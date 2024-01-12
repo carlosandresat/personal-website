@@ -28,7 +28,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 
 export default function ProjectsSection() {
   return (
-    <>
+    <section className="w-full flex flex-col justify-center items-center py-12 md:py-24 lg:py-28">
       <h2
         className="mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0"
         id="projects"
@@ -602,6 +602,6 @@ export default function ProjectsSection() {
           </CardFooter>
         </Card>
       </div>
-    </>
+    </section>
   );
 }
