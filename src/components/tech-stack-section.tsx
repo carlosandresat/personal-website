@@ -465,194 +465,135 @@ export default function TechStackSection() {
       >
         <CarouselContent>
           <CarouselItem
-            key="python"
+            key="playwright"
             className=" md:basis-1/3 lg:basis-1/4 xl:basis-1/5"
           >
             <div className="p-1 h-full">
               <Card className="transition-all">
                 <CardContent className="flex aspect-square items-center justify-center p-6 flex-col">
                   <Image
-                    alt="Python"
-                    height="64"
-                    src="/Python.png"
-                    width="64"
-                  />
-                  <span className="pt-4 font-semibold text-2xl">Python</span>
-                </CardContent>
-              </Card>
-            </div>
-          </CarouselItem>
-          <CarouselItem
-            key="Matplotlib"
-            className=" md:basis-1/3 lg:basis-1/4 xl:basis-1/5"
-          >
-            <div className="p-1">
-              <Card>
-                <CardContent className="flex aspect-square items-center justify-center p-6 flex-col">
-                  <Image
-                    alt="Matplotlib"
-                    height="70"
-                    src="/matplotlib.png"
-                    width="70"
-                  />
-                  <span className="pt-4 font-semibold text-2xl">
-                    Matplotlib
-                  </span>
-                </CardContent>
-              </Card>
-            </div>
-          </CarouselItem>
-          <CarouselItem
-            key="scikitlearn"
-            className=" md:basis-1/3 lg:basis-1/4 xl:basis-1/5"
-          >
-            <div className="p-1">
-              <Card>
-                <CardContent className="flex aspect-square items-center justify-center p-6 flex-col">
-                  <Image
-                    alt="ScikitLearn"
-                    height="90"
-                    src="/scikitlearn.png"
-                    width="90"
-                  />
-                  <span className="pt-6 font-semibold text-2xl">
-                    Scikit-learn
-                  </span>
-                </CardContent>
-              </Card>
-            </div>
-          </CarouselItem>
-
-          <CarouselItem
-            key="tensorflow"
-            className=" md:basis-1/3 lg:basis-1/4 xl:basis-1/5"
-          >
-            <div className="p-1">
-              <Card>
-                <CardContent className="flex aspect-square items-center justify-center p-6 flex-col">
-                  <Image
-                    alt="Tensorflow"
-                    height="64"
-                    src="/tensorflow.png"
-                    width="64"
-                  />
-                  <span className="pt-4 font-semibold text-2xl">
-                    Tensorflow
-                  </span>
-                </CardContent>
-              </Card>
-            </div>
-          </CarouselItem>
-
-          <CarouselItem
-            key="jupyter"
-            className=" md:basis-1/3 lg:basis-1/4 xl:basis-1/5"
-          >
-            <div className="p-1">
-              <Card>
-                <CardContent className="flex aspect-square items-center justify-center p-6 flex-col">
-                  <Image
-                    alt="Jupyter"
-                    height="60"
-                    src="/jupyter.png"
-                    width="60"
-                  />
-                  <span className="pt-4 font-semibold text-2xl">Jupyter</span>
-                </CardContent>
-              </Card>
-            </div>
-          </CarouselItem>
-
-          <CarouselItem
-            key="numpy"
-            className=" md:basis-1/3 lg:basis-1/4 xl:basis-1/5"
-          >
-            <div className="p-1">
-              <Card>
-                <CardContent className="flex aspect-square items-center justify-center p-6 flex-col">
-                  <Image alt="numpy" height="70" src="/numpy.svg" width="70" />
-                  <span className="pt-4 font-semibold text-2xl">Numpy</span>
-                </CardContent>
-              </Card>
-            </div>
-          </CarouselItem>
-
-          <CarouselItem
-            key="opencv"
-            className=" md:basis-1/3 lg:basis-1/4 xl:basis-1/5"
-          >
-            <div className="p-1">
-              <Card>
-                <CardContent className="flex aspect-square items-center justify-center p-6 flex-col">
-                  <Image
-                    alt="OpenCV"
-                    height="64"
-                    src="/OpenCV.png"
-                    width="64"
-                  />
-                  <span className="pt-6 font-semibold text-2xl">OpenCV</span>
-                </CardContent>
-              </Card>
-            </div>
-          </CarouselItem>
-
-          <CarouselItem
-            key="express"
-            className=" md:basis-1/3 lg:basis-1/4 xl:basis-1/5"
-          >
-            <div className="p-1">
-              <Card>
-                <CardContent className="flex aspect-square items-center justify-center p-6 flex-col">
-                  <Image
-                    alt="Expressjs"
-                    height="90"
-                    src="/express.png"
-                    width="90"
-                    className="dark:invert"
-                  />
-                  <span className="pt-4 font-semibold text-2xl">Express</span>
-                </CardContent>
-              </Card>
-            </div>
-          </CarouselItem>
-
-          <CarouselItem
-            key="jquery"
-            className=" md:basis-1/3 lg:basis-1/4 xl:basis-1/5"
-          >
-            <div className="p-1">
-              <Card>
-                <CardContent className="flex aspect-square items-center justify-center p-6 flex-col">
-                  <Image
-                    alt="jquery"
-                    height="70"
-                    src="/jquery.png"
-                    width="70"
-                  />
-                  <span className="pt-4 font-semibold text-2xl">jQuery</span>
-                </CardContent>
-              </Card>
-            </div>
-          </CarouselItem>
-
-          <CarouselItem
-            key="bootstrap"
-            className=" md:basis-1/3 lg:basis-1/4 xl:basis-1/5"
-          >
-            <div className="p-1">
-              <Card>
-                <CardContent className="flex aspect-square items-center justify-center p-6 flex-col">
-                  <Image
-                    alt="Bootstrap"
+                    alt="Playwright"
                     height="80"
-                    src="/Bootstrap.png"
+                    src="/playwright.png"
                     width="80"
                   />
-                  <span className="pt-4 font-semibold text-2xl">Bootstrap</span>
+                  <span className="pt-2 font-semibold text-2xl">Playwright</span>
                 </CardContent>
               </Card>
             </div>
           </CarouselItem>
+          
+          <CarouselItem
+            key="bun"
+            className=" md:basis-1/3 lg:basis-1/4 xl:basis-1/5"
+          >
+            <div className="p-1">
+              <Card>
+                <CardContent className="flex aspect-square items-center justify-center p-6 flex-col">
+                  <Image alt="bun" height="70" src="/bun.svg" width="70" />
+                  <span className="pt-4 font-semibold text-2xl">Bun</span>
+                </CardContent>
+              </Card>
+            </div>
+          </CarouselItem>
+
+
+          <CarouselItem
+            key="nestjs"
+            className=" md:basis-1/3 lg:basis-1/4 xl:basis-1/5"
+          >
+            <div className="p-1">
+              <Card>
+                <CardContent className="flex aspect-square items-center justify-center p-6 flex-col">
+                  <Image
+                    alt="NestJS"
+                    height="80"
+                    src="/nestjs.svg"
+                    width="80"
+                  />
+                  <span className="pt-4 font-semibold text-2xl">
+                    NestJS
+                  </span>
+                </CardContent>
+              </Card>
+            </div>
+          </CarouselItem>
+
+          <CarouselItem
+            key="tanstack"
+            className=" md:basis-1/3 lg:basis-1/4 xl:basis-1/5"
+          >
+            <div className="p-1">
+              <Card>
+                <CardContent className="flex aspect-square items-center justify-center p-6 flex-col">
+                  <Image
+                    alt="Tanstack"
+                    height="80"
+                    src="/tanstack.png"
+                    width="80"
+                  />
+                  <span className="pt-4 font-semibold text-2xl">TanStack</span>
+                </CardContent>
+              </Card>
+            </div>
+          </CarouselItem>
+
+          <CarouselItem
+            key="zustand"
+            className=" md:basis-1/3 lg:basis-1/4 xl:basis-1/5"
+          >
+            <div className="p-1">
+              <Card>
+                <CardContent className="flex aspect-square items-center justify-center p-6 flex-col">
+                  <Image alt="Zustand" height="120" src="/zustand.png" width="120" />
+                  <span className="pt-4 font-semibold text-2xl">Zustand</span>
+                </CardContent>
+              </Card>
+            </div>
+          </CarouselItem>
+
+
+          <CarouselItem
+            key="php"
+            className=" md:basis-1/3 lg:basis-1/4 xl:basis-1/5"
+          >
+            <div className="p-1">
+              <Card>
+                <CardContent className="flex aspect-square items-center justify-center p-6 flex-col">
+                  <Image
+                    alt="PHP"
+                    height="100"
+                    src="/php.png"
+                    width="100"
+                  />
+                  <span className="pt-6 font-semibold text-2xl">
+                    PHP
+                  </span>
+                </CardContent>
+              </Card>
+            </div>
+          </CarouselItem>
+          <CarouselItem
+            key="laravel"
+            className=" md:basis-1/3 lg:basis-1/4 xl:basis-1/5"
+          >
+            <div className="p-1">
+              <Card>
+                <CardContent className="flex aspect-square items-center justify-center p-6 flex-col">
+                  <Image
+                    alt="Laravel"
+                    height="75"
+                    src="/laravel.png"
+                    width="75"
+                  />
+                  <span className="pt-2 font-semibold text-2xl">
+                    Laravel
+                  </span>
+                </CardContent>
+              </Card>
+            </div>
+          </CarouselItem>
+
         </CarouselContent>
         <CarouselPrevious className="left-12 2xl:-left-12" />
         <CarouselNext className="right-12 2xl:-right-12" />
