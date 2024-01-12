@@ -6,7 +6,7 @@ import { Github, Mail } from "lucide-react";
 
 export default function HomeSection() {
   return (
-    <section className="w-full pt-12 md:pt-24 lg:pt-32 bg-secondary pb-12 md:pb-24 lg:pb-32">
+    <section className="w-full pt-12 md:pt-24 lg:pt-32 bg-secondary pb-12 md:pb-24 lg:pb-32" id="home">
       <div className="px-4 md:px-6 space-y-10 xl:space-y-16">
         <div className="absolute top-20 right-2 mt-4 mr-4">
           <ModeToggle />

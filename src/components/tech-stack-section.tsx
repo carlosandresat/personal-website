@@ -18,10 +18,9 @@ export default function TechStackSection() {
   const plugin3 = useRef(Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: true }));
 
   return (
-    <section className="w-full bg-secondary flex flex-col justify-center items-center py-12 md:py-24 lg:py-28">
+    <section className="w-full bg-secondary flex flex-col justify-center items-center py-12 md:py-24 lg:py-28" id="tech-stack">
       <h2
         className="scroll-m-20 border-b border-foreground pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0"
-        id="projects"
       >
         Tech Stack
       </h2>
