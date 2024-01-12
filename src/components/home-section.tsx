@@ -2,7 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { ModeToggle } from "@/components/mode-toggle";
 import { Button } from "@/components/ui/button";
-import { Github, Mail } from "lucide-react";
+import { Github, Mail, Linkedin } from "lucide-react";
+import { LinkedInLogoIcon } from "@radix-ui/react-icons";
 
 export default function HomeSection() {
   return (
@@ -33,6 +34,11 @@ export default function HomeSection() {
               <a href="https://github.com/carlosandresat" target="_blank">
               <Button className="bg-green-500 hover:bg-green-600">
                 <Github />
+              </Button>
+              </a>
+              <a href="https://www.linkedin.com/in/carlosandresat/" target="_blank">
+              <Button className="bg-green-500 hover:bg-green-600">
+                <Linkedin />
               </Button>
               </a>
               <a href="mailto:carlosandresat@hotmail.com" target="_blank">
