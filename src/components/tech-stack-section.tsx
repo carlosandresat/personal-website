@@ -13,8 +13,9 @@ import {
 import Image from "next/image";
 
 export default function TechStackSection() {
-  const plugin = useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
-  const plugin2 = useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
+  const plugin = useRef(Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: true }));
+  const plugin2 = useRef(Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: true }));
+  const plugin3 = useRef(Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: true }));
 
   return (
     <section className="w-full bg-secondary flex flex-col justify-center items-center py-12 md:py-24 lg:py-28">
@@ -34,8 +35,6 @@ export default function TechStackSection() {
       <Carousel
         plugins={[plugin.current]}
         className="w-full max-w-screen-xl px-28 mt-6"
-        onMouseEnter={plugin.current.stop}
-        onMouseLeave={plugin.current.reset}
         opts={{
           align: "start",
           loop: true,
@@ -446,6 +445,220 @@ export default function TechStackSection() {
         <CarouselPrevious className="left-12 2xl:-left-12" />
         <CarouselNext className="right-12 2xl:-right-12" />
       </Carousel>
+
+      <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight w-full px-8 mt-8 max-w-screen-xl">
+        🥉 Interesting Techs
+      </h3>
+      <p className="text-lg text-muted-foreground w-full px-8 max-w-screen-xl">
+        Technologies that I have interest in learning in the future
+      </p>
+
+      <Carousel
+        plugins={[plugin3.current]}
+        className="w-full max-w-screen-xl px-28 mt-6"
+        onMouseEnter={plugin3.current.stop}
+        onMouseLeave={plugin3.current.reset}
+        opts={{
+          align: "start",
+          loop: true,
+        }}
+      >
+        <CarouselContent>
+          <CarouselItem
+            key="python"
+            className=" md:basis-1/3 lg:basis-1/4 xl:basis-1/5"
+          >
+            <div className="p-1 h-full">
+              <Card className="transition-all">
+                <CardContent className="flex aspect-square items-center justify-center p-6 flex-col">
+                  <Image
+                    alt="Python"
+                    height="64"
+                    src="/Python.png"
+                    width="64"
+                  />
+                  <span className="pt-4 font-semibold text-2xl">Python</span>
+                </CardContent>
+              </Card>
+            </div>
+          </CarouselItem>
+          <CarouselItem
+            key="Matplotlib"
+            className=" md:basis-1/3 lg:basis-1/4 xl:basis-1/5"
+          >
+            <div className="p-1">
+              <Card>
+                <CardContent className="flex aspect-square items-center justify-center p-6 flex-col">
+                  <Image
+                    alt="Matplotlib"
+                    height="70"
+                    src="/matplotlib.png"
+                    width="70"
+                  />
+                  <span className="pt-4 font-semibold text-2xl">
+                    Matplotlib
+                  </span>
+                </CardContent>
+              </Card>
+            </div>
+          </CarouselItem>
+          <CarouselItem
+            key="scikitlearn"
+            className=" md:basis-1/3 lg:basis-1/4 xl:basis-1/5"
+          >
+            <div className="p-1">
+              <Card>
+                <CardContent className="flex aspect-square items-center justify-center p-6 flex-col">
+                  <Image
+                    alt="ScikitLearn"
+                    height="90"
+                    src="/scikitlearn.png"
+                    width="90"
+                  />
+                  <span className="pt-6 font-semibold text-2xl">
+                    Scikit-learn
+                  </span>
+                </CardContent>
+              </Card>
+            </div>
+          </CarouselItem>
+
+          <CarouselItem
+            key="tensorflow"
+            className=" md:basis-1/3 lg:basis-1/4 xl:basis-1/5"
+          >
+            <div className="p-1">
+              <Card>
+                <CardContent className="flex aspect-square items-center justify-center p-6 flex-col">
+                  <Image
+                    alt="Tensorflow"
+                    height="64"
+                    src="/tensorflow.png"
+                    width="64"
+                  />
+                  <span className="pt-4 font-semibold text-2xl">
+                    Tensorflow
+                  </span>
+                </CardContent>
+              </Card>
+            </div>
+          </CarouselItem>
+
+          <CarouselItem
+            key="jupyter"
+            className=" md:basis-1/3 lg:basis-1/4 xl:basis-1/5"
+          >
+            <div className="p-1">
+              <Card>
+                <CardContent className="flex aspect-square items-center justify-center p-6 flex-col">
+                  <Image
+                    alt="Jupyter"
+                    height="60"
+                    src="/jupyter.png"
+                    width="60"
+                  />
+                  <span className="pt-4 font-semibold text-2xl">Jupyter</span>
+                </CardContent>
+              </Card>
+            </div>
+          </CarouselItem>
+
+          <CarouselItem
+            key="numpy"
+            className=" md:basis-1/3 lg:basis-1/4 xl:basis-1/5"
+          >
+            <div className="p-1">
+              <Card>
+                <CardContent className="flex aspect-square items-center justify-center p-6 flex-col">
+                  <Image alt="numpy" height="70" src="/numpy.svg" width="70" />
+                  <span className="pt-4 font-semibold text-2xl">Numpy</span>
+                </CardContent>
+              </Card>
+            </div>
+          </CarouselItem>
+
+          <CarouselItem
+            key="opencv"
+            className=" md:basis-1/3 lg:basis-1/4 xl:basis-1/5"
+          >
+            <div className="p-1">
+              <Card>
+                <CardContent className="flex aspect-square items-center justify-center p-6 flex-col">
+                  <Image
+                    alt="OpenCV"
+                    height="64"
+                    src="/OpenCV.png"
+                    width="64"
+                  />
+                  <span className="pt-6 font-semibold text-2xl">OpenCV</span>
+                </CardContent>
+              </Card>
+            </div>
+          </CarouselItem>
+
+          <CarouselItem
+            key="express"
+            className=" md:basis-1/3 lg:basis-1/4 xl:basis-1/5"
+          >
+            <div className="p-1">
+              <Card>
+                <CardContent className="flex aspect-square items-center justify-center p-6 flex-col">
+                  <Image
+                    alt="Expressjs"
+                    height="90"
+                    src="/express.png"
+                    width="90"
+                    className="dark:invert"
+                  />
+                  <span className="pt-4 font-semibold text-2xl">Express</span>
+                </CardContent>
+              </Card>
+            </div>
+          </CarouselItem>
+
+          <CarouselItem
+            key="jquery"
+            className=" md:basis-1/3 lg:basis-1/4 xl:basis-1/5"
+          >
+            <div className="p-1">
+              <Card>
+                <CardContent className="flex aspect-square items-center justify-center p-6 flex-col">
+                  <Image
+                    alt="jquery"
+                    height="70"
+                    src="/jquery.png"
+                    width="70"
+                  />
+                  <span className="pt-4 font-semibold text-2xl">jQuery</span>
+                </CardContent>
+              </Card>
+            </div>
+          </CarouselItem>
+
+          <CarouselItem
+            key="bootstrap"
+            className=" md:basis-1/3 lg:basis-1/4 xl:basis-1/5"
+          >
+            <div className="p-1">
+              <Card>
+                <CardContent className="flex aspect-square items-center justify-center p-6 flex-col">
+                  <Image
+                    alt="Bootstrap"
+                    height="80"
+                    src="/Bootstrap.png"
+                    width="80"
+                  />
+                  <span className="pt-4 font-semibold text-2xl">Bootstrap</span>
+                </CardContent>
+              </Card>
+            </div>
+          </CarouselItem>
+        </CarouselContent>
+        <CarouselPrevious className="left-12 2xl:-left-12" />
+        <CarouselNext className="right-12 2xl:-right-12" />
+      </Carousel>
+
+
     </section>
   );
 }
