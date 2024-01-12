@@ -3,6 +3,7 @@ import { Chakra_Petch } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Chakra_Petch({ subsets: ["latin"], weight: "500" });
 
@@ -54,6 +55,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
