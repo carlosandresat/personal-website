@@ -52,7 +52,7 @@ export default function ProjectsSection() {
                 <a
                   href="https://edfacademy.com/"
                   target="_blank"
-                  className="hover:border-b"
+                  className="hover:border-b text-green-500"
                 >
                   edfacademy.com
                 </a>
@@ -70,11 +70,15 @@ export default function ProjectsSection() {
           </CardContent>
           <CardFooter className="flex flex-row justify-between gap-4">
             <a href="https://edfacademy.com/" target="_blank">
-              <Button variant="link">View live</Button>
+              <Button variant="link" className="hover:text-green-500">
+                View live
+              </Button>
             </a>
             <Dialog>
               <DialogTrigger asChild>
-                <Button variant="default">More info...</Button>
+                <Button variant="default" className="hover:bg-green-500">
+                  More info...
+                </Button>
               </DialogTrigger>
 
               <DialogContent className="sm:max-w-[525px] md:max-w-xl xl:max-w-3xl max-h-full">
@@ -157,9 +161,17 @@ export default function ProjectsSection() {
                     the way for future learning experiences.
                   </p>
 
-                  <DialogFooter>
+                  <DialogFooter className="mt-4">
+                  
+                      <Button className="hover:bg-green-500"><a
+                      href="https://github.com/carlosandresat/educacion-del-futuro-web"
+                      target="_blank"
+                    >
+                        View code</a>
+                      </Button>
+                    
                     <DialogClose>
-                      <Button variant="secondary" className="mt-4">
+                      <Button variant="secondary" className="w-full">
                         Back
                       </Button>
                     </DialogClose>
@@ -173,7 +185,7 @@ export default function ProjectsSection() {
           <CardHeader className="flex flex-row items-center gap-4">
             <div className="w-12 h-12 rounded-full border border-muted bg-secondary">
               <Image
-                alt="EDF Academy"
+                alt="Tuto-U logo"
                 src="/Tuto-U-logo.png"
                 width={52}
                 height={52}
@@ -181,7 +193,9 @@ export default function ProjectsSection() {
             </div>
             <div className="grid gap-1">
               <CardTitle>Tuto-U</CardTitle>
-              <CardDescription>Peer Tutoring Platform</CardDescription>
+              <CardDescription className="text-green-500">
+                Peer Tutoring Platform
+              </CardDescription>
             </div>
           </CardHeader>
           <CardContent className="grid gap-2">
@@ -196,11 +210,15 @@ export default function ProjectsSection() {
           </CardContent>
           <CardFooter className="flex flex-row justify-between gap-4">
             <a href="https://tuto-u.vercel.app/" target="_blank">
-              <Button variant="link">View live</Button>
+              <Button variant="link" className="hover:text-green-500">
+                View live
+              </Button>
             </a>
             <Dialog>
               <DialogTrigger asChild>
-                <Button variant="default">More info...</Button>
+                <Button variant="default" className="hover:bg-green-500">
+                  More info...
+                </Button>
               </DialogTrigger>
 
               <DialogContent className="sm:max-w-[525px] md:max-w-2xl xl:max-w-3xl max-h-full">
@@ -283,10 +301,17 @@ export default function ProjectsSection() {
                     ⚙️ Currently in Development
                   </h4>
 
-                  <DialogFooter>
+                  <DialogFooter className="mt-4">
+                    
+                      <Button className="hover:bg-green-500"><a
+                      href="https://github.com/carlosandresat/tuto-u"
+                      target="_blank"
+                    >
+                        View code</a>
+                      </Button>
+                    
                     <DialogClose>
-                      <Button className="mt-4">View code</Button>{" "}
-                      <Button variant="secondary" className="mt-4">
+                      <Button variant="secondary" className="w-full">
                         Back
                       </Button>
                     </DialogClose>
@@ -316,7 +341,9 @@ export default function ProjectsSection() {
             </div>
             <div className="grid gap-1">
               <CardTitle>OrientaYT</CardTitle>
-              <CardDescription>Old Peer Tutoring Platform</CardDescription>
+              <CardDescription className="text-green-500">
+                Old Peer Tutoring Platform
+              </CardDescription>
             </div>
           </CardHeader>
           <CardContent className="grid gap-2">
@@ -332,7 +359,9 @@ export default function ProjectsSection() {
           <CardFooter className="flex flex-row justify-end gap-4">
             <Dialog>
               <DialogTrigger asChild>
-                <Button variant="default">More info...</Button>
+                <Button variant="default" className="hover:bg-green-500">
+                  More info...
+                </Button>
               </DialogTrigger>
 
               <DialogContent className="sm:max-w-[525px] md:max-w-2xl xl:max-w-5xl max-h-full">
@@ -449,9 +478,9 @@ export default function ProjectsSection() {
                     Welcome to the legacy of OrientaYT! 📚🚀
                   </p>
 
-                  <DialogFooter>
+                  <DialogFooter className="mt-4">
                     <DialogClose>
-                      <Button variant="secondary" className="mt-4">
+                      <Button variant="secondary" >
                         Back
                       </Button>
                     </DialogClose>
@@ -466,7 +495,9 @@ export default function ProjectsSection() {
             <LayoutPanelLeftIcon className="w-8 h-8" />
             <div className="grid gap-1">
               <CardTitle>Kidney App</CardTitle>
-              <CardDescription>Dialysis Sessions Control</CardDescription>
+              <CardDescription className="text-green-500">
+                Dialysis Sessions Control
+              </CardDescription>
             </div>
           </CardHeader>
           <CardContent className="grid gap-2">
@@ -482,7 +513,9 @@ export default function ProjectsSection() {
           <CardFooter className="flex flex-row justify-end gap-4">
             <Dialog>
               <DialogTrigger asChild>
-                <Button variant="default">More info...</Button>
+                <Button variant="default" className="hover:bg-green-500">
+                  More info...
+                </Button>
               </DialogTrigger>
 
               <DialogContent className="sm:max-w-[525px] md:max-w-2xl xl:max-w-3xl max-h-full">
@@ -578,22 +611,31 @@ export default function ProjectsSection() {
                   </div>
 
                   <p className="leading-7 mt-2">
-                    Obviously this is dummy data, respecting the patient&apos;s privacy. The retrieved data is stored in a local SQLite database so it can be used in future for analysis and research purposes by the Nephrology Department using Artificial Intelligence and Machine Learning algorithms to improve the quality of life of patients with kidney failure and to prevent a fully kidney failure.
+                    Obviously this is dummy data, respecting the patient&apos;s
+                    privacy. The retrieved data is stored in a local SQLite
+                    database so it can be used in future for analysis and
+                    research purposes by the Nephrology Department using
+                    Artificial Intelligence and Machine Learning algorithms to
+                    improve the quality of life of patients with kidney failure
+                    and to prevent a fully kidney failure.
                   </p>
                   <p className="leading-7 mt-2">
-                    Anyways, I upload a functional version of the app in GitHub, so you can check it out and play with it. I hope you like it!
+                    Anyways, I upload a functional version of the app in GitHub,
+                    so you can check it out and play with it. I hope you like
+                    it!
                   </p>
 
-                  <DialogFooter>
-                    <Button>
-                        <a href="https://github.com/carlosandresat/kidney-app" target="_blank">
-                            View code
-                        </a>
+                  <DialogFooter className="mt-4">
+                    <Button className="hover:bg-green-500">
+                      <a
+                        href="https://github.com/carlosandresat/kidney-app"
+                        target="_blank"
+                      >
+                        View code
+                      </a>
                     </Button>
                     <DialogClose>
-                      <Button variant="secondary">
-                        Back
-                      </Button>
+                      <Button variant="secondary" className="w-full">Back</Button>
                     </DialogClose>
                   </DialogFooter>
                 </ScrollArea>

@@ -28,7 +28,7 @@ export default function TechStackSection() {
       <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight w-full px-8 mt-8 max-w-screen-xl">
         🥇 Main Stack
       </h3>
-      <p className="text-lg text-muted-foreground w-full px-8 max-w-screen-xl">
+      <p className="text-lg w-full px-8 max-w-screen-xl text-green-500">
         Essencial technologies in my current projects
       </p>
 
@@ -229,15 +229,34 @@ export default function TechStackSection() {
               </Card>
             </div>
           </CarouselItem>
+
+          <CarouselItem
+            key="jest"
+            className=" md:basis-1/3 lg:basis-1/4 xl:basis-1/5"
+          >
+            <div className="p-1">
+              <Card>
+                <CardContent className="flex aspect-square items-center justify-center p-6 flex-col">
+                  <Image
+                    alt="Jest"
+                    height="64"
+                    src="/jest.png"
+                    width="64"
+                  />
+                  <span className="pt-4 font-semibold text-2xl">Jest</span>
+                </CardContent>
+              </Card>
+            </div>
+          </CarouselItem>
         </CarouselContent>
-        <CarouselPrevious className="left-12 2xl:-left-12" />
-        <CarouselNext className="right-12 2xl:-right-12" />
+        <CarouselPrevious className="left-12 2xl:-left-12 hover:bg-green-500" />
+        <CarouselNext className="right-12 2xl:-right-12 hover:bg-green-500" />
       </Carousel>
 
       <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight w-full px-8 max-w-screen-xl mt-8">
         🥈 Secondary Techs
       </h3>
-      <p className="text-lg text-muted-foreground w-full px-8 max-w-screen-xl">
+      <p className="text-lg w-full px-8 max-w-screen-xl text-green-500">
         Tecnologies learned and used in the past
       </p>
 
@@ -442,14 +461,14 @@ export default function TechStackSection() {
             </div>
           </CarouselItem>
         </CarouselContent>
-        <CarouselPrevious className="left-12 2xl:-left-12" />
-        <CarouselNext className="right-12 2xl:-right-12" />
+        <CarouselPrevious className="left-12 2xl:-left-12 hover:bg-green-500" />
+        <CarouselNext className="right-12 2xl:-right-12 hover:bg-green-500" />
       </Carousel>
 
       <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight w-full px-8 mt-8 max-w-screen-xl">
         🥉 Interesting Techs
       </h3>
-      <p className="text-lg text-muted-foreground w-full px-8 max-w-screen-xl">
+      <p className="text-lg w-full px-8 max-w-screen-xl text-green-500">
         Technologies that I have interest in learning in the future
       </p>
 
@@ -595,8 +614,8 @@ export default function TechStackSection() {
           </CarouselItem>
 
         </CarouselContent>
-        <CarouselPrevious className="left-12 2xl:-left-12" />
-        <CarouselNext className="right-12 2xl:-right-12" />
+        <CarouselPrevious className="left-12 2xl:-left-12 hover:bg-green-500" />
+        <CarouselNext className="right-12 2xl:-right-12 hover:bg-green-500" />
       </Carousel>
 
 
