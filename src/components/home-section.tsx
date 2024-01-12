@@ -35,9 +35,11 @@ export default function HomeSection() {
                 <Github />
               </Button>
               </a>
+              <a href="mailto:carlosandresat@hotmail.com" target="_blank">
               <Button className="bg-green-500 hover:bg-green-600">
                 <Mail />
               </Button>
+              </a>
             </div>
           </div>
           <div className="flex flex-col items-start space-y-4">
