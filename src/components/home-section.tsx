@@ -58,7 +58,7 @@ export default function HomeSection() {
           <div className="flex flex-col items-center justify-center pt-6 md:pt-0">
             <Image
               alt="profile picture"
-              className="mx-auto aspect-[1/1] overflow-hidden rounded-full object-cover w-52 md:w-auto"
+              className="mx-auto aspect-[1/1] overflow-hidden rounded-full object-cover w-52 md:w-[450px] shadow-xl"
               height="450"
               src="/carlos.arevalo.jpg"
               width="450"
