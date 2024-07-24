@@ -8,7 +8,7 @@ import { LinkedInLogoIcon } from "@radix-ui/react-icons";
 export default function HomeSection() {
   return (
     <section
-      className="w-full pt-12 md:pt-24 lg:pt-32 bg-secondary pb-12 md:pb-24 lg:pb-32"
+      className="w-full pt-16 md:pt-24 lg:pt-32 bg-secondary pb-12 md:pb-24 lg:pb-32"
       id="home"
     >
       <div className="px-4 md:px-6 space-y-10 xl:space-y-16">
