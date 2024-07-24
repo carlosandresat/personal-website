@@ -1,5 +1,6 @@
 import { Award, Globe, Database, UserCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function ServicesSection() {
   return (
@@ -43,7 +44,9 @@ export default function ServicesSection() {
                 proporcionar una base sólida y habilidades prácticas necesarias
                 para sobresalir en el campo del desarrollo web.
               </p>
-              <Button className="mt-2 w-fit self-start">Conoce más</Button>
+              <Button className="mt-2 w-fit self-start" asChild>
+                <Link href="/courses">Conoce más</Link>
+              </Button>
             </div>
           </div>
         </div>
@@ -59,7 +62,9 @@ export default function ServicesSection() {
                 conceptualización hasta el lanzamiento, manejo todos los
                 aspectos técnicos para crear aplicaciones robustas y eficientes.
               </p>
-              <Button className="mt-2 w-fit self-end">Conoce más</Button>
+              <Button className="mt-2 w-fit self-end" asChild>
+                <Link href="/developing">Conoce más</Link>
+              </Button>
             </div>
             <div className="flex-shrink-0 w-24 h-24 flex justify-center items-center bg-green-500 md:bg-secondary rounded-md shadow">
               <Globe className="w-8 h-8 invert dark:invert-0 md:invert-0" />
