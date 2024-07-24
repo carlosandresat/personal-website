@@ -62,12 +62,12 @@ export default function ServicesSection() {
               <Button className="mt-2 w-fit self-end">Conoce más</Button>
             </div>
             <div className="flex-shrink-0 w-24 h-24 flex justify-center items-center bg-green-500 md:bg-secondary rounded-md shadow">
-              <Globe className="w-8 h-8" />
+              <Globe className="w-8 h-8 invert dark:invert-0 md:invert-0" />
             </div>
           </div>
           <div className="flex space-x-8 md:space-x-12 items-center w-full">
             <div className="flex-shrink-0 w-24 h-24 flex justify-center items-center bg-secondary md:bg-green-500 rounded-md shadow">
-              <Database className="w-8 h-8 invert dark:invert-0" />
+              <Database className="w-8 h-8 md:invert dark:invert-0" />
             </div>
 
             <div className="flex flex-col">
