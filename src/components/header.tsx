@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Header() {
   return (
     <header className="px-4 lg:px-6 h-16 flex items-center border-b fixed top-0 w-full bg-background z-10">
-      <Link className="flex items-center justify-center" href="#">
+      <Link className="flex items-center justify-center" href="/">
         <Image
           alt="Logo"
           height="42"
@@ -15,21 +15,21 @@ export default function Header() {
       <nav className="ml-auto flex gap-4 sm:gap-6">
       <Link
           className="text-sm font-medium hover:underline underline-offset-4"
-          href="#home"
+          href="/"
         >
           Home
         </Link>
         <Link
           className="text-sm font-medium hover:underline underline-offset-4"
-          href="#projects"
+          href="/developing"
         >
-          Projects
+          Developing
         </Link>
         <Link
           className="text-sm font-medium hover:underline underline-offset-4"
-          href="#tech-stack"
+          href="/courses"
         >
-          Tech Stack
+          Courses
         </Link>
         
       </nav>
