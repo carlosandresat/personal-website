@@ -1,34 +1,5 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-  CardFooter,
-} from "@/components/ui/card";
-import {
-  Award,
-  BookOpenIcon,
-  Code2,
-  GithubIcon,
-  HomeIcon,
-  LayoutPanelLeftIcon,
-  Server,
-  UserCheck,
-} from "lucide-react";
+import { Award, Code2, Server, UserCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-  DialogClose,
-} from "@/components/ui/dialog";
-import Image from "next/image";
-import { ScrollArea } from "@/components/ui/scroll-area";
 
 export default function ServicesSection() {
   return (
