@@ -1,4 +1,4 @@
-import { Award, Code2, Server, UserCheck } from "lucide-react";
+import { Award, Globe, Database, UserCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function ServicesSection() {
@@ -25,7 +25,7 @@ export default function ServicesSection() {
               </p>
             </div>
             <div className="flex-shrink-0 w-24 h-24 flex justify-center items-center bg-green-500 rounded-md">
-              <UserCheck className="w-8 h-8" />
+              <UserCheck className="w-8 h-8 invert dark:invert-0" />
             </div>
           </div>
           <div className="flex space-x-8 md:space-x-12 items-center w-full">
@@ -62,12 +62,12 @@ export default function ServicesSection() {
               <Button className="mt-2 w-fit self-end">Conoce más</Button>
             </div>
             <div className="flex-shrink-0 w-24 h-24 flex justify-center items-center bg-green-500 md:bg-secondary rounded-md">
-              <Code2 className="w-8 h-8" />
+              <Globe className="w-8 h-8" />
             </div>
           </div>
           <div className="flex space-x-8 md:space-x-12 items-center w-full">
             <div className="flex-shrink-0 w-24 h-24 flex justify-center items-center bg-secondary md:bg-green-500 rounded-md">
-              <Server className="w-8 h-8" />
+              <Database className="w-8 h-8 invert dark:invert-0" />
             </div>
 
             <div className="flex flex-col">
