@@ -23,7 +23,7 @@ export default function Courses() {
           <Card className="flex items-center h-full">
             <div className="flex w-16 md:w-28 aspect-square justify-center items-center bg-secondary shadow rounded-xl md:m-6 shrink-0 object-cover p-2 ml-5">
               <Image
-                src="/python.png"
+                src="/Python.png"
                 height={60}
                 width={60}
                 alt="Python"
