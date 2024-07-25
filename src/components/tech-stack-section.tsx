@@ -11,8 +11,12 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Image from "next/image";
+import {useTranslations} from 'next-intl';
+
 
 export default function TechStackSection() {
+  const t = useTranslations('TechStack');
+
   const plugin = useRef(Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: true }));
   const plugin2 = useRef(Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: true }));
   const plugin3 = useRef(Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: true }));
@@ -22,13 +26,13 @@ export default function TechStackSection() {
       <h2
         className="scroll-m-20 border-b border-foreground pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0"
       >
-        Tech Stack
+         {t('title')}
       </h2>
       <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight w-full px-8 mt-8 max-w-screen-xl">
-        🥇 Main Stack
+        🥇 {t('tier1')}
       </h3>
       <p className="text-lg w-full px-8 max-w-screen-xl text-green-500">
-        Essencial technologies in my current projects
+        {t('tier1description')}
       </p>
 
       <Carousel
@@ -253,10 +257,10 @@ export default function TechStackSection() {
       </Carousel>
 
       <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight w-full px-8 max-w-screen-xl mt-8">
-        🥈 Secondary Techs
+        📚 {t('tier2')}
       </h3>
       <p className="text-lg w-full px-8 max-w-screen-xl text-green-500">
-        Tecnologies learned and used in the past
+        {t('tier2description')}
       </p>
 
       <Carousel
@@ -465,10 +469,10 @@ export default function TechStackSection() {
       </Carousel>
 
       <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight w-full px-8 mt-8 max-w-screen-xl">
-        🥉 Interesting Techs
+        🔎 {t('tier3')}
       </h3>
       <p className="text-lg w-full px-8 max-w-screen-xl text-green-500">
-        Technologies that I have interest in learning in the future
+        {t('tier3description')}
       </p>
 
       <Carousel

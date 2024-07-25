@@ -25,14 +25,19 @@ import {
 } from "@/components/ui/dialog";
 import Image from "next/image";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import {useTranslations} from 'next-intl';
+
+
 
 export default function ProjectsSection() {
+  const t = useTranslations('Projects');
+
   return (
     <section className="w-full flex flex-col justify-center items-center py-12 md:py-24 lg:py-28" id="projects">
       <h2
         className="mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0"
       >
-        My Projects
+        {t('title')}
       </h2>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-screen-xl w-full mx-auto p-8">
         <Card>
@@ -70,13 +75,13 @@ export default function ProjectsSection() {
           <CardFooter className="flex flex-row justify-between gap-4">
             <a href="https://edfacademy.com/" target="_blank">
               <Button variant="link" className="hover:text-green-500">
-                View live
+              {t('liveButtonText')}
               </Button>
             </a>
             <Dialog>
               <DialogTrigger asChild>
                 <Button variant="default" className="hover:bg-green-500">
-                  More info...
+                {t('infoButtonText')}
                 </Button>
               </DialogTrigger>
 
@@ -97,67 +102,54 @@ export default function ProjectsSection() {
                   </div>
 
                   <p className="leading-7 mt-4">
-                    A web platform for EDF Academy, an innovative institution
-                    dedicated to preparing high school students for higher
-                    education through cutting-edge tools like Virtual Reality.
+                    	{t('projects.edf.content.introduction')}
                   </p>
                   <p className="leading-7 mt-4">
                     🛠️{" "}
-                    <span className=" font-semibold">Tech Stack Mastery: </span>
-                    This project was an incredible journey in modern web
-                    development, where I leveraged a robust tech stack:
+                    <span className=" font-semibold">{t('projects.edf.content.title1')} </span>
+                    {t('projects.edf.content.p1')}
                   </p>
                   <ul className="ml-6 list-disc [&>li]:mt-2">
                     <li>
                       <span className=" font-semibold">
                         React & Typescript{" "}
                       </span>
-                      for dynamic and efficient frontend development.
+                      {t('projects.edf.content.item1description')}
                     </li>
                     <li>
-                      <span className=" font-semibold">TailwindCSS </span>for
-                      sleek, responsive design.
+                      <span className=" font-semibold">TailwindCSS </span>{t('projects.edf.content.item2description')}
+
                     </li>
                     <li>
                       <span className=" font-semibold">Next.js 14 </span>
-                      framework & Vercel for optimal performance and seamless
-                      deployment.
+                      {t('projects.edf.content.item3description')}
                     </li>
                     <li>
-                      <span className=" font-semibold">Shadcn, </span>a
-                      versatile collection of React components based on Radix
-                      primitives for enhanced UI/UX.
+                      <span className=" font-semibold">Shadcn, </span>{t('projects.edf.content.item4description')}
                     </li>
                     <li>
                       <span className=" font-semibold">Prisma & MySQL </span>
-                      for robust database management.
+                      {t('projects.edf.content.item5description')}
                     </li>
                     <li>
                       <span className=" font-semibold">
                         Google Cloud Platform (GCP){" "}
                       </span>
-                      for reliable storage of images and videos.
+                      {t('projects.edf.content.item6description')}
                     </li>
                   </ul>
                   <h4 className="scroll-m-20 text-xl font-semibold tracking-tight mt-4">
-                    🔍 From Concept to Reality:
+                    🔍 {t('projects.edf.content.title2')}
                   </h4>
                   <p className="leading-7 mt-2">
-                    My role spanned the entire development lifecycle - from
-                    initial meetings with EDF Academy&apos;s founders to
-                    understand their vision, through to deploying and
-                    integrating new features tailored to the academy&apos;s
-                    evolving needs.
+                  {t('projects.edf.content.p2')}
                   </p>
                   <h4 className="scroll-m-20 text-xl font-semibold tracking-tight mt-4">
-                    🌐 Creating Impact:
+                    🌐 {t('projects.edf.content.title3')}
                   </h4>
 
                   <p className="leading-7 mt-2">
-                    This website is more than just a project; it&apos;s a
-                    gateway for students to access innovative educational tools.
-                    It represents a fusion of technology and education, paving
-                    the way for future learning experiences.
+                  {t('projects.edf.content.p3')}
                   </p>
 
                   <DialogFooter className="mt-4">
@@ -166,12 +158,12 @@ export default function ProjectsSection() {
                       href="https://github.com/carlosandresat/educacion-del-futuro-web"
                       target="_blank"
                     >
-                        View code</a>
+                        {t('viewCodeButton')}</a>
                       </Button>
                     
                     <DialogClose>
                       <Button variant="secondary" className="w-full">
-                        Back
+                      {t('backButton')}
                       </Button>
                     </DialogClose>
                   </DialogFooter>
@@ -210,13 +202,13 @@ export default function ProjectsSection() {
           <CardFooter className="flex flex-row justify-between gap-4">
             <a href="https://tuto-u.vercel.app/" target="_blank">
               <Button variant="link" className="hover:text-green-500">
-                View live
+              {t('liveButtonText')}
               </Button>
             </a>
             <Dialog>
               <DialogTrigger asChild>
                 <Button variant="default" className="hover:bg-green-500">
-                  More info...
+                {t('infoButtonText')}
                 </Button>
               </DialogTrigger>
 
@@ -359,7 +351,7 @@ export default function ProjectsSection() {
             <Dialog>
               <DialogTrigger asChild>
                 <Button variant="default" className="hover:bg-green-500">
-                  More info...
+                {t('infoButtonText')}
                 </Button>
               </DialogTrigger>
 
@@ -513,7 +505,7 @@ export default function ProjectsSection() {
             <Dialog>
               <DialogTrigger asChild>
                 <Button variant="default" className="hover:bg-green-500">
-                  More info...
+                {t('infoButtonText')}
                 </Button>
               </DialogTrigger>
 

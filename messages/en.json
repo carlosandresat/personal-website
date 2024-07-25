@@ -1,15 +1,75 @@
 {
-    "HomePage": {
-      "title": "Hi, I'm",
-      "description1": "+3 years of experience as ",
-      "description2": "Software Developer",
-      "description3": ". +500 ",
-      "description4": "GitHub contributions",
-      "description5": " last year. Passion for creating innovative solutions with cutting-edge technologies. As a freelancer, I have successfully delivered front-end and full-stack projects, consistently meeting clients' requirements and deadlines. Staying abreast of the latest technology trends ensures that my skills remain updated. Eager to contribute to impactful projects and collaborate with dynamic teams. I look forward to connecting and exploring how we can create something exceptional together. Let's start!"            
-    },
-    "Navbar": {
-      "home": "Home",
-      "developing": "Developing",
-      "courses": "Courses"
+  "HomePage": {
+    "title": "Hi, I'm",
+    "description1": "+3 years of experience as ",
+    "description2": "Software Developer",
+    "description3": ". +500 ",
+    "description4": "GitHub contributions",
+    "description5": " last year. Passion for creating innovative solutions with cutting-edge technologies. As a freelancer, I have successfully delivered front-end and full-stack projects, consistently meeting clients' requirements and deadlines. Staying abreast of the latest technology trends ensures that my skills remain updated. Eager to contribute to impactful projects and collaborate with dynamic teams. I look forward to connecting and exploring how we can create something exceptional together. Let's start!"
+  },
+  "Navbar": {
+    "home": "Home",
+    "developing": "Developing",
+    "courses": "Courses"
+  },
+  "Projects": {
+    "title": "My Projects",
+    "infoButtonText": "More info...",
+    "liveButtonText": "View live",
+    "backButton": "Back",
+    "viewCodeButton": "View code",
+    "projects": {
+      "edf": {
+        "description": "",
+        "content": {
+          "introduction": "A web platform for EDF Academy, an innovative institution dedicated to preparing high school students for higher education through cutting-edge tools like Virtual Reality.",
+          "title1": "Tech Stack Mastery:",
+          "p1": "This project was an incredible journey in modern web development, where I leveraged a robust tech stack:",
+          "item1description": "for dynamic and efficient frontend development.",
+          "item2description": "for sleek, responsive design.",
+          "item3description": "framework & Vercel for optimal performance and seamless deployment.",
+          "item4description": "a versatile collection of React components based on Radix primitives for enhanced UI/UX.",
+          "item5description": "for robust database management.",
+          "item6description": "for reliable storage of images and videos.",
+          "title2": "From Concept to Reality:",
+          "p2": "My role spanned the entire development lifecycle - from initial meetings with EDF Academy's founders to understand their vision, through to deploying and integrating new features tailored to the academy's evolving needs.",
+          "title3": "Creating Impact:",
+          "p3": "This website is more than just a project; it's a gateway for students to access innovative educational tools. It represents a fusion of technology and education, paving the way for future learning experiences."
+        }
+      },
+      "tutou": {
+        "description": "Peer Tutoring Platform",
+        "content": ""
+      },
+      "orientayt": {
+        "description": "Old Peer Tutoring Platform",
+        "content": ""
+      },
+      "kidneyapp": {
+        "description": "Dialysis Sessions Control",
+        "content": ""
+      }
     }
-  }
+  },
+  "TechStack": {
+    "title": "Tech Stack",
+    "tier1": "Main Stack",
+    "tier1description": "Essencial technologies in my current projects", 
+    "tier2": "Secondary Techs",
+    "tier2description": "Tecnologies learned and used in the past",
+    "tier3": "Interesting Techs",
+    "tier3description": "Technologies that I have interest in learning in the future"
+  },
+  "Services": {
+  "title": "My Services",
+  "learnButtonText": "Learn more",
+  "service1": "Personalized Tutoring",
+  "service1description": "I offer personalized tutoring sessions in various areas of computational sciences or mathematics, tailored to your specific needs. From topics for children to university students, I ensure directed and effective learning for each student.",
+  "service2": "Courses",
+  "service2description": "I teach programming courses in front-end, back-end, and full-stack technologies, among other areas. These courses are designed for you to gain solid foundations and practical skills through projects that demonstrate your learning. Certificate included.",
+  "service3": "Custom Web Application Development",
+  "service3description": "As an experienced developer, I offer design and development services for web applications. From conceptualization to launch, I handle all technical aspects to create robust and efficient applications.",
+  "service4": "Database Development and Management",
+  "service4description": "Specializing in database design and management, I offer solutions that ensure data integrity, performance, and scalability. Perfect for businesses requiring advanced data storage and real-time analysis."
+}
+}
