@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import Navbar from "@/components/navbar";
 
 export default function Header() {
   return (
@@ -12,27 +13,7 @@ export default function Header() {
           width="42"
         />
       </Link>
-      <nav className="ml-auto flex gap-4 sm:gap-6">
-      <Link
-          className="text-sm font-medium hover:underline underline-offset-4"
-          href="/"
-        >
-          Home
-        </Link>
-        <Link
-          className="text-sm font-medium hover:underline underline-offset-4"
-          href="/developing"
-        >
-          Developing
-        </Link>
-        <Link
-          className="text-sm font-medium hover:underline underline-offset-4"
-          href="/courses"
-        >
-          Courses
-        </Link>
-        
-      </nav>
+      <Navbar />
     </header>
   );
 }

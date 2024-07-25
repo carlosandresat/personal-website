@@ -6,5 +6,10 @@
       "description3": ". +500 ",
       "description4": "GitHub contributions",
       "description5": " last year. Passion for creating innovative solutions with cutting-edge technologies. As a freelancer, I have successfully delivered front-end and full-stack projects, consistently meeting clients' requirements and deadlines. Staying abreast of the latest technology trends ensures that my skills remain updated. Eager to contribute to impactful projects and collaborate with dynamic teams. I look forward to connecting and exploring how we can create something exceptional together. Let's start!"            
+    },
+    "Navbar": {
+      "home": "Home",
+      "developing": "Developing",
+      "courses": "Courses"
     }
   }
