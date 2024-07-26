@@ -6,6 +6,8 @@ import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
 import "../globals.css";
 import { Analytics } from "@vercel/analytics/react";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 const inter = Chakra_Petch({ subsets: ["latin"], weight: "500" });
 
@@ -64,7 +66,10 @@ export default async function LocaleLayout({
           disableTransitionOnChange
         >
           <NextIntlClientProvider messages={messages}>
+          <Header />
             {children}
+            <Footer />
+
           </NextIntlClientProvider>
           <Analytics />
         </ThemeProvider>

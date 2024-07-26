@@ -9,16 +9,12 @@ import Footer from "@/components/footer";
 export default function HomePage() {
   const t = useTranslations('HomePage');
   return (
-    <>
-      <Header />
       <main className="flex min-h-screen flex-col items-center">
         <HomeSection />
         <ProjectsSection />
         <TechStackSection />
         <ServicesSection />
       </main>
-      <Footer />
-    </>
   );
 }
 

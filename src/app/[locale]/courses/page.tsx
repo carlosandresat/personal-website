@@ -13,8 +13,6 @@ import { Button } from "@/components/ui/button";
 
 export default function Courses() {
   return (
-    <>
-      <Header />
       <main className="flex min-h-screen flex-col items-center">
         <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl pt-24 lg:pt-32">
           Mis Cursos
@@ -94,7 +92,5 @@ export default function Courses() {
           </Card>
         </div>
       </main>
-      <Footer />
-    </>
   );
 }
