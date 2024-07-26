@@ -39,15 +39,50 @@
       },
       "tutou": {
         "description": "Peer Tutoring Platform",
-        "content": ""
+        "content": {
+          "introduction": "Tuto-U has successfully transitioned from its developmental phase into a fully operational peer-tutoring web platform, revolutionizing the way students at Yachay Tech engage in collaborative learning. Here’s an overview of its evolving features and achievements:",
+          "item1": "Peer-Tutoring Platform:",
+          "item1desc": "Tuto-U has established a dynamic community where students connect for tutoring sessions, facilitating knowledge sharing and collaborative learning. This environment empowers students by allowing them to both teach and learn, enriching their educational experience.",
+          "item2": "Empowered Student Tutors:",
+          "item2desc": "In keeping with its founding principles, Tuto-U continues to enable students to serve as tutors. This peer-to-peer learning model not only enhances academic understanding but also builds leadership and teaching skills among students.",
+          "item3": "Advanced Technology Stack:",
+          "item3desc": "Utilizing modern technologies like React, TypeScript, and Next.js, Tuto-U offers a robust, scalable, and intuitive user experience. The platform prioritizes accessibility and ease of navigation, making it inclusive for all users.",
+          "item4": "Impact and Recognition:",
+          "item4desc": "Beyond its functional achievements, Tuto-U has gained recognition for its social impact, notably participating in the Hult Prize competition. The platform aims to tackle educational disparities and foster a local community of learners and educators.",
+          "item5": "Expanding Learning Connections:",
+          "item5desc": "Tuto-U’s vision extends towards cultivating a expansive connection network inside the Yachay Tech's learning community. It aims to create opportunities for shared growth and development across interdisciplinary connections.",
+          "item6": "Status Update:",
+          "item6desc": "Tuto-U is actively expanding, continuously integrating new features and enhancements to improve user engagement and educational outcomes.",
+          "p2": "This evolution from OrientaYT to Tuto-U marks a significant milestone in my mission to transform educational interactions and build a more connected, educated world."
+        }
       },
       "orientayt": {
         "description": "Old Peer Tutoring Platform",
-        "content": ""
+        "content": {
+          "introduction": "OrientaYT created an educational ecosystem all about mutual support. It was a peer tutoring platform designed for students, by students. Its mission was to provide Yachay Tech students with an online community where they could find personalized academic help and collaborate in their educational development.",
+          "title1": "How it Worked:",
+          "p1": "OrientaYT was easy to use. If a student needed assistance, they simply logged in to the platform and searched for available tutors. They could explore tutor profiles, view their areas of expertise, and check their availability schedules. Then, they selected a tutor that suited their needs and scheduled a tutoring session.",
+          "p2": "If a student was looking to share their knowledge, they could join the team of volunteer tutors. By becoming a tutor, they had the opportunity to help their peers, build their expertise, and earn achievements for their contribution.",
+          "title2": "Screenshots:",
+          "title3": "Creating Impact:",
+          "p3": "In summary, OrientaYT was an online learning companion, where the community came together to help each other achieve academic success. It was an exciting educational journey. Welcome to the legacy of OrientaYT!"
+        }
       },
       "kidneyapp": {
         "description": "Dialysis Sessions Control",
-        "content": ""
+        "content": {
+          "introduction": "Kidney app is a web application that allows the control of dialysis sessions for patients with kidney failure. It was developed for a Nephrology Department of a hospital. The main features are:",
+          "item1": "Patient Registration:",
+          "item1desc": "The app allows the registration of patients with their personal information and medical history.",
+          "item2": "Dialysis Sessions Control:",
+          "item2desc": "The app allows the registration of dialysis sessions for each patient, including the date, time, clinical parameters, and additional symptoms.",
+          "item3": "Charts:",
+          "item3desc": "The app allows the visualization of charts with data of the dialysis sessions for each patient in a timeline with clinical parameters.",
+          "item4": "Technology Stack:",
+          "item4desc": "The platform is built using cutting-edge technologies like React, TypeScript, and Next.js. This ensures a robust, scalable, and user-friendly application. Focus on user experience and accessibility is paramount, making the app inclusive and easy to navigate.",
+          "p1": "Obviously this is dummy data, respecting the patient's privacy. The retrieved data is stored in a local SQLite database so it can be used in future for analysis and research purposes by the Nephrology Department using Artificial Intelligence and Machine Learning algorithms to improve the quality of life of patients with kidney failure and to prevent a fully kidney failure.",
+          "p2": "Anyways, I upload a functional version of the app in GitHub, so you can check it out and play with it. I hope you like it"
+        }
       }
     }
   },

@@ -185,7 +185,7 @@ export default function ProjectsSection() {
             <div className="grid gap-1">
               <CardTitle>Tuto-U</CardTitle>
               <CardDescription className="text-green-500">
-                Peer Tutoring Platform
+              {t('projects.tutou.description')}
               </CardDescription>
             </div>
           </CardHeader>
@@ -215,7 +215,7 @@ export default function ProjectsSection() {
               <DialogContent className="sm:max-w-[525px] md:max-w-2xl xl:max-w-3xl max-h-full">
                 <DialogHeader>
                   <DialogTitle>Tuto-U</DialogTitle>
-                  <DialogDescription>Peer Tutoring Platform</DialogDescription>
+                  <DialogDescription>{t('projects.tutou.description')}</DialogDescription>
                 </DialogHeader>
                 <ScrollArea className=" h-[200px] hsm:h-[300px] hmd:h-[500px] hxl:h-[700px] px-2">
                   <div className="w-full flex justify-center">
@@ -231,66 +231,45 @@ export default function ProjectsSection() {
                   </div>
 
                   <p className="leading-7 mt-8">
-                    Tuto-U is the evolution of OrientaYT currently in
-                    development, an innovative peer-tutoring web application
-                    designed to revolutionize the way students learn and
-                    interact. Here&apos;s a breakdown of its key features and
-                    goals:
+                    {t("projects.tutou.content.introduction")}
                   </p>
                   <ul className="ml-6 list-disc [&>li]:mt-2">
                     <li>
                       <span className=" font-semibold">
-                        Peer-Tutoring Platform:{" "}
+                      {t("projects.tutou.content.item1")}{" "}
                       </span>
-                      At its core, Tuto-U is a platform where students can
-                      connect with their peers for tutoring purposes. It creates
-                      a community where knowledge is shared, promoting
-                      collaborative learning.
+                      {t("projects.tutou.content.item1desc")}
                     </li>
                     <li>
                       <span className=" font-semibold">
-                        Institution and Student Registration:{" "}
+                      {t("projects.tutou.content.item2")}{" "}
                       </span>
-                      Educational institutions and students can register on the
-                      platform. This ensures a broad and diverse user base,
-                      providing a rich learning environment.
+                      {t("projects.tutou.content.item2desc")}
                     </li>
                     <li>
-                      <span className=" font-semibold">Student Tutors: </span>A
-                      unique aspect of Tuto-U is that students themselves act as
-                      tutors. This not only facilitates peer-to-peer learning
-                      but also empowers students by giving them the opportunity
-                      to teach and reinforce their own understanding.
+                      <span className=" font-semibold">{t("projects.tutou.content.item3")} </span>{t("projects.tutou.content.item3desc")}
                     </li>
                     <li>
-                      <span className=" font-semibold">Technology Stack: </span>
-                      The platform is built using cutting-edge technologies like
-                      React, TypeScript, and Next.js. This ensures a robust,
-                      scalable, and user-friendly application. Focus on user
-                      experience and accessibility is paramount, making the app
-                      inclusive and easy to navigate.
+                      <span className=" font-semibold">{t("projects.tutou.content.item4")} </span>
+                      {t("projects.tutou.content.item4desc")}
                     </li>
                     <li>
                       <span className=" font-semibold">
-                        Hult Prize Competition:{" "}
+                      {t("projects.tutou.content.item5")}{" "}
                       </span>
-                      Tuto-U is not just a business venture but also a
-                      participant in the Hult Prize competition, aiming to
-                      address pressing social issues through entrepreneurship.
+                      {t("projects.tutou.content.item5desc")}
                     </li>
                     <li>
                       <span className=" font-semibold">
-                        Collaborative Learning Communities:
+                      {t("projects.tutou.content.item6")}{" "}
                       </span>
-                      The ultimate goal of Tuto-U is to foster communities of
-                      learners and educators, breaking down barriers and
-                      creating a more connected and educated world.
+                      {t("projects.tutou.content.item6desc")}
                     </li>
                   </ul>
 
-                  <h4 className="scroll-m-20 text-xl font-semibold tracking-tight mt-4 text-center">
-                    ⚙️ Currently in Development
-                  </h4>
+                  <p className="leading-7 mt-4">
+                    {t("projects.tutou.content.p2")}
+                  </p>
 
                   <DialogFooter className="mt-4">
                     
@@ -298,12 +277,12 @@ export default function ProjectsSection() {
                       href="https://github.com/carlosandresat/tuto-u"
                       target="_blank"
                     >
-                        View code</a>
+                        {t('viewCodeButton')}</a>
                       </Button>
                     
                     <DialogClose>
                       <Button variant="secondary" className="w-full">
-                        Back
+                        {t('backButton')}
                       </Button>
                     </DialogClose>
                   </DialogFooter>
@@ -316,14 +295,14 @@ export default function ProjectsSection() {
           <CardHeader className="flex flex-row items-center gap-4">
             <div className="w-12 h-12 rounded-full border border-muted bg-secondary">
               <Image
-                alt="EDF Academy"
+                alt="OrientaYT logo"
                 src="/logoTutoYT.png"
                 width={52}
                 height={52}
                 className="hidden dark:block p-1"
               />
               <Image
-                alt="EDF Academy"
+                alt="OrientaYT logo"
                 src="/logoTutoYTwhite.png"
                 width={52}
                 height={52}
@@ -333,7 +312,7 @@ export default function ProjectsSection() {
             <div className="grid gap-1">
               <CardTitle>OrientaYT</CardTitle>
               <CardDescription className="text-green-500">
-                Old Peer Tutoring Platform
+                {t("projects.orientayt.description")}
               </CardDescription>
             </div>
           </CardHeader>
@@ -358,7 +337,7 @@ export default function ProjectsSection() {
               <DialogContent className="sm:max-w-[525px] md:max-w-2xl xl:max-w-5xl max-h-full">
                 <DialogHeader>
                   <DialogTitle>OrientaYT</DialogTitle>
-                  <DialogDescription>Peer Tutoring Platform</DialogDescription>
+                  <DialogDescription> {t("projects.orientayt.description")}</DialogDescription>
                 </DialogHeader>
                 <ScrollArea className=" h-[200px] hsm:h-[300px] hmd:h-[500px] hxl:h-[700px] px-2">
                   <div className="w-full flex justify-center">
@@ -381,32 +360,17 @@ export default function ProjectsSection() {
                   </div>
 
                   <p className="leading-7 mt-4">
-                    OrientaYT created an educational ecosystem all about mutual
-                    support. It was a peer tutoring platform designed for
-                    students, by students. Its mission was to provide Yachay
-                    Tech students with an online community where they could find
-                    personalized academic help and collaborate in their
-                    educational development.
+                  {t("projects.orientayt.content.introduction")}
                   </p>
                   <h4 className="scroll-m-20 text-xl font-semibold tracking-tight mt-4">
-                    ⚙️ How it Worked:
+                    ⚙️ {t("projects.orientayt.content.title1")}
                   </h4>
 
                   <p className="leading-7 mt-4">
-                    OrientaYT was easy to use. If a student needed assistance,
-                    they simply logged in to the platform and searched for
-                    available tutors. They could explore tutor profiles, view
-                    their areas of expertise, and check their availability
-                    schedules. Then, they selected a tutor that suited their
-                    needs and scheduled a tutoring session.
+                  {t("projects.orientayt.content.p1")}
                   </p>
                   <p className="leading-7 mt-4">
-                    If a student was looking to share their knowledge, they
-                    could join the team of volunteer tutors. By becoming a
-                    tutor, they had the opportunity to help their peers, build
-                    their expertise, and earn achievements for their
-                    contribution.
-                  </p>
+                  {t("projects.orientayt.content.p2")}                  </p>
                   <h4 className="scroll-m-20 text-xl font-semibold tracking-tight mt-4">
                     ✨ Screenshots:
                   </h4>
@@ -463,16 +427,12 @@ export default function ProjectsSection() {
                   </div>
 
                   <p className="leading-7 mt-2">
-                    In summary, OrientaYT was an online learning companion,
-                    where the community came together to help each other achieve
-                    academic success. It was an exciting educational journey.
-                    Welcome to the legacy of OrientaYT! 📚🚀
-                  </p>
+                  {t("projects.orientayt.content.p3")}                  </p>
 
                   <DialogFooter className="mt-4">
                     <DialogClose>
                       <Button variant="secondary" >
-                        Back
+                        {t('backButton')}
                       </Button>
                     </DialogClose>
                   </DialogFooter>
@@ -487,7 +447,7 @@ export default function ProjectsSection() {
             <div className="grid gap-1">
               <CardTitle>Kidney App</CardTitle>
               <CardDescription className="text-green-500">
-                Dialysis Sessions Control
+                {t('projects.kidneyapp.description')}
               </CardDescription>
             </div>
           </CardHeader>
@@ -513,7 +473,7 @@ export default function ProjectsSection() {
                 <DialogHeader>
                   <DialogTitle>Kidney App</DialogTitle>
                   <DialogDescription>
-                    Dialysis Sessions Control
+                  {t('projects.kidneyapp.description')}
                   </DialogDescription>
                 </DialogHeader>
                 <ScrollArea className=" h-[200px] hsm:h-[300px] hmd:h-[500px] hxl:h-[700px] px-2">
@@ -524,40 +484,29 @@ export default function ProjectsSection() {
                   </div>
 
                   <p className="leading-7 mt-4">
-                    Kidney app is a web application that allows the control of
-                    dialysis sessions for patients with kidney failure. It was
-                    developed for a Nephrology Department of a hospital. The
-                    main features are:
+                  {t('projects.kidneyapp.content.introduction')}
                   </p>
                   <ul className="ml-6 list-disc [&>li]:mt-2">
                     <li>
                       <span className=" font-semibold">
-                        Patient Registration:{" "}
+                      {t('projects.kidneyapp.content.item1')}
+                      {" "}
                       </span>
-                      The app allows the registration of patients with their
-                      personal information and medical history.
+                      {t('projects.kidneyapp.content.item1desc')}
                     </li>
                     <li>
-                      <span className=" font-semibold">
-                        Dialysis Sessions Control:{" "}
+                      <span className="font-semibold">
+                      {t('projects.kidneyapp.content.item2')}{" "}
                       </span>
-                      The app allows the registration of dialysis sessions for
-                      each patient, including the date, time, clinical
-                      parameters, and additional symptoms.
+                      {t('projects.kidneyapp.content.item2desc')}
                     </li>
                     <li>
-                      <span className=" font-semibold">Charts: </span>
-                      The app allows the visualization of charts with data of
-                      the dialysis sessions for each patient in a timeline with
-                      clinical parameters.
+                      <span className=" font-semibold">{t('projects.kidneyapp.content.item3')} </span>
+                      {t('projects.kidneyapp.content.item3desc')}
                     </li>
                     <li>
-                      <span className=" font-semibold">Technology Stack: </span>
-                      The platform is built using cutting-edge technologies like
-                      React, TypeScript, and Next.js. This ensures a robust,
-                      scalable, and user-friendly application. Focus on user
-                      experience and accessibility is paramount, making the app
-                      inclusive and easy to navigate.
+                      <span className=" font-semibold">{t('projects.kidneyapp.content.item4')} </span>
+                      {t('projects.kidneyapp.content.item4desc')}
                     </li>
                   </ul>
                   <h4 className="scroll-m-20 text-xl font-semibold tracking-tight mt-4">
@@ -602,18 +551,10 @@ export default function ProjectsSection() {
                   </div>
 
                   <p className="leading-7 mt-2">
-                    Obviously this is dummy data, respecting the patient&apos;s
-                    privacy. The retrieved data is stored in a local SQLite
-                    database so it can be used in future for analysis and
-                    research purposes by the Nephrology Department using
-                    Artificial Intelligence and Machine Learning algorithms to
-                    improve the quality of life of patients with kidney failure
-                    and to prevent a fully kidney failure.
+                  {t('projects.kidneyapp.content.p1')}
                   </p>
                   <p className="leading-7 mt-2">
-                    Anyways, I upload a functional version of the app in GitHub,
-                    so you can check it out and play with it. I hope you like
-                    it!
+                  {t('projects.kidneyapp.content.p2')}
                   </p>
 
                   <DialogFooter className="mt-4">
@@ -622,11 +563,11 @@ export default function ProjectsSection() {
                         href="https://github.com/carlosandresat/kidney-app"
                         target="_blank"
                       >
-                        View code
+                        {t('viewCodeButton')}
                       </a>
                     </Button>
                     <DialogClose>
-                      <Button variant="secondary" className="w-full">Back</Button>
+                      <Button variant="secondary" className="w-full">{t('backButton')}</Button>
                     </DialogClose>
                   </DialogFooter>
                 </ScrollArea>

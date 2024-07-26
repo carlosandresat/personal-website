@@ -39,15 +39,48 @@
       },
       "tutou": {
         "description": "Plataforma de Tutorías",
-        "content": ""
+        "content": {
+          "introduction": "Tuto-U ha completado exitosamente la transición de su fase de desarrollo a una plataforma web de tutoría entre pares totalmente operativa, revolucionando la forma en que los estudiantes de Yachay Tech participan en el aprendizaje colaborativo. Aquí tienes una visión general de sus características en evolución y logros:",
+          "item1": "Plataforma de Tutoría entre Pares:",
+          "item1desc": "Tuto-U ha establecido una comunidad dinámica donde los estudiantes se conectan para sesiones de tutoría, facilitando el intercambio de conocimientos y el aprendizaje colaborativo. Este ambiente empodera a los estudiantes permitiéndoles tanto enseñar como aprender, enriqueciendo su experiencia educativa.",
+          "item2": "Estudiantes Tutores Empoderados:",
+          "item2desc": "Siguiendo sus principios fundacionales, Tuto-U continúa permitiendo que los estudiantes sirvan como tutores. Este modelo de aprendizaje de pares no solo mejora la comprensión académica sino que también desarrolla habilidades de liderazgo y enseñanza entre los estudiantes.",
+          "item3": "Tecnología Avanzada:",
+          "item3desc": "Utilizando tecnologías modernas como React, TypeScript y Next.js, Tuto-U ofrece una experiencia de usuario robusta, escalable e intuitiva. La plataforma prioriza la accesibilidad y facilidad de navegación, haciéndola inclusiva para todos los usuarios.",
+          "item4": "Impacto y Reconocimiento:",
+          "item4desc": "Más allá de sus logros funcionales, Tuto-U ha ganado reconocimiento por su impacto social, participando notablemente en la competencia del Hult Prize. La plataforma busca abordar las disparidades educativas y fomentar una comunidad local de aprendices y educadores.",
+          "item5": "Expandiendo Conexiones de Aprendizaje:",
+          "item5desc": "La visión de Tuto-U se extiende hacia el cultivo de una red de conexiones expansiva dentro de la comunidad de aprendizaje de Yachay Tech. Aspira a crear oportunidades para el crecimiento compartido y el desarrollo a través de conexiones interdisciplinarias.",
+          "item6": "Actualización de Estado:",
+          "item6desc": "Tuto-U está en expansión activa, integrando continuamente nuevas características y mejoras para aumentar el compromiso de los usuarios y los resultados educativos.",
+          "p2": "Esta evolución de OrientaYT a Tuto-U marca un hito significativo en nuestra misión de transformar las interacciones educativas y construir un mundo más conectado y educado."
+        }
       },
       "orientayt": {
         "description": "Plataforma de Tutorías (versión antigua)",
-        "content": ""
+        "content": {
+          "introduction": "OrientaYT creó un ecosistema educativo basado en el apoyo mutuo. Era una plataforma de tutoría entre pares diseñada por estudiantes para estudiantes. Su misión era proporcionar a los estudiantes de Yachay Tech una comunidad en línea donde pudieran encontrar ayuda académica personalizada y colaborar en su desarrollo educativo.",
+          "title1": "Cómo Funcionaba:",
+          "p1": "OrientaYT era fácil de usar. Si un estudiante necesitaba asistencia, simplemente se registraba en la plataforma y buscaba tutores disponibles. Podían explorar los perfiles de los tutores, ver sus áreas de especialización y consultar sus horarios disponibles. Luego, seleccionaban a un tutor que se adaptara a sus necesidades y programaban una sesión de tutoría.",
+          "p2": "Si un estudiante quería compartir su conocimiento, podía unirse al equipo de tutores voluntarios. Al convertirse en tutor, tenían la oportunidad de ayudar a sus compañeros, desarrollar su experiencia y obtener logros por su contribución.",
+          "p3": "En resumen, OrientaYT fue un compañero de aprendizaje en línea, donde la comunidad se unía para ayudarse mutuamente a alcanzar el éxito académico. Fue un emocionante viaje educativo. ¡Bienvenidos al legado de OrientaYT!"
+        }
       },
       "kidneyapp": {
         "description": "Control de Sesiones de Diálisis",
-        "content": ""
+        "content": {
+          "introduction": "Kidney app es una aplicación web que permite el control de sesiones de diálisis para pacientes con insuficiencia renal. Fue desarrollada para el Departamento de Nefrología de un hospital. Las principales características son:",
+          "item1": "Registro de Pacientes:",
+          "item1desc": "La aplicación permite el registro de pacientes con su información personal e historial médico.",
+          "item2": "Control de Sesiones de Diálisis:",
+          "item2desc": "La aplicación permite el registro de sesiones de diálisis para cada paciente, incluyendo la fecha, hora, parámetros clínicos y síntomas adicionales.",
+          "item3": "Gráficos:",
+          "item3desc": "La aplicación permite la visualización de gráficos con datos de las sesiones de diálisis de cada paciente en una línea de tiempo con parámetros clínicos.",
+          "item4": "Tecnología Utilizada:",
+          "item4desc": "La plataforma está construida usando tecnologías de punta como React, TypeScript y Next.js. Esto asegura una aplicación robusta, escalable y amigable para el usuario. El enfoque en la experiencia del usuario y la accesibilidad es primordial, haciendo que la aplicación sea inclusiva y fácil de navegar.",
+          "p1": "Obviamente estos son datos ficticios, respetando la privacidad del paciente. Los datos recuperados se almacenan en una base de datos SQLite local para que puedan ser utilizados en el futuro para análisis e investigación por el Departamento de Nefrología utilizando algoritmos de Inteligencia Artificial y Aprendizaje Automático para mejorar la calidad de vida de los pacientes con insuficiencia renal y para prevenir una insuficiencia renal completa.",
+          "p2": "De todos modos, subí una versión funcional de la aplicación en GitHub, para que puedas revisarla y experimentar con ella. Espero que te guste"
+        }        
       }
     }
   },
