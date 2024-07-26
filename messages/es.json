@@ -104,5 +104,9 @@
     "service3description": "Como desarrollador experimentado, ofrezco servicios de diseño y desarrollo de aplicaciones web. Desde la conceptualización hasta el lanzamiento, manejo todos los aspectos técnicos para crear aplicaciones robustas y eficientes.",
     "service4": "Desarrollo y Gestión de Bases de Datos",
     "service4description": "Especializado en el diseño y manejo de bases de datos, ofrezco soluciones que garantizan la integridad, el rendimiento y la escalabilidad de los datos. Perfecto para negocios que requieren almacenamiento de datos avanzado y análisis en tiempo real."
+  },
+  "Developing": {
+    "title": "Desarrollo de Aplicaciones Web",
+    "message": "Próximamente"
   }
 }

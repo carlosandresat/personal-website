@@ -89,22 +89,26 @@
   "TechStack": {
     "title": "Tech Stack",
     "tier1": "Main Stack",
-    "tier1description": "Essencial technologies in my current projects", 
+    "tier1description": "Essencial technologies in my current projects",
     "tier2": "Secondary Techs",
     "tier2description": "Tecnologies learned and used in the past",
     "tier3": "Interesting Techs",
     "tier3description": "Technologies that I have interest in learning in the future"
   },
   "Services": {
-  "title": "My Services",
-  "learnButtonText": "Learn more",
-  "service1": "Personalized Tutoring",
-  "service1description": "I offer personalized tutoring sessions in various areas of computational sciences or mathematics, tailored to your specific needs. From topics for children to university students, I ensure directed and effective learning for each student.",
-  "service2": "Courses",
-  "service2description": "I teach programming courses in front-end, back-end, and full-stack technologies, among other areas. These courses are designed for you to gain solid foundations and practical skills through projects that demonstrate your learning. Certificate included.",
-  "service3": "Custom Web Application Development",
-  "service3description": "As an experienced developer, I offer design and development services for web applications. From conceptualization to launch, I handle all technical aspects to create robust and efficient applications.",
-  "service4": "Database Development and Management",
-  "service4description": "Specializing in database design and management, I offer solutions that ensure data integrity, performance, and scalability. Perfect for businesses requiring advanced data storage and real-time analysis."
-}
+    "title": "My Services",
+    "learnButtonText": "Learn more",
+    "service1": "Personalized Tutoring",
+    "service1description": "I offer personalized tutoring sessions in various areas of computational sciences or mathematics, tailored to your specific needs. From topics for children to university students, I ensure directed and effective learning for each student.",
+    "service2": "Courses",
+    "service2description": "I teach programming courses in front-end, back-end, and full-stack technologies, among other areas. These courses are designed for you to gain solid foundations and practical skills through projects that demonstrate your learning. Certificate included.",
+    "service3": "Custom Web Application Development",
+    "service3description": "As an experienced developer, I offer design and development services for web applications. From conceptualization to launch, I handle all technical aspects to create robust and efficient applications.",
+    "service4": "Database Development and Management",
+    "service4description": "Specializing in database design and management, I offer solutions that ensure data integrity, performance, and scalability. Perfect for businesses requiring advanced data storage and real-time analysis."
+  },
+  "Developing": {
+    "title": "Web Applications Development",
+    "message": "Coming Soon"
+  }
 }
