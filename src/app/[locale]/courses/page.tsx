@@ -10,6 +10,7 @@ import {
 import Footer from "@/components/footer";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function Courses() {
   return (
@@ -22,8 +23,8 @@ export default function Courses() {
             <div className="flex w-16 md:w-28 aspect-square justify-center items-center bg-secondary shadow rounded-xl md:ml-10 md:mr-4 shrink-0 object-cover p-2 ml-5">
               <Image
                 src="/Python.png"
-                height={60}
-                width={60}
+                height={200}
+                width={200}
                 alt="Python"
               ></Image>
             </div>
@@ -31,14 +32,14 @@ export default function Courses() {
               <CardHeader>
                 <CardTitle>Basic Programming with Python</CardTitle>
                 <CardDescription>
-                  6 clases prácticas + 1 proyecto final
+                  8 talleres + 1 proyecto final
                 </CardDescription>
               </CardHeader>
               <CardContent className="hidden md:block">
                 <p>This course introduces the fundamentals of programming using Python, one of the most popular and versatile programming languages. Participants will learn basic concepts such as variables, control structures, functions, and data types. By the end of the course, students will be able to write simple programs, solve problems algorithmically, and understand the core principles of coding. Ideal for beginners with no prior programming experience.</p>
               </CardContent>
               <CardFooter>
-                <Button>Ver más</Button>
+                <Button asChild><Link href="/courses/basics-python">Ver más</Link></Button>
               </CardFooter>
             </div>
           </Card>
