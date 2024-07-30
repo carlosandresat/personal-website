@@ -110,8 +110,8 @@ export default function BasicsPython() {
                 <p className="leading-4 text-center">assessments</p>
               </div>
             </div>
-            <div className="w-full flex justify-center border-t border-background grow aspect-[5/2] md:aspect-auto h-full">
-              <div className="w-1/3 flex flex-col items-center justify-center p-4 border-r border-background">
+            <div className="w-full flex justify-center border-t border-background grow  h-full">
+              <div className="w-1/3 flex flex-col items-center justify-center p-4 border-r border-background aspect-square md:aspect-auto">
                 <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
                   1
                 </h4>
