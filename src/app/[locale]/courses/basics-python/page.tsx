@@ -18,7 +18,7 @@ import {
 } from "@/components/ui/accordion";
 
 import { coursesData } from "@/data/python-basics";
-import { Lightbulb } from "lucide-react";
+import { Award, BookOpen, Lightbulb, MapPin, Timer } from "lucide-react";
 
 
 
@@ -41,8 +41,23 @@ export default function BasicsPython() {
             algorithmically, and understand the core principles of coding. Ideal
             for beginners with no prior programming experience.
           </p>
+          <div className="grid grid-cols-2 lg:grid-cols-4 mt-4 gap-2">
+            <div className="flex items-center gap-2">
+              <Timer /> <p>30 hours</p>
+            </div>
+            <div className="flex items-center gap-2">
+              <MapPin /> <p>Online</p>
+            </div>
+            <div className="flex items-center gap-2">
+              <BookOpen /> <p>Beginner</p>
+            </div>
+            <div className="flex items-center gap-2">
+              <Award /> <p>Includes certificate</p>
+            </div>
+
+          </div>
         </div>
-        <div className="w-64 shrink-0 bg-secondary mx-auto rounded-xl shadow-lg aspect-square flex items-center justify-center p-8">
+        <div className="w-40 md:w-64 shrink-0 bg-secondary mx-auto rounded-xl shadow-lg aspect-square flex items-center justify-center p-8">
           <Image
             src="/Python.png"
             height={500}
