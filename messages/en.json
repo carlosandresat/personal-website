@@ -108,9 +108,103 @@
     "service4description": "Specializing in database design and management, I offer solutions that ensure data integrity, performance, and scalability. Perfect for businesses requiring advanced data storage and real-time analysis."
   },
   "Courses": {
+    "title": "My Courses",
     "BasicsPython": {
       "title": "Basic Programming with Python",
-      "description": "This course introduces the fundamentals of programming using Python, one of the most popular and versatile programming languages. Participants will learn basic concepts such as variables, control structures, functions, and data types. By the end of the course, students will be able to write simple programs, solve problems algorithmically, and understand the core principles of coding. Ideal for beginners with no prior programming experience."
+      "description": "This course introduces the fundamentals of programming using Python, one of the most popular and versatile programming languages. Participants will learn basic concepts such as variables, control structures, functions, and data types. By the end of the course, students will be able to write simple programs, solve problems algorithmically, and understand the core principles of coding. Ideal for beginners with no prior programming experience.",
+      "time": "hours",
+      "place": "Live",
+      "difficulty": "Beginner",
+      "certificate": "Includes certificate",
+      "learningObjective": {
+        "title": "Learning Objectives",
+        "1": "Understand and implement basic programming concepts",
+        "2": "Write and debug Python programs",
+        "3": "Develop problem-solving skills through practical experiences",
+        "4": "Create robust and maintainable code"
+      },
+      "lectures": "lectures",
+      "workshops": "workshops",
+      "assessments": "assessments",
+      "project": "project",
+      "investment": "investment",
+      "prerequisites": "Prerequisites",
+      "req": {
+        "1": "None"
+      },
+      "content": "Content",
+      "lecture": "Lecture",
+      "workshop": "WorkShop",
+      "assessment": "Assessment",
+      "lecturesData": {
+        "1": "Introduction to Programming & Python",
+        "2": "Variables and Data Types",
+        "3": "Control structures: conditionals & loops",
+        "4": "Introduction to functions",
+        "5": "Lists",
+        "6": "Working with Strings",
+        "7": "Reading/Writting Files",
+        "8": "Error Handling"
+      },
+      "workshopsData": {
+        "1": "Writing Your First Python Program",
+        "2": "Working with Variables and Data Types",
+        "3": "Implementing Control Structures",
+        "4": "Creating and Using Functions",
+        "5": "Creating Arrays and Matrices",
+        "6": "Practical String Manipulation",
+        "7": "File Input and Output Operations",
+        "8": "Writing Robust Programs with Error Handling"
+      },
+      "finalProject": "Final Project",
+      "obtainCertificate": "Obtain Certificate"
+    },
+    "Scratch": {
+      "title": "Programming for kids with Scratch",
+      "description": "Designed for young learners, this course uses Scratch, a visual programming language that makes coding fun and interactive. Children will learn the basics of programming through creating their own games, animations, and interactive stories. This course encourages creativity, logical thinking, and problem-solving skills in an engaging and supportive environment. Perfect for kids aged 8-14.",
+      "time": "hours",
+      "place": "Live",
+      "difficulty": "Beginner",
+      "certificate": "Includes certificate",
+      "learningObjective": {
+        "title": "Learning Objectives",
+        "1": "Understand basic programming concepts using Scratch’s visual language",
+        "2": "Create interactive stories, games, and animations using Scratch",
+        "3": "Develop problem-solving skills by building projects",
+        "4": "Gain confidence in presenting and explaining coding projects"
+      },
+      "lectures": "lectures",
+      "workshops": "workshops",
+      "assessments": "assessments",
+      "project": "project",
+      "projects": "projects",
+      "investment": "investment",
+      "prerequisites": "Prerequisites",
+      "req": {
+        "1": "None"
+      },
+      "content": "Content",
+      "lecture": "Lecture",
+      "workshop": "WorkShop",
+      "assessment": "Assessment",
+      "lecturesData": {
+        "1": "Introduction to Scratch and the Scratch Interface",
+        "2": "Understanding Events and Controls",
+        "3": "Introduction to Variables and Loops",
+        "4": "Adding Sounds and Music to Projects",
+        "5": "Using Conditional Statements",
+        "6": "Introduction to Broadcasting and Cloning"
+      },
+      "workshopsData": {
+        "1": "Creating Your First Scratch Project: Make a Sprite Move",
+        "2": "Creating Interactive Animations with Events",
+        "3": "Building a Simple Game with Variables",
+        "4": "Creating a Music-based Game",
+        "5": "Creating a Choose-Your-Own-Adventure Story",
+        "6": "Building a Multiplayer Game"
+      },
+      "projectM": "Project",
+      "obtainCertificate": "Obtain Certificate"
     }
   },
   "Developing": {

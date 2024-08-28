@@ -80,7 +80,7 @@
           "item4desc": "La plataforma está construida usando tecnologías de punta como React, TypeScript y Next.js. Esto asegura una aplicación robusta, escalable y amigable para el usuario. El enfoque en la experiencia del usuario y la accesibilidad es primordial, haciendo que la aplicación sea inclusiva y fácil de navegar.",
           "p1": "Obviamente estos son datos ficticios, respetando la privacidad del paciente. Los datos recuperados se almacenan en una base de datos SQLite local para que puedan ser utilizados en el futuro para análisis e investigación por el Departamento de Nefrología utilizando algoritmos de Inteligencia Artificial y Aprendizaje Automático para mejorar la calidad de vida de los pacientes con insuficiencia renal y para prevenir una insuficiencia renal completa.",
           "p2": "De todos modos, subí una versión funcional de la aplicación en GitHub, para que puedas revisarla y experimentar con ella. Espero que te guste"
-        }        
+        }
       }
     }
   },
@@ -104,6 +104,106 @@
     "service3description": "Como desarrollador experimentado, ofrezco servicios de diseño y desarrollo de aplicaciones web. Desde la conceptualización hasta el lanzamiento, manejo todos los aspectos técnicos para crear aplicaciones robustas y eficientes.",
     "service4": "Desarrollo y Gestión de Bases de Datos",
     "service4description": "Especializado en el diseño y manejo de bases de datos, ofrezco soluciones que garantizan la integridad, el rendimiento y la escalabilidad de los datos. Perfecto para negocios que requieren almacenamiento de datos avanzado y análisis en tiempo real."
+  },
+  "Courses": {
+    "title": "Mis Cursos",
+    "BasicsPython": {
+      "title": "Programación Básica con Python",
+      "description": "Este curso introduce los fundamentos de la programación utilizando Python, uno de los lenguajes de programación más populares y versátiles. Los participantes aprenderán conceptos básicos como variables, estructuras de control, funciones y tipos de datos. Al final del curso, los estudiantes podrán escribir programas simples, resolver problemas de manera algorítmica y comprender los principios fundamentales de la codificación. Ideal para principiantes sin experiencia previa en programación.",
+      "time": "horas",
+      "place": "En vivo",
+      "difficulty": "Principiante",
+      "certificate": "Incluye certificado",
+      "learningObjective": {
+        "title": "Objetivos de Aprendizaje",
+        "1": "Comprender e implementar conceptos básicos de programación",
+        "2": "Escribir y depurar programas en Python",
+        "3": "Desarrollar habilidades para resolver problemas a través de experiencias prácticas",
+        "4": "Crear código robusto y mantenible"
+      },
+      "lectures": "clases",
+      "workshops": "talleres",
+      "assessments": "evaluaciones",
+      "project": "proyecto",
+      "investment": "inversión",
+      "prerequisites": "Requisitos Previos",
+      "req": {
+        "1": "Ninguno"
+      },
+      "content": "Contenido",
+      "lecture": "Clase",
+      "workshop": "Taller",
+      "assessment": "Evaluación",
+      "lecturesData": {
+        "1": "Introducción a la Programación y Python",
+        "2": "Variables y Tipos de Datos",
+        "3": "Estructuras de control: condicionales y bucles",
+        "4": "Introducción a las funciones",
+        "5": "Listas",
+        "6": "Trabajando con Cadenas de Texto",
+        "7": "Lectura/Escritura de Archivos",
+        "8": "Manejo de Errores"
+      },
+      "workshopsData": {
+        "1": "Escribiendo Tu Primer Programa en Python",
+        "2": "Trabajando con Variables y Tipos de Datos",
+        "3": "Implementación de Estructuras de Control",
+        "4": "Creación y Uso de Funciones",
+        "5": "Creación de Arreglos y Matrices",
+        "6": "Manipulación Práctica de Cadenas de Texto",
+        "7": "Operaciones de Entrada y Salida de Archivos",
+        "8": "Escribiendo Programas Robustos con Manejo de Errores"
+      },
+      "finalProject": "Proyecto Final",
+      "obtainCertificate": "Obtener Certificado"
+    },
+    "Scratch": {
+      "title": "Programación para niños con Scratch",
+      "description": "Diseñado para jóvenes aprendices, este curso utiliza Scratch, un lenguaje de programación visual que hace que la codificación sea divertida e interactiva. Los niños aprenderán los conceptos básicos de la programación creando sus propios juegos, animaciones e historias interactivas. Este curso fomenta la creatividad, el pensamiento lógico y las habilidades para resolver problemas en un entorno atractivo y de apoyo. Perfecto para niños de 8 a 14 años.",
+      "time": "horas",
+      "place": "En vivo",
+      "difficulty": "Principiante",
+      "certificate": "Incluye certificado",
+      "learningObjective": {
+        "title": "Objetivos de Aprendizaje",
+        "1": "Comprender los conceptos básicos de programación utilizando el lenguaje visual de Scratch",
+        "2": "Crear historias interactivas, juegos y animaciones usando Scratch",
+        "3": "Desarrollar habilidades para resolver problemas al construir proyectos",
+        "4": "Ganar confianza en la presentación y explicación de proyectos de codificación"
+      },
+      "lectures": "clases",
+      "workshops": "talleres",
+      "assessments": "evaluaciones",
+      "project": "proyecto",
+      "projects": "proyectos",
+      "investment": "inversión",
+      "prerequisites": "Requisitos previos",
+      "req": {
+        "1": "Ninguno"
+      },
+      "content": "Contenido",
+      "lecture": "Clase",
+      "workshop": "Taller",
+      "assessment": "Evaluación",
+      "lecturesData": {
+        "1": "Introducción a Scratch y la interfaz de Scratch",
+        "2": "Comprensión de Eventos y Controles",
+        "3": "Introducción a Variables y Bucles",
+        "4": "Añadiendo Sonidos y Música a Proyectos",
+        "5": "Uso de Declaraciones Condicionales",
+        "6": "Introducción a la Difusión y Clonación"
+      },
+      "workshopsData": {
+        "1": "Creación de tu Primer Proyecto en Scratch: Haz que un Sprite se Mueva",
+        "2": "Creación de Animaciones Interactivas con Eventos",
+        "3": "Construcción de un Juego Simple con Variables",
+        "4": "Creación de un Juego basado en Música",
+        "5": "Creación de una Historia de Aventuras con Elecciones",
+        "6": "Construcción de un Juego Multijugador"
+      },
+      "projectM": "Proyecto",
+      "obtainCertificate": "Obtener Certificado"
+    }
   },
   "Developing": {
     "title": "Desarrollo de Aplicaciones Web",
