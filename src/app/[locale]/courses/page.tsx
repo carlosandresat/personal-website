@@ -11,12 +11,14 @@ import Footer from "@/components/footer";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { useTranslations } from 'next-intl';
 
 export default function Courses() {
+  const t = useTranslations('Courses')
   return (
       <main className="flex min-h-screen flex-col items-center">
         <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl pt-24 lg:pt-32">
-          My Courses
+          {t('title')}
         </h1>
         <div className="flex flex-col w-full max-w-screen-lg space-y-6 p-8">
           <Card className="flex items-center h-full">
@@ -30,13 +32,13 @@ export default function Courses() {
             </div>
             <div>
               <CardHeader>
-                <CardTitle>Basic Programming with Python</CardTitle>
+                <CardTitle>{t('BasicsPython.title')}</CardTitle>
                 <CardDescription>
-                  8 talleres + 1 proyecto final
+                  8 {t('BasicsPython.lectures')} + 8 {t('BasicsPython.workshops')} + 8 {t('BasicsPython.assessments')} + 1 {t('BasicsPython.project')}
                 </CardDescription>
               </CardHeader>
               <CardContent className="hidden md:block">
-                <p>This course introduces the fundamentals of programming using Python, one of the most popular and versatile programming languages. Participants will learn basic concepts such as variables, control structures, functions, and data types. By the end of the course, students will be able to write simple programs, solve problems algorithmically, and understand the core principles of coding. Ideal for beginners with no prior programming experience.</p>
+                <p>{t('BasicsPython.description')}</p>
               </CardContent>
               <CardFooter>
                 <Button asChild><Link href="/courses/basics-python">Ver más</Link></Button>
@@ -63,7 +65,7 @@ export default function Courses() {
                 <p>Designed for young learners, this course uses Scratch, a visual programming language that makes coding fun and interactive. Children will learn the basics of programming through creating their own games, animations, and interactive stories. This course encourages creativity, logical thinking, and problem-solving skills in an engaging and supportive environment. Perfect for kids aged 8-14.</p>
               </CardContent>
               <CardFooter>
-                <Button>Ver más</Button>
+                <Button asChild><Link href="/courses/scratch-kids">Ver más</Link></Button>
               </CardFooter>
             </div>
           </Card>
