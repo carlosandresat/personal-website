@@ -1,30 +1,177 @@
-import Header from "@/components/header";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import Footer from "@/components/footer";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 
-import { coursesData } from "@/data/python-basics";
 import { Award, BookOpen, Lightbulb, MapPin, Timer } from "lucide-react";
 import ContentTimeline from "@/components/content-timeline";
 
 
 
 export default function BasicsPython() {
-  const course = coursesData.find(s => s.id === 1);
+
+  const timelineItems:{
+    title: string;
+    duration: string;
+    description: string;
+    image: string;
+}[] = [
+    {
+      title: 'Lecture 1',
+      duration: '20 min',
+      description: 'Introduction to Programming & Python',
+      image: '/theoretical.png'
+    },
+    {
+      title: 'Workshop 1',
+      duration: '40 min',
+      description: 'Writing Your First Python Program',
+      image: '/workshop.png'
+    },
+    {
+      title: 'Assessment 1',
+      duration: '2 hours',
+      description: '',
+      image: '/assessment.png'
+    },
+    {
+      title: 'Lecture 2',
+      duration: '20 min',
+      description: 'Variables and Data Types',
+      image: '/theoretical.png'
+    },
+    {
+      title: 'Workshop 2',
+      duration: '40 min',
+      description: 'Working with Variables and Data Types',
+      image: '/workshop.png'
+    },
+    {
+      title: 'Assessment 2',
+      duration: '2 hours',
+      description: '',
+      image: '/assessment.png'
+    },
+    {
+      title: 'Lecture 3',
+      duration: '20 min',
+      description: 'Control structures: conditionals & loops',
+      image: '/theoretical.png'
+    },
+    {
+      title: 'Workshop 3',
+      duration: '40 min',
+      description: 'Implementing control structures',
+      image: '/workshop.png'
+    },
+    {
+      title: 'Assessment 3',
+      duration: '2 hours',
+      description: '',
+      image: '/assessment.png'
+    },
+    {
+      title: 'Lecture 4',
+      duration: '20 min',
+      description: 'Introduction to functions',
+      image: '/theoretical.png'
+    },
+    {
+      title: 'Workshop 4',
+      duration: '40 min',
+      description: 'Creating and Using Functions',
+      image: '/workshop.png'
+    },
+    {
+      title: 'Assessment 4',
+      duration: '2 hours',
+      description: '',
+      image: '/assessment.png'
+    },
+    {
+      title: 'Lecture 5',
+      duration: '20 min',
+      description: 'Lists',
+      image: '/theoretical.png'
+    },
+    {
+      title: 'Workshop 5',
+      duration: '40 min',
+      description: 'Creating arrays and matrices',
+      image: '/workshop.png'
+    },
+    {
+      title: 'Assessment 5',
+      duration: '2 hours',
+      description: '',
+      image: '/assessment.png'
+    },
+    {
+      title: 'Lecture 6',
+      duration: '20 min',
+      description: 'Working with Strings',
+      image: '/theoretical.png'
+    },
+    {
+      title: 'Workshop 6',
+      duration: '40 min',
+      description: 'Practical String Manipulation',
+      image: '/workshop.png'
+    },
+    {
+      title: 'Assessment 6',
+      duration: '2 hours',
+      description: '',
+      image: '/assessment.png'
+    },
+    {
+      title: 'Lecture 7',
+      duration: '20 min',
+      description: 'Reading/Writting Files',
+      image: '/theoretical.png'
+    },
+
+    {
+      title: 'Workshop 7',
+      duration: '40 min',
+      description: 'File Input and Output Operations',
+      image: '/workshop.png'
+    },
+    {
+      title: 'Assessment 7',
+      duration: '2 hours',
+      description: '',
+      image: '/assessment.png'
+    },
+    {
+      title: 'Lecture 8',
+      duration: '20 min',
+      description: 'Error Handling',
+      image: '/theoretical.png'
+    },
+    {
+      title: 'Workshop 8',
+      duration: '40 min',
+      description: 'Writing Robust Programs with Error Handling',
+      image: '/workshop.png'
+    },
+    {
+      title: 'Assessment 8',
+      duration: '2 hours',
+      description: '',
+      image: '/assessment.png'
+    },
+   
+    {
+      title: 'Final Project',
+      duration: '6 hours',
+      description: '',
+      image: '/idea.png'
+    },
+    {
+      title: 'Obtain Certificate',
+      duration: '',
+      description: '',
+      image: '/certificate.png'
+    }
+  ];
 
   return (
     <main className="flex min-h-screen flex-col items-center">
@@ -47,7 +194,7 @@ export default function BasicsPython() {
               <Timer /> <p>30 hours</p>
             </div>
             <div className="flex items-center gap-2">
-              <MapPin /> <p>Online</p>
+              <MapPin /> <p>Online (Live)</p>
             </div>
             <div className="flex items-center gap-2">
               <BookOpen /> <p>Beginner</p>
@@ -74,14 +221,14 @@ export default function BasicsPython() {
               Learning Objectives:
             </h4>
 
-            <ul className="mt-6 ml-6 list-disc [&>li]:mt-2">
+            <ul className="mt-4 ml-6 list-disc [&>li]:mt-2">
               <li>Understand and implement basic programming concepts
               </li>
               <li>Write and debug Python programs
               </li>
               <li>Develop problem-solving skills through practical experiences
               </li>
-              <li>Gain familiarity with Python’s standard and popular libraries</li>
+              <li>Create robust and maintainable code</li>
             </ul>
           </div>
           <div className="w-full md:w-1/2 flex flex-col items-center justify-center md:border-r border-background">
@@ -89,15 +236,15 @@ export default function BasicsPython() {
               <div className="w-1/2 flex flex-col items-center justify-center border-r border-background h-full p-4 aspect-square md:aspect-auto">
 
                 <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
-                  18
+                  8
                 </h4>
                 <p className="leading-4 text-center">
-                  theoretical<br></br>classes
+                  lectures
                 </p>
               </div>
               <div className="w-1/2 flex flex-col items-center justify-center border-r border-background h-full p-4 aspect-square md:aspect-auto">
                 <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
-                  10
+                  8
                 </h4>
                 <p className="leading-4 text-center">
                   workshops
@@ -106,7 +253,7 @@ export default function BasicsPython() {
 
               <div className="w-1/2 flex flex-col items-center justify-center p-4">
                 <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
-                  10
+                  8
                 </h4>
                 <p className="leading-4 text-center">assessments</p>
               </div>
@@ -121,7 +268,7 @@ export default function BasicsPython() {
 
               <div className="w-2/3 flex flex-col items-center justify-center p-4 ">
                 <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
-                  $80
+                  $100
                 </h4>
                 <p className="leading-4 text-center">investment</p>
               </div>
@@ -131,11 +278,11 @@ export default function BasicsPython() {
       </div>
       <div className="flex flex-col  w-full p-8 items-start max-w-screen-xl">
         <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
-          Pre-requisitos:
+          Prerequisites:
         </h4>
 
-        <ul className="mt-6 ml-6 list-disc [&>li]:mt-2">
-          <li>Ninguno</li>
+        <ul className="mt-4 ml-6 list-disc [&>li]:mt-2">
+          <li>None</li>
         </ul>
       </div>
       <div className="w-full flex flex-col items-center justify-center bg-secondary">
@@ -143,7 +290,7 @@ export default function BasicsPython() {
           <h4 className="scroll-m-20 text-xl font-semibold tracking-tight self-start">
             Content:
           </h4>
-          <ContentTimeline />
+          <ContentTimeline timelineItems={timelineItems}/>
         </div>
       </div>
     </main>

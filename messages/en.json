@@ -107,6 +107,12 @@
     "service4": "Database Development and Management",
     "service4description": "Specializing in database design and management, I offer solutions that ensure data integrity, performance, and scalability. Perfect for businesses requiring advanced data storage and real-time analysis."
   },
+  "Courses": {
+    "BasicsPython": {
+      "title": "Basic Programming with Python",
+      "description": "This course introduces the fundamentals of programming using Python, one of the most popular and versatile programming languages. Participants will learn basic concepts such as variables, control structures, functions, and data types. By the end of the course, students will be able to write simple programs, solve problems algorithmically, and understand the core principles of coding. Ideal for beginners with no prior programming experience."
+    }
+  },
   "Developing": {
     "title": "Web Applications Development",
     "message": "Coming Soon"
