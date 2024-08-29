@@ -56,13 +56,13 @@ export default function Courses() {
             </div>
             <div>
               <CardHeader>
-                <CardTitle>Programming for kids with Scratch</CardTitle>
+                <CardTitle>{t('Scratch.title')}</CardTitle>
                 <CardDescription>
-                  6 clases prácticas + 1 proyecto final
+                  6 {t('BasicsPython.lectures')} + 6 {t('BasicsPython.workshops')} + 3 {t('Scratch.projects')}
                 </CardDescription>
               </CardHeader>
               <CardContent className="hidden md:block">
-                <p>Designed for young learners, this course uses Scratch, a visual programming language that makes coding fun and interactive. Children will learn the basics of programming through creating their own games, animations, and interactive stories. This course encourages creativity, logical thinking, and problem-solving skills in an engaging and supportive environment. Perfect for kids aged 8-14.</p>
+                <p>{t('Scratch.description')}</p>
               </CardContent>
               <CardFooter>
                 <Button asChild><Link href="/courses/scratch-kids">Ver más</Link></Button>
