@@ -10,7 +10,7 @@ import {
 import Footer from "@/components/footer";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import { Link } from "@/navigation";
 import { useTranslations } from 'next-intl';
 
 export default function Courses() {

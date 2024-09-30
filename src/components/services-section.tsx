@@ -1,7 +1,7 @@
 import { Award, Globe, Database, UserCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {useTranslations} from 'next-intl';
-import Link from "next/link";
+import { Link } from "@/navigation";
 
 export default function ServicesSection() {
   const t = useTranslations('Services');
