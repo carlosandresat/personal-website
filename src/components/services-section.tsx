@@ -15,38 +15,7 @@ export default function ServicesSection() {
         {t('title')}
       </h2>
       <div className="flex flex-col space-y-8 p-8 max-w-screen-xl  justify-center items-center">
-        <div className="flex flex-col space-y-8 md:space-y-0 md:flex-row md:space-x-12 items-center justify-center">
-          <div className="flex space-x-8 md:space-x-12 items-center w-full">
-            <div className="flex flex-col">
-              <h4 className="scroll-m-20 text-xl font-semibold tracking-tight text-right">
-                {t('service1')}
-              </h4>
-              <p className="leading-7 text-right">
-                {t('service1description')}
-              </p>
-            </div>
-            <div className="flex-shrink-0 w-24 h-24 flex justify-center items-center bg-green-500 rounded-md shadow-lg">
-              <UserCheck className="w-8 h-8 invert dark:invert-0" />
-            </div>
-          </div>
-          <div className="flex space-x-8 md:space-x-12 items-center w-full">
-            <div className="flex-shrink-0 w-24 h-24 flex justify-center items-center bg-secondary rounded-md shadow-lg">
-              <Award className="w-8 h-8" />
-            </div>
-
-            <div className="flex flex-col">
-              <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
-                {t('service2')}
-              </h4>
-              <p className="leading-7 mt-2">
-                {t('service2description')}
-              </p>
-              <Button className="mt-2 w-fit self-start" asChild>
-                <Link href="/courses">{t("learnButtonText")}</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
+        
         <div className="flex flex-col space-y-8 md:space-y-0 md:flex-row md:space-x-12 items-center justify-center">
           <div className="flex space-x-8 md:space-x-12 items-center w-full">
             <div className="flex flex-col">
@@ -76,6 +45,38 @@ export default function ServicesSection() {
               <p className="leading-7 mt-2">
                 {t('service4description')}
               </p>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col space-y-8 md:space-y-0 md:flex-row md:space-x-12 items-center justify-center">
+          <div className="flex space-x-8 md:space-x-12 items-center w-full">
+            <div className="flex flex-col">
+              <h4 className="scroll-m-20 text-xl font-semibold tracking-tight text-right">
+                {t('service1')}
+              </h4>
+              <p className="leading-7 text-right">
+                {t('service1description')}
+              </p>
+            </div>
+            <div className="flex-shrink-0 w-24 h-24 flex justify-center items-center bg-green-500 rounded-md shadow-lg">
+              <UserCheck className="w-8 h-8 invert dark:invert-0" />
+            </div>
+          </div>
+          <div className="flex space-x-8 md:space-x-12 items-center w-full">
+            <div className="flex-shrink-0 w-24 h-24 flex justify-center items-center bg-secondary rounded-md shadow-lg">
+              <Award className="w-8 h-8" />
+            </div>
+
+            <div className="flex flex-col">
+              <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+                {t('service2')}
+              </h4>
+              <p className="leading-7 mt-2">
+                {t('service2description')}
+              </p>
+              <Button className="mt-2 w-fit self-start" asChild>
+                <Link href="/courses">{t("learnButtonText")}</Link>
+              </Button>
             </div>
           </div>
         </div>
