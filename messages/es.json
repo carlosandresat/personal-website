@@ -84,6 +84,65 @@
       }
     }
   },
+ "Experiences": {
+    "title": "Mis Experiencias",
+    "1": {
+      "title": "Presentación Poster Científico",
+      "type": "evento",
+      "date": "Jul 10, 2023",
+      "location": "I Congreso Internacional de Educación, Ciencias, Innovación y Sociedad (CIECIS23)",
+      "description": "Presenté un póster titulado 'Tutoring Sessions Yachay Tech: aplicación web para impulsar aprendizaje colectivo' donde destaco los resultados de mi proyecto OrientaYT."
+    },
+    "2": {
+      "title": "Pasantía como Desarrollador de Software",
+      "type": "trabajo",
+      "date": "Jun - Dic 2022",
+      "location": "TALOV",
+      "description": "Preprocesamiento de un conjunto de datos de lenguaje de señas con aumento de datos. Recopilación de puntos clave de fotogramas de video. Modelado de una red neuronal LSTM y entrenamiento con los puntos clave obtenidos. Uso de TFLite para crear un modelo ligero que sería usado en una aplicación móvil creada en Flutter por otro equipo de desarrollo."
+    },
+    "3": {
+      "title": "Fundamentos de IA Generativa",
+      "type": "curso",
+      "date": "Jun 14, 2022",
+      "location": "Google Cloud Skills Boost",
+      "description": "Certificación en conocimientos fundamentales de IA generativa y sus aplicaciones."
+    },
+    "4": {
+      "title": "Seminario de Ingeniería de Software y Ciencias Computacionales",
+      "type": "evento",
+      "date": "Mar 21 - 25, 2022",
+      "location": "",
+      "description": "Organizado por el Club de Software ESPE Latacunga, el Club de Ciencias Computacionales de la Universidad Yachay Tech, el Capítulo Técnico de la Computer Society ESPE Latacunga y el Capítulo Técnico de la Computer Society Yachay Tech."
+    },
+    "5": {
+      "title": "Ponente en Exposición de Visión Computacional 2.0",
+      "type": "evento",
+      "date": "Dic 7, 2021",
+      "location": "IEEE Computer Society Universidad Yachay Tech",
+      "description": "Presenté un póster sobre una aplicación de reconocimiento de gestos basada en el ejemplo de Android de TensorFlow Lite."
+    },
+    "6": {
+      "title": "Tutor en Proyecto Hamilton Tech",
+      "type": "evento",
+      "date": "Nov - Dic 2021",
+      "location": "Club de Ciencias Computacionales de la Universidad Yachay Tech",
+      "description": "Mentoría a estudiantes de secundaria en temas de computación."
+    },
+    "7": {
+      "title": "Ponente y Asistente en el Seminario de Fundamentos de Ingeniería de Software",
+      "type": "evento",
+      "date": "May - Jul 2021",
+      "location": "Grupo de Investigación SDAS",
+      "description": "Contribución a sesiones sobre principios de ingeniería de software."
+    },
+    "8": {
+      "title": "Miembro de Junta Directiva",
+      "type": "trabajo",
+      "date": "Oct 2020 - Oct 2021",
+      "location": "Club de Ciencias Computacionales de la Universidad Yachay Tech",
+      "description": "Director del Departamento de Comunicación en el club de la carrera de Ingeniería en TICs / Ciencias Computacionales."
+    }
+  },
   "TechStack": {
     "title": "Stack Tecnológico",
     "tier1": "Stack Principal",
