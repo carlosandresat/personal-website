@@ -1,7 +1,9 @@
 import Image from "next/image";
-import { Award, BookOpen, Lightbulb, MapPin, Timer } from "lucide-react";
+import { Award, BadgePercent, BookOpen, Lightbulb, MapPin, Timer } from "lucide-react";
 import ContentTimeline from "@/components/content-timeline";
 import { useTranslations } from 'next-intl';
+import { Dialog, DialogContent, DialogHeader, DialogTrigger, DialogTitle, DialogDescription, DialogFooter } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
 
 export default function ScratchKids() {
 
@@ -179,13 +181,62 @@ export default function ScratchKids() {
                 <p className="leading-4 text-center">{t('projects')}</p>
               </div>
             </div>
-            <div className="w-full flex justify-center border-t border-background grow  aspect-[10/3] md:aspect-auto h-full">
+            <div className="w-full flex justify-center items-center gap-4 border-t border-background grow  aspect-[10/3] md:aspect-auto h-full">
               <div className=" flex flex-col items-center justify-center p-4">
                 <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
                   $100
                 </h4>
                 <p className="leading-4 text-center">{t('investment')}</p>
               </div>
+              <Dialog>
+                <DialogTrigger asChild><Button><BadgePercent className="mr-2" />Descuentos</Button></DialogTrigger>
+                <DialogContent>
+                  <DialogHeader>
+                    <DialogTitle>Descuentos</DialogTitle>
+                    <DialogDescription>Revisa los precios por número de estudiantes</DialogDescription>
+                  </DialogHeader>
+                  <div className="flex flex-col">
+                    <div className="flex justify-between">
+                      <p className="leading-7">
+                        2 estudiantes
+                      </p>
+                      <p className="leading-7">
+                        -20%
+                      </p>
+                      <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+                        $80
+                      </h4>
+                    </div>
+                    <div className="flex justify-between">
+                      <p className="leading-7">
+                        3 estudiantes
+                      </p>
+                      <p className="leading-7">
+                        -30%
+                      </p>
+                      <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+                        $70
+                      </h4>
+                    </div>
+                    <div className="flex justify-between">
+                      <p className="leading-7">
+                        4 estudiantes
+                      </p>
+                      <p className="leading-7">
+                        -40%
+                      </p>
+                      <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+                        $60
+                      </h4>
+                    </div>
+                  </div>
+                  <DialogFooter>
+                  <p className="text-sm text-muted-foreground">
+                        El número máximo de estudiantes por curso es de 4. Esto asegura la calidad del aprendizaje para cada estudiante.
+                      </p>
+                  </DialogFooter>
+                </DialogContent>
+              </Dialog>
             </div>
           </div>
         </div>
