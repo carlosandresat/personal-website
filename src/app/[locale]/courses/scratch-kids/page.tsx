@@ -4,6 +4,30 @@ import ContentTimeline from "@/components/content-timeline";
 import { useTranslations } from 'next-intl';
 import { Dialog, DialogContent, DialogHeader, DialogTrigger, DialogTitle, DialogDescription, DialogFooter } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
+import type { Metadata } from 'next';
+
+type Props = {
+  params: { locale: string }
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  if (params.locale == "es") {
+    return {
+      title: 'Curso Scratch | Carlos Arévalo',
+      description: 'Perfecto para niños de 8 a 14 años. Scratch es un lenguaje de programación visual que hace que la codificación sea divertida e interactiva.'
+    }
+  }
+  if (params.locale == "en") {
+    return {
+      title: 'Scratch Course | Carlos Arévalo',
+      description: 'Perfect for kids aged 8-14. Scratch is a visual programming language that makes coding fun and interactive.'
+    }
+  }
+  return {
+    title: 'Scratch Course | Carlos Arévalo',
+    description: 'Perfect for kids aged 8-14. Scratch is a visual programming language that makes coding fun and interactive.'
+  }
+}
 
 export default function ScratchKids() {
 
@@ -231,9 +255,9 @@ export default function ScratchKids() {
                     </div>
                   </div>
                   <DialogFooter>
-                  <p className="text-sm text-muted-foreground">
-                        El número máximo de estudiantes por curso es de 4. Esto asegura la calidad del aprendizaje para cada estudiante.
-                      </p>
+                    <p className="text-sm text-muted-foreground">
+                      El número máximo de estudiantes por curso es de 4. Esto asegura la calidad del aprendizaje para cada estudiante.
+                    </p>
                   </DialogFooter>
                 </DialogContent>
               </Dialog>
