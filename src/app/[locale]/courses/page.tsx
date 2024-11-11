@@ -82,7 +82,7 @@ export default function Courses() {
               <CardHeader>
                 <CardTitle>Data Visualization with Matplotlib</CardTitle>
                 <CardDescription>
-                  6 clases prácticas + 1 proyecto final
+                  -
                 </CardDescription>
               </CardHeader>
               <CardContent className="hidden md:block">
@@ -106,7 +106,7 @@ export default function Courses() {
               <CardHeader>
                 <CardTitle>Front-End (I): HTML, CSS & JavaScript</CardTitle>
                 <CardDescription>
-                  6 clases prácticas + 1 proyecto final
+                  -
                 </CardDescription>
               </CardHeader>
               <CardContent className="hidden md:block">
@@ -130,7 +130,7 @@ export default function Courses() {
               <CardHeader>
                 <CardTitle>Front-End (II): React, TypeScript & TailwindCSS</CardTitle>
                 <CardDescription>
-                  6 clases prácticas + 1 proyecto final
+                  -
                 </CardDescription>
               </CardHeader>
               <CardContent className="hidden md:block">
@@ -155,7 +155,7 @@ export default function Courses() {
               <CardHeader>
                 <CardTitle>Front-End (III): Next.js</CardTitle>
                 <CardDescription>
-                  6 clases prácticas + 1 proyecto final
+                  -
                 </CardDescription>
               </CardHeader>
               <CardContent className="hidden md:block">
@@ -179,7 +179,7 @@ export default function Courses() {
               <CardHeader>
                 <CardTitle>Databases with PostgreSQL</CardTitle>
                 <CardDescription>
-                  6 clases prácticas + 1 proyecto final
+                  -
                 </CardDescription>
               </CardHeader>
               <CardContent className="hidden md:block">
@@ -204,7 +204,7 @@ export default function Courses() {
               <CardHeader>
                 <CardTitle>Back-End with Express</CardTitle>
                 <CardDescription>
-                  6 clases prácticas + 1 proyecto final
+                  -
                 </CardDescription>
               </CardHeader>
               <CardContent className="hidden md:block">
@@ -229,7 +229,7 @@ export default function Courses() {
               <CardHeader>
                 <CardTitle>Back-End with Next.js</CardTitle>
                 <CardDescription>
-                  6 clases prácticas + 1 proyecto final
+                  -
                 </CardDescription>
               </CardHeader>
               <CardContent className="hidden md:block">
@@ -253,7 +253,7 @@ export default function Courses() {
               <CardHeader>
                 <CardTitle>Internet of Things (IoT) Fundamentals with Arduino</CardTitle>
                 <CardDescription>
-                  6 clases prácticas + 1 proyecto final
+                  -
                 </CardDescription>
               </CardHeader>
               <CardContent className="hidden md:block">
@@ -277,7 +277,7 @@ export default function Courses() {
               <CardHeader>
                 <CardTitle>Internet of Things (IoT) Fundamentals with ESP8266</CardTitle>
                 <CardDescription>
-                  6 clases prácticas + 1 proyecto final
+                  -
                 </CardDescription>
               </CardHeader>
               <CardContent className="hidden md:block">
