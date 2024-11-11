@@ -236,6 +236,10 @@
       "project": "proyecto",
       "projects": "proyectos",
       "investment": "inversión",
+      "discounts": "Descuentos",
+      "discountsDescription": "Revisa los precios por número de estudiantes",
+      "students": "estudiantes",
+      "discountsNote": "El número máximo de estudiantes por curso es de 4. Esto asegura la calidad del aprendizaje para cada estudiante",
       "prerequisites": "Requisitos previos",
       "req": {
         "1": "Ninguno"

@@ -213,16 +213,16 @@ export default function ScratchKids() {
                 <p className="leading-4 text-center">{t('investment')}</p>
               </div>
               <Dialog>
-                <DialogTrigger asChild><Button><BadgePercent className="mr-2" />Descuentos</Button></DialogTrigger>
+                <DialogTrigger asChild><Button><BadgePercent className="mr-2" />{t('discounts')}</Button></DialogTrigger>
                 <DialogContent>
                   <DialogHeader>
-                    <DialogTitle>Descuentos</DialogTitle>
-                    <DialogDescription>Revisa los precios por número de estudiantes</DialogDescription>
+                    <DialogTitle>{t('discounts')}</DialogTitle>
+                    <DialogDescription>{t('discountsDescription')}</DialogDescription>
                   </DialogHeader>
                   <div className="flex flex-col">
                     <div className="flex justify-between">
                       <p className="leading-7">
-                        2 estudiantes
+                        2 {t('students')}
                       </p>
                       <p className="leading-7">
                         -20%
@@ -233,7 +233,7 @@ export default function ScratchKids() {
                     </div>
                     <div className="flex justify-between">
                       <p className="leading-7">
-                        3 estudiantes
+                        3 {t('students')}
                       </p>
                       <p className="leading-7">
                         -30%
@@ -244,7 +244,7 @@ export default function ScratchKids() {
                     </div>
                     <div className="flex justify-between">
                       <p className="leading-7">
-                        4 estudiantes
+                        4 {t('students')}
                       </p>
                       <p className="leading-7">
                         -40%
@@ -256,7 +256,7 @@ export default function ScratchKids() {
                   </div>
                   <DialogFooter>
                     <p className="text-sm text-muted-foreground">
-                      El número máximo de estudiantes por curso es de 4. Esto asegura la calidad del aprendizaje para cada estudiante.
+                    {t('discountsNote')}
                     </p>
                   </DialogFooter>
                 </DialogContent>

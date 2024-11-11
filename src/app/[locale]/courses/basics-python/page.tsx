@@ -248,7 +248,7 @@ export default function BasicsPython() {
               </div>
               <div className="w-2/3 flex flex-col items-center justify-center p-4 ">
                 <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
-                  $100
+                  $120
                 </h4>
                 <p className="leading-4 text-center">{t('investment')}</p>
               </div>
