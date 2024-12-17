@@ -14,10 +14,10 @@ export default function HomeSection() {
 
   return (
     <section
-      className="w-full pt-24 bg-secondary pb-12 md:pb-24 lg:pb-32 flex flex-col items-center"
+      className="w-full pt-24 md:pt-32 bg-secondary pb-12 md:pb-24 lg:pb-32 flex flex-col items-center"
       id="home"
     >
-      <div className="w-full flex justify-between px-8">
+      <div className="w-full flex justify-between px-8 md:hidden">
         <LanguageSelect></LanguageSelect>
         <ModeToggle />
 
