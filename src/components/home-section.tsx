@@ -14,7 +14,7 @@ export default function HomeSection() {
 
   return (
     <section
-      className="w-full pt-24 bg-secondary pb-12 md:pb-24 lg:pb-32"
+      className="w-full pt-24 bg-secondary pb-12 md:pb-24 lg:pb-32 flex flex-col items-center"
       id="home"
     >
       <div className="w-full flex justify-between px-8">
@@ -22,14 +22,13 @@ export default function HomeSection() {
         <ModeToggle />
 
       </div>
-      <div className="px-8 space-y-10 xl:space-y-16 mt-6">
-        <div className="grid max-w-[1300px] mx-auto gap-4 md:grid-cols-2 md:gap-16 items-center">
-          <div>
+        <div className="flex max-w-screen-xl md:flex-row items-center justify-center md:space-x-14 p-8 w-full gap-8 md:gap-0 flex-col-reverse">
+          <div className="w-full xl:pr-24">
             <h1 className="lg:leading-tighter text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]">
               {t('title')}{" "}
               <span className=" text-green-500">Carlos Arévalo</span>
             </h1>
-            <p className="mx-auto max-w-[700px] md:text-xl mt-6">
+            <p className="md:text-xl mt-6">
               {t('description1')}
               <span className=" text-green-500">{t('description2')}</span>{t('description3')}{" "}
               <span className=" text-green-500">{t('description4')}</span> {t('description5')}
@@ -58,14 +57,13 @@ export default function HomeSection() {
           <div className="flex flex-col items-center justify-center pt-6 md:pt-0">
             <Image
               alt="profile picture"
-              className="mx-auto aspect-[1/1] overflow-hidden rounded-full object-cover w-52 md:w-[450px] shadow-xl"
-              height="450"
+              className="mx-auto aspect-[1/1] overflow-hidden rounded-full object-cover w-52 md:w-[550px] xl:w-[650px] shadow-xl"
+              height="900"
               src="/carlos.arevalo.jpg"
-              width="450"
+              width="900"
             />
           </div>
         </div>
-      </div>
     </section>
   );
 }
