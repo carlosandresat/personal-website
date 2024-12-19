@@ -26,12 +26,12 @@ export function LanguageSelect() {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuItem onClick={() => {
-           router.push('/en')
+           router.push('/en' + pathname.slice(3))
         }}>
           English
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => {
-           router.push('/es')
+           router.push('/es' + pathname.slice(3))
         }}>
           Español
         </DropdownMenuItem>
