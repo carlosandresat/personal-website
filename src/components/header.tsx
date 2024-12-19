@@ -18,7 +18,7 @@ export default function Header() {
       <div className="md:fixed w-full left-0 flex justify-end md:justify-center">
         <Navbar />
       </div>
-      <div className="md:flex space-x-2 hidden">
+      <div className="md:flex space-x-2 hidden z-10">
         <LanguageSelect></LanguageSelect>
         <ModeToggle />      
       </div>
