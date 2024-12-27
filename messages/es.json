@@ -266,6 +266,42 @@
       },
       "projectM": "Proyecto",
       "obtainCertificate": "Obtener Certificado"
+    },
+    "Matplotlib": {
+      "title": "Visualización de Datos con Matplotlib",
+      "description": "Este curso se centra en el arte de la visualización de datos utilizando Matplotlib, una potente biblioteca de Python. Los estudiantes aprenderán a crear una amplia variedad de visualizaciones estáticas, animadas e interactivas. Los temas incluyen la creación de gráficos básicos, la personalización de gráficos, el trabajo con múltiples figuras y subgráficos, y la integración con otras bibliotecas de análisis de datos. Ideal para quienes desean transformar datos en información valiosa mediante representaciones visuales atractivas."
+    },
+    "FrontI": {
+      "title": "Front-End (I): HTML, CSS y JavaScript",
+      "description": "Este curso introductorio cubre las tecnologías esenciales para la construcción de páginas web. Los participantes aprenderán HTML para la estructura, CSS para el diseño y JavaScript para la interactividad. Al finalizar el curso, los estudiantes serán capaces de crear páginas web dinámicas y adaptables desde cero. Este curso es perfecto para principiantes que desean iniciar su camino en el desarrollo web."
+    },
+    "FrontII": {
+      "title": "Front-End (II): React, TypeScript y TailwindCSS",
+      "description": "Basándose en habilidades básicas de desarrollo web, este curso aborda el desarrollo front-end moderno con React, TypeScript y TailwindCSS. Los participantes aprenderán a crear interfaces de usuario complejas y escalables con React, garantizar la calidad del código y la seguridad de tipos con TypeScript, y diseñar aplicaciones de manera eficiente con TailwindCSS. Ideal para quienes buscan avanzar en el desarrollo front-end y trabajar en aplicaciones web de nivel profesional."
+    },
+    "FrontIII": {
+      "title": "Front-End (III): Next.js",
+      "description": "Este curso avanzado profundiza en Next.js, un potente framework de React para construir aplicaciones front-end de alto rendimiento. Los participantes aprenderán sobre características clave como el renderizado del lado del servidor y el enrutamiento dinámico. El curso también aborda temas avanzados como la integración de APIs, la carga optimizada y la implementación de aplicaciones Next.js. Al finalizar, los estudiantes serán competentes en la construcción de aplicaciones front-end sofisticadas y escalables con Next.js. Adecuado para desarrolladores con experiencia en React que deseen mejorar sus habilidades en desarrollo front-end moderno."
+    },
+    "Databases": {
+      "title": "Bases de Datos con PostgreSQL",
+      "description": "Este curso ofrece una introducción integral a PostgreSQL, un sistema de bases de datos relacional potente y de código abierto. Los participantes aprenderán a diseñar, implementar y gestionar bases de datos. Los temas incluyen consultas SQL y diseño de bases de datos. Al finalizar el curso, los estudiantes podrán gestionar datos de manera eficiente utilizando PostgreSQL. Perfecto para quienes estén interesados en la gestión de datos y el desarrollo de back-end."
+    },
+    "BackExpress": {
+      "title": "Back-End con Express",
+      "description": "Este curso introduce el desarrollo web de back-end utilizando Express, un framework minimalista y flexible para Node.js. Los participantes aprenderán a crear APIs RESTful, manejar middleware, gestionar sesiones y conectar con bases de datos. Al finalizar el curso, los estudiantes podrán construir y desplegar servicios de back-end robustos. Adecuado para quienes tengan conocimientos básicos de JavaScript y deseen profundizar en el desarrollo del lado del servidor."
+    },
+    "BackNext": {
+      "title": "Back-End con Next.js",
+      "description": "Este curso avanzado explora las capacidades de back-end de Next.js. Los participantes aprenderán sobre acciones del servidor, rutas de API e integración con bases de datos. El curso también cubre las mejores prácticas para construir sistemas de back-end escalables y mantenibles. Ideal para desarrolladores que hayan completado el curso Front-End (III): Next.js y quieran aprovechar Next.js para el desarrollo full-stack."
+    },
+    "IoTArduino": {
+      "title": "Fundamentos de IoT con Arduino",
+      "description": "Este curso introduce los fundamentos de IoT utilizando Arduino, una plataforma de electrónica de código abierto. Los participantes aprenderán a crear dispositivos conectados, leer sensores, controlar actuadores y comunicarse con otros dispositivos. Al finalizar el curso, los estudiantes habrán construido varios proyectos de IoT y adquirido una sólida comprensión de los principios de sistemas embebidos. Perfecto para principiantes interesados en electrónica e IoT."
+    },
+    "IoTESP8266": {
+      "title": "Fundamentos de IoT con ESP8266",
+      "description": "Este curso se centra en el desarrollo de IoT utilizando el ESP8266, un microchip Wi-Fi de bajo costo. Los participantes aprenderán a programar el ESP8266, conectarse a internet y construir dispositivos conectados a la web. El curso abarca diversos protocolos de comunicación e integración con la nube. Al finalizar, los estudiantes serán capaces de crear proyectos de IoT sofisticados con el ESP8266. Ideal para quienes tengan algo de experiencia en electrónica y programación y deseen explorar más a fondo el IoT."
     }
   },
   "Developing": {

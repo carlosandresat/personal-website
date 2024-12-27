@@ -80,13 +80,13 @@ export default function Courses() {
             </div>
             <div>
               <CardHeader>
-                <CardTitle>Data Visualization with Matplotlib</CardTitle>
+                <CardTitle>{t('Matplotlib.title')}</CardTitle>
                 <CardDescription>
                   -
                 </CardDescription>
               </CardHeader>
               <CardContent className="hidden md:block">
-                <p>This course focuses on the art of data visualization using Matplotlib, a powerful Python library. Students will learn how to create a wide range of static, animated, and interactive visualizations. Topics include plotting basic graphs, customizing plots, working with multiple figures and subplots, and integrating with other data analysis libraries. Ideal for those who want to transform data into meaningful insights through compelling visual representations.</p>
+                <p>{t('Matplotlib.description')}</p>
               </CardContent>
               <CardFooter>
                 <Button>Ver más</Button>
@@ -104,13 +104,13 @@ export default function Courses() {
             </div>
             <div>
               <CardHeader>
-                <CardTitle>Front-End (I): HTML, CSS & JavaScript</CardTitle>
+                <CardTitle>{t('FrontI.title')}</CardTitle>
                 <CardDescription>
                   -
                 </CardDescription>
               </CardHeader>
               <CardContent className="hidden md:block">
-                <p>This foundational course covers the essential technologies for building web pages. Participants will learn HTML for structure, CSS for styling, and JavaScript for interactivity. By the end of the course, students will be able to create responsive and dynamic web pages from scratch. This course is perfect for beginners who want to start their journey in web development.</p>
+                <p>{t('FrontI.description')}</p>
               </CardContent>
               <CardFooter>
                 <Button>Ver más</Button>
@@ -128,13 +128,13 @@ export default function Courses() {
             </div>
             <div>
               <CardHeader>
-                <CardTitle>Front-End (II): React, TypeScript & TailwindCSS</CardTitle>
+                <CardTitle>{t('FrontII.title')}</CardTitle>
                 <CardDescription>
                   -
                 </CardDescription>
               </CardHeader>
               <CardContent className="hidden md:block">
-                <p>Building on basic web development skills, this course dives into modern front-end development with React, TypeScript, and TailwindCSS. Participants will learn to create complex and scalable user interfaces with React, ensure code quality and type safety with TypeScript, and style applications efficiently with TailwindCSS. Ideal for those looking to advance their front-end development skills and work on professional-grade web applications.</p>
+                <p>{t('FrontII.description')}</p>
               </CardContent>
               <CardFooter>
                 <Button>Ver más</Button>
@@ -153,13 +153,13 @@ export default function Courses() {
             </div>
             <div>
               <CardHeader>
-                <CardTitle>Front-End (III): Next.js</CardTitle>
+                <CardTitle>{t('FrontIII.title')}</CardTitle>
                 <CardDescription>
                   -
                 </CardDescription>
               </CardHeader>
               <CardContent className="hidden md:block">
-                <p>This advanced course delves into Next.js, a powerful React framework for building high-performance front-end applications. Participants will learn about key features such as server-side rendering, and dynamic routing. The course also covers advanced topics like API integration, optimized loading, and deploying Next.js applications. By the end of the course, students will be proficient in building sophisticated and scalable front-end applications using Next.js. Suitable for developers with React experience looking to enhance their skills in modern front-end development.</p>
+                <p>{t('FrontIII.description')}</p>
               </CardContent>
               <CardFooter>
                 <Button>Ver más</Button>
@@ -177,13 +177,13 @@ export default function Courses() {
             </div>
             <div>
               <CardHeader>
-                <CardTitle>Databases with PostgreSQL</CardTitle>
+                <CardTitle>{t('Databases.title')}</CardTitle>
                 <CardDescription>
                   -
                 </CardDescription>
               </CardHeader>
               <CardContent className="hidden md:block">
-                <p>This course provides a comprehensive introduction to PostgreSQL, a powerful and open-source relational database system. Participants will learn how to design, implement, and manage databases. Topics include SQL queries and database design. By the end of the course, students will be able to handle data efficiently using PostgreSQL. Perfect for those interested in data management and back-end development.</p>
+                <p>{t('Databases.description')}</p>
               </CardContent>
               <CardFooter>
                 <Button>Ver más</Button>
@@ -202,13 +202,13 @@ export default function Courses() {
             </div>
             <div>
               <CardHeader>
-                <CardTitle>Back-End with Express</CardTitle>
+                <CardTitle>{t('BackExpress.title')}</CardTitle>
                 <CardDescription>
                   -
                 </CardDescription>
               </CardHeader>
               <CardContent className="hidden md:block">
-                <p>This course introduces back-end web development using Express, a minimal and flexible Node.js framework. Participants will learn to create RESTful APIs, handle middleware, manage sessions, and connect to databases. By the end of the course, students will be able to build and deploy robust back-end services. Suitable for those with basic JavaScript knowledge looking to delve into server-side development.</p>
+                <p>{t('BackExpress.description')}</p>
               </CardContent>
               <CardFooter>
                 <Button>Ver más</Button>
@@ -227,13 +227,13 @@ export default function Courses() {
             </div>
             <div>
               <CardHeader>
-                <CardTitle>Back-End with Next.js</CardTitle>
+                <CardTitle>{t('BackNext.title')}</CardTitle>
                 <CardDescription>
                   -
                 </CardDescription>
               </CardHeader>
               <CardContent className="hidden md:block">
-                <p>This advanced course explores the back-end capabilities of Next.js. Participants will learn about server actions, API routes, and integrating with databases. The course also covers best practices for building scalable and maintainable back-end systems. Ideal for developers who have completed the Front-End (III): Next.js course and want to leverage Next.js for full-stack development.</p>
+                <p>{t('BackNext.description')}</p>
               </CardContent>
               <CardFooter>
                 <Button>Ver más</Button>
@@ -251,13 +251,13 @@ export default function Courses() {
             </div>
             <div>
               <CardHeader>
-                <CardTitle>Internet of Things (IoT) Fundamentals with Arduino</CardTitle>
+                <CardTitle>{t('IoTArduino.title')}</CardTitle>
                 <CardDescription>
                   -
                 </CardDescription>
               </CardHeader>
               <CardContent className="hidden md:block">
-                <p>This course introduces the fundamentals of IoT using Arduino, an open-source electronics platform. Participants will learn to create connected devices, read sensors, control actuators, and communicate with other devices. By the end of the course, students will have built several IoT projects and gained a solid understanding of the principles of embedded systems. Perfect for beginners interested in electronics and IoT.</p>
+                <p>{t('IoTArduino.description')}</p>
               </CardContent>
               <CardFooter>
                 <Button>Ver más</Button>
@@ -275,13 +275,13 @@ export default function Courses() {
             </div>
             <div>
               <CardHeader>
-                <CardTitle>Internet of Things (IoT) Fundamentals with ESP8266</CardTitle>
+                <CardTitle>{t('IoTESP8266.title')}</CardTitle>
                 <CardDescription>
                   -
                 </CardDescription>
               </CardHeader>
               <CardContent className="hidden md:block">
-                <p>This course focuses on IoT development using the ESP8266, a low-cost Wi-Fi microchip. Participants will learn to program the ESP8266, connect to the internet, and build web-connected devices. The course covers various communication protocols and cloud integration. By the end of the course, students will be able to create sophisticated IoT projects with the ESP8266. Ideal for those with some experience in electronics and programming, looking to explore IoT further.</p>
+                <p>{t('IoTESP8266.description')}</p>
               </CardContent>
               <CardFooter>
                 <Button>Ver más</Button>
