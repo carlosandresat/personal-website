@@ -5,7 +5,6 @@ export default function Footer() {
         Developed by{" "}
         <span className="font-bold text-foreground">Carlos Arévalo</span>.
       </p>
-      
     </footer>
   );
 }

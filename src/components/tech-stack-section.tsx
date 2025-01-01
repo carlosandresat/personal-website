@@ -11,28 +11,34 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Image from "next/image";
-import {useTranslations} from 'next-intl';
-
+import { useTranslations } from "next-intl";
 
 export default function TechStackSection() {
-  const t = useTranslations('TechStack');
+  const t = useTranslations("TechStack");
 
-  const plugin = useRef(Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: true }));
-  const plugin2 = useRef(Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: true }));
-  const plugin3 = useRef(Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: true }));
+  const plugin = useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: true })
+  );
+  const plugin2 = useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: true })
+  );
+  const plugin3 = useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: true })
+  );
 
   return (
-    <section className="w-full bg-secondary flex flex-col justify-center items-center py-12 md:py-24 lg:py-28" id="tech-stack">
-      <h2
-        className="scroll-m-20 border-b border-foreground pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0"
-      >
-         {t('title')}
+    <section
+      className="w-full bg-secondary flex flex-col justify-center items-center py-12 md:py-24 lg:py-28"
+      id="tech-stack"
+    >
+      <h2 className="scroll-m-20 border-b border-foreground pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
+        {t("title")}
       </h2>
       <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight w-full px-8 mt-8 max-w-screen-xl">
-        🥇 {t('tier1')}
+        🥇 {t("tier1")}
       </h3>
       <p className="text-lg w-full px-8 max-w-screen-xl text-green-500">
-        {t('tier1description')}
+        {t("tier1description")}
       </p>
 
       <Carousel
@@ -240,12 +246,7 @@ export default function TechStackSection() {
             <div className="p-1">
               <Card>
                 <CardContent className="flex aspect-square items-center justify-center p-6 flex-col">
-                  <Image
-                    alt="Jest"
-                    height="64"
-                    src="/jest.png"
-                    width="64"
-                  />
+                  <Image alt="Jest" height="64" src="/jest.png" width="64" />
                   <span className="pt-4 font-semibold text-2xl">Jest</span>
                 </CardContent>
               </Card>
@@ -257,10 +258,10 @@ export default function TechStackSection() {
       </Carousel>
 
       <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight w-full px-8 max-w-screen-xl mt-8">
-        📚 {t('tier2')}
+        📚 {t("tier2")}
       </h3>
       <p className="text-lg w-full px-8 max-w-screen-xl text-green-500">
-        {t('tier2description')}
+        {t("tier2description")}
       </p>
 
       <Carousel
@@ -469,10 +470,10 @@ export default function TechStackSection() {
       </Carousel>
 
       <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight w-full px-8 mt-8 max-w-screen-xl">
-        🔎 {t('tier3')}
+        🔎 {t("tier3")}
       </h3>
       <p className="text-lg w-full px-8 max-w-screen-xl text-green-500">
-        {t('tier3description')}
+        {t("tier3description")}
       </p>
 
       <Carousel
@@ -499,12 +500,14 @@ export default function TechStackSection() {
                     src="/playwright.png"
                     width="80"
                   />
-                  <span className="pt-2 font-semibold text-2xl">Playwright</span>
+                  <span className="pt-2 font-semibold text-2xl">
+                    Playwright
+                  </span>
                 </CardContent>
               </Card>
             </div>
           </CarouselItem>
-          
+
           <CarouselItem
             key="bun"
             className=" md:basis-1/3 lg:basis-1/4 xl:basis-1/5"
@@ -519,7 +522,6 @@ export default function TechStackSection() {
             </div>
           </CarouselItem>
 
-
           <CarouselItem
             key="nestjs"
             className=" md:basis-1/3 lg:basis-1/4 xl:basis-1/5"
@@ -533,9 +535,7 @@ export default function TechStackSection() {
                     src="/nestjs.svg"
                     width="80"
                   />
-                  <span className="pt-4 font-semibold text-2xl">
-                    NestJS
-                  </span>
+                  <span className="pt-4 font-semibold text-2xl">NestJS</span>
                 </CardContent>
               </Card>
             </div>
@@ -567,13 +567,17 @@ export default function TechStackSection() {
             <div className="p-1">
               <Card>
                 <CardContent className="flex aspect-square items-center justify-center p-6 flex-col">
-                  <Image alt="Zustand" height="120" src="/zustand.png" width="120" />
+                  <Image
+                    alt="Zustand"
+                    height="120"
+                    src="/zustand.png"
+                    width="120"
+                  />
                   <span className="pt-4 font-semibold text-2xl">Zustand</span>
                 </CardContent>
               </Card>
             </div>
           </CarouselItem>
-
 
           <CarouselItem
             key="php"
@@ -582,15 +586,8 @@ export default function TechStackSection() {
             <div className="p-1">
               <Card>
                 <CardContent className="flex aspect-square items-center justify-center p-6 flex-col">
-                  <Image
-                    alt="PHP"
-                    height="100"
-                    src="/php.png"
-                    width="100"
-                  />
-                  <span className="pt-6 font-semibold text-2xl">
-                    PHP
-                  </span>
+                  <Image alt="PHP" height="100" src="/php.png" width="100" />
+                  <span className="pt-6 font-semibold text-2xl">PHP</span>
                 </CardContent>
               </Card>
             </div>
@@ -608,20 +605,15 @@ export default function TechStackSection() {
                     src="/laravel.png"
                     width="75"
                   />
-                  <span className="pt-2 font-semibold text-2xl">
-                    Laravel
-                  </span>
+                  <span className="pt-2 font-semibold text-2xl">Laravel</span>
                 </CardContent>
               </Card>
             </div>
           </CarouselItem>
-
         </CarouselContent>
         <CarouselPrevious className="left-12 2xl:-left-12 hover:bg-green-500" />
         <CarouselNext className="right-12 2xl:-right-12 hover:bg-green-500" />
       </Carousel>
-
-
     </section>
   );
 }
