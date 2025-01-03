@@ -44,7 +44,7 @@ export default function Courses() {
             </CardContent>
             <CardFooter>
               <Button asChild>
-                <Link href="/courses/basics-python">Ver más</Link>
+                <Link href="/courses/basics-python">{t("viewMore")}</Link>
               </Button>
             </CardFooter>
           </div>
@@ -71,7 +71,7 @@ export default function Courses() {
             </CardContent>
             <CardFooter>
               <Button asChild>
-                <Link href="/courses/scratch-kids">Ver más</Link>
+                <Link href="/courses/scratch-kids">{t("viewMore")}</Link>
               </Button>
             </CardFooter>
           </div>
@@ -94,7 +94,7 @@ export default function Courses() {
               <p>{t("Matplotlib.description")}</p>
             </CardContent>
             <CardFooter>
-              <Button>Ver más</Button>
+              <Button>{t("viewMore")}</Button>
             </CardFooter>
           </div>
         </Card>
@@ -116,7 +116,7 @@ export default function Courses() {
               <p>{t("FrontI.description")}</p>
             </CardContent>
             <CardFooter>
-              <Button>Ver más</Button>
+              <Button>{t("viewMore")}</Button>
             </CardFooter>
           </div>
         </Card>
@@ -138,7 +138,7 @@ export default function Courses() {
               <p>{t("FrontII.description")}</p>
             </CardContent>
             <CardFooter>
-              <Button>Ver más</Button>
+              <Button>{t("viewMore")}</Button>
             </CardFooter>
           </div>
         </Card>
@@ -161,7 +161,7 @@ export default function Courses() {
               <p>{t("FrontIII.description")}</p>
             </CardContent>
             <CardFooter>
-              <Button>Ver más</Button>
+              <Button>{t("viewMore")}</Button>
             </CardFooter>
           </div>
         </Card>
@@ -183,7 +183,7 @@ export default function Courses() {
               <p>{t("Databases.description")}</p>
             </CardContent>
             <CardFooter>
-              <Button>Ver más</Button>
+              <Button>{t("viewMore")}</Button>
             </CardFooter>
           </div>
         </Card>
@@ -206,7 +206,7 @@ export default function Courses() {
               <p>{t("BackExpress.description")}</p>
             </CardContent>
             <CardFooter>
-              <Button>Ver más</Button>
+              <Button>{t("viewMore")}</Button>
             </CardFooter>
           </div>
         </Card>
@@ -229,7 +229,7 @@ export default function Courses() {
               <p>{t("BackNext.description")}</p>
             </CardContent>
             <CardFooter>
-              <Button>Ver más</Button>
+              <Button>{t("viewMore")}</Button>
             </CardFooter>
           </div>
         </Card>
@@ -251,7 +251,7 @@ export default function Courses() {
               <p>{t("IoTArduino.description")}</p>
             </CardContent>
             <CardFooter>
-              <Button>Ver más</Button>
+              <Button>{t("viewMore")}</Button>
             </CardFooter>
           </div>
         </Card>
@@ -273,7 +273,7 @@ export default function Courses() {
               <p>{t("IoTESP8266.description")}</p>
             </CardContent>
             <CardFooter>
-              <Button>Ver más</Button>
+              <Button>{t("viewMore")}</Button>
             </CardFooter>
           </div>
         </Card>
