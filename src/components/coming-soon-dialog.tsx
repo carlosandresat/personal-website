@@ -7,20 +7,20 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { useTranslations } from "next-intl";
 
 export function ComingSoonDialog() {
+  const t = useTranslations("Courses");
+
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button>View more</Button>
+        <Button>{t("viewMore")}</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>Cooming Soon</DialogTitle>
-          <DialogDescription>
-            The page for this course is still being integrated, but you can
-            contact me directly if you need information.
-          </DialogDescription>
+          <DialogTitle>{t("comingSoon")}</DialogTitle>
+          <DialogDescription>{t("comingSoonDescription")}</DialogDescription>
         </DialogHeader>
       </DialogContent>
     </Dialog>

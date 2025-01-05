@@ -167,6 +167,8 @@
   "Courses": {
     "title": "Mis Cursos",
     "viewMore": "Ver más",
+    "comingSoon": "Próximamente",
+    "comingSoonDescription": "Aún se está integrando la página de este curso, pero puedes contactarte directamente conmigo si necesitas información.",
     "BasicsPython": {
       "title": "Programación Básica con Python",
       "description": "Este curso introduce los fundamentos de la programación utilizando Python, uno de los lenguajes de programación más populares y versátiles. Los participantes aprenderán conceptos básicos como variables, estructuras de control, funciones y tipos de datos. Al final del curso, los estudiantes podrán escribir programas simples, resolver problemas de manera algorítmica y comprender los principios fundamentales de la codificación. Ideal para principiantes sin experiencia previa en programación.",
