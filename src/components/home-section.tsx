@@ -1,9 +1,7 @@
 import Image from "next/image";
-import Link from "next/link";
 import { ModeToggle } from "@/components/mode-toggle";
 import { Button } from "@/components/ui/button";
 import { Github, Mail, Linkedin } from "lucide-react";
-import { LinkedInLogoIcon } from "@radix-ui/react-icons";
 import { useTranslations } from "next-intl";
 import { LanguageSelect } from "@/components/language-select";
 

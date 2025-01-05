@@ -6,12 +6,7 @@ import {
   CardTitle,
   CardFooter,
 } from "@/components/ui/card";
-import {
-  BookOpenIcon,
-  GithubIcon,
-  HomeIcon,
-  LayoutPanelLeftIcon,
-} from "lucide-react";
+import { LayoutPanelLeftIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
