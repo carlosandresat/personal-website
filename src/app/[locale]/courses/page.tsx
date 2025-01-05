@@ -12,6 +12,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/navigation";
 import { useTranslations } from "next-intl";
+import { ComingSoonDialog } from "@/components/coming-soon-dialog";
 
 export default function Courses() {
   const t = useTranslations("Courses");
@@ -94,7 +95,7 @@ export default function Courses() {
               <p>{t("Matplotlib.description")}</p>
             </CardContent>
             <CardFooter>
-              <Button>{t("viewMore")}</Button>
+              <ComingSoonDialog />
             </CardFooter>
           </div>
         </Card>
@@ -116,7 +117,7 @@ export default function Courses() {
               <p>{t("FrontI.description")}</p>
             </CardContent>
             <CardFooter>
-              <Button>{t("viewMore")}</Button>
+              <ComingSoonDialog />
             </CardFooter>
           </div>
         </Card>
@@ -138,7 +139,7 @@ export default function Courses() {
               <p>{t("FrontII.description")}</p>
             </CardContent>
             <CardFooter>
-              <Button>{t("viewMore")}</Button>
+              <ComingSoonDialog />
             </CardFooter>
           </div>
         </Card>
@@ -161,7 +162,7 @@ export default function Courses() {
               <p>{t("FrontIII.description")}</p>
             </CardContent>
             <CardFooter>
-              <Button>{t("viewMore")}</Button>
+              <ComingSoonDialog />
             </CardFooter>
           </div>
         </Card>
@@ -183,7 +184,7 @@ export default function Courses() {
               <p>{t("Databases.description")}</p>
             </CardContent>
             <CardFooter>
-              <Button>{t("viewMore")}</Button>
+              <ComingSoonDialog />
             </CardFooter>
           </div>
         </Card>
@@ -206,7 +207,7 @@ export default function Courses() {
               <p>{t("BackExpress.description")}</p>
             </CardContent>
             <CardFooter>
-              <Button>{t("viewMore")}</Button>
+              <ComingSoonDialog />
             </CardFooter>
           </div>
         </Card>
@@ -229,7 +230,7 @@ export default function Courses() {
               <p>{t("BackNext.description")}</p>
             </CardContent>
             <CardFooter>
-              <Button>{t("viewMore")}</Button>
+              <ComingSoonDialog />
             </CardFooter>
           </div>
         </Card>
@@ -251,7 +252,7 @@ export default function Courses() {
               <p>{t("IoTArduino.description")}</p>
             </CardContent>
             <CardFooter>
-              <Button>{t("viewMore")}</Button>
+              <ComingSoonDialog />
             </CardFooter>
           </div>
         </Card>
@@ -273,7 +274,7 @@ export default function Courses() {
               <p>{t("IoTESP8266.description")}</p>
             </CardContent>
             <CardFooter>
-              <Button>{t("viewMore")}</Button>
+              <ComingSoonDialog />
             </CardFooter>
           </div>
         </Card>
