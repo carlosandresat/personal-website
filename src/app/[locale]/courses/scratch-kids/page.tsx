@@ -1,9 +1,7 @@
 import Image from "next/image";
-import { Award, BadgePercent, BookOpen, Lightbulb, MapPin, Timer } from "lucide-react";
+import { Award, BookOpen, MapPin, Timer } from "lucide-react";
 import ContentTimeline from "@/components/content-timeline";
 import { useTranslations } from 'next-intl';
-import { Dialog, DialogContent, DialogHeader, DialogTrigger, DialogTitle, DialogDescription, DialogFooter } from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
 import type { Metadata } from 'next';
 import { DiscountsDialog } from "@/components/discounts-dialog";
 

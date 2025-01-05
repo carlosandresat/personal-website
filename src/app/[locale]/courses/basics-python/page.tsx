@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Award, BookOpen, Lightbulb, MapPin, Timer } from "lucide-react";
+import { Award, BookOpen, MapPin, Timer } from "lucide-react";
 import ContentTimeline from "@/components/content-timeline";
 import { useTranslations } from "next-intl";
 

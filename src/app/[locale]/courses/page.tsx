@@ -1,4 +1,3 @@
-import Header from "@/components/header";
 import {
   Card,
   CardContent,
@@ -7,7 +6,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import Footer from "@/components/footer";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/navigation";
