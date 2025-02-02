@@ -311,5 +311,10 @@
   "Developing": {
     "title": "Web Applications Development",
     "message": "Coming Soon"
+  },
+  "Students": {
+    "title": "Students",
+    "message": "These are the students who have taken my courses. They have shown great dedication and enthusiasm in learning and applying new concepts. I am proud to have been part of their educational journey.",
+     "viewProfile": "View Profile"
   }
 }

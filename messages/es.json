@@ -311,5 +311,10 @@
   "Developing": {
     "title": "Desarrollo de Aplicaciones Web",
     "message": "Próximamente"
+  },
+  "Students": {
+    "title": "Estudiantes",
+    "message": "Estos son los alumnos que han seguido mis cursos. Han demostrado una gran dedicación y entusiasmo a la hora de aprender y aplicar nuevos conceptos. Estoy orgulloso de haber formado parte de su viaje educativo.",
+    "viewProfile": "Ver Perfil"
   }
 }
