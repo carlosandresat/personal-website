@@ -38,6 +38,15 @@ export default function Navbar() {
       >
         {t("courses")}
       </Link>
+      <Link
+        className={cn(
+          "text-sm font-medium hover:underline hover:text-green-500 underline-offset-4",
+          pathname.endsWith("/students") ? "text-green-500" : ""
+        )}
+        href="/students"
+      >
+        {t("students")}
+      </Link>
     </nav>
   );
 }

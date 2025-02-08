@@ -10,7 +10,8 @@
   "Navbar": {
     "home": "Inicio",
     "developing": "Desarrollo",
-    "courses": "Cursos"
+    "courses": "Cursos",
+    "students": "Estudiantes"
   },
   "Projects": {
     "title": "Mis Proyectos",
