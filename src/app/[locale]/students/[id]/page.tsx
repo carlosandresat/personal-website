@@ -6,9 +6,9 @@ import { ExternalLink } from "lucide-react";
 export default function Page() {
   return (
     <main className="w-full flex flex-col justify-center items-center py-12 md:py-24 lg:py-28 min-h-[93vh]">
-      <div className="max-w-screen-xl px-8 pt-12 lg:pt-0">
-        <Card className="w-full ">
-          <CardHeader className="flex flex-col sm:flex-row items-center sm:items-start gap-4">
+      <div className="max-w-screen-lg px-8 pt-12 lg:pt-0">
+        <Card className="w-full">
+          <CardHeader className="flex flex-col sm:flex-row items-center  gap-4">
             <Avatar className="w-24 h-24">
               <AvatarImage src="" alt="Student Name" />
               <AvatarFallback>CA</AvatarFallback>
@@ -22,9 +22,9 @@ export default function Page() {
               </p>
             </div>
           </CardHeader>
-          <CardContent>
-            <h3 className="text-xl font-semibold mb-2">Acerca</h3>
-            <p className="text-muted-foreground mb-6">
+          <CardContent className="pt-2">
+            <h3 className="text-xl font-semibold mb-6">Acerca</h3>
+            <p className="text-muted-foreground mb-8 leading-7">
               Esta es una descripción genérica de un estudiante. Aquí se puede
               hablar de sus intereses, habilidades y metas. También se puede
               mencionar cualquier información relevante sobre su experiencia
@@ -32,7 +32,7 @@ export default function Page() {
               necesario.
             </p>
             <h3 className="text-xl font-semibold mb-4">Cursos Completados</h3>
-            <div className="space-y-4">
+            <div className="space-y-4 mt-6">
               <Card className="p-4">
                 <div className="flex justify-between items-center">
                   <div>
