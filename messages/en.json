@@ -316,6 +316,27 @@
   "Students": {
     "title": "Students",
     "message": "These are the students who have taken my courses. They have shown great dedication and enthusiasm in learning and applying new concepts. I am proud to have been part of their educational journey.",
-     "viewProfile": "View Profile"
+    "viewProfile": "View Profile",
+    "about": "About",
+    "completedCourse": "Completed Courses",
+    "completed": "Completed",
+    "viewProject": "View Final Project",
+    "carlos-arevalo": "This is a generic description of a student. Here you can talk about your interests, skills and goals. You can also mention any relevant information about your professional or educational experience. This section can be as long as necessary.",
+    "ejemplo-estudiante": "This is a generic description of a student. Here you can talk about your interests, skills and goals. You can also mention any relevant information about your professional or educational experience. This section can be as long as necessary.",
+    "otro-nombre": "This is a generic description of a student. Here you can talk about your interests, skills and goals. You can also mention any relevant information about your professional or educational experience. This section can be as long as necessary.",
+    "ultimo-estudiante": "This is a generic description of a student. Here you can talk about your interests, skills and goals. You can also mention any relevant information about your professional or educational experience. This section can be as long as necessary.",
+    "courses": {
+      "BasicsPython": "Basic Programming with Python",
+      "Scratch": "Programming for kids with Scratch",
+      "Matplotlib": "Data Visualization with Matplotlib",
+      "FrontI": "Front-End (I): HTML, CSS & JavaScript",
+      "FrontII": "Front-End (II): React, TypeScript & TailwindCSS",
+      "FrontIII": "Front-End (III): Next.js",
+      "Databases": "Databases with PostgreSQL",
+      "BackExpress": "Back-End with Express",
+      "BackNext": "Back-End with Next.js",
+      "IoTArduino": "Internet of Things (IoT) Fundamentals with Arduino",
+      "IoTESP8266": "Internet of Things (IoT) Fundamentals with ESP8266"
+    }
   }
 }

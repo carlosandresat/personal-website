@@ -316,6 +316,24 @@
   "Students": {
     "title": "Estudiantes",
     "message": "Estos son los alumnos que han seguido mis cursos. Han demostrado una gran dedicación y entusiasmo a la hora de aprender y aplicar nuevos conceptos. Estoy orgulloso de haber formado parte de su viaje educativo.",
-    "viewProfile": "Ver Perfil"
+    "viewProfile": "Ver Perfil",
+    "about": "Acerca",
+    "completedCourse": "Cursos Completados",
+    "completed": "Completado",
+    "viewProject": "Ver Proyecto Final",
+    "carlos-arevalo": "Esta es una descripción genérica de un estudiante. Aquí se puede hablar de sus intereses, habilidades y metas. También se puede mencionar cualquier información relevante sobre su experiencia profesional o educativa. Esta sección puede ser tan larga como sea necesario.",
+    "courses": {
+      "BasicsPython": "Programación Básica con Python",
+      "Scratch": "Programación para niños con Scratch",
+      "Matplotlib": "Visualización de Datos con Matplotlib",
+      "FrontI": "Front-End (I): HTML, CSS y JavaScript",
+      "FrontII": "Front-End (II): React, TypeScript y TailwindCSS",
+      "FrontIII": "Front-End (III): Next.js",
+      "Databases": "Bases de Datos con PostgreSQL",
+      "BackExpress": "Back-End con Express",
+      "BackNext": "Back-End con Next.js",
+      "IoTArduino": "Fundamentos de IoT con Arduino",
+      "IoTESP8266": "Fundamentos de IoT con ESP8266"
+    }
   }
 }
