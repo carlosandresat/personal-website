@@ -43,7 +43,7 @@ export default function Page({ params }: { params: { id: string } }) {
             <div className="space-y-4 mt-6">
               {student.courses.map((course) => (
                 <Card key={course.code} className="p-4">
-                  <div className="flex justify-between items-center">
+                  <div className="flex flex-col sm:flex-row gap-4 justify-between items-center">
                     <div>
                       <h4 className="font-semibold">
                         {t(`courses.${course.code}`)}
