@@ -16,7 +16,8 @@ export default function Students() {
       <div className="grid grid-cols-1 md:grid-cols-2 w-full max-w-screen-xl p-8 gap-8">
         {studentsData.map((student) => (
           <StudentCard
-            key={student.name}
+            key={student.code}
+            code={student.code}
             name={student.name}
             photoUrl={student.photoUrl}
           />
