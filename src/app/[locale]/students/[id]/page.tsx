@@ -10,7 +10,13 @@ export default function Page({ params }: { params: { id: string } }) {
   const student = studentsData.find((s) => s.code === params.id);
 
   if (!student) {
-    return null;
+    return (
+      <main className="flex min-h-[93vh] flex-col items-center justify-center">
+        <h1 className="scroll-m-20 text-4xl font-extrabold lg:text-5xl px-8 text-center">
+          Student not found
+        </h1>
+      </main>
+    );
   }
 
   return (
