@@ -1,13 +1,4 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
 import StudentCard from "@/components/student-card";
 
 export default function Students() {
