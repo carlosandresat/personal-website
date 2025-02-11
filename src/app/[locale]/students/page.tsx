@@ -13,10 +13,10 @@ export default function Students() {
         {t("message")}
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 w-full max-w-screen-xl p-8 gap-8">
-        <StudentCard />
-        <StudentCard />
-        <StudentCard />
-        <StudentCard />
+        <StudentCard name="Carlos Arévalo" />
+        <StudentCard name="Carlos Arévalo" />
+        <StudentCard name="Carlos Arévalo" />
+        <StudentCard name="Otro Nombre" />
       </div>
     </main>
   );
