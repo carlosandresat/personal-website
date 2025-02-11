@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import StudentCard from "@/components/student-card";
+import { studentsData } from "@/data/students-data";
 
 export default function Students() {
   const t = useTranslations("Students");
@@ -13,10 +14,13 @@ export default function Students() {
         {t("message")}
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 w-full max-w-screen-xl p-8 gap-8">
-        <StudentCard name="Carlos Arévalo" />
-        <StudentCard name="Carlos Arévalo" />
-        <StudentCard name="Carlos Arévalo" />
-        <StudentCard name="Otro Nombre" />
+        {studentsData.map((student) => (
+          <StudentCard
+            key={student.name}
+            name={student.name}
+            photoUrl={student.photoUrl}
+          />
+        ))}
       </div>
     </main>
   );
