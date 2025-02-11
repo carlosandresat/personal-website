@@ -322,6 +322,9 @@
     "completed": "Completado",
     "viewProject": "Ver Proyecto Final",
     "carlos-arevalo": "Esta es una descripción genérica de un estudiante. Aquí se puede hablar de sus intereses, habilidades y metas. También se puede mencionar cualquier información relevante sobre su experiencia profesional o educativa. Esta sección puede ser tan larga como sea necesario.",
+    "ejemplo-estudiaante": "Esta es una descripción genérica de un estudiante. Aquí se puede hablar de sus intereses, habilidades y metas. También se puede mencionar cualquier información relevante sobre su experiencia profesional o educativa. Esta sección puede ser tan larga como sea necesario.",
+    "otro-nombre": "Esta es una descripción genérica de un estudiante. Aquí se puede hablar de sus intereses, habilidades y metas. También se puede mencionar cualquier información relevante sobre su experiencia profesional o educativa. Esta sección puede ser tan larga como sea necesario.",
+    "ultimo-estudiante": "Esta es una descripción genérica de un estudiante. Aquí se puede hablar de sus intereses, habilidades y metas. También se puede mencionar cualquier información relevante sobre su experiencia profesional o educativa. Esta sección puede ser tan larga como sea necesario.",
     "courses": {
       "BasicsPython": "Programación Básica con Python",
       "Scratch": "Programación para niños con Scratch",
