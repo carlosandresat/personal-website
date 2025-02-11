@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/card";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import StudentCard from "@/components/student-card";
 
 export default function Students() {
   const t = useTranslations("Students");
@@ -21,54 +22,10 @@ export default function Students() {
         {t("message")}
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 w-full max-w-screen-xl p-8 gap-8">
-        <Card className="flex items-center h-full p-6">
-          <Avatar className="w-16 h-16">
-            <AvatarImage src="" alt="@shadcn" />
-            <AvatarFallback>CA</AvatarFallback>
-          </Avatar>
-          <div>
-            <CardHeader>
-              <CardTitle>Carlos Arévalo</CardTitle>
-            </CardHeader>
-          </div>
-          <Button className="ml-auto">{t("viewProfile")}</Button>
-        </Card>
-        <Card className="flex items-center h-full p-6">
-          <Avatar className="w-16 h-16">
-            <AvatarImage src="" alt="@shadcn" />
-            <AvatarFallback>CA</AvatarFallback>
-          </Avatar>
-          <div>
-            <CardHeader>
-              <CardTitle>Estudiante 1</CardTitle>
-            </CardHeader>
-          </div>
-          <Button className="ml-auto">{t("viewProfile")}</Button>
-        </Card>
-        <Card className="flex items-center h-full p-6">
-          <Avatar className="w-16 h-16">
-            <AvatarImage src="" alt="@shadcn" />
-            <AvatarFallback>CA</AvatarFallback>
-          </Avatar>
-          <div>
-            <CardHeader>
-              <CardTitle>Estudiante 2</CardTitle>
-            </CardHeader>
-          </div>
-          <Button className="ml-auto">{t("viewProfile")}</Button>
-        </Card>
-        <Card className="flex items-center h-full p-6">
-          <Avatar className="w-16 h-16">
-            <AvatarImage src="" alt="@shadcn" />
-            <AvatarFallback>CA</AvatarFallback>
-          </Avatar>
-          <div>
-            <CardHeader>
-              <CardTitle>Estudiante 3</CardTitle>
-            </CardHeader>
-          </div>
-          <Button className="ml-auto">{t("viewProfile")}</Button>
-        </Card>
+        <StudentCard />
+        <StudentCard />
+        <StudentCard />
+        <StudentCard />
       </div>
     </main>
   );
