@@ -17,22 +17,20 @@ export default function StudentCard({
   const t = useTranslations("Students");
 
   return (
-    <Card className="flex items-center h-full p-6">
-      <Avatar className="w-16 h-16">
-        <AvatarImage src={photoUrl ? photoUrl : ""} alt={`${name} Photo`} />
-        <AvatarFallback>
-          {name
-            .split(" ")
-            .map((n) => n[0])
-            .join("")}
-        </AvatarFallback>
-      </Avatar>
-      <div>
-        <CardHeader>
-          <CardTitle>{name}</CardTitle>
-        </CardHeader>
+    <Card className="flex flex-row items-center justify-between gap-4 sm:gap-8 p-6">
+      <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+        <Avatar className="w-16 h-16">
+          <AvatarImage src={photoUrl ? photoUrl : ""} alt={`${name} Photo`} />
+          <AvatarFallback>
+            {name
+              .split(" ")
+              .map((n) => n[0])
+              .join("")}
+          </AvatarFallback>
+        </Avatar>
+        <CardTitle>{name}</CardTitle>
       </div>
-      <Button className="ml-auto" asChild>
+      <Button asChild>
         <Link href={`/students/${code}`}>{t("viewProfile")}</Link>
       </Button>
     </Card>
