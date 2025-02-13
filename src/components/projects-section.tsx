@@ -67,11 +67,11 @@ export default function ProjectsSection() {
             </div>
           </CardContent>
           <CardFooter className="flex flex-row justify-between gap-4">
-            <a href="https://edfacademy.com/" target="_blank">
-              <Button variant="link" className="hover:text-green-500">
+            <Button variant="link" className="hover:text-green-500" asChild>
+              <a href="https://edfacademy.com/" target="_blank">
                 {t("liveButtonText")}
-              </Button>
-            </a>
+              </a>
+            </Button>
             <Dialog>
               <DialogTrigger asChild>
                 <Button variant="default" className="hover:bg-green-500">
@@ -198,11 +198,11 @@ export default function ProjectsSection() {
             </div>
           </CardContent>
           <CardFooter className="flex flex-row justify-between gap-4">
-            <a href="https://tutou.app/" target="_blank">
-              <Button variant="link" className="hover:text-green-500">
+            <Button variant="link" className="hover:text-green-500" asChild>
+              <a href="https://tutou.app/" target="_blank">
                 {t("liveButtonText")}
-              </Button>
-            </a>
+              </a>
+            </Button>
             <Dialog>
               <DialogTrigger asChild>
                 <Button variant="default" className="hover:bg-green-500">
