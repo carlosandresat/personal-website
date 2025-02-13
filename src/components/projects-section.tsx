@@ -198,7 +198,7 @@ export default function ProjectsSection() {
             </div>
           </CardContent>
           <CardFooter className="flex flex-row justify-between gap-4">
-            <a href="https://tuto-u.vercel.app/" target="_blank">
+            <a href="https://tutou.app/" target="_blank">
               <Button variant="link" className="hover:text-green-500">
                 {t("liveButtonText")}
               </Button>
