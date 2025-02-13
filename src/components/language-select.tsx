@@ -16,7 +16,7 @@ export function LanguageSelect() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline">
+        <Button variant="outline" className="z-10">
           {pathname.startsWith("/en")
             ? "English"
             : pathname.startsWith("/es")
