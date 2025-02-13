@@ -30,24 +30,24 @@ export default function HomeSection() {
             {t("description5")}
           </p>
           <div className="space-x-4 mt-6">
-            <a href="https://github.com/carlosandresat" target="_blank">
-              <Button className="bg-green-500 hover:bg-green-600">
+            <Button className="bg-green-500 hover:bg-green-600" asChild>
+              <a href="https://github.com/carlosandresat" target="_blank">
                 <Github />
-              </Button>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/carlosandresat/"
-              target="_blank"
-            >
-              <Button className="bg-green-500 hover:bg-green-600">
+              </a>
+            </Button>
+            <Button className="bg-green-500 hover:bg-green-600" asChild>
+              <a
+                href="https://www.linkedin.com/in/carlosandresat/"
+                target="_blank"
+              >
                 <Linkedin />
-              </Button>
-            </a>
-            <a href="mailto:carlosandresat@hotmail.com" target="_blank">
-              <Button className="bg-green-500 hover:bg-green-600">
+              </a>
+            </Button>
+            <Button className="bg-green-500 hover:bg-green-600" asChild>
+              <a href="mailto:carlosandresat@hotmail.com" target="_blank">
                 <Mail />
-              </Button>
-            </a>
+              </a>
+            </Button>
           </div>
         </div>
         <div className="flex flex-col items-center justify-center pt-6 md:pt-0">
