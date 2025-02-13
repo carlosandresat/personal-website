@@ -191,7 +191,7 @@ export default function ProjectsSection() {
             <div className="flex items-center gap-4 text-sm">
               <div className="flex items-center gap-1">
                 <span className="text-gray-500 dark:text-gray-400">
-                  React, Next.js, Tailwind CSS, TypeScript, Prisma, tRCP,
+                  React, Next.js, Tailwind CSS, TypeScript, Prisma,
                   PostgreSQL, GCP
                 </span>
               </div>
