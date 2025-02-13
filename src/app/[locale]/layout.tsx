@@ -12,8 +12,8 @@ import Footer from "@/components/footer";
 const inter = Chakra_Petch({ subsets: ["latin"], weight: "500" });
 
 export const metadata: Metadata = {
-  title: "Carlos Arévalo Website",
-  description: "Personal website of Carlos Arévalo - Software Developer",
+  title: "Carlos Arévalo | Software Developer & AI Researcher",
+  description: "Desarrollador de software y investigador en inteligencia artificial con experiencia en tecnologías web modernas como JavaScript, TypeScript, Next.js y React. Apasionado por la innovación, el aprendizaje continuo y la construcción de soluciones tecnológicas impactantes.",
 };
 
 export default async function LocaleLayout({
