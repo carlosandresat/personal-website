@@ -11,10 +11,31 @@ import Footer from "@/components/footer";
 
 const inter = Chakra_Petch({ subsets: ["latin"], weight: "500" });
 
-export const metadata: Metadata = {
-  title: "Carlos Arévalo | Software Developer & AI Researcher",
-  description: "Desarrollador de software y investigador en inteligencia artificial con experiencia en tecnologías web modernas como JavaScript, TypeScript, Next.js y React. Apasionado por la innovación, el aprendizaje continuo y la construcción de soluciones tecnológicas impactantes.",
-};
+type Props = {
+  params: { locale: string }
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  if (params.locale == "es") {
+    return {
+      title: "Carlos Arévalo | Software Developer & AI Researcher",
+      description:
+        "Desarrollador de software e investigador en inteligencia artificial con experiencia en tecnologías web modernas como TypeScript, Next.js y React. Apasionado por la innovación, el aprendizaje continuo y la construcción de soluciones tecnológicas impactantes.",
+    };
+  }
+  if (params.locale == "en") {
+    return {
+      title: "Carlos Arévalo | Software Developer & AI Researcher",
+      description:
+        "Software developer and artificial intelligence researcher with experience in modern web technologies such as TypeScript, Next.js and React. Passionate about innovation, continuous learning and building impactful technology solutions.",
+    };
+  }
+  return {
+    title: "Carlos Arévalo | Software Developer & AI Researcher",
+    description:
+      "Desarrollador de software e investigador en inteligencia artificial con experiencia en tecnologías web modernas como TypeScript, Next.js y React. Apasionado por la innovación, el aprendizaje continuo y la construcción de soluciones tecnológicas impactantes.",
+  };
+}
 
 export default async function LocaleLayout({
   children,
