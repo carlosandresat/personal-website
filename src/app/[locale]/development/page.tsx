@@ -3,7 +3,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import PhaseTabContent from "@/components/phase-tab-content";
 
 export default function Page() {
-  const t = useTranslations("Developing");
+  const t = useTranslations("Development");
 
   const requirementsData = [
     {

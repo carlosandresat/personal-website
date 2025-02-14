@@ -9,7 +9,7 @@
   },
   "Navbar": {
     "home": "Inicio",
-    "developing": "Desarrollo",
+    "development": "Desarrollo",
     "courses": "Cursos",
     "students": "Estudiantes"
   },
@@ -309,7 +309,7 @@
       "description": "Este curso se centra en el desarrollo de IoT utilizando el ESP8266, un microchip Wi-Fi de bajo costo. Los participantes aprenderán a programar el ESP8266, conectarse a internet y construir dispositivos conectados a la web. El curso abarca diversos protocolos de comunicación e integración con la nube. Al finalizar, los estudiantes serán capaces de crear proyectos de IoT sofisticados con el ESP8266. Ideal para quienes tengan algo de experiencia en electrónica y programación y deseen explorar más a fondo el IoT."
     }
   },
-  "Developing": {
+  "Development": {
     "title": "Desarrollo de Aplicaciones Web",
     "message": "Próximamente"
   },

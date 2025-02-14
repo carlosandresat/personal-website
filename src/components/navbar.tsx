@@ -23,11 +23,11 @@ export default function Navbar() {
       <Link
         className={cn(
           "text-sm font-medium hover:underline hover:text-green-500 underline-offset-4",
-          pathname.endsWith("/developing") ? "text-green-500" : ""
+          pathname.endsWith("/development") ? "text-green-500" : ""
         )}
-        href="/developing"
+        href="/development"
       >
-        {t("developing")}
+        {t("development")}
       </Link>
       <Link
         className={cn(

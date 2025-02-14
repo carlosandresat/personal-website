@@ -25,7 +25,7 @@ export default function ServicesSection() {
                 {t("service3description")}
               </p>
               <Button className="mt-2 w-fit self-end" asChild>
-                <Link href="/developing">{t("learnButtonText")}</Link>
+                <Link href="/development">{t("learnButtonText")}</Link>
               </Button>
             </div>
             <div className="flex-shrink-0 w-20 h-20 md:w-14 md:h-14 xl:w-24 xl:h-24 flex justify-center items-center bg-green-500 md:bg-secondary rounded-md shadow-lg">
