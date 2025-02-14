@@ -43,31 +43,42 @@ export default function Page() {
                 del proyecto.
               </CardDescription>
             </CardHeader>
-            <CardContent>
-              <h4 className="font-semibold leading-none tracking-tight">
-                Acciones del Cliente
-              </h4>
-              <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
-                <li>Describir la idea general del proyecto y sus objetivos.</li>
-                <li>
-                  Mencionar funcionalidades esenciales y necesidades
-                  específicas.
-                </li>
-                <li>
-                  Proporcionar información sobre presupuesto y tiempo estimado.
-                </li>
-              </ul>
-              <h4 className="font-semibold leading-none tracking-tight">
-                Acciones del Desarrollador
-              </h4>
-              <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
-                <li>Realizar preguntas para clarificar requerimientos.</li>
-                <li>
-                  Tomar notas detalladas y sugerir posibles tecnologías o
-                  enfoques.
-                </li>
-                <li>Establecer la base para la documentación futura.</li>
-              </ul>
+            <CardContent className="flex flex-col md:flex-row w-full gap-4">
+              <Card className="bg-secondary flex-1">
+                <CardHeader>
+                  <CardTitle>Acciones del Cliente</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="ml-6 list-disc [&>li]:mt-2">
+                    <li>
+                      Describir la idea general del proyecto y sus objetivos.
+                    </li>
+                    <li>
+                      Mencionar funcionalidades esenciales y necesidades
+                      específicas.
+                    </li>
+                    <li>
+                      Proporcionar información sobre presupuesto y tiempo
+                      estimado.
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+              <Card className="bg-secondary flex-1">
+                <CardHeader>
+                  <CardTitle>Acciones del Desarrollador</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="ml-6 list-disc [&>li]:mt-2">
+                    <li>Realizar preguntas para clarificar requerimientos.</li>
+                    <li>
+                      Tomar notas detalladas y sugerir posibles tecnologías o
+                      enfoques.
+                    </li>
+                    <li>Establecer la base para la documentación futura.</li>
+                  </ul>
+                </CardContent>
+              </Card>
             </CardContent>
           </Card>
         </TabsContent>
