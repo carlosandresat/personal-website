@@ -310,8 +310,153 @@
     }
   },
   "Development": {
-    "title": "Web Applications Development",
-    "message": "Coming Soon"
+    "title": "Web Application Development",
+    "requirements": {
+      "title": "Requirements",
+      "phases": {
+        "1": {
+          "title": "First Meeting: Requirements Analysis",
+          "description": "Define what the client needs and establish a clear vision of the project",
+          "clientActions": {
+            "1": "Describe the general idea of the project and its objectives.",
+            "2": "Mention essential functionalities and specific needs.",
+            "3": "Provide information about budget and estimated time."
+          },
+          "developerActions": {
+            "1": "Ask questions to clarify requirements.",
+            "2": "Take detailed notes and suggest possible technologies or approaches.",
+            "3": "Lay the foundation for future documentation."
+          }
+        }
+      }
+    },
+    "planning": {
+      "title": "Planning",
+      "phases": {
+        "1": {
+          "title": "Specifications Document and Technical Proposal",
+          "description": "Formalize the requirements and establish an initial project roadmap.",
+          "clientActions": {
+            "1": "Review the document to confirm that all requirements are covered.",
+            "2": "Provide feedback and suggest necessary adjustments."
+          },
+          "developerActions": {
+            "1": "Draft a document including system description, functionalities, timeline, and cost estimation.",
+            "2": "Propose work methodologies and tracking tools."
+          }
+        },
+        "2": {
+          "title": "Contract Signing and Scope Definition",
+          "description": "Align expectations, costs, and deadlines through a formal agreement.",
+          "clientActions": {
+            "1": "Read, understand, and sign the contract.",
+            "2": "Make the first payment or advance if applicable."
+          },
+          "developerActions": {
+            "1": "Clearly define deliverables and deadlines.",
+            "2": "Define communication and tracking channels and tools."
+          }
+        }
+      }
+    },
+    "development": {
+      "title": "Development",
+      "phases": {
+        "1": {
+          "title": "Design and Prototyping",
+          "description": "Create and validate the project's user interface (UI) and user experience (UX).",
+          "clientActions": {
+            "1": "Review presented sketches and wireframes.",
+            "2": "Provide feedback to refine the design."
+          },
+          "developerActions": {
+            "1": "Develop wireframes.",
+            "2": "Adjust the design based on client feedback."
+          }
+        },
+        "2": {
+          "title": "Coding and System Construction",
+          "description": "Implement the defined functionalities and structure the system's foundation.",
+          "clientActions": {
+            "1": "Review partial deliveries or system demos.",
+            "2": "Validate that functionalities meet expectations and report observations."
+          },
+          "developerActions": {
+            "1": "Write code, create software architecture, and configure the database.",
+            "2": "Integrate modules and perform unit testing during development."
+          }
+        },
+        "3": {
+          "title": "Testing and Adjustments",
+          "description": "Ensure the system works correctly and is error-free before deployment.",
+          "clientActions": {
+            "1": "Perform user tests in the development environment.",
+            "2": "Report issues or necessary improvements."
+          },
+          "developerActions": {
+            "1": "Conduct integration, compatibility, and security tests.",
+            "2": "Fix bugs and optimize system performance."
+          }
+        }
+      }
+    },
+    "deployment": {
+      "title": "Deployment",
+      "phases": {
+        "1": {
+          "title": "Production Environment Setup",
+          "description": "Prepare the necessary infrastructure to host and run the application live.",
+          "clientActions": {
+            "1": "Define the domain for the application."
+          },
+          "developerActions": {
+            "1": "Set up servers, domains, and databases in the production environment.",
+            "2": "Perform final tests to ensure proper migration."
+          }
+        },
+        "2": {
+          "title": "Launch and Training",
+          "description": "Put the application online and train the client for proper use.",
+          "clientActions": {
+            "1": "Verify the proper functioning of the system in production.",
+            "2": "Participate in training sessions and review user manuals."
+          },
+          "developerActions": {
+            "1": "Perform the final deployment and monitor initial system stability.",
+            "2": "Provide documentation, manuals, and support for team training."
+          }
+        }
+      }
+    },
+    "maintenance": {
+      "title": "Maintenance",
+      "phases": {
+        "1": {
+          "title": "Support and Continuous Monitoring",
+          "description": "Ensure the system's stable operation and resolve any issues that may arise.",
+          "clientActions": {
+            "1": "Report problems or incidents in daily use.",
+            "2": "Suggest improvements or new functionalities as the system is used."
+          },
+          "developerActions": {
+            "1": "Continuously monitor system performance and security.",
+            "2": "Provide technical support and fix detected errors or failures."
+          }
+        },
+        "2": {
+          "title": "Updates and Improvements",
+          "description": "Keep the software updated and adapt it to changes or new business needs.",
+          "clientActions": {
+            "1": "Evaluate and propose new functionalities or periodic improvements.",
+            "2": "Plan future update cycles together."
+          },
+          "developerActions": {
+            "1": "Develop and implement security, performance, and new feature updates.",
+            "2": "Perform post-update tests to ensure system stability."
+          }
+        }
+      }
+    }
   },
   "Students": {
     "title": "Students",

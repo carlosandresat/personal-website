@@ -311,7 +311,152 @@
   },
   "Development": {
     "title": "Desarrollo de Aplicaciones Web",
-    "message": "Próximamente"
+    "requirements": {
+      "title": "Requerimientos",
+      "phases": {
+        "1": {
+          "title": "Primera Reunión: Análisis de Requerimientos",
+          "description": "Definir qué necesita el cliente y establecer una visión clara del proyecto",
+          "clientActions": {
+            "1": "Describir la idea general del proyecto y sus objetivos.",
+            "2": "Mencionar funcionalidades esenciales y necesidades específicas.",
+            "3": "Proporcionar información sobre presupuesto y tiempo estimado."
+          },
+          "developerActions": {
+            "1": "Realizar preguntas para clarificar requerimientos.",
+            "2": "Tomar notas detalladas y sugerir posibles tecnologías o enfoques.",
+            "3": "Establecer la base para la documentación futura."
+          }
+        }
+      }
+    },
+    "planning": {
+      "title": "Planificación",
+      "phases": {
+        "1": {
+          "title": "Documento de Especificaciones y Propuesta Técnica",
+          "description": "Formalizar los requerimientos y establecer una hoja de ruta inicial del proyecto.",
+          "clientActions": {
+            "1": "Revisar el documento para confirmar que todos los requerimientos están contemplados.",
+            "2": "Proveer retroalimentación y sugerir ajustes necesarios."
+          },
+          "developerActions": {
+            "1": "Redactar un documento que incluya descripción del sistema, funcionalidades, cronograma y estimación de costos.",
+            "2": "Proponer metodologías de trabajo y herramientas de seguimiento."
+          }
+        },
+        "2": {
+          "title": "Firma de Contrato y Definición del Alcance",
+          "description": "Alinear expectativas, costos y plazos mediante un acuerdo formal.",
+          "clientActions": {
+            "1": "Leer, entender y firmar el contrato.",
+            "2": "Realizar el primer pago o adelanto si aplica."
+          },
+          "developerActions": {
+            "1": "Establecer claramente los entregables y los tiempos de entrega.",
+            "2": "Definir canales y herramientas de comunicación y seguimiento."
+          }
+        }
+      }
+    },
+    "development": {
+      "title": "Desarrollo",
+      "phases": {
+        "1": {
+          "title": "Diseño y Prototipado",
+          "description": "Crear y validar la interfaz de usuario (UI) y la experiencia de usuario (UX) del proyecto.",
+          "clientActions": {
+            "1": "Revisar bocetos y wireframes presentados.",
+            "2": "Proporcionar feedback para refinar el diseño."
+          },
+          "developerActions": {
+            "1": "Desarrollar wireframes.",
+            "2": "Ajustar el diseño de acuerdo a los comentarios del cliente."
+          }
+        },
+        "2": {
+          "title": "Codificación y Construcción del Sistema",
+          "description": "Implementar las funcionalidades definidas y estructurar la base del sistema.",
+          "clientActions": {
+            "1": "Revisar entregas parciales o demos del sistema.",
+            "2": "Validar que las funcionalidades se ajusten a lo esperado y reportar observaciones."
+          },
+          "developerActions": {
+            "1": "Escribir el código, crear la arquitectura del software y configurar la base de datos.",
+            "2": "Integrar módulos y realizar pruebas unitarias durante el desarrollo."
+          }
+        },
+        "3": {
+          "title": "Pruebas y Ajustes",
+          "description": "Garantizar que el sistema funcione correctamente y esté libre de errores antes de su despliegue.",
+          "clientActions": {
+            "1": "Ejecutar pruebas de usuario en el entorno de desarrollo.",
+            "2": "Reportar incidencias o mejoras necesarias."
+          },
+          "developerActions": {
+            "1": "Realizar pruebas de integración, compatibilidad y seguridad.",
+            "2": "Corregir errores y optimizar el rendimiento del sistema."
+          }
+        }
+      }
+    },
+    "deployment": {
+      "title": "Despliegue",
+      "phases": {
+        "1": {
+          "title": "Configuración del Entorno de Producción",
+          "description": "Preparar la infraestructura necesaria para alojar y ejecutar la aplicación en vivo.",
+          "clientActions": {
+            "1": "Definir el dominio para la aplicación."
+          },
+          "developerActions": {
+            "1": "Configurar servidores, dominios y bases de datos en el entorno de producción.",
+            "2": "Realizar pruebas finales para garantizar la correcta migración."
+          }
+        },
+        "2": {
+          "title": "Lanzamiento y Capacitación",
+          "description": "Poner la aplicación en línea y capacitar al cliente para su uso correcto.",
+          "clientActions": {
+            "1": "Verificar el correcto funcionamiento del sistema en producción.",
+            "2": "Participar en sesiones de capacitación y revisión de manuales de uso."
+          },
+          "developerActions": {
+            "1": "Realizar el despliegue final y monitorear la estabilidad inicial del sistema.",
+            "2": "Proveer documentación, manuales y soporte para la capacitación del equipo."
+          }
+        }
+      }
+    },
+    "maintenance": {
+      "title": "Mantenimiento",
+      "phases": {
+        "1": {
+          "title": "Soporte y Monitoreo Continuo",
+          "description": "Asegurar la operación estable del sistema y resolver incidencias que puedan surgir.",
+          "clientActions": {
+            "1": "Reportar problemas o incidencias en el uso diario.",
+            "2": "Sugerir mejoras o nuevas funcionalidades conforme se utilice el sistema."
+          },
+          "developerActions": {
+            "1": "Monitorear el rendimiento y la seguridad del sistema de manera continua.",
+            "2": "Proveer soporte técnico y solucionar errores o fallos detectados."
+          }
+        },
+        "2": {
+          "title": "Actualizaciones y Mejoras",
+          "description": "Mantener el software actualizado y adaptarlo a cambios o nuevas necesidades del negocio.",
+          "clientActions": {
+            "1": "Evaluar y proponer nuevas funcionalidades o mejoras periódicas.",
+            "2": "Planificar en conjunto futuros ciclos de actualización."
+          },
+          "developerActions": {
+            "1": "Desarrollar e implementar actualizaciones de seguridad, rendimiento y nuevas funcionalidades.",
+            "2": "Realizar pruebas posteriores a cada actualización para garantizar la estabilidad del sistema."
+          }
+        }
+      }
+    }
   },
   "Students": {
     "title": "Estudiantes",
