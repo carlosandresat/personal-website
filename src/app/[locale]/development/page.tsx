@@ -165,13 +165,13 @@ export default function Page() {
       <Tabs defaultValue="requirements" className="w-full max-w-screen-xl p-8">
         <TabsList className="flex w-full  py-2 h-full flex-wrap justify-center">
           {tabsData.map((tab, index) => (
-            <TabsTrigger value={tab.code} key={tab.code} className="text-wrap">
+            <TabsTrigger value={tab.code} key={tab.code} className="text-wrap data-[state=active]:bg-green-500">
               {`${index + 1}. ` + tab.title}
             </TabsTrigger>
           ))}
         </TabsList>
         {tabsData.map((tab) => (
-          <TabsContent value={tab.code} key={tab.code}>
+          <TabsContent value={tab.code} key={tab.code} className="space-y-2">
             {tab.phases.map((data, index) => (
               <PhaseTabContent
                 key={index}
