@@ -8,159 +8,149 @@ export default function Page() {
   const tabsData = [
     {
       code: "requirements",
-      title: "Requerimientos",
+      title: t("requirements.title"),
       phases: [
         {
-          title: "Primera Reunión: Análisis de Requerimientos",
-          description:
-            "Definir qué necesita el cliente y establecer una visión clara del proyecto.",
+          title: t("requirements.phases.1.title"),
+          description: t("requirements.phases.1.description"),
           clientActions: [
-            "Describir la idea general del proyecto y sus objetivos.",
-            "Mencionar funcionalidades esenciales y necesidades específicas.",
-            "Proporcionar información sobre presupuesto y tiempo estimado.",
+            t("requirements.phases.1.clientActions.1"),
+            t("requirements.phases.1.clientActions.2"),
+            t("requirements.phases.1.clientActions.3"),
           ],
           developerActions: [
-            "Realizar preguntas para clarificar requerimientos.",
-            "Tomar notas detalladas y sugerir posibles tecnologías o enfoques.",
-            "Establecer la base para la documentación futura.",
+            t("requirements.phases.1.developerActions.1"),
+            t("requirements.phases.1.developerActions.2"),
+            t("requirements.phases.1.developerActions.3"),
           ],
         },
       ],
     },
     {
       code: "planning",
-      title: "Planificación",
+      title: t("planning.title"),
       phases: [
         {
-          title: "Documento de Especificaciones y Propuesta Técnica",
-          description:
-            "Formalizar los requerimientos y establecer una hoja de ruta inicial del proyecto.",
+          title: t("planning.phases.1.title"),
+          description: t("planning.phases.1.description"),
           clientActions: [
-            "Revisar el documento para confirmar que todos los requerimientos están contemplados.",
-            "Proveer retroalimentación y sugerir ajustes necesarios.",
+            t("planning.phases.1.clientActions.1"),
+            t("planning.phases.1.clientActions.2"),
           ],
           developerActions: [
-            "Redactar un documento que incluya descripción del sistema, funcionalidades, cronograma y estimación de costos.",
-            "Proponer metodologías de trabajo y herramientas de seguimiento.",
+            t("planning.phases.1.developerActions.1"),
+            t("planning.phases.1.developerActions.2"),
           ],
         },
         {
-          title: "Firma de Contrato y Definición del Alcance",
-          description:
-            "Alinear expectativas, costos y plazos mediante un acuerdo formal.",
+          title: t("planning.phases.2.title"),
+          description: t("planning.phases.2.description"),
           clientActions: [
-            "Leer, entender y firmar el contrato.",
-            "Realizar el primer pago o adelanto si aplica.",
+            t("planning.phases.2.clientActions.1"),
+            t("planning.phases.2.clientActions.2"),
           ],
           developerActions: [
-            "Establecer claramente los entregables y los tiempos de entrega.",
-            "Definir canales y herramientas de comunicación y seguimiento.",
+            t("planning.phases.2.developerActions.1"),
+            t("planning.phases.2.developerActions.2"),
           ],
         },
       ],
     },
     {
       code: "development",
-      title: "Desarrollo",
+      title: t("development.title"),
       phases: [
         {
-          title: "Diseño y Prototipado",
-          description:
-            "Crear y validar la interfaz de usuario (UI) y la experiencia de usuario (UX) del proyecto.",
+          title: t("development.phases.1.title"),
+          description: t("development.phases.1.description"),
           clientActions: [
-            "Revisar bocetos y wireframes presentados.",
-            "Proporcionar feedback para refinar el diseño.",
+            t("development.phases.1.clientActions.1"),
+            t("development.phases.1.clientActions.2"),
           ],
           developerActions: [
-            "Desarrollar wireframes.",
-            "Ajustar el diseño de acuerdo a los comentarios del cliente.",
+            t("development.phases.1.developerActions.1"),
+            t("development.phases.1.developerActions.2"),
           ],
         },
         {
-          title: "Codificación y Construcción del Sistema",
-          description:
-            "Implementar las funcionalidades definidas y estructurar la base del sistema.",
+          title: t("development.phases.2.title"),
+          description: t("development.phases.2.description"),
           clientActions: [
-            "Revisar entregas parciales o demos del sistema.",
-            "Validar que las funcionalidades se ajusten a lo esperado y reportar observaciones.",
+            t("development.phases.2.clientActions.1"),
+            t("development.phases.2.clientActions.2"),
           ],
           developerActions: [
-            "Escribir el código, crear la arquitectura del software y configurar la base de datos.",
-            "Integrar módulos y realizar pruebas unitarias durante el desarrollo.",
+            t("development.phases.2.developerActions.1"),
+            t("development.phases.2.developerActions.2"),
           ],
         },
         {
-          title: "Pruebas y Ajustes",
-          description:
-            "Garantizar que el sistema funcione correctamente y esté libre de errores antes de su despliegue.",
+          title: t("development.phases.3.title"),
+          description: t("development.phases.3.description"),
           clientActions: [
-            "Ejecutar pruebas de usuario en el entorno de desarrollo.",
-            "Reportar incidencias o mejoras necesarias.",
+            t("development.phases.3.clientActions.1"),
+            t("development.phases.3.clientActions.2"),
           ],
           developerActions: [
-            "Realizar pruebas de integración, compatibilidad y seguridad.",
-            "Corregir errores y optimizar el rendimiento del sistema.",
+            t("development.phases.3.developerActions.1"),
+            t("development.phases.3.developerActions.2"),
           ],
         },
       ],
     },
     {
       code: "deployment",
-      title: "Despliegue",
+      title: t("deployment.title"),
       phases: [
         {
-          title: "Configuración del Entorno de Producción",
-          description:
-            "Preparar la infraestructura necesaria para alojar y ejecutar la aplicación en vivo.",
-          clientActions: ["Definir el dominio para la aplicación"],
+          title: t("deployment.phases.1.title"),
+          description: t("deployment.phases.1.description"),
+          clientActions: [t("deployment.phases.1.clientActions.1")],
           developerActions: [
-            "Configurar servidores, dominios y bases de datos en el entorno de producción.",
-            "Realizar pruebas finales para garantizar la correcta migración.",
+            t("deployment.phases.1.developerActions.1"),
+            t("deployment.phases.1.developerActions.2"),
           ],
         },
         {
-          title: "Lanzamiento y Capacitación",
-          description:
-            "Poner la aplicación en línea y capacitar al cliente para su uso correcto.",
+          title: t("deployment.phases.2.title"),
+          description: t("deployment.phases.2.description"),
           clientActions: [
-            "Verificar el correcto funcionamiento del sistema en producción.",
-            "Participar en sesiones de capacitación y revisión de manuales de uso.",
+            t("deployment.phases.2.clientActions.1"),
+            t("deployment.phases.2.clientActions.2"),
           ],
           developerActions: [
-            "Realizar el despliegue final y monitorear la estabilidad inicial del sistema.",
-            "Proveer documentación, manuales y soporte para la capacitación del equipo.",
+            t("deployment.phases.2.developerActions.1"),
+            t("deployment.phases.2.developerActions.2"),
           ],
         },
       ],
     },
     {
       code: "maintenance",
-      title: "Mantenimiento",
+      title: t("maintenance.title"),
       phases: [
         {
-          title: "Soporte y Monitoreo Continuo",
-          description:
-            "Asegurar la operación estable del sistema y resolver incidencias que puedan surgir.",
+          title: t("maintenance.phases.1.title"),
+          description: t("maintenance.phases.1.description"),
           clientActions: [
-            "Reportar problemas o incidencias en el uso diario.",
-            "Sugerir mejoras o nuevas funcionalidades conforme se utilice el sistema.",
+            t("maintenance.phases.1.clientActions.1"),
+            t("maintenance.phases.1.clientActions.2"),
           ],
           developerActions: [
-            "Monitorear el rendimiento y la seguridad del sistema de manera continua.",
-            "Proveer soporte técnico y solucionar errores o fallos detectados.",
+            t("maintenance.phases.1.developerActions.1"),
+            t("maintenance.phases.1.developerActions.2"),
           ],
         },
         {
-          title: "Actualizaciones y Mejoras",
-          description:
-            "Mantener el software actualizado y adaptarlo a cambios o nuevas necesidades del negocio.",
+          title: t("maintenance.phases.2.title"),
+          description: t("maintenance.phases.2.description"),
           clientActions: [
-            "Evaluar y proponer nuevas funcionalidades o mejoras periódicas.",
-            "Planificar en conjunto futuros ciclos de actualización.",
+            t("maintenance.phases.2.clientActions.1"),
+            t("maintenance.phases.2.clientActions.2"),
           ],
           developerActions: [
-            "Desarrollar e implementar actualizaciones de seguridad, rendimiento y nuevas funcionalidades.",
-            "Realizar pruebas posteriores a cada actualización para garantizar la estabilidad del sistema.",
+            t("maintenance.phases.2.developerActions.1"),
+            t("maintenance.phases.2.developerActions.2"),
           ],
         },
       ],
