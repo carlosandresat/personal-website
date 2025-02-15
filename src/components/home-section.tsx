@@ -32,7 +32,7 @@ export default function HomeSection() {
           <div className="space-x-4 mt-6">
             <Button className="bg-green-500 hover:bg-green-600" asChild>
               <a href="https://github.com/carlosandresat" target="_blank">
-                <Github />
+                <Github color="white"/>
               </a>
             </Button>
             <Button className="bg-green-500 hover:bg-green-600" asChild>
@@ -40,12 +40,12 @@ export default function HomeSection() {
                 href="https://www.linkedin.com/in/carlosandresat/"
                 target="_blank"
               >
-                <Linkedin />
+                <Linkedin color="white"/>
               </a>
             </Button>
             <Button className="bg-green-500 hover:bg-green-600" asChild>
               <a href="mailto:carlosandresat@hotmail.com" target="_blank">
-                <Mail />
+                <Mail color="white"/>
               </a>
             </Button>
           </div>
