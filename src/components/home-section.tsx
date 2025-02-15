@@ -30,12 +30,12 @@ export default function HomeSection() {
             {t("description5")}
           </p>
           <div className="space-x-4 mt-6">
-            <Button className="bg-green-500 hover:bg-green-600" asChild>
+            <Button className="bg-green-500 hover:bg-green-600" aria-label="Link to Github" asChild>
               <a href="https://github.com/carlosandresat" target="_blank">
                 <Github color="white"/>
               </a>
             </Button>
-            <Button className="bg-green-500 hover:bg-green-600" asChild>
+            <Button className="bg-green-500 hover:bg-green-600" aria-label="Link to LinkedIn" asChild>
               <a
                 href="https://www.linkedin.com/in/carlosandresat/"
                 target="_blank"
@@ -43,7 +43,7 @@ export default function HomeSection() {
                 <Linkedin color="white"/>
               </a>
             </Button>
-            <Button className="bg-green-500 hover:bg-green-600" asChild>
+            <Button className="bg-green-500 hover:bg-green-600" aria-label="Link to Mail" asChild>
               <a href="mailto:carlosandresat@hotmail.com" target="_blank">
                 <Mail color="white"/>
               </a>
