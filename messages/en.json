@@ -461,6 +461,8 @@
   "Students": {
     "title": "Students",
     "message": "These are the students who have taken my courses. They have shown great dedication and enthusiasm in learning and applying new concepts. I am proud to have been part of their educational journey.",
+    "alertTitle": "Section in Development",
+    "alertDescription": "This section is still under development. Soon you will be able to see the complete information.",
     "viewProfile": "View Profile",
     "about": "About",
     "completedCourse": "Completed Courses",

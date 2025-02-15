@@ -461,6 +461,8 @@
   "Students": {
     "title": "Estudiantes",
     "message": "Estos son los alumnos que han seguido mis cursos. Han demostrado una gran dedicación y entusiasmo a la hora de aprender y aplicar nuevos conceptos. Estoy orgulloso de haber formado parte de su viaje educativo.",
+    "alertTitle": "Sección en Desarrollo",
+    "alertDescription": "Esta sección aún se encuentra en desarrollo. Próximamente podrás ver la información completa.",
     "viewProfile": "Ver Perfil",
     "about": "Acerca",
     "completedCourse": "Cursos Completados",
