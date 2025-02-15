@@ -18,9 +18,9 @@ export default function ServicesSection() {
         <div className="flex flex-col space-y-8 md:space-y-0 md:flex-row md:space-x-12 items-center justify-center">
           <div className="flex space-x-8 xl:space-x-12 items-center w-full">
             <div className="flex flex-col">
-              <h4 className="scroll-m-20 text-xl font-semibold tracking-tight text-right">
+              <h3 className="scroll-m-20 text-xl font-semibold tracking-tight text-right">
                 {t("service3")}
-              </h4>
+              </h3>
               <p className="leading-7 mt-2 text-right">
                 {t("service3description")}
               </p>
@@ -38,9 +38,9 @@ export default function ServicesSection() {
             </div>
 
             <div className="flex flex-col">
-              <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+              <h3 className="scroll-m-20 text-xl font-semibold tracking-tight">
                 {t("service4")}
-              </h4>
+              </h3>
               <p className="leading-7 mt-2">{t("service4description")}</p>
             </div>
           </div>
@@ -48,9 +48,9 @@ export default function ServicesSection() {
         <div className="flex flex-col space-y-8 md:space-y-0 md:flex-row md:space-x-12 items-center justify-center">
           <div className="flex space-x-8 xl:space-x-12 items-center w-full">
             <div className="flex flex-col">
-              <h4 className="scroll-m-20 text-xl font-semibold tracking-tight text-right">
+              <h3 className="scroll-m-20 text-xl font-semibold tracking-tight text-right">
                 {t("service1")}
-              </h4>
+              </h3>
               <p className="leading-7 text-right">{t("service1description")}</p>
             </div>
             <div className="flex-shrink-0  w-20 h-20 md:w-14 md:h-14 xl:w-24 xl:h-24 flex justify-center items-center bg-green-500 rounded-md shadow-lg">
@@ -63,9 +63,9 @@ export default function ServicesSection() {
             </div>
 
             <div className="flex flex-col">
-              <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+              <h3 className="scroll-m-20 text-xl font-semibold tracking-tight">
                 {t("service2")}
-              </h4>
+              </h3>
               <p className="leading-7 mt-2">{t("service2description")}</p>
               <Button className="mt-2 w-fit self-start" asChild>
                 <Link href="/courses">{t("learnButtonText")}</Link>
