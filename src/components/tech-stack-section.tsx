@@ -89,6 +89,24 @@ export default function TechStackSection() {
             </div>
           </CarouselItem>
           <CarouselItem
+            key="nestjs"
+            className=" md:basis-1/3 lg:basis-1/4 xl:basis-1/5"
+          >
+            <div className="p-1">
+              <Card>
+                <CardContent className="flex aspect-square items-center justify-center p-6 flex-col">
+                  <Image
+                    alt="NestJS"
+                    height="70"
+                    src="/nestjs.svg"
+                    width="70"
+                  />
+                  <span className="pt-4 font-semibold text-2xl">NestJS</span>
+                </CardContent>
+              </Card>
+            </div>
+          </CarouselItem>
+          <CarouselItem
             key="typescript"
             className=" md:basis-1/3 lg:basis-1/4 xl:basis-1/5"
           >
@@ -148,7 +166,24 @@ export default function TechStackSection() {
               </Card>
             </div>
           </CarouselItem>
-
+          <CarouselItem
+            key="typeorm"
+            className=" md:basis-1/3 lg:basis-1/4 xl:basis-1/5"
+          >
+            <div className="p-1">
+              <Card>
+                <CardContent className="flex aspect-square items-center justify-center p-6 flex-col">
+                  <Image
+                    alt="TypeORM"
+                    height="60"
+                    src="/typeorm.png"
+                    width="60"
+                  />
+                  <span className="pt-4 font-semibold text-2xl">TypeORM</span>
+                </CardContent>
+              </Card>
+            </div>
+          </CarouselItem>
           <CarouselItem
             key="trpc"
             className=" md:basis-1/3 lg:basis-1/4 xl:basis-1/5"
@@ -517,25 +552,6 @@ export default function TechStackSection() {
                 <CardContent className="flex aspect-square items-center justify-center p-6 flex-col">
                   <Image alt="bun" height="70" src="/bun.svg" width="70" />
                   <span className="pt-4 font-semibold text-2xl">Bun</span>
-                </CardContent>
-              </Card>
-            </div>
-          </CarouselItem>
-
-          <CarouselItem
-            key="nestjs"
-            className=" md:basis-1/3 lg:basis-1/4 xl:basis-1/5"
-          >
-            <div className="p-1">
-              <Card>
-                <CardContent className="flex aspect-square items-center justify-center p-6 flex-col">
-                  <Image
-                    alt="NestJS"
-                    height="80"
-                    src="/nestjs.svg"
-                    width="80"
-                  />
-                  <span className="pt-4 font-semibold text-2xl">NestJS</span>
                 </CardContent>
               </Card>
             </div>
