@@ -25,9 +25,17 @@ export default function HomeSection() {
           <p className="md:text-xl mt-6">
             {t("description1")}
             <span className=" text-green-500">{t("description2")}</span>
-            {t("description3")}{" "}
-            <span className=" text-green-500">{t("description4")}</span>{" "}
+            {t("description3")}
+            <span className=" text-green-500">{t("description4")}</span>
             {t("description5")}
+            <span className=" text-green-500">{t("description6")}</span>
+            {t("description7")}
+            <span className=" text-green-500">{t("description8")}</span>
+            {t("description9")}
+            <span className=" text-green-500">{t("description10")}</span>
+            {t("description11")}
+            <span className=" text-green-500">{t("description12")}</span>
+            {t("description13")}
           </p>
           <div className="space-x-4 mt-6">
             <Button className="bg-green-500 hover:bg-green-600" aria-label="Link to Github" asChild>
