@@ -123,7 +123,7 @@ export default function ExperiencesSection() {
         {defaultExperiences.map((exp, index) => (
           <Card key={index} className="flex flex-col h-full justify-between">
             <CardHeader>
-              <div className="flex items-start justify-between mb-2">
+              <div className="flex items-start justify-between mb-2 space-x-2">
                 <CardTitle className="text-lg">{exp.title}</CardTitle>
                 <Badge variant="secondary" className="capitalize">
                   {getIcon(exp.type)}
