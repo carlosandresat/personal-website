@@ -1,6 +1,12 @@
 import { useTranslations } from "next-intl";
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
   Briefcase,
@@ -9,6 +15,17 @@ import {
   MapPin,
   Ticket,
 } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 type Experience = {
   type: string;
@@ -104,8 +121,8 @@ export default function ExperiencesSection() {
       </h2>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 p-8 max-w-screen-xl w-full">
         {defaultExperiences.map((exp, index) => (
-          <Card key={index} className="flex flex-col h-full">
-            <CardHeader className="flex-grow-0">
+          <Card key={index} className="flex flex-col h-full justify-between">
+            <CardHeader>
               <div className="flex items-start justify-between mb-2">
                 <CardTitle className="text-lg">{exp.title}</CardTitle>
                 <Badge variant="secondary" className="capitalize">
@@ -128,11 +145,31 @@ export default function ExperiencesSection() {
                 )}
               </div>
             </CardHeader>
-            <CardContent className="flex-grow flex flex-col justify-between">
-              <div className="border-t pt-4 mt-2">
-                <p className="text-sm">{exp.description}</p>
-              </div>
-            </CardContent>
+            <CardFooter className="justify-end">
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button>Más info...</Button>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-[425px]">
+                  <DialogHeader>
+                    <DialogTitle>{exp.title}</DialogTitle>
+                    <DialogDescription className="capitalize flex items-center">
+                      {getIcon(exp.type)}
+                      <span className="ml-1">{exp.type}</span>
+                    </DialogDescription>
+                  </DialogHeader>
+                  <p className="leading-relaxedyy">{exp.description}</p>
+                  <DialogFooter className="md:justify-between w-full">
+                    <Button>Ver certificado</Button>
+                    <DialogClose asChild>
+                      <Button type="button" variant="secondary">
+                        Cerrar
+                      </Button>
+                    </DialogClose>
+                  </DialogFooter>
+                </DialogContent>
+              </Dialog>
+            </CardFooter>
           </Card>
         ))}
       </div>
