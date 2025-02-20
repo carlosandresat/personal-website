@@ -154,6 +154,13 @@
       "date": "Jul 10, 2023",
       "location": "I Congreso Internacional de Educación, Ciencias, Innovación y Sociedad (CIECIS23)",
       "description": "Presenté un póster titulado 'Tutoring Sessions Yachay Tech: aplicación web para impulsar aprendizaje colectivo' donde destaco los resultados de mi proyecto OrientaYT."
+    },
+    "9": {
+      "title": "NestJS: La Guía Completa del Desarrollador",
+      "type": "curso",
+      "date": "Feb 17, 2024",
+      "location": "Udemy",
+      "description": "He completado un curso de 20 horas de NestJS para backend, profundizando en TypeORM y ampliando mi comprensión de TypeScript, más allá del tipado de variables. Esta experiencia me ha permitido fortalecer mis habilidades en arquitectura backend, desarrollo modular y mejores prácticas en aplicaciones escalables."
     }
   },
   "TechStack": {

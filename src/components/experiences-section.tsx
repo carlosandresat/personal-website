@@ -40,6 +40,13 @@ export default function ExperiencesSection() {
 
   const defaultExperiences: Experience[] = [
     {
+      type: t("9.type"),
+      title: t("9.title"),
+      description: t("9.description"),
+      date: t("9.date"),
+      location: t("9.location"),
+    },
+    {
       type: t("8.type"),
       title: t("8.title"),
       description: t("8.description"),
