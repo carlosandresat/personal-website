@@ -40,46 +40,11 @@ export default function ExperiencesSection() {
 
   const defaultExperiences: Experience[] = [
     {
-      type: t("1.type"),
-      title: t("1.title"),
-      description: t("1.description"),
-      date: t("1.date"),
-      location: t("1.location"),
-    },
-    {
-      type: t("2.type"),
-      title: t("2.title"),
-      description: t("2.description"),
-      date: t("2.date"),
-      location: t("2.location"),
-    },
-    {
-      type: t("3.type"),
-      title: t("3.title"),
-      description: t("3.description"),
-      date: t("3.date"),
-      location: t("3.location"),
-    },
-    {
-      type: t("4.type"),
-      title: t("4.title"),
-      description: t("4.description"),
-      date: t("4.date"),
-      location: t("4.location"),
-    },
-    {
-      type: t("5.type"),
-      title: t("5.title"),
-      description: t("5.description"),
-      date: t("5.date"),
-      location: t("5.location"),
-    },
-    {
-      type: t("6.type"),
-      title: t("6.title"),
-      description: t("6.description"),
-      date: t("6.date"),
-      location: t("6.location"),
+      type: t("8.type"),
+      title: t("8.title"),
+      description: t("8.description"),
+      date: t("8.date"),
+      location: t("8.location"),
     },
     {
       type: t("7.type"),
@@ -89,11 +54,46 @@ export default function ExperiencesSection() {
       location: t("7.location"),
     },
     {
-      type: t("8.type"),
-      title: t("8.title"),
-      description: t("8.description"),
-      date: t("8.date"),
-      location: t("8.location"),
+      type: t("6.type"),
+      title: t("6.title"),
+      description: t("6.description"),
+      date: t("6.date"),
+      location: t("6.location"),
+    },
+    {
+      type: t("5.type"),
+      title: t("5.title"),
+      description: t("5.description"),
+      date: t("5.date"),
+      location: t("5.location"),
+    },
+    {
+      type: t("4.type"),
+      title: t("4.title"),
+      description: t("4.description"),
+      date: t("4.date"),
+      location: t("4.location"),
+    },
+    {
+      type: t("3.type"),
+      title: t("3.title"),
+      description: t("3.description"),
+      date: t("3.date"),
+      location: t("3.location"),
+    },
+    {
+      type: t("2.type"),
+      title: t("2.title"),
+      description: t("2.description"),
+      date: t("2.date"),
+      location: t("2.location"),
+    },
+    {
+      type: t("1.type"),
+      title: t("1.title"),
+      description: t("1.description"),
+      date: t("1.date"),
+      location: t("1.location"),
     },
   ];
 
@@ -148,7 +148,7 @@ export default function ExperiencesSection() {
             <CardFooter className="justify-end">
               <Dialog>
                 <DialogTrigger asChild>
-                  <Button>Más info...</Button>
+                  <Button>{t("moreInfo")}</Button>
                 </DialogTrigger>
                 <DialogContent className="sm:max-w-[425px]">
                   <DialogHeader>
@@ -160,10 +160,10 @@ export default function ExperiencesSection() {
                   </DialogHeader>
                   <p className="leading-relaxedyy">{exp.description}</p>
                   <DialogFooter className="md:justify-between w-full">
-                    <Button>Ver certificado</Button>
+                    <Button>{t("viewCertificate")}</Button>
                     <DialogClose asChild>
                       <Button type="button" variant="secondary">
-                        Cerrar
+                        {t("close")}
                       </Button>
                     </DialogClose>
                   </DialogFooter>

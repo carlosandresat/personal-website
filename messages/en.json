@@ -96,61 +96,64 @@
   },
   "Experiences": {
     "title": "My Experiences",
+    "moreInfo": "More info...",
+    "viewCertificate": "View certificate",
+    "close": "Close",
     "1": {
-      "title": "Scientific Poster Presentation",
-      "type": "event",
-      "date": "Jul 10, 2023",
-      "location": "I Congreso Internacional de Educación, Ciencias, Innovación y Sociedad (CIECIS23)",
-      "description": "Presented a poster titled 'Tutoring Sessions Yachay Tech: web application to promote collective learning,' highlighting the results of my OrientaYT project."
+      "title": "Board Member",
+      "type": "work",
+      "date": "Oct 2020 - Oct 2021",
+      "location": "Computational Sciences Club at Yachay Tech University",
+      "description": "Director of the Communications Department in the TICs / Computer Science Engineering club."
     },
     "2": {
-      "title": "Software Developer Internship",
-      "type": "work",
-      "date": "Jun - Dec 2022",
-      "location": "TALOV",
-      "description": "Preprocessed a sign language dataset with data augmentation, collected keypoints from video frames, modeled an LSTM neural network, and trained it with the retrieved keypoints. Used TFLite to create a lightweight model for a mobile app developed in Flutter by another team."
-    },
-    "3": {
-      "title": "Generative AI Fundamentals",
-      "type": "course",
-      "date": "Jun 14, 2022",
-      "location": "Google Cloud Skills Boost",
-      "description": "Certified foundational knowledge in generative AI and its applications."
-    },
-    "4": {
-      "title": "Software Engineering & Computational Sciences Seminar",
-      "type": "event",
-      "date": "Mar 21 - 25, 2022",
-      "location": "",
-      "description": "Organized by the Software Club ESPE Latacunga, the Computational Sciences Club at Yachay Tech University, the Computer Society Chapter ESPE Latacunga, and the Computer Society Chapter Yachay Tech."
-    },
-    "5": {
-      "title": "Speaker in Computer Vision Exhibition 2.0",
-      "type": "event",
-      "date": "Dec 7, 2021",
-      "location": "IEEE Computer Society Yachay Tech University",
-      "description": "Presented a poster about a Gesture Recognition App based on the TensorFlow Lite Android example."
-    },
-    "6": {
-      "title": "Tutor in Proyecto Hamilton Tech",
-      "type": "event",
-      "date": "Nov - Dec 2021",
-      "location": "Computational Sciences Club at Yachay Tech University",
-      "description": "Mentored high school students in computing subjects."
-    },
-    "7": {
       "title": "Speaker & Assistant in Fundamentals of Software Engineering Seminar",
       "type": "event",
       "date": "May - Jul 2021",
       "location": "SDAS Research Group",
       "description": "Contributed to sessions on software engineering principles."
     },
-    "8": {
-      "title": "Board Member",
-      "type": "work",
-      "date": "Oct 2020 - Oct 2021",
+    "3": {
+      "title": "Tutor in Proyecto Hamilton Tech",
+      "type": "event",
+      "date": "Nov - Dec 2021",
       "location": "Computational Sciences Club at Yachay Tech University",
-      "description": "Director of the Communications Department in the TICs / Computer Science Engineering club."
+      "description": "Mentored high school students in computing subjects."
+    },
+    "4": {
+      "title": "Speaker in Computer Vision Exhibition 2.0",
+      "type": "event",
+      "date": "Dec 7, 2021",
+      "location": "IEEE Computer Society Yachay Tech University",
+      "description": "Presented a poster about a Gesture Recognition App based on the TensorFlow Lite Android example."
+    },
+    "5": {
+      "title": "Software Engineering & Computational Sciences Seminar",
+      "type": "event",
+      "date": "Mar 21 - 25, 2022",
+      "location": "",
+      "description": "Organized by the Software Club ESPE Latacunga, the Computational Sciences Club at Yachay Tech University, the Computer Society Chapter ESPE Latacunga, and the Computer Society Chapter Yachay Tech."
+    },
+    "6": {
+      "title": "Generative AI Fundamentals",
+      "type": "course",
+      "date": "Jun 14, 2022",
+      "location": "Google Cloud Skills Boost",
+      "description": "Certified foundational knowledge in generative AI and its applications."
+    },
+    "7": {
+      "title": "Software Developer Internship",
+      "type": "work",
+      "date": "Jun - Dec 2022",
+      "location": "TALOV",
+      "description": "Preprocessed a sign language dataset with data augmentation, collected keypoints from video frames, modeled an LSTM neural network, and trained it with the retrieved keypoints. Used TFLite to create a lightweight model for a mobile app developed in Flutter by another team."
+    },
+    "8": {
+      "title": "Scientific Poster Presentation",
+      "type": "event",
+      "date": "Jul 10, 2023",
+      "location": "I Congreso Internacional de Educación, Ciencias, Innovación y Sociedad (CIECIS23)",
+      "description": "Presented a poster titled 'Tutoring Sessions Yachay Tech: web application to promote collective learning,' highlighting the results of my OrientaYT project."
     }
   },
   "TechStack": {
