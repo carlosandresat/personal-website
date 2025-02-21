@@ -33,6 +33,7 @@ type Experience = {
   description: string;
   date: string;
   location?: string;
+  certificate?: string;
 };
 
 export default function ExperiencesSection() {
@@ -45,6 +46,8 @@ export default function ExperiencesSection() {
       description: t("9.description"),
       date: t("9.date"),
       location: t("9.location"),
+      certificate:
+        "https://www.udemy.com/certificate/UC-8fd07ed2-700b-45d2-a8e6-48f673432f84/",
     },
     {
       type: t("8.type"),
@@ -52,6 +55,8 @@ export default function ExperiencesSection() {
       description: t("8.description"),
       date: t("8.date"),
       location: t("8.location"),
+      certificate:
+        "https://drive.google.com/file/d/1Uvj9UCsvFPhH8kbiKozF5ue_BpDAmMRM/view?usp=drive_link",
     },
     {
       type: t("7.type"),
@@ -66,6 +71,8 @@ export default function ExperiencesSection() {
       description: t("6.description"),
       date: t("6.date"),
       location: t("6.location"),
+      certificate:
+        "https://www.cloudskillsboost.google/public_profiles/84fd359f-c2dc-40ed-952e-0c15c770f547/badges/3994394",
     },
     {
       type: t("5.type"),
@@ -73,6 +80,8 @@ export default function ExperiencesSection() {
       description: t("5.description"),
       date: t("5.date"),
       location: t("5.location"),
+      certificate:
+        "https://drive.google.com/file/d/1BZ0aSQV2ArIjwuf7SqOIvmrCZJnQizv8/view?usp=sharing",
     },
     {
       type: t("4.type"),
@@ -80,6 +89,8 @@ export default function ExperiencesSection() {
       description: t("4.description"),
       date: t("4.date"),
       location: t("4.location"),
+      certificate:
+        "https://drive.google.com/file/d/1-KlFzNerXEhrc8XNmf7VorVgha7gE1GM/view?usp=sharing",
     },
     {
       type: t("3.type"),
@@ -87,6 +98,8 @@ export default function ExperiencesSection() {
       description: t("3.description"),
       date: t("3.date"),
       location: t("3.location"),
+      certificate:
+        "https://drive.google.com/file/d/1kCUiT5kkI3ajeMcnyv2nxOPJGRwOhCSq/view?usp=sharing",
     },
     {
       type: t("2.type"),
@@ -167,7 +180,11 @@ export default function ExperiencesSection() {
                   </DialogHeader>
                   <p className="leading-relaxedyy">{exp.description}</p>
                   <DialogFooter className="md:justify-between w-full">
-                    <Button>{t("viewCertificate")}</Button>
+                    {exp.certificate && (
+                      <Button asChild>
+                        <a href={exp.certificate} target="_blank">{t("viewCertificate")}</a>
+                      </Button>
+                    )}
                     <DialogClose asChild>
                       <Button type="button" variant="secondary">
                         {t("back")}
