@@ -1,4 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { useTranslations } from "next-intl";
 
 interface PhaseTabContentProps {
   title: string;
@@ -13,6 +14,8 @@ export default function PhaseTabContent({
   clientActions,
   developerActions,
 }: PhaseTabContentProps) {
+  const t = useTranslations("Development");
+
   return (
     <Card>
       <CardHeader>
@@ -22,7 +25,7 @@ export default function PhaseTabContent({
       <CardContent className="flex flex-col md:flex-row w-full gap-4">
         <Card className="bg-secondary flex-1">
           <CardHeader>
-            <CardTitle>Acciones del Cliente</CardTitle>
+            <CardTitle>{t("clientActions")}</CardTitle>
           </CardHeader>
           <CardContent>
             <ul className="ml-6 list-disc [&>li]:mt-2">
@@ -34,7 +37,7 @@ export default function PhaseTabContent({
         </Card>
         <Card className="bg-secondary flex-1">
           <CardHeader>
-            <CardTitle>Acciones del Desarrollador</CardTitle>
+            <CardTitle>{t("developerActions")}</CardTitle>
           </CardHeader>
           <CardContent>
             <ul className="ml-6 list-disc [&>li]:mt-2">

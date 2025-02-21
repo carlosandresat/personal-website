@@ -329,6 +329,8 @@
   },
   "Development": {
     "title": "Web Application Development",
+    "clientActions": "Client Actions",
+    "developerActions": "Developer Actions",
     "requirements": {
       "title": "Requirements",
       "phases": {
