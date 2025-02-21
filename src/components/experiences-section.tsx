@@ -170,7 +170,7 @@ export default function ExperiencesSection() {
                     <Button>{t("viewCertificate")}</Button>
                     <DialogClose asChild>
                       <Button type="button" variant="secondary">
-                        {t("close")}
+                        {t("back")}
                       </Button>
                     </DialogClose>
                   </DialogFooter>
