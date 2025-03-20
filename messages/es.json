@@ -158,9 +158,16 @@
     "9": {
       "title": "NestJS: La Guía Completa del Desarrollador",
       "type": "curso",
-      "date": "Feb 17, 2024",
+      "date": "Feb 17, 2025",
       "location": "Udemy",
       "description": "He completado un curso de 20 horas de NestJS para backend, profundizando en TypeORM y ampliando mi comprensión de TypeScript, más allá del tipado de variables. Esta experiencia me ha permitido fortalecer mis habilidades en arquitectura backend, desarrollo modular y mejores prácticas en aplicaciones escalables."
+    },
+    "10": {
+      "title": "Docker & Kubernetes: La Guía Práctica",
+      "type": "curso",
+      "date": "Mar 6, 2025",
+      "location": "Udemy",
+      "description": "He completado un curso de 23.5 horas de Docker y Kubernetes para la conteinerización de proyectos. Este curso me ha permitido comprender la importancia de la orquestación de contenedores y cómo implementar aplicaciones en entornos de producción. Ahora tengo la capacidad de crear, administrar y escalar contenedores de manera eficiente."
     }
   },
   "TechStack": {

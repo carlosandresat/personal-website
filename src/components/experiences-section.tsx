@@ -41,6 +41,15 @@ export default function ExperiencesSection() {
 
   const defaultExperiences: Experience[] = [
     {
+      type: t("10.type"),
+      title: t("10.title"),
+      description: t("10.description"),
+      date: t("10.date"),
+      location: t("10.location"),
+      certificate:
+        "https://www.udemy.com/certificate/UC-d531c97e-05ae-48bc-9364-775a2961cf59/",
+    },
+    {
       type: t("9.type"),
       title: t("9.title"),
       description: t("9.description"),
