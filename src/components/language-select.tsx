@@ -27,14 +27,14 @@ export function LanguageSelect() {
       <DropdownMenuContent align="end">
         <DropdownMenuItem
           onClick={() => {
-            router.push("/en" + pathname.slice(3));
+            router.push("/en" + pathname.slice(3), { scroll: false });
           }}
         >
           English
         </DropdownMenuItem>
         <DropdownMenuItem
           onClick={() => {
-            router.push("/es" + pathname.slice(3));
+            router.push("/es" + pathname.slice(3), { scroll: false });
           }}
         >
           Español
