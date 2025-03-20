@@ -6,7 +6,7 @@ import { ModeToggle } from "@/components/mode-toggle";
 
 export default function Header() {
   return (
-    <header className="px-4 lg:px-6 h-16 flex items-center border-b fixed top-0 w-full bg-background justify-between z-10">
+    <header className="px-4 lg:px-6 h-16 flex items-center border-b fixed top-0 w-full bg-background justify-between z-20">
       <Link className="flex items-center justify-center" href="/">
         <Image alt="Logo" height="42" src="/logo.png" width="42" />
       </Link>
