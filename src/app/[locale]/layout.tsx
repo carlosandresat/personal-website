@@ -21,6 +21,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: "Carlos Arévalo | Software Developer & AI Researcher",
       description:
         "Desarrollador de software e investigador en inteligencia artificial con experiencia en tecnologías web modernas como TypeScript, Next.js y React. Apasionado por la innovación, el aprendizaje continuo y la construcción de soluciones tecnológicas impactantes.",
+      metadataBase: new URL("https://carlosarevalo.dev"),
+      alternates: {
+        canonical: "/",
+        languages: {
+          en: "/en",
+          es: "/es",
+        },
+      },
     };
   }
   if (params.locale == "en") {
@@ -28,12 +36,28 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: "Carlos Arévalo | Software Developer & AI Researcher",
       description:
         "Software developer and artificial intelligence researcher with experience in modern web technologies such as TypeScript, Next.js and React. Passionate about innovation, continuous learning and building impactful technology solutions.",
+      metadataBase: new URL("https://carlosarevalo.dev"),
+      alternates: {
+        canonical: "/",
+        languages: {
+          en: "/en",
+          es: "/es",
+        },
+      },
     };
   }
   return {
     title: "Carlos Arévalo | Software Developer & AI Researcher",
     description:
       "Desarrollador de software e investigador en inteligencia artificial con experiencia en tecnologías web modernas como TypeScript, Next.js y React. Apasionado por la innovación, el aprendizaje continuo y la construcción de soluciones tecnológicas impactantes.",
+    metadataBase: new URL("https://carlosarevalo.dev"),
+    alternates: {
+      canonical: "/",
+      languages: {
+        en: "/en",
+        es: "/es",
+      },
+    },
   };
 }
 
@@ -90,7 +114,6 @@ export default async function LocaleLayout({
           <Header />
             {children}
             <Footer />
-
           </NextIntlClientProvider>
           <Analytics />
         </ThemeProvider>
