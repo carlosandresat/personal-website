@@ -3,7 +3,6 @@ import { Award, BookOpen, MapPin, Timer } from "lucide-react";
 import ContentTimeline from "@/components/content-timeline";
 import { useTranslations } from 'next-intl';
 import type { Metadata } from 'next';
-import { DiscountsDialog } from "@/components/discounts-dialog";
 
 type Props = {
   params: { locale: string }
