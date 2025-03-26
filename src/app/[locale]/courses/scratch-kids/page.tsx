@@ -167,7 +167,7 @@ export default function ScratchKids() {
       </div>
       <div className="w-full bg-secondary flex items-center justify-center">
         <div className="flex flex-col lg:flex-row  w-full max-w-screen-xl">
-          <div className="border-b w-full lg:border-r border-background lg:border-b-0 lg:w-1/2 flex flex-col p-8">
+          <div className="border-b w-full border-background lg:border-b-0 lg:w-1/2 flex flex-col p-8">
             <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
               {t('learningObjective.title')}
             </h4>
