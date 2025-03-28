@@ -3,6 +3,7 @@ import { Award, BookOpen, MapPin, Timer } from "lucide-react";
 import ContentTimeline from "@/components/content-timeline";
 import { useTranslations } from 'next-intl';
 import type { Metadata } from 'next';
+import { PricingDialog } from "@/components/pricing-dialog";
 
 type Props = {
   params: { locale: string }
@@ -140,7 +141,7 @@ export default function ScratchKids() {
           <p className="mt-4">
             {t('description')}
           </p>
-          <div className="grid grid-cols-2 lg:grid-cols-4 mt-4 gap-2">
+          <div className="grid grid-cols-2 lg:grid-cols-4 mt-4 mb-8 gap-2">
             <div className="flex items-center gap-2">
               <Timer color="#22c55e"/> <p>15 {t('time')}</p>
             </div>
@@ -153,6 +154,10 @@ export default function ScratchKids() {
             <div className="flex items-center gap-2">
               <Award color="#22c55e"/> <p>{t('certificate')}</p>
             </div>
+          </div>
+          <div className="flex gap-4 flex-col items-center md:flex-row md:justify-evenly">
+            <div className="flex items-center gap-2"><p>{t('from')}</p> <div className="flex flex-col items-center"><p className="text-xl font-semibold">$40</p> <p className="text-muted-foreground text-sm self-end">{t('forGroups')}</p></div></div>
+            <PricingDialog />
           </div>
         </div>
         <div className="w-40 lg:w-64 shrink-0 bg-secondary mx-auto rounded-xl shadow-lg aspect-square flex items-center justify-center p-8">

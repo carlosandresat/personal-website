@@ -266,10 +266,15 @@
       "project": "project",
       "projects": "projects",
       "investment": "investment",
-      "discounts": "Discounts",
+      "from": "From",
+      "forGroups": "for groups",
+      "viewPrices": "View Prices",
+      "prices": "Prices", 
+      "pricePerStudent": "Price per student", 
+      "discount": "Discount",
       "discountsDescription": "Check the prices per number of students",
-      "students": "students",
-      "discountsNote": "The maximum number of students per course is 4. This ensures the quality of learning for each student",
+      "students": "Students",
+      "pricingNote": "Ask for additional discounts or personalized course for educational organizations",
       "prerequisites": "Prerequisites",
       "req": {
         "1": "None"
