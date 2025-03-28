@@ -214,34 +214,38 @@ export default function BasicsPython() {
           <div className="w-full lg:w-1/2 flex flex-col items-center justify-center">
             <div className="w-full flex items-center">
               <div className="w-1/3 flex flex-col items-center justify-center border-r border-background lg:border-0 p-4 aspect-square md:aspect-video lg:aspect-square">
-              <div className="flex flex-col items-center justify-center lg:border-green-500 lg:border-8 rounded-full w-full aspect-square md:aspect-video lg:aspect-square">
-                <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
-                  8
-                </h4>
-                <p className="leading-4 text-center">{t("lectures")}</p></div>
+                <div className="flex flex-col items-center justify-center lg:border-green-500 lg:border-8 rounded-full w-full aspect-square md:aspect-video lg:aspect-square">
+                  <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+                    8
+                  </h4>
+                  <p className="leading-4 text-center">{t("lectures")}</p>
+                </div>
               </div>
               <div className="w-1/3 flex flex-col items-center justify-center border-r border-background lg:border-0 p-4 aspect-square md:aspect-video lg:aspect-square">
-              <div className="flex flex-col items-center justify-center lg:border-green-500 lg:border-8 rounded-full w-full aspect-square md:aspect-video lg:aspect-square">
-                <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
-                  8
-                </h4>
-                <p className="leading-4 text-center">{t("workshops")}</p></div>
+                <div className="flex flex-col items-center justify-center lg:border-green-500 lg:border-8 rounded-full w-full aspect-square md:aspect-video lg:aspect-square">
+                  <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+                    8
+                  </h4>
+                  <p className="leading-4 text-center">{t("workshops")}</p>
+                </div>
               </div>
               <div className="w-1/3 flex flex-col items-center justify-center p-4 aspect-square md:aspect-video lg:aspect-square">
-              <div className="flex flex-col items-center justify-center lg:border-green-500 lg:border-8 rounded-full w-full aspect-square md:aspect-video lg:aspect-square">
-                <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
-                  8
-                </h4>
-                <p className="leading-4 text-center">{t("assessments")}</p></div>
+                <div className="flex flex-col items-center justify-center lg:border-green-500 lg:border-8 rounded-full w-full aspect-square md:aspect-video lg:aspect-square">
+                  <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+                    8
+                  </h4>
+                  <p className="leading-4 text-center">{t("assessments")}</p>
+                </div>
               </div>
             </div>
             <div className="w-full flex justify-center border-t lg:border-0 border-background grow  h-full">
               <div className="w-full flex flex-col items-center justify-center p-4">
-              <div className="w-[30%] flex flex-col items-center justify-center lg:border-green-500 lg:border-8 rounded-full lg:aspect-square">
-                <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
-                  1
-                </h4>
-                <p className="leading-4 text-center">{t("project")}</p></div>
+                <div className="w-[30%] flex flex-col items-center justify-center lg:border-green-500 lg:border-8 rounded-full lg:aspect-square">
+                  <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+                    1
+                  </h4>
+                  <p className="leading-4 text-center">{t("project")}</p>
+                </div>
               </div>
             </div>
           </div>
