@@ -180,9 +180,9 @@ export default function ScratchKids() {
       <div className="w-full bg-secondary flex items-center justify-center">
         <div className="flex flex-col lg:flex-row  w-full max-w-screen-xl">
           <div className="border-b w-full border-background lg:border-b-0 lg:w-1/2 flex flex-col p-8">
-            <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+            <h2 className="scroll-m-20 text-xl font-semibold tracking-tight">
               {t("learningObjective.title")}
-            </h4>
+            </h2>
 
             <ul className="mt-4 ml-6 list-disc [&>li]:mt-2">
               <li>{t("learningObjective.1")}</li>
@@ -195,25 +195,25 @@ export default function ScratchKids() {
             <div className="w-full flex items-center">
               <div className="w-1/3 flex flex-col items-center justify-center border-r border-background lg:border-0 p-4 aspect-square md:aspect-video lg:aspect-square">
                 <div className="flex flex-col items-center justify-center lg:border-green-500 lg:border-8 rounded-full w-full aspect-square md:aspect-video lg:aspect-square">
-                  <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+                  <p className="scroll-m-20 text-xl font-semibold tracking-tight">
                     6
-                  </h4>
+                  </p>
                   <p className="leading-4 text-center">{t("lectures")}</p>
                 </div>
               </div>
               <div className="w-1/3 flex flex-col items-center justify-center border-r border-background lg:border-0 p-4 aspect-square md:aspect-video lg:aspect-square">
                 <div className="flex flex-col items-center justify-center lg:border-green-500 lg:border-8 rounded-full w-full aspect-square md:aspect-video lg:aspect-square">
-                  <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+                  <p className="scroll-m-20 text-xl font-semibold tracking-tight">
                     6
-                  </h4>
+                  </p>
                   <p className="leading-4 text-center">{t("workshops")}</p>
                 </div>
               </div>
               <div className="w-1/3 flex items-center justify-center p-4 aspect-square md:aspect-video lg:aspect-square">
                 <div className="flex flex-col items-center justify-center lg:border-green-500 lg:border-8 rounded-full w-full aspect-square md:aspect-video lg:aspect-square">
-                  <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+                  <p className="scroll-m-20 text-xl font-semibold tracking-tight">
                     3
-                  </h4>
+                  </p>
                   <p className="leading-4 text-center">{t("projects")}</p>
                 </div>
               </div>
@@ -222,9 +222,9 @@ export default function ScratchKids() {
         </div>
       </div>
       <div className="flex flex-col  w-full p-8 items-start max-w-screen-xl">
-        <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+        <h2 className="scroll-m-20 text-xl font-semibold tracking-tight">
           {t("prerequisites")}
-        </h4>
+        </h2>
 
         <ul className="mt-4 ml-6 list-disc [&>li]:mt-2">
           <li>{t("req.1")}</li>
@@ -232,9 +232,9 @@ export default function ScratchKids() {
       </div>
       <div className="w-full flex flex-col items-center justify-center bg-secondary">
         <div className="w-full flex flex-col items-center justify-center max-w-screen-xl p-8">
-          <h4 className="scroll-m-20 text-xl font-semibold tracking-tight self-start">
+          <h2 className="scroll-m-20 text-xl font-semibold tracking-tight self-start">
             {t("content")}
-          </h4>
+          </h2>
           <ContentTimeline timelineItems={timelineItems} />
         </div>
       </div>

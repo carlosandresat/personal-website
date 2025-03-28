@@ -37,9 +37,9 @@ const ContentTimeline = ({
                   className="invert dark:invert-0"
                 />
               </div>
-              <h4 className="scroll-m-20 text-xl font-semibold tracking-tight ml-4">
+              <h3 className="scroll-m-20 text-xl font-semibold tracking-tight ml-4">
                 {item.title}
-              </h4>
+              </h3>
               <p className="text-md text-muted-foreground ml-auto">
                 {item.duration}
               </p>
