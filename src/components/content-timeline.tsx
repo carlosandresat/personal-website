@@ -64,7 +64,7 @@ const ContentTimeline = ({
             </div>
           </div>
         ))}
-      <Button onClick={handleToggle} className="rounded-full h-16 w-16">
+      <Button onClick={handleToggle} className="rounded-full h-16 w-16" aria-label="View more">
         {showAll ? <ChevronUp /> : <ChevronDown />}
       </Button>
     </div>
