@@ -167,7 +167,7 @@ export default function BasicsPython() {
 
   return (
     <main className="flex min-h-screen flex-col items-center">
-      <div className="flex pt-24 lg:pt-32 w-full p-8 gap-6 md:gap-12 items-center flex-col-reverse md:flex-row max-w-screen-xl">
+      <div className="flex pt-24 lg:pt-32 w-full p-8 gap-6 lg:gap-12 items-center flex-col-reverse lg:flex-row max-w-screen-xl">
         <div>
           <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl ">
             {t("title")}
@@ -188,7 +188,7 @@ export default function BasicsPython() {
             </div>
           </div>
         </div>
-        <div className="w-40 md:w-64 shrink-0 bg-secondary mx-auto rounded-xl shadow-lg aspect-square flex items-center justify-center p-8">
+        <div className="w-40 lg:w-64 shrink-0 bg-secondary mx-auto rounded-xl shadow-lg aspect-square flex items-center justify-center p-8">
           <Image
             src="/Python.png"
             height={500}
@@ -198,8 +198,8 @@ export default function BasicsPython() {
         </div>
       </div>
       <div className="w-full bg-secondary flex items-center justify-center">
-        <div className="flex flex-col md:flex-row  w-full max-w-screen-xl">
-          <div className="border-b w-full md:border-r border-background md:border-b-0 md:w-1/2 flex flex-col p-8">
+        <div className="flex flex-col lg:flex-row  w-full max-w-screen-xl">
+          <div className="border-b w-full border-background lg:border-b-0 lg:w-1/2 flex flex-col p-8 justify-center">
             <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
               {t("learningObjective.title")}
             </h4>
@@ -211,39 +211,37 @@ export default function BasicsPython() {
               <li>{t("learningObjective.4")}</li>
             </ul>
           </div>
-          <div className="w-full md:w-1/2 flex flex-col items-center justify-center md:border-r border-background">
-            <div className="w-full flex items-center grow h-full">
-              <div className="w-1/2 flex flex-col items-center justify-center border-r border-background h-full p-4 aspect-square md:aspect-auto">
+          <div className="w-full lg:w-1/2 flex flex-col items-center justify-center">
+            <div className="w-full flex items-center">
+              <div className="w-1/3 flex flex-col items-center justify-center border-r border-background lg:border-0 p-4 aspect-square md:aspect-video lg:aspect-square">
+              <div className="flex flex-col items-center justify-center lg:border-green-500 lg:border-8 rounded-full w-full aspect-square md:aspect-video lg:aspect-square">
                 <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
                   8
                 </h4>
-                <p className="leading-4 text-center">{t("lectures")}</p>
+                <p className="leading-4 text-center">{t("lectures")}</p></div>
               </div>
-              <div className="w-1/2 flex flex-col items-center justify-center border-r border-background h-full p-4 aspect-square md:aspect-auto">
+              <div className="w-1/3 flex flex-col items-center justify-center border-r border-background lg:border-0 p-4 aspect-square md:aspect-video lg:aspect-square">
+              <div className="flex flex-col items-center justify-center lg:border-green-500 lg:border-8 rounded-full w-full aspect-square md:aspect-video lg:aspect-square">
                 <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
                   8
                 </h4>
-                <p className="leading-4 text-center">{t("workshops")}</p>
+                <p className="leading-4 text-center">{t("workshops")}</p></div>
               </div>
-              <div className="w-1/2 flex flex-col items-center justify-center p-4">
+              <div className="w-1/3 flex flex-col items-center justify-center p-4 aspect-square md:aspect-video lg:aspect-square">
+              <div className="flex flex-col items-center justify-center lg:border-green-500 lg:border-8 rounded-full w-full aspect-square md:aspect-video lg:aspect-square">
                 <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
                   8
                 </h4>
-                <p className="leading-4 text-center">{t("assessments")}</p>
+                <p className="leading-4 text-center">{t("assessments")}</p></div>
               </div>
             </div>
-            <div className="w-full flex justify-center border-t border-background grow  h-full">
-              <div className="w-1/3 flex flex-col items-center justify-center p-4 border-r border-background aspect-square md:aspect-auto">
+            <div className="w-full flex justify-center border-t lg:border-0 border-background grow  h-full">
+              <div className="w-full flex flex-col items-center justify-center p-4">
+              <div className="w-[30%] flex flex-col items-center justify-center lg:border-green-500 lg:border-8 rounded-full lg:aspect-square">
                 <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
                   1
                 </h4>
-                <p className="leading-4 text-center">{t("project")}</p>
-              </div>
-              <div className="w-2/3 flex flex-col items-center justify-center p-4 ">
-                <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
-                  $120
-                </h4>
-                <p className="leading-4 text-center">{t("investment")}</p>
+                <p className="leading-4 text-center">{t("project")}</p></div>
               </div>
             </div>
           </div>
