@@ -175,16 +175,16 @@ export default function BasicsPython() {
           <p className="mt-4">{t("description")}</p>
           <div className="grid grid-cols-2 lg:grid-cols-4 mt-4 gap-2">
             <div className="flex items-center gap-2">
-              <Timer /> <p>30 {t("time")}</p>
+              <Timer color="#22c55e" /> <p>30 {t("time")}</p>
             </div>
             <div className="flex items-center gap-2">
-              <MapPin /> <p>Online ({t("place")})</p>
+              <MapPin color="#22c55e" /> <p>Online ({t("place")})</p>
             </div>
             <div className="flex items-center gap-2">
-              <BookOpen /> <p>{t("difficulty")}</p>
+              <BookOpen color="#22c55e" /> <p>{t("difficulty")}</p>
             </div>
             <div className="flex items-center gap-2">
-              <Award /> <p>{t("certificate")}</p>
+              <Award color="#22c55e" /> <p>{t("certificate")}</p>
             </div>
           </div>
         </div>
