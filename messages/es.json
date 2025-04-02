@@ -168,6 +168,13 @@
       "date": "Mar 6, 2025",
       "location": "Udemy",
       "description": "He completado un curso de 23.5 horas de Docker y Kubernetes para la conteinerización de proyectos. Este curso me ha permitido comprender la importancia de la orquestación de contenedores y cómo implementar aplicaciones en entornos de producción. Ahora tengo la capacidad de crear, administrar y escalar contenedores de manera eficiente."
+    },
+    "11": {
+      "title": "Github Actions - La Guía Completa",
+      "type": "course",
+      "date": "Mar 31, 2025",
+      "location": "Udemy",
+      "description": "He completado un curso de 10.5 horas sobre GitHub Actions, donde aprendí sobre automatización CI/CD, orquestación de flujos de trabajo, gestión de jobs, variables de entorno, seguridad e integración con las API de GitHub. Esta experiencia práctica reforzó mis habilidades en DevOps y me permitirá optimizar procesos de desarrollo de manera más eficiente."
     }
   },
   "TechStack": {

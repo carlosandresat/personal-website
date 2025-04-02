@@ -168,6 +168,13 @@
       "date": "Mar 6, 2025",
       "location": "Udemy",
       "description": "I have completed a 23.5 hour course on Docker and Kubernetes for containerizing projects. This course has allowed me to understand the importance of container orchestration and how to deploy applications in production environments. I now have the ability to efficiently create, manage and scale containers."
+    },
+    "11": {
+      "title": "Github Actions - The Complete Guide",
+      "type": "course",
+      "date": "Mar 31, 2025",
+      "location": "Udemy",
+      "description": "I completed a 10.5 hours course on GitHub Actions, covering CI/CD automation, workflow orchestration, job management, environment variables, security, and integrating GitHub APIs. This experience reinforced my DevOps skills and will help me manage development processes efficiently."
     }
   },
   "TechStack": {
