@@ -38,6 +38,146 @@ export default function ProjectsSection() {
           <CardHeader className="flex flex-row items-center gap-4">
             <div className="w-12 h-12 rounded-full border border-muted bg-secondary">
               <Image
+                alt="TinderYT logo"
+                src="/tinderYTlogo.webp"
+                width={52}
+                height={52}
+                className="rounded-full"
+              />
+            </div>
+            <div className="grid gap-1">
+              <CardTitle>TinderYT</CardTitle>
+              <CardDescription>Social matching app</CardDescription>
+            </div>
+          </CardHeader>
+          <CardContent className="grid gap-2">
+            <div className="flex items-center gap-4 text-sm">
+              <div className="flex items-center gap-1">
+                <span className="text-gray-500 dark:text-gray-400">
+                  React, Next.js, Tailwind CSS, TypeScript, Prisma, PostgreSQL
+                </span>
+              </div>
+            </div>
+          </CardContent>
+          <CardFooter className="flex flex-row justify-end gap-4">
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button variant="default" className="hover:bg-green-500">
+                  {t("infoButtonText")}
+                </Button>
+              </DialogTrigger>
+
+              <DialogContent className="sm:max-w-[525px] md:max-w-xl xl:max-w-3xl max-h-full">
+                <DialogHeader>
+                  <DialogTitle>TinderYT</DialogTitle>
+                </DialogHeader>
+                <ScrollArea className=" h-[200px] hsm:h-[300px] hmd:h-[500px] hxl:h-[700px] px-2">
+                  <div className="w-full flex justify-center">
+                    <div className=" w-52 h-52 rounded-full border border-muted bg-secondary center">
+                      <Image
+                        alt="EDF Academy"
+                        src="/tinderYTlogo.webp"
+                        width={500}
+                        height={500}
+                        className="rounded-full"
+                      />
+                    </div>
+                  </div>
+
+                  <p className="leading-7 mt-4">
+                    Hace apenas unos días lancé TinderYT, una aplicación web de
+                    matching pensada especialmente para la comunidad estudiantil
+                    de Yachay Tech. Lo que comenzó como un experimento personal
+                    para reforzar mis habilidades de desarrollo ágil,
+                    rápidamente se convirtió en un proyecto real con tracción,
+                    que ya ha alcanzado más de 1 000 visitas en 9 días,
+                    superando incluso el límite de eventos mensuales del plan
+                    gratuito de Vercel.
+                  </p>
+                  <p className="leading-7 mt-4">
+                    💡{" "}
+                    <span className=" font-semibold">
+                      ¿De qué trata TinderYT?
+                    </span>
+                  </p>
+                  <p className="leading-7 mt-4">
+                    TinderYT es una plataforma que busca fomentar nuevas
+                    conexiones dentro del campus, combinando ideas de redes
+                    sociales, cuestionarios de afinidad y un sistema de
+                    emparejamiento basado en preferencias personales. Los
+                    usuarios completan un cuestionario con preguntas de
+                    distintos tipos (selección simple, múltiple y escala), y a
+                    partir de sus respuestas se calcula un match score con otros
+                    estudiantes. Este puntaje refleja el nivel de compatibilidad
+                    en base a gustos, intereses y opiniones compartidas. Además,
+                    los usuarios pueden configurar sus preferencias personales
+                    (como género y orientación), lo que permite que las
+                    coincidencias también respeten los criterios de búsqueda
+                    individuales, haciendo de la experiencia más personalizada.
+                  </p>
+                  <p className="leading-7 mt-4">
+                    📊{" "}
+                    <span className=" font-semibold">Resultados iniciales</span>
+                  </p>
+                  <p className="leading-7 mt-4">
+                    En solo 9 días, TinderYT ha recibido 1 044 visitantes 
+                    y más de 5 100 vistas de página, sobrepasando incluso
+                    el límite mensual de analíticas del plan Hobby de Vercel
+                    (¡alcancé el 213% del límite antes de que se pausaran los
+                    registros de tráfico!).
+                  </p>
+                  <p className="leading-7 mt-4">
+                    Más allá de las visitas, los resultados en uso real han sido aún más significativos:
+                  </p>
+
+                  <ul className="ml-6 list-disc [&>li]:mt-2">
+                    <li>
+                      <span className=" font-semibold">
+                      202 usuarios registrados y verificados por correo electrónico,{" "}
+                      </span>
+                      lo que indica un alto nivel de interés genuino por parte de la comunidad.
+                    </li>
+                    <li>
+                      <span className=" font-semibold">139 usuarios completaron el cuestionario, </span>
+                      lo que les permitió revelar sus matches y explorar nuevas conexiones dentro de la universidad.
+                    </li>
+                    <li>
+                      <span className=" font-semibold">Se han desbloqueado matches 336 veces, </span>
+                      lo que refleja una alta tasa de interacción y curiosidad por conocer a otros con intereses afines.
+                    </li>
+                  </ul>
+
+                  <p className="leading-7 mt-4">
+                  Estos números validan no solo la propuesta técnica del proyecto, sino también su impacto como herramienta social dentro del entorno universitario. TinderYT está cumpliendo su objetivo: conectar personas más allá del aula.
+                  </p>
+
+                  <p className="leading-7 mt-4">
+                    🔮 <span className=" font-semibold">¿Qué sigue?</span>
+                  </p>
+                  <p className="leading-7 mt-4">
+                    El proyecto aún está en crecimiento. Próximamente estaré
+                    incorporando mejoras como lista de bloqueados, filtros más
+                    avanzados y una sección para sugerencias anónimas.
+                  </p>
+
+                  
+
+                  <DialogFooter className="mt-4">
+                    <DialogClose>
+                      <Button variant="secondary" className="w-full">
+                        {t("backButton")}
+                      </Button>
+                    </DialogClose>
+                  </DialogFooter>
+                </ScrollArea>
+              </DialogContent>
+            </Dialog>
+          </CardFooter>
+        </Card>
+        <Card>
+          <CardHeader className="flex flex-row items-center gap-4">
+            <div className="w-12 h-12 rounded-full border border-muted bg-secondary">
+              <Image
                 alt="EDF Academy"
                 src="/logoEDF.png"
                 width={52}
@@ -191,8 +331,8 @@ export default function ProjectsSection() {
             <div className="flex items-center gap-4 text-sm">
               <div className="flex items-center gap-1">
                 <span className="text-gray-500 dark:text-gray-400">
-                  React, Next.js, Tailwind CSS, TypeScript, Prisma,
-                  PostgreSQL, GCP
+                  React, Next.js, Tailwind CSS, TypeScript, Prisma, PostgreSQL,
+                  GCP
                 </span>
               </div>
             </div>
