@@ -28,6 +28,28 @@
     "backButton": "Back",
     "viewCodeButton": "View code",
     "projects": {
+      "tinderyt": {
+        "description": "Social matching app",
+        "content": {
+          "introduction": "Just a few days ago, I launched TinderYT, a web-based matching application specifically designed for the student community at Yachay Tech. What started as a personal experiment to sharpen my rapid development skills quickly evolved into a real project with strong traction — reaching over 1,000 visits in just 9 days, even surpassing the monthly analytics event limit on Vercel’s free Hobby plan.",
+          "title1": "What Is TinderYT?",
+          "p1": "TinderYT is a platform designed to encourage new social connections on campus. It blends elements of social networking, personality quizzes, and a matching algorithm based on individual preferences.",
+          "p2": "Users complete a compatibility survey featuring different types of questions (single choice, multiple choice, and scale-based). Based on their answers, a match score is calculated with other students, reflecting levels of compatibility in interests, values, and opinions.",
+          "p3": "The platform is designed to be user-friendly and intuitive, allowing students to easily navigate through it and discover potential matches. It aims to foster a sense of community and connection among students, helping them find like-minded individuals and build social relationships.",
+          "title2": "Initial Results",
+          "p4": "In just 9 days, TinderYT received 1,044 unique visitors and over 5,100 page views, even surpassing the analytics limit of the Vercel Hobby Plan (I hit 213% of the monthly quota before traffic tracking was paused).",
+          "p5": "Beyond visits, real engagement metrics are even more exciting:",
+          "item1": "202 registered users ",
+          "item1desc": "verified through email — a strong sign of genuine community interest.",
+          "item2": "139 users completed the questionnaire,",
+          "item2desc": "allowing them to reveal their matches and explore new connections.",
+          "item3": "Matches have been unlocked 336 times,",
+          "item3desc": " showing a high level of curiosity and interaction among users with shared interests.",
+          "p6": "These numbers validate not only the technical value of the project, but also its social impact within the university setting. TinderYT is already achieving its goal: bringing people together beyond the classroom.",
+          "title3": "What’s Next?",
+          "p7": "The project is still growing. Upcoming features include a block list, advanced filtering options, and an anonymous suggestions box — all aimed at making the platform more user-friendly, safe, and community-driven. "
+        }
+      },
       "edf": {
         "description": "",
         "content": {
