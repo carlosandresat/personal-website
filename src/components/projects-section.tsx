@@ -109,6 +109,15 @@ export default function ProjectsSection() {
                   <p className="leading-7 mt-4">
                     {t("projects.tinderyt.content.p4")}
                   </p>
+                  <div className="w-full flex flex-col justify-center items-center gap-2 mt-4">
+                    <Image
+                      alt="TinderYT Analytics"
+                      src="/tinderYTanalytics.png"
+                      width={800}
+                      height={800}
+                      className="border-4"
+                    />
+                  </div>
                   <p className="leading-7 mt-4">
                     {t("projects.tinderyt.content.p5")}
                   </p>
@@ -141,8 +150,25 @@ export default function ProjectsSection() {
                   {t("projects.tinderyt.content.p7")}
                   </p>
 
-                  
-
+                  <h4 className="scroll-m-20 text-xl font-semibold tracking-tight mt-4">
+                    👨‍💻 Screenshots:
+                  </h4>
+                  <div className="w-full flex flex-col justify-center items-center gap-2 mt-4">
+                    <Image
+                      alt="TinderYT Form"
+                      src="/tinderYTform.png"
+                      width={800}
+                      height={800}
+                      className="border-4"
+                    />
+                    <Image
+                      alt="TinderYT Matches"
+                      src="/tinderYTmatches.png"
+                      width={800}
+                      height={800}
+                      className="border-4"
+                    />
+                  </div>
                   <DialogFooter className="mt-4">
                     <DialogClose>
                       <Button variant="secondary" className="w-full">
