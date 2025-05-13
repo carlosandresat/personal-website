@@ -47,7 +47,7 @@ export default function ProjectsSection() {
             </div>
             <div className="grid gap-1">
               <CardTitle>TinderYT</CardTitle>
-              <CardDescription>{t("projects.tinderyt.description")}</CardDescription>
+              <CardDescription className="text-green-500">{t("projects.tinderyt.description")}</CardDescription>
             </div>
           </CardHeader>
           <CardContent className="grid gap-2">
