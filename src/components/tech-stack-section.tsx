@@ -1,6 +1,6 @@
 "use client";
 import Autoplay from "embla-carousel-autoplay";
-import { useRef } from "react";
+import { useMemo } from "react";
 
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -16,14 +16,17 @@ import { useTranslations } from "next-intl";
 export default function TechStackSection() {
   const t = useTranslations("TechStack");
 
-  const plugin = useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: true })
+  const plugin = useMemo(
+    () => Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: true }),
+    []
   );
-  const plugin2 = useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: true })
+  const plugin2 = useMemo(
+    () => Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: true }),
+    []
   );
-  const plugin3 = useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: true })
+  const plugin3 = useMemo(
+    () => Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: true }),
+    []
   );
 
   return (
@@ -42,7 +45,7 @@ export default function TechStackSection() {
       </p>
 
       <Carousel
-        plugins={[plugin.current]}
+        plugins={[plugin]}
         className="w-full max-w-screen-xl px-28 mt-6"
         opts={{
           align: "start",
@@ -300,10 +303,10 @@ export default function TechStackSection() {
       </p>
 
       <Carousel
-        plugins={[plugin2.current]}
+        plugins={[plugin2]}
         className="w-full max-w-screen-xl px-28 mt-6"
-        onMouseEnter={plugin2.current.stop}
-        onMouseLeave={plugin2.current.reset}
+        onMouseEnter={plugin2.stop}
+        onMouseLeave={plugin2.reset}
         opts={{
           align: "start",
           loop: true,
@@ -512,10 +515,10 @@ export default function TechStackSection() {
       </p>
 
       <Carousel
-        plugins={[plugin3.current]}
+        plugins={[plugin3]}
         className="w-full max-w-screen-xl px-28 mt-6"
-        onMouseEnter={plugin3.current.stop}
-        onMouseLeave={plugin3.current.reset}
+        onMouseEnter={plugin3.stop}
+        onMouseLeave={plugin3.reset}
         opts={{
           align: "start",
           loop: true,

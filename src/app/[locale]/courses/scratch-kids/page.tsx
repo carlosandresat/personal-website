@@ -6,10 +6,11 @@ import type { Metadata } from "next";
 import { PricingDialog } from "@/components/pricing-dialog";
 
 type Props = {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata(props: Props): Promise<Metadata> {
+  const params = await props.params;
   if (params.locale == "es") {
     return {
       title: "Curso Scratch | Carlos Arévalo",
