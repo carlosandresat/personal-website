@@ -170,7 +170,7 @@ export default function ProjectsSection() {
                     />
                   </div>
                   <DialogFooter className="mt-4">
-                    <DialogClose>
+                    <DialogClose asChild>
                       <Button variant="secondary" className="w-full">
                         {t("backButton")}
                       </Button>
@@ -297,7 +297,7 @@ export default function ProjectsSection() {
                   </p>
 
                   <DialogFooter className="mt-4">
-                    <Button className="hover:bg-green-500">
+                    <Button className="hover:bg-green-500" asChild>
                       <a
                         href="https://github.com/carlosandresat/educacion-del-futuro-web"
                         target="_blank"
@@ -306,7 +306,7 @@ export default function ProjectsSection() {
                       </a>
                     </Button>
 
-                    <DialogClose>
+                    <DialogClose asChild>
                       <Button variant="secondary" className="w-full">
                         {t("backButton")}
                       </Button>
@@ -424,7 +424,7 @@ export default function ProjectsSection() {
                   </p>
 
                   <DialogFooter className="mt-4">
-                    <Button className="hover:bg-green-500">
+                    <Button className="hover:bg-green-500" asChild>
                       <a
                         href="https://github.com/carlosandresat/tuto-u"
                         target="_blank"
@@ -433,7 +433,7 @@ export default function ProjectsSection() {
                       </a>
                     </Button>
 
-                    <DialogClose>
+                    <DialogClose asChild>
                       <Button variant="secondary" className="w-full">
                         {t("backButton")}
                       </Button>
@@ -588,7 +588,7 @@ export default function ProjectsSection() {
                   </p>
 
                   <DialogFooter className="mt-4">
-                    <DialogClose>
+                    <DialogClose asChild>
                       <Button variant="secondary">{t("backButton")}</Button>
                     </DialogClose>
                   </DialogFooter>
@@ -717,7 +717,7 @@ export default function ProjectsSection() {
                   </p>
 
                   <DialogFooter className="mt-4">
-                    <Button className="hover:bg-green-500">
+                    <Button className="hover:bg-green-500" asChild>
                       <a
                         href="https://github.com/carlosandresat/kidney-app"
                         target="_blank"
@@ -725,7 +725,7 @@ export default function ProjectsSection() {
                         {t("viewCodeButton")}
                       </a>
                     </Button>
-                    <DialogClose>
+                    <DialogClose asChild>
                       <Button variant="secondary" className="w-full">
                         {t("backButton")}
                       </Button>
