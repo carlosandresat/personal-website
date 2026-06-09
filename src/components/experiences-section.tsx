@@ -26,6 +26,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 type Experience = {
   type: string;
@@ -135,50 +136,60 @@ export default function ExperiencesSection() {
     },
   ];
 
+  const getNormalizedType = (type: string): "work" | "course" | "event" => {
+    const tLower = type.toLowerCase();
+    if (tLower === "work" || tLower === "trabajo") return "work";
+    if (tLower === "course" || tLower === "curso") return "course";
+    if (tLower === "event" || tLower === "evento") return "event";
+    return "work";
+  };
+
   const getIcon = (type: string) => {
     switch (type) {
       case "course":
       case "curso":
-        return <GraduationCap className="h-4 w-4" />;
+        return <GraduationCap className="size-4" />;
       case "event":
       case "evento":
-        return <Ticket className="h-4 w-4" />;
+        return <Ticket className="size-4" />;
       case "work":
       case "trabajo":
-        return <Briefcase className="h-4 w-4" />;
+        return <Briefcase className="size-4" />;
     }
   };
 
-  return (
-    <section
-      className="w-full bg-secondary flex flex-col justify-center items-center py-12 md:py-24 lg:py-28"
-      id="tech-stack"
-    >
-      <h2 className="scroll-m-20 border-b border-foreground pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
-        {t("title")}
-      </h2>
+  const workExperiences = defaultExperiences.filter(
+    (exp) => getNormalizedType(exp.type) === "work"
+  );
+  const courseExperiences = defaultExperiences.filter(
+    (exp) => getNormalizedType(exp.type) === "course"
+  );
+  const eventExperiences = defaultExperiences.filter(
+    (exp) => getNormalizedType(exp.type) === "event"
+  );
+
+  const renderExperienceCards = (experiences: Experience[]) => {
+    return (
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 p-8 max-w-screen-xl w-full">
-        {defaultExperiences.map((exp, index) => (
+        {experiences.map((exp, index) => (
           <Card key={index} className="flex flex-col h-full justify-between">
             <CardHeader>
-              <div className="flex items-start justify-between mb-2 space-x-2">
+              <div className="flex items-start justify-between mb-2 gap-2">
                 <CardTitle className="text-lg">{exp.title}</CardTitle>
-                <Badge variant="secondary" className="capitalize">
+                <Badge variant="secondary" className="capitalize flex items-center gap-1">
                   {getIcon(exp.type)}
-                  <span className="ml-1">{exp.type}</span>
+                  <span>{exp.type}</span>
                 </Badge>
               </div>
-              <div className="text-sm text-muted-foreground">
-                <div className="flex items-center">
-                  <CalendarDays className="h-4 w-4 mr-2" />
-                  {exp.date}
+              <div className="text-sm text-muted-foreground flex flex-col gap-1">
+                <div className="flex items-center gap-2">
+                  <CalendarDays className="size-4" />
+                  <span>{exp.date}</span>
                 </div>
                 {exp.location && (
-                  <div className="flex items-center mt-1">
-                    <div>
-                      <MapPin className="h-4 w-4 mr-2" />
-                    </div>
-                    {exp.location}
+                  <div className="flex items-center gap-2">
+                    <MapPin className="size-4" />
+                    <span>{exp.location}</span>
                   </div>
                 )}
               </div>
@@ -191,16 +202,18 @@ export default function ExperiencesSection() {
                 <DialogContent className="sm:max-w-[425px]">
                   <DialogHeader>
                     <DialogTitle>{exp.title}</DialogTitle>
-                    <DialogDescription className="capitalize flex items-center">
+                    <DialogDescription className="capitalize flex items-center gap-1">
                       {getIcon(exp.type)}
-                      <span className="ml-1">{exp.type}</span>
+                      <span>{exp.type}</span>
                     </DialogDescription>
                   </DialogHeader>
                   <p className="leading-relaxedyy">{exp.description}</p>
-                  <DialogFooter className="md:justify-between w-full">
+                  <DialogFooter className="flex flex-col md:flex-row md:justify-between gap-2 w-full">
                     {exp.certificate && (
                       <Button asChild>
-                        <a href={exp.certificate} target="_blank">{t("viewCertificate")}</a>
+                        <a href={exp.certificate} target="_blank" rel="noopener noreferrer">
+                          {t("viewCertificate")}
+                        </a>
                       </Button>
                     )}
                     <DialogClose asChild>
@@ -215,6 +228,48 @@ export default function ExperiencesSection() {
           </Card>
         ))}
       </div>
+    );
+  };
+
+  return (
+    <section
+      className="w-full bg-secondary flex flex-col justify-center items-center py-12 md:py-24 lg:py-28"
+      id="tech-stack"
+    >
+      <h2 className="scroll-m-20 border-b border-foreground pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
+        {t("title")}
+      </h2>
+      <Tabs defaultValue="work" className="w-full max-w-screen-xl flex flex-col items-center mt-8">
+        <TabsList className="flex w-full max-w-md h-full py-1 justify-center gap-1 bg-muted rounded-lg">
+          <TabsTrigger
+            value="work"
+            className="flex-1 py-2 data-[state=active]:bg-green-500 data-[state=active]:text-white"
+          >
+            {t("tabWork")}
+          </TabsTrigger>
+          <TabsTrigger
+            value="course"
+            className="flex-1 py-2 data-[state=active]:bg-green-500 data-[state=active]:text-white"
+          >
+            {t("tabCourses")}
+          </TabsTrigger>
+          <TabsTrigger
+            value="event"
+            className="flex-1 py-2 data-[state=active]:bg-green-500 data-[state=active]:text-white"
+          >
+            {t("tabEvents")}
+          </TabsTrigger>
+        </TabsList>
+        <TabsContent value="work" className="w-full">
+          {renderExperienceCards(workExperiences)}
+        </TabsContent>
+        <TabsContent value="course" className="w-full">
+          {renderExperienceCards(courseExperiences)}
+        </TabsContent>
+        <TabsContent value="event" className="w-full">
+          {renderExperienceCards(eventExperiences)}
+        </TabsContent>
+      </Tabs>
     </section>
   );
 }

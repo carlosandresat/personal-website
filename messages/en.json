@@ -121,6 +121,9 @@
     "moreInfo": "More info...",
     "viewCertificate": "View certificate",
     "back": "Back",
+    "tabWork": "Work",
+    "tabCourses": "Courses",
+    "tabEvents": "Events",
     "1": {
       "title": "Board Member",
       "type": "work",

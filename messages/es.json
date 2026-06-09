@@ -121,6 +121,9 @@
     "moreInfo": "Más info...",
     "viewCertificate": "Ver certificado",
     "back": "Atrás",
+    "tabWork": "Trabajo",
+    "tabCourses": "Cursos",
+    "tabEvents": "Eventos",
     "1": {
       "title": "Miembro de Junta Directiva",
       "type": "trabajo",
