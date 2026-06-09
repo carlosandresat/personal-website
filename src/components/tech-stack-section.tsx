@@ -54,6 +54,11 @@ const technologies: TechItem[] = [
   { id: "gcs", name: "Google Cloud Storage", src: "/google-cloud-storage.png", width: 64, height: 64, category: "devops", tier: 1, brandColor: "#4285f4" },
   { id: "vercel", name: "Vercel", src: "/vercel.svg", width: 64, height: 64, category: "devops", tier: 1, brandColor: "#888888", darkInvert: true },
   { id: "jest", name: "Jest", src: "/jest.png", width: 64, height: 64, category: "devops", tier: 1, brandColor: "#c21325" },
+  { id: "docker", name: "Docker", src: "/docker.png", width: 80, height: 80, category: "devops", tier: 1, brandColor: "#2496ed" },
+  { id: "kubernetes", name: "Kubernetes", src: "/kubernetes.png", width: 70, height: 70, category: "devops", tier: 2, brandColor: "#326ce5" },
+  { id: "githubactions", name: "GitHub Actions", src: "/github-actions.png", width: 70, height: 70, category: "devops", tier: 2, brandColor: "#2f81f7", darkInvert: true },
+  { id: "antigravity", name: "Antigravity", src: "/antigravity.png", width: 70, height: 70, category: "devops", tier: 1, brandColor: "#d946ef" },
+  { id: "claudecode", name: "Claude Code", src: "/claude.png", width: 70, height: 70, category: "devops", tier: 1, brandColor: "#ea580c" },
   { id: "playwright", name: "Playwright", src: "/playwright.png", width: 80, height: 80, category: "devops", tier: 3, brandColor: "#2ead33" },
   { id: "bun", name: "Bun", src: "/bun.svg", width: 70, height: 70, category: "devops", tier: 3, brandColor: "#e2b89d" },
 ];
