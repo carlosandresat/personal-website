@@ -209,7 +209,14 @@
     "tier2": "Tecnologías Secundarias",
     "tier2description": "Tecnologías aprendidas y usadas en el pasado",
     "tier3": "Tecnologías Interesantes",
-    "tier3description": "Tecnologías en las que tengo interés en aprender en el futuro"
+    "tier3description": "Tecnologías en las que tengo interés en aprender en el futuro",
+    "tabFrontend": "Frontend",
+    "tabBackend": "Backend y BD",
+    "tabDataScience": "Ciencia de Datos e IA",
+    "tabDevOps": "DevOps y Herramientas",
+    "coreBadge": "Principal",
+    "secondaryBadge": "Secundario",
+    "exploringBadge": "Interés"
   },
   "Services": {
     "title": "Mis Servicios",

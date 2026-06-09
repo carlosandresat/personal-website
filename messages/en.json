@@ -209,7 +209,14 @@
     "tier2": "Secondary Techs",
     "tier2description": "Tecnologies learned and used in the past",
     "tier3": "Interesting Techs",
-    "tier3description": "Technologies that I have interest in learning in the future"
+    "tier3description": "Technologies that I have interest in learning in the future",
+    "tabFrontend": "Frontend & Client",
+    "tabBackend": "Backend & Database",
+    "tabDataScience": "Data Science & AI",
+    "tabDevOps": "DevOps & Tools",
+    "coreBadge": "Core",
+    "secondaryBadge": "Secondary",
+    "exploringBadge": "Exploring"
   },
   "Services": {
     "title": "My Services",
