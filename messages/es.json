@@ -124,82 +124,124 @@
     "tabWork": "Trabajo",
     "tabCourses": "Cursos",
     "tabEvents": "Eventos",
-    "1": {
-      "title": "Miembro de Junta Directiva",
-      "type": "trabajo",
-      "date": "Oct 2020 - Oct 2021",
-      "location": "Club de Ciencias Computacionales de la Universidad Yachay Tech",
-      "description": "Director del Departamento de Comunicación en el club de la carrera de Ingeniería en TICs / Ciencias Computacionales."
-    },
-    "2": {
-      "title": "Ponente y Asistente en el Seminario de Fundamentos de Ingeniería de Software",
-      "type": "evento",
-      "date": "May - Jul 2021",
-      "location": "Grupo de Investigación SDAS",
-      "description": "Contribución a sesiones sobre principios de ingeniería de software."
-    },
-    "3": {
-      "title": "Tutor en Proyecto Hamilton Tech",
-      "type": "evento",
-      "date": "Nov - Dic 2021",
-      "location": "Club de Ciencias Computacionales de la Universidad Yachay Tech",
-      "description": "Mentoría a estudiantes de secundaria en temas de computación."
-    },
-    "4": {
-      "title": "Ponente en Exposición de Visión Computacional 2.0",
-      "type": "evento",
-      "date": "Dic 7, 2021",
-      "location": "IEEE Computer Society Universidad Yachay Tech",
-      "description": "Presenté un póster sobre una aplicación de reconocimiento de gestos basada en el ejemplo de Android de TensorFlow Lite."
-    },
-    "5": {
-      "title": "Seminario de Ingeniería de Software y Ciencias Computacionales",
-      "type": "evento",
-      "date": "Mar 21 - 25, 2022",
-      "location": "",
-      "description": "Organizado por el Club de Software ESPE Latacunga, el Club de Ciencias Computacionales de la Universidad Yachay Tech, el Capítulo Técnico de la Computer Society ESPE Latacunga y el Capítulo Técnico de la Computer Society Yachay Tech."
-    },
-    "6": {
-      "title": "Fundamentos de IA Generativa",
+    "claude-code": {
+      "title": "Claude Code",
       "type": "curso",
-      "date": "Jun 14, 2022",
-      "location": "Google Cloud Skills Boost",
-      "description": "Certificación en conocimientos fundamentales de IA generativa y sus aplicaciones."
+      "date": "Abr 2026",
+      "location": "Platzi",
+      "description": "Completé un curso de 8 horas sobre Claude Code, aprendiendo prácticas avanzadas de asistentes de codificación con IA, integración de herramientas de desarrollo y flujos de trabajo de programación asistida por IA."
     },
-    "7": {
-      "title": "Pasantía como Desarrollador de Software",
+    "exec-leadership": {
+      "title": "Participante del Programa de Liderazgo Ejecutivo",
+      "type": "evento",
+      "date": "Dic 5, 2025 - Ene 23, 2026",
+      "location": "International School of Management, UIDE, Westfield Business School & Prestigio",
+      "description": "Participación en el Programa de Liderazgo Ejecutivo, enfocado en gestión estratégica, liderazgo de equipos y habilidades de toma de decisiones."
+    },
+    "uide-ta": {
+      "title": "Asistente de Cátedra / Docente",
       "type": "trabajo",
-      "date": "Jun - Dic 2022",
-      "location": "TALOV",
-      "description": "Preprocesamiento de un conjunto de datos de lenguaje de señas con aumento de datos. Recopilación de puntos clave de fotogramas de video. Modelado de una red neuronal LSTM y entrenamiento con los puntos clave obtenidos. Uso de TFLite para crear un modelo ligero que sería usado en una aplicación móvil creada en Flutter por otro equipo de desarrollo."
+      "date": "Oct 2025 - Presente",
+      "location": "Universidad Internacional del Ecuador (UIDE)",
+      "description": "Planificación e impartición de cursos presenciales de programación en Java, Go y Desarrollo Web, integrando fundamentos teóricos con práctica dirigida. Facilitación de clases virtuales de programación en Java y Tecnología y Sociedad, promoviendo el pensamiento crítico sobre el impacto social de la tecnología."
     },
-    "8": {
-      "title": "Presentación Poster Científico",
+    "ieee-techweek": {
+      "title": "Ponente en IEEE CS Tech Week",
+      "type": "evento",
+      "date": "Sep 15 - 19, 2025",
+      "location": "Rama Estudiantil IEEE (EPN, UTN, ESPOCH, Yachay Tech, UCE, ESPE)",
+      "description": "Ponente invitado en el IEEE CS Tech Week, compartiendo conocimientos sobre temas de ingeniería de software y conectando con la comunidad de estudiantes desarrolladores."
+    },
+    "dorothy-challenge": {
+      "title": "Finalista del Dorothy Coding Challenge - 3er Lugar",
+      "type": "evento",
+      "date": "Ago 6 - 8, 2025",
+      "location": "UIDE, UDLA, Yachay Tech, Grupo de Investigación Latitud Cero, ICTP PWF Ecuador",
+      "description": "Obtención del tercer lugar en el Dorothy Coding Challenge, demostrando velocidad de resolución de problemas y habilidades algorítmicas bajo presión de competencia."
+    },
+    "epic5-attendee": {
+      "title": "Asistente de la Escuela de Programación para la Investigación Científica (EPIC 5)",
+      "type": "evento",
+      "date": "Ago 4 - 8, 2025",
+      "location": "UIDE, UDLA, Yachay Tech, Grupo de Investigación Latitud Cero, ICTP PWF Ecuador",
+      "description": "Completadas 40 horas de capacitación en técnicas y herramientas de programación aplicadas a la investigación científica y modelos computacionales."
+    },
+    "python-data": {
+      "title": "Python Data Associate",
+      "type": "curso",
+      "date": "Jun 2025",
+      "location": "DataCamp",
+      "description": "Completadas 28 horas de formación especializada en Python para análisis de datos, incluyendo manipulación, limpieza, análisis exploratorio de datos y consultas a bases de datos."
+    },
+    "github-actions": {
+      "title": "GitHub Actions - La Guía Completa",
+      "type": "curso",
+      "date": "Mar 2025",
+      "location": "Udemy",
+      "description": "He completado un curso de 10.5 horas sobre GitHub Actions, donde aprendí sobre automatización CI/CD, orquestación de flujos de trabajo, gestión de jobs, variables de entorno, seguridad e integración con las API de GitHub. Esta experiencia práctica reforzó mis habilidades en DevOps y me permitirá optimizar procesos de desarrollo de manera más eficiente."
+    },
+    "docker-k8s": {
+      "title": "Docker & Kubernetes: La Guía Práctica",
+      "type": "curso",
+      "date": "Mar 2025",
+      "location": "Udemy",
+      "description": "He completado un curso de 23.5 horas de Docker y Kubernetes para la conteinerización de proyectos. Este curso me ha permitido comprender la importancia de la orquestación de contenedores y cómo implementar aplicaciones en entornos de producción. Ahora tengo la capacidad de crear, administrar y escalar contenedores de manera eficiente."
+    },
+    "nestjs-guide": {
+      "title": "NestJS: La Guía Completa del Desarrollador",
+      "type": "curso",
+      "date": "Feb 2025",
+      "location": "Udemy",
+      "description": "He completado un curso de 20 horas de NestJS para backend, profundizando en TypeORM y ampliando mi comprensión de TypeScript, más allá del tipado de variables. Esta experiencia me ha permitido fortalecer mis habilidades en arquitectura backend, desarrollo modular y mejores prácticas en aplicaciones escalables."
+    },
+    "edf-se": {
+      "title": "Ingeniero de Software",
+      "type": "trabajo",
+      "date": "Jul 2023 - Ene 2024, Abr - Nov 2024",
+      "location": "EDF Academy",
+      "description": "Desarrollo de un sitio web institucional que fortaleció la presencia digital y apoyó la captación de estudiantes. Construcción de una herramienta basada en datos para obtener puntajes de admisión universitaria a través de la extracción de datos web. Diseño e implementación de un sistema de gestión académica para administrar cursos, seguimiento de estudiantes, calificaciones y asistencia. Implementación de un sistema de control de acceso seguro basado en roles con validación en el backend para garantizar la integridad y seguridad de los datos."
+    },
+    "hult-prize": {
+      "title": "Participante en Hult Prize Yachay Tech",
+      "type": "evento",
+      "date": "Feb 24, 2024",
+      "location": "Fundación Hult Prize",
+      "description": "Participación en el evento Hult Prize en Yachay Tech, desarrollando y presentando ideas de emprendimiento social destinadas a abordar desafíos globales."
+    },
+    "scientific-poster": {
+      "title": "Presentador de Póster Científico",
       "type": "evento",
       "date": "Jul 10, 2023",
       "location": "I Congreso Internacional de Educación, Ciencias, Innovación y Sociedad (CIECIS23)",
       "description": "Presenté un póster titulado 'Tutoring Sessions Yachay Tech: aplicación web para impulsar aprendizaje colectivo' donde destaco los resultados de mi proyecto OrientaYT."
     },
-    "9": {
-      "title": "NestJS: La Guía Completa del Desarrollador",
-      "type": "curso",
-      "date": "Feb 17, 2025",
-      "location": "Udemy",
-      "description": "He completado un curso de 20 horas de NestJS para backend, profundizando en TypeORM y ampliando mi comprensión de TypeScript, más allá del tipado de variables. Esta experiencia me ha permitido fortalecer mis habilidades en arquitectura backend, desarrollo modular y mejores prácticas en aplicaciones escalables."
+    "talov-intern": {
+      "title": "Desarrollador Pasante",
+      "type": "trabajo",
+      "date": "Jun - Dic 2022",
+      "location": "TALOV",
+      "description": "Desarrollo de un sistema de reconocimiento de lenguaje de señas mediante análisis de fotogramas de video y técnicas de detección de gestos. Mejora de la calidad del conjunto de datos mediante preprocesamiento y aumento para optimizar el rendimiento del modelo. Implementación de un modelo MediaPipe holístico para la extracción de puntos clave para el seguimiento de rostro, manos y postura corporal."
     },
-    "10": {
-      "title": "Docker & Kubernetes: La Guía Práctica",
-      "type": "curso",
-      "date": "Mar 6, 2025",
-      "location": "Udemy",
-      "description": "He completado un curso de 23.5 horas de Docker y Kubernetes para la conteinerización de proyectos. Este curso me ha permitido comprender la importancia de la orquestación de contenedores y cómo implementar aplicaciones en entornos de producción. Ahora tengo la capacidad de crear, administrar y escalar contenedores de manera eficiente."
+    "software-seminar": {
+      "title": "Asistente al Seminario de Ingeniería de Software y Ciencias Computacionales",
+      "type": "evento",
+      "date": "Mar 21 - 25, 2022",
+      "location": "Computer Science Club & IEEE CS Chapters (Yachay Tech & EPN)",
+      "description": "Organizado por el Club de Software ESPE Latacunga, el Club de Ciencias Computacionales de la Universidad Yachay Tech, el Capítulo Técnico de la Computer Society ESPE Latacunga y el Capítulo Técnico de la Computer Society Yachay Tech."
     },
-    "11": {
-      "title": "Github Actions - La Guía Completa",
-      "type": "course",
-      "date": "Mar 31, 2025",
-      "location": "Udemy",
-      "description": "He completado un curso de 10.5 horas sobre GitHub Actions, donde aprendí sobre automatización CI/CD, orquestación de flujos de trabajo, gestión de jobs, variables de entorno, seguridad e integración con las API de GitHub. Esta experiencia práctica reforzó mis habilidades en DevOps y me permitirá optimizar procesos de desarrollo de manera más eficiente."
+    "sdas-seminar": {
+      "title": "Ponente y Asistente en el Seminario de Fundamentos de Ingeniería de Software",
+      "type": "evento",
+      "date": "May - Jul 2021",
+      "location": "Grupo de Investigación SDAS",
+      "description": "Contribución y participación en sesiones sobre principios de ingeniería de software."
+    },
+    "board-member": {
+      "title": "Miembro de Junta Directiva",
+      "type": "trabajo",
+      "date": "Oct 2020 - Oct 2021",
+      "location": "Computer Science Club – Yachay Tech University",
+      "description": "Director del Departamento de Comunicación en el club de la carrera de Ingeniería en TICs / Ciencias Computacionales."
     }
   },
   "TechStack": {
