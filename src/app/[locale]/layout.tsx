@@ -1,5 +1,5 @@
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import { Chakra_Petch } from "next/font/google";
 import { cn } from "@/lib/utils";
@@ -13,6 +13,10 @@ const inter = Chakra_Petch({ subsets: ["latin"], weight: "500" });
 
 type Props = {
   params: Promise<{ locale: string }>
+}
+
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "es" }];
 }
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
@@ -73,6 +77,8 @@ export default async function LocaleLayout(
   const {
     locale
   } = params;
+
+  setRequestLocale(locale);
 
   const {
     children

@@ -1,8 +1,13 @@
 import { useTranslations } from "next-intl";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import PhaseTabContent from "@/components/phase-tab-content";
+import { setRequestLocale } from "next-intl/server";
+import { use } from "react";
 
-export default function Page() {
+export default function Page(props: { params: Promise<{ locale: string }> }) {
+  const { locale } = use(props.params);
+  setRequestLocale(locale);
+
   const t = useTranslations("Development");
 
   const tabsData = [

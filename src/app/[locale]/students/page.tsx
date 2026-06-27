@@ -3,8 +3,13 @@ import StudentCard from "@/components/student-card";
 import { studentsData } from "@/data/students-data";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { AlertCircle } from "lucide-react";
+import { setRequestLocale } from "next-intl/server";
+import { use } from "react";
 
-export default function Students() {
+export default function Students(props: { params: Promise<{ locale: string }> }) {
+  const { locale } = use(props.params);
+  setRequestLocale(locale);
+
   const t = useTranslations("Students");
 
   return (

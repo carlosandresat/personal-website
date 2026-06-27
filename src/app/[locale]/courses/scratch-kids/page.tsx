@@ -4,6 +4,8 @@ import ContentTimeline from "@/components/content-timeline";
 import { useTranslations } from "next-intl";
 import type { Metadata } from "next";
 import { PricingDialog } from "@/components/pricing-dialog";
+import { setRequestLocale } from "next-intl/server";
+import { use } from "react";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -32,7 +34,10 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   };
 }
 
-export default function ScratchKids() {
+export default function ScratchKids(props: { params: Promise<{ locale: string }> }) {
+  const { locale } = use(props.params);
+  setRequestLocale(locale);
+
   const t = useTranslations("Courses.Scratch");
 
   const timelineItems = [

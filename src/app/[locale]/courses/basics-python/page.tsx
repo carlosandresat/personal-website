@@ -2,8 +2,13 @@ import Image from "next/image";
 import { Award, BookOpen, MapPin, Timer } from "lucide-react";
 import ContentTimeline from "@/components/content-timeline";
 import { useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
+import { use } from "react";
 
-export default function BasicsPython() {
+export default function BasicsPython(props: { params: Promise<{ locale: string }> }) {
+  const { locale } = use(props.params);
+  setRequestLocale(locale);
+
   const t = useTranslations("Courses.BasicsPython");
 
   const timelineItems = [

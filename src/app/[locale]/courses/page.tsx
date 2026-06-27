@@ -11,8 +11,13 @@ import { Button } from "@/components/ui/button";
 import { Link } from "@/navigation";
 import { useTranslations } from "next-intl";
 import { ComingSoonDialog } from "@/components/coming-soon-dialog";
+import { setRequestLocale } from "next-intl/server";
+import { use } from "react";
 
-export default function Courses() {
+export default function Courses(props: { params: Promise<{ locale: string }> }) {
+  const { locale } = use(props.params);
+  setRequestLocale(locale);
+
   const t = useTranslations("Courses");
   return (
     <main className="flex min-h-screen flex-col items-center">

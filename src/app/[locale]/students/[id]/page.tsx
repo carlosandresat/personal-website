@@ -5,11 +5,15 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 import { studentsData } from "@/data/students-data";
 import { useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
 
-export default function Page(props: { params: Promise<{ id: string }> }) {
+export default function Page(props: { params: Promise<{ id: string; locale: string }> }) {
   const params = use(props.params);
+  const { id, locale } = params;
+  setRequestLocale(locale);
+
   const t = useTranslations("Students");
-  const student = studentsData.find((s) => s.code === params.id);
+  const student = studentsData.find((s) => s.code === id);
 
   if (!student) {
     return (
@@ -79,4 +83,17 @@ export default function Page(props: { params: Promise<{ id: string }> }) {
       </div>
     </main>
   );
+}
+
+export async function generateStaticParams() {
+  const locales = ["en", "es"];
+  const params: { locale: string; id: string }[] = [];
+  
+  for (const locale of locales) {
+    for (const student of studentsData) {
+      params.push({ locale, id: student.code });
+    }
+  }
+  
+  return params;
 }
