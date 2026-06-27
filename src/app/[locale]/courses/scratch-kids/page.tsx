@@ -13,11 +13,22 @@ type Props = {
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
   const params = await props.params;
+  const imageUrl = "/courses/scratch-kids/opengraph-image.png";
   if (params.locale == "es") {
     return {
       title: "Curso Scratch | Carlos Arévalo",
       description:
         "Perfecto para niños de 8 a 14 años. Scratch es un lenguaje de programación visual que hace que la codificación sea divertida e interactiva.",
+      openGraph: {
+        images: [
+          {
+            url: imageUrl,
+            width: 1200,
+            height: 630,
+            alt: "Curso Scratch | Carlos Arévalo",
+          },
+        ],
+      },
     };
   }
   if (params.locale == "en") {
@@ -25,12 +36,32 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
       title: "Scratch Course | Carlos Arévalo",
       description:
         "Perfect for kids aged 8-14. Scratch is a visual programming language that makes coding fun and interactive.",
+      openGraph: {
+        images: [
+          {
+            url: imageUrl,
+            width: 1200,
+            height: 630,
+            alt: "Scratch Course | Carlos Arévalo",
+          },
+        ],
+      },
     };
   }
   return {
     title: "Scratch Course | Carlos Arévalo",
     description:
       "Perfect for kids aged 8-14. Scratch is a visual programming language that makes coding fun and interactive.",
+    openGraph: {
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: "Scratch Course | Carlos Arévalo",
+        },
+      ],
+    },
   };
 }
 
