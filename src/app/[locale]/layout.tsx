@@ -21,6 +21,12 @@ export function generateStaticParams() {
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
   const params = await props.params;
+  const ogImage = {
+    url: "/opengraph-image.png",
+    width: 1200,
+    height: 630,
+    alt: "Carlos Arévalo | Software Developer & AI Researcher",
+  };
   if (params.locale == "es") {
     return {
       title: "Carlos Arévalo | Software Developer & AI Researcher",
@@ -33,6 +39,9 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
           en: "/en",
           es: "/es",
         },
+      },
+      openGraph: {
+        images: [ogImage],
       },
     };
   }
@@ -49,6 +58,9 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
           es: "/es",
         },
       },
+      openGraph: {
+        images: [ogImage],
+      },
     };
   }
   return {
@@ -62,6 +74,9 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
         en: "/en",
         es: "/es",
       },
+    },
+    openGraph: {
+      images: [ogImage],
     },
   };
 }
