@@ -18,7 +18,7 @@ export default function Page(props: { params: Promise<{ id: string; locale: stri
   if (!student) {
     return (
       <main className="flex min-h-[93vh] flex-col items-center justify-center">
-        <h1 className="scroll-m-20 text-4xl font-extrabold lg:text-5xl px-8 text-center">
+        <h1 className="scroll-m-20 text-4xl font-bold lg:text-5xl px-8 text-center">
           Student not found
         </h1>
       </main>

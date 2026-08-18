@@ -9,7 +9,10 @@ import { Analytics } from "@vercel/analytics/react";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 
-const inter = Chakra_Petch({ subsets: ["latin"], weight: "500" });
+const chakraPetch = Chakra_Petch({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 
 type Props = {
   params: Promise<{ locale: string }>
@@ -132,7 +135,7 @@ export default async function LocaleLayout(
       <body
         className={cn(
           "min-h-screen bg-background antialiased",
-          inter.className
+          chakraPetch.className
         )}
       >
         <ThemeProvider

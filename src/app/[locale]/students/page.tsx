@@ -21,7 +21,7 @@ export default function Students(props: { params: Promise<{ locale: string }> })
           <AlertDescription>{t("alertDescription")}</AlertDescription>
         </Alert>
       </div>
-      <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl mt-6 px-8 text-center">
+      <h1 className="scroll-m-20 text-4xl font-bold tracking-tight lg:text-5xl mt-6 px-8 text-center">
         {t("title")}
       </h1>
       <p className="text-base text-muted-foreground px-8 pt-4 max-w-screen-xl">
