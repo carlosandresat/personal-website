@@ -24,7 +24,7 @@ export default function Courses(props: { params: Promise<{ locale: string }> }) 
       <h1 className="scroll-m-20 text-4xl font-bold tracking-tight lg:text-5xl pt-28 lg:pt-32">
         {t("title")}
       </h1>
-      <div className="flex flex-col w-full max-w-screen-lg space-y-6 p-8">
+      <div className="flex flex-col w-full max-w-screen-lg gap-6 p-8">
         <Card className="flex items-center h-full">
           <div className="flex w-16 md:w-28 aspect-square justify-center items-center bg-secondary shadow rounded-xl md:ml-10 md:mr-4 shrink-0 object-cover p-2 ml-5">
             <Image

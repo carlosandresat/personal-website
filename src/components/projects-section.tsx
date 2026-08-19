@@ -30,7 +30,7 @@ export default function ProjectsSection() {
       className="w-full flex flex-col justify-center items-center py-12 md:py-24 lg:py-28"
       id="projects"
     >
-      <h2 className="mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
+      <h2 className="mt-10 scroll-m-20 border-b border-foreground pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
         {t("title")}
       </h2>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-screen-xl w-full mx-auto p-8">

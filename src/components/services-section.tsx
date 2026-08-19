@@ -11,12 +11,12 @@ export default function ServicesSection() {
       className="w-full flex flex-col justify-center items-center py-12 md:py-24 lg:py-28"
       id="services"
     >
-      <h2 className="mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
+      <h2 className="mt-10 scroll-m-20 border-b border-foreground pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
         {t("title")}
       </h2>
-      <div className="flex flex-col space-y-8 p-8 max-w-screen-xl  justify-center items-center">
-        <div className="flex flex-col space-y-8 md:space-y-0 md:flex-row md:space-x-12 items-center justify-center">
-          <div className="flex space-x-8 xl:space-x-12 items-center w-full">
+      <div className="flex flex-col gap-8 p-8 max-w-screen-xl  justify-center items-center">
+        <div className="flex flex-col gap-8 md:flex-row md:gap-12 items-center justify-center">
+          <div className="flex gap-8 xl:gap-12 items-center w-full">
             <div className="flex flex-col">
               <h3 className="scroll-m-20 text-xl font-semibold tracking-tight text-right">
                 {t("service3")}
@@ -32,7 +32,7 @@ export default function ServicesSection() {
               <Globe className="w-8 h-8 invert dark:invert-0 md:invert-0" />
             </div>
           </div>
-          <div className="flex space-x-8 xl:space-x-12 items-center w-full">
+          <div className="flex gap-8 xl:gap-12 items-center w-full">
             <div className="flex-shrink-0 w-20 h-20 md:w-14 md:h-14 xl:w-24 xl:h-24 flex justify-center items-center bg-secondary md:bg-brand rounded-md shadow-lg ">
               <Database className="w-8 h-8 md:invert dark:invert-0" />
             </div>
@@ -45,8 +45,8 @@ export default function ServicesSection() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col space-y-8 md:space-y-0 md:flex-row md:space-x-12 items-center justify-center">
-          <div className="flex space-x-8 xl:space-x-12 items-center w-full">
+        <div className="flex flex-col gap-8 md:flex-row md:gap-12 items-center justify-center">
+          <div className="flex gap-8 xl:gap-12 items-center w-full">
             <div className="flex flex-col">
               <h3 className="scroll-m-20 text-xl font-semibold tracking-tight text-right">
                 {t("service1")}
@@ -57,7 +57,7 @@ export default function ServicesSection() {
               <UserCheck className="w-8 h-8 invert dark:invert-0" />
             </div>
           </div>
-          <div className="flex space-x-8 xl:space-x-12 items-center w-full">
+          <div className="flex gap-8 xl:gap-12 items-center w-full">
             <div className="flex-shrink-0  w-20 h-20 md:w-14 md:h-14 xl:w-24 xl:h-24 flex justify-center items-center bg-secondary rounded-md shadow-lg">
               <Award className="w-8 h-8" />
             </div>

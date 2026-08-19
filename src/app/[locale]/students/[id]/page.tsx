@@ -52,7 +52,7 @@ export default function Page(props: { params: Promise<{ id: string; locale: stri
               {t(params.id)}
             </p>
             <h3 className="text-xl font-semibold mb-4">{t("completedCourse")}</h3>
-            <div className="space-y-4 mt-6">
+            <div className="flex flex-col gap-4 mt-6">
               {student.courses.map((course) => (
                 <Card key={course.code} className="p-4">
                   <div className="flex flex-col sm:flex-row gap-4 justify-between items-center">

@@ -257,7 +257,7 @@ export default function ExperiencesSection() {
                       <span>{exp.type}</span>
                     </DialogDescription>
                   </DialogHeader>
-                  <p className="leading-relaxedyy">{exp.description}</p>
+                  <p className="leading-relaxed">{exp.description}</p>
                   <DialogFooter className="flex flex-col md:flex-row md:justify-between gap-2 w-full">
                     {exp.certificate && (
                       <Button asChild>
@@ -284,7 +284,7 @@ export default function ExperiencesSection() {
   return (
     <section
       className="w-full bg-secondary flex flex-col justify-center items-center py-12 md:py-24 lg:py-28"
-      id="tech-stack"
+      id="experiences"
     >
       <h2 className="scroll-m-20 border-b border-foreground pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
         {t("title")}

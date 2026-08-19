@@ -11,9 +11,9 @@ export default function HomeSection() {
       className="w-full pt-28 md:pt-32 bg-secondary pb-12 md:pb-24 lg:pb-32 flex flex-col items-center"
       id="home"
     >
-      <div className="flex max-w-screen-xl md:flex-row items-center justify-center md:space-x-14 p-8 w-full gap-8 md:gap-0 flex-col-reverse">
+      <div className="flex max-w-screen-xl md:flex-row items-center justify-center p-8 w-full gap-8 md:gap-14 flex-col-reverse">
         <div className="w-full xl:pr-24">
-          <h1 className="lg:leading-tighter text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]">
+          <h1 className="lg:leading-tight text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]">
             {t("title")} <span className=" text-brand">Carlos Arévalo</span>
           </h1>
           <p className="md:text-xl mt-6">
@@ -31,13 +31,13 @@ export default function HomeSection() {
             <span className="font-semibold dark:font-normal dark:text-brand">{t("description12")}</span>
             {t("description13")}
           </p>
-          <div className="space-x-4 mt-6">
-            <Button variant="brand" aria-label="Link to Github" asChild>
+          <div className="flex gap-4 mt-6">
+            <Button variant="brand" size="icon" aria-label="Link to Github" asChild>
               <a href="https://github.com/carlosandresat" target="_blank">
                 <Github />
               </a>
             </Button>
-            <Button variant="brand" aria-label="Link to LinkedIn" asChild>
+            <Button variant="brand" size="icon" aria-label="Link to LinkedIn" asChild>
               <a
                 href="https://www.linkedin.com/in/carlosandresat/"
                 target="_blank"
@@ -45,7 +45,7 @@ export default function HomeSection() {
                 <Linkedin />
               </a>
             </Button>
-            <Button variant="brand" aria-label="Link to Mail" asChild>
+            <Button variant="brand" size="icon" aria-label="Link to Mail" asChild>
               <a href="mailto:carlosandresat@hotmail.com" target="_blank">
                 <Mail />
               </a>

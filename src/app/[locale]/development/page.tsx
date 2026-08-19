@@ -176,7 +176,7 @@ export default function Page(props: { params: Promise<{ locale: string }> }) {
           ))}
         </TabsList>
         {tabsData.map((tab) => (
-          <TabsContent value={tab.code} key={tab.code} className="space-y-2">
+          <TabsContent value={tab.code} key={tab.code} className="flex flex-col gap-2">
             {tab.phases.map((data, index) => (
               <PhaseTabContent
                 key={index}

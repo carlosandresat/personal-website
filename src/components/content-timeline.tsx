@@ -50,7 +50,7 @@ const ContentTimeline = ({
                   <div className="w-1 bg-foreground"></div>
                 </div>
               </div>
-              <div className="flex flex-col pl-4 w-auto space-y-2 h-max">
+              <div className="flex flex-col pl-4 w-auto gap-2 h-max">
                 <p className="leading-7">{item.description}</p>
               </div>
             </div>
@@ -60,7 +60,7 @@ const ContentTimeline = ({
                   <div className="w-1 bg-foreground"></div>
                 </div>
               </div>
-              <div className="flex flex-col pl-4 w-auto space-y-2 h-8"></div>
+              <div className="flex flex-col pl-4 w-auto gap-2 h-8"></div>
             </div>
           </div>
         ))}
