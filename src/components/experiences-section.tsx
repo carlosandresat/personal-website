@@ -222,7 +222,10 @@ export default function ExperiencesSection() {
     return (
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 p-8 max-w-screen-xl w-full">
         {experiences.map((exp, index) => (
-          <Card key={index} className="flex flex-col h-full justify-between">
+          <Card
+            key={index}
+            className="flex flex-col h-full justify-between border-border/80 transition-all duration-300 hover:-translate-y-1 hover:border-brand/40"
+          >
             <CardHeader>
               <div className="flex items-start justify-between mb-2 gap-2">
                 <CardTitle className="text-lg">{exp.title}</CardTitle>
@@ -290,22 +293,22 @@ export default function ExperiencesSection() {
         {t("title")}
       </h2>
       <Tabs defaultValue="work" className="w-full max-w-screen-xl flex flex-col items-center mt-8">
-        <TabsList className="flex w-full max-w-md h-full py-1 justify-center gap-1 bg-muted rounded-lg">
+        <TabsList className="flex w-full max-w-md h-auto p-1.5 justify-center gap-1.5 bg-muted/50 border border-border/80 rounded-xl">
           <TabsTrigger
             value="work"
-            className="flex-1 py-2 data-[state=active]:bg-brand data-[state=active]:text-brand-foreground"
+            className="flex-1 py-2.5 rounded-lg data-[state=active]:bg-primary data-[state=active]:text-primary-foreground transition-all duration-300 font-semibold text-sm"
           >
             {t("tabWork")}
           </TabsTrigger>
           <TabsTrigger
             value="course"
-            className="flex-1 py-2 data-[state=active]:bg-brand data-[state=active]:text-brand-foreground"
+            className="flex-1 py-2.5 rounded-lg data-[state=active]:bg-primary data-[state=active]:text-primary-foreground transition-all duration-300 font-semibold text-sm"
           >
             {t("tabCourses")}
           </TabsTrigger>
           <TabsTrigger
             value="event"
-            className="flex-1 py-2 data-[state=active]:bg-brand data-[state=active]:text-brand-foreground"
+            className="flex-1 py-2.5 rounded-lg data-[state=active]:bg-primary data-[state=active]:text-primary-foreground transition-all duration-300 font-semibold text-sm"
           >
             {t("tabEvents")}
           </TabsTrigger>

@@ -168,9 +168,13 @@ export default function Page(props: { params: Promise<{ locale: string }> }) {
         {t("title")}
       </h1>
       <Tabs defaultValue="requirements" className="w-full max-w-screen-xl p-8">
-        <TabsList className="flex w-full  py-2 h-full flex-wrap justify-center">
+        <TabsList className="flex w-full h-auto p-1.5 flex-wrap justify-center gap-1.5 bg-muted/50 border border-border/80 rounded-xl">
           {tabsData.map((tab, index) => (
-            <TabsTrigger value={tab.code} key={tab.code} className="text-wrap data-[state=active]:bg-brand data-[state=active]:text-brand-foreground">
+            <TabsTrigger
+              value={tab.code}
+              key={tab.code}
+              className="text-wrap rounded-lg px-3 py-2.5 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground transition-all duration-300 font-semibold text-sm"
+            >
               {`${index + 1}. ` + tab.title}
             </TabsTrigger>
           ))}

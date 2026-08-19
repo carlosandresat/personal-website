@@ -34,7 +34,7 @@ export default function ProjectsSection() {
         {t("title")}
       </h2>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-screen-xl w-full mx-auto p-8">
-        <Card>
+        <Card className="border-border/80 transition-all duration-300 hover:-translate-y-1 hover:border-brand/40">
           <CardHeader className="flex flex-row items-center gap-4">
             <div className="w-12 h-12 rounded-full border border-muted bg-secondary">
               <Image
@@ -181,7 +181,7 @@ export default function ProjectsSection() {
             </Dialog>
           </CardFooter>
         </Card>
-        <Card>
+        <Card className="border-border/80 transition-all duration-300 hover:-translate-y-1 hover:border-brand/40">
           <CardHeader className="flex flex-row items-center gap-4">
             <div className="w-12 h-12 rounded-full border border-muted bg-secondary">
               <Image
@@ -317,7 +317,7 @@ export default function ProjectsSection() {
             </Dialog>
           </CardFooter>
         </Card>
-        <Card>
+        <Card className="border-border/80 transition-all duration-300 hover:-translate-y-1 hover:border-brand/40">
           <CardHeader className="flex flex-row items-center gap-4">
             <div className="w-12 h-12 rounded-full border border-muted bg-secondary">
               <Image
@@ -444,7 +444,7 @@ export default function ProjectsSection() {
             </Dialog>
           </CardFooter>
         </Card>
-        <Card>
+        <Card className="border-border/80 transition-all duration-300 hover:-translate-y-1 hover:border-brand/40">
           <CardHeader className="flex flex-row items-center gap-4">
             <div className="w-12 h-12 rounded-full border border-muted bg-secondary">
               <Image
@@ -597,7 +597,7 @@ export default function ProjectsSection() {
             </Dialog>
           </CardFooter>
         </Card>
-        <Card>
+        <Card className="border-border/80 transition-all duration-300 hover:-translate-y-1 hover:border-brand/40">
           <CardHeader className="flex flex-row items-center gap-4">
             <LayoutPanelLeftIcon className="w-8 h-8" />
             <div className="grid gap-1">

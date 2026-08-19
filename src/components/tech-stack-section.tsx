@@ -190,7 +190,7 @@ export default function TechStackSection() {
           <TabsContent
             key={category.key}
             value={category.key}
-            className="w-full mt-10 focus-visible:ring-0 focus-visible:outline-none"
+            className="w-full mt-10"
           >
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6 px-4 md:px-8 max-w-screen-xl w-full mx-auto">
               {technologies

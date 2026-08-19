@@ -1,7 +1,7 @@
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
-import { Chakra_Petch } from "next/font/google";
+import { Chakra_Petch, JetBrains_Mono } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
 import "../globals.css";
@@ -12,6 +12,12 @@ import Footer from "@/components/footer";
 const chakraPetch = Chakra_Petch({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-mono",
 });
 
 type Props = {
@@ -135,7 +141,8 @@ export default async function LocaleLayout(
       <body
         className={cn(
           "min-h-screen bg-background antialiased",
-          chakraPetch.className
+          chakraPetch.className,
+          jetbrainsMono.variable
         )}
       >
         <ThemeProvider
