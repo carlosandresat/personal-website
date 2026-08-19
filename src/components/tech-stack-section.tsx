@@ -72,7 +72,7 @@ function TechCard({ tech }: { tech: TechItem }) {
         return {
           text: t("coreBadge"),
           className:
-            "bg-emerald-500/10 text-emerald-600 border-emerald-500/20 dark:text-emerald-400 dark:border-emerald-500/30",
+            "bg-brand/10 text-brand border-brand/20 dark:border-brand/30",
         };
       case 2:
         return {

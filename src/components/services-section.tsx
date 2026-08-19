@@ -28,12 +28,12 @@ export default function ServicesSection() {
                 <Link href="/development">{t("learnButtonText")}</Link>
               </Button>
             </div>
-            <div className="flex-shrink-0 w-20 h-20 md:w-14 md:h-14 xl:w-24 xl:h-24 flex justify-center items-center bg-green-500 md:bg-secondary rounded-md shadow-lg">
+            <div className="flex-shrink-0 w-20 h-20 md:w-14 md:h-14 xl:w-24 xl:h-24 flex justify-center items-center bg-brand md:bg-secondary rounded-md shadow-lg">
               <Globe className="w-8 h-8 invert dark:invert-0 md:invert-0" />
             </div>
           </div>
           <div className="flex space-x-8 xl:space-x-12 items-center w-full">
-            <div className="flex-shrink-0 w-20 h-20 md:w-14 md:h-14 xl:w-24 xl:h-24 flex justify-center items-center bg-secondary md:bg-green-500 rounded-md shadow-lg ">
+            <div className="flex-shrink-0 w-20 h-20 md:w-14 md:h-14 xl:w-24 xl:h-24 flex justify-center items-center bg-secondary md:bg-brand rounded-md shadow-lg ">
               <Database className="w-8 h-8 md:invert dark:invert-0" />
             </div>
 
@@ -53,7 +53,7 @@ export default function ServicesSection() {
               </h3>
               <p className="leading-7 text-right">{t("service1description")}</p>
             </div>
-            <div className="flex-shrink-0  w-20 h-20 md:w-14 md:h-14 xl:w-24 xl:h-24 flex justify-center items-center bg-green-500 rounded-md shadow-lg">
+            <div className="flex-shrink-0  w-20 h-20 md:w-14 md:h-14 xl:w-24 xl:h-24 flex justify-center items-center bg-brand rounded-md shadow-lg">
               <UserCheck className="w-8 h-8 invert dark:invert-0" />
             </div>
           </div>

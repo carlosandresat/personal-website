@@ -231,7 +231,7 @@ export default function ScratchKids(props: { params: Promise<{ locale: string }>
           <div className="w-full lg:w-1/2 flex flex-col items-center justify-center  border-background">
             <div className="w-full flex items-center">
               <div className="w-1/3 flex flex-col items-center justify-center border-r border-background lg:border-0 p-4 aspect-square md:aspect-video lg:aspect-square">
-                <div className="flex flex-col items-center justify-center lg:border-green-500 lg:border-8 rounded-full w-full aspect-square md:aspect-video lg:aspect-square">
+                <div className="flex flex-col items-center justify-center lg:border-brand lg:border-8 rounded-full w-full aspect-square md:aspect-video lg:aspect-square">
                   <p className="scroll-m-20 text-xl font-semibold tracking-tight">
                     6
                   </p>
@@ -239,7 +239,7 @@ export default function ScratchKids(props: { params: Promise<{ locale: string }>
                 </div>
               </div>
               <div className="w-1/3 flex flex-col items-center justify-center border-r border-background lg:border-0 p-4 aspect-square md:aspect-video lg:aspect-square">
-                <div className="flex flex-col items-center justify-center lg:border-green-500 lg:border-8 rounded-full w-full aspect-square md:aspect-video lg:aspect-square">
+                <div className="flex flex-col items-center justify-center lg:border-brand lg:border-8 rounded-full w-full aspect-square md:aspect-video lg:aspect-square">
                   <p className="scroll-m-20 text-xl font-semibold tracking-tight">
                     6
                   </p>
@@ -247,7 +247,7 @@ export default function ScratchKids(props: { params: Promise<{ locale: string }>
                 </div>
               </div>
               <div className="w-1/3 flex items-center justify-center p-4 aspect-square md:aspect-video lg:aspect-square">
-                <div className="flex flex-col items-center justify-center lg:border-green-500 lg:border-8 rounded-full w-full aspect-square md:aspect-video lg:aspect-square">
+                <div className="flex flex-col items-center justify-center lg:border-brand lg:border-8 rounded-full w-full aspect-square md:aspect-video lg:aspect-square">
                   <p className="scroll-m-20 text-xl font-semibold tracking-tight">
                     3
                   </p>

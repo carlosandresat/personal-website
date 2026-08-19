@@ -293,19 +293,19 @@ export default function ExperiencesSection() {
         <TabsList className="flex w-full max-w-md h-full py-1 justify-center gap-1 bg-muted rounded-lg">
           <TabsTrigger
             value="work"
-            className="flex-1 py-2 data-[state=active]:bg-green-500 data-[state=active]:text-white"
+            className="flex-1 py-2 data-[state=active]:bg-brand data-[state=active]:text-brand-foreground"
           >
             {t("tabWork")}
           </TabsTrigger>
           <TabsTrigger
             value="course"
-            className="flex-1 py-2 data-[state=active]:bg-green-500 data-[state=active]:text-white"
+            className="flex-1 py-2 data-[state=active]:bg-brand data-[state=active]:text-brand-foreground"
           >
             {t("tabCourses")}
           </TabsTrigger>
           <TabsTrigger
             value="event"
-            className="flex-1 py-2 data-[state=active]:bg-green-500 data-[state=active]:text-white"
+            className="flex-1 py-2 data-[state=active]:bg-brand data-[state=active]:text-brand-foreground"
           >
             {t("tabEvents")}
           </TabsTrigger>

@@ -13,8 +13,8 @@ export default function Navbar() {
     <nav className="flex gap-4 sm:gap-6">
       <Link
         className={cn(
-          "text-sm font-medium hover:underline hover:text-green-500 underline-offset-4",
-          pathname === "/es" || pathname === "/en" ? "text-green-500" : ""
+          "text-sm font-medium hover:underline hover:text-brand underline-offset-4",
+          pathname === "/es" || pathname === "/en" ? "text-brand" : ""
         )}
         href="/"
       >
@@ -22,8 +22,8 @@ export default function Navbar() {
       </Link>
       <Link
         className={cn(
-          "text-sm font-medium hover:underline hover:text-green-500 underline-offset-4",
-          pathname.endsWith("/development") ? "text-green-500" : ""
+          "text-sm font-medium hover:underline hover:text-brand underline-offset-4",
+          pathname.endsWith("/development") ? "text-brand" : ""
         )}
         href="/development"
       >
@@ -31,8 +31,8 @@ export default function Navbar() {
       </Link>
       <Link
         className={cn(
-          "text-sm font-medium hover:underline hover:text-green-500 underline-offset-4",
-          pathname.endsWith("/courses") ? "text-green-500" : ""
+          "text-sm font-medium hover:underline hover:text-brand underline-offset-4",
+          pathname.endsWith("/courses") ? "text-brand" : ""
         )}
         href="/courses"
       >
@@ -40,8 +40,8 @@ export default function Navbar() {
       </Link>
       <Link
         className={cn(
-          "text-sm font-medium hover:underline hover:text-green-500 underline-offset-4",
-          pathname.endsWith("/students") ? "text-green-500" : ""
+          "text-sm font-medium hover:underline hover:text-brand underline-offset-4",
+          pathname.endsWith("/students") ? "text-brand" : ""
         )}
         href="/students"
       >

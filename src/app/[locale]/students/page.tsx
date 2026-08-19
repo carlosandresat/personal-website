@@ -17,7 +17,7 @@ export default function Students(props: { params: Promise<{ locale: string }> })
       <div className="pt-24 lg:pt-32 px-8 w-full max-w-screen-xl flex justify-start">
         <Alert className="w-[500px]">
           <AlertCircle className="h-4 w-4" />
-          <AlertTitle className="text-green-500">{t("alertTitle")}</AlertTitle>
+          <AlertTitle className="text-brand">{t("alertTitle")}</AlertTitle>
           <AlertDescription>{t("alertDescription")}</AlertDescription>
         </Alert>
       </div>

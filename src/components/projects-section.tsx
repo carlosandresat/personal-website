@@ -47,7 +47,7 @@ export default function ProjectsSection() {
             </div>
             <div className="grid gap-1">
               <CardTitle>TinderYT</CardTitle>
-              <CardDescription className="text-green-500">{t("projects.tinderyt.description")}</CardDescription>
+              <CardDescription className="text-brand">{t("projects.tinderyt.description")}</CardDescription>
             </div>
           </CardHeader>
           <CardContent className="grid gap-2">
@@ -197,7 +197,7 @@ export default function ProjectsSection() {
                 <a
                   href="https://edfacademy.com/"
                   target="_blank"
-                  className="hover:border-b text-green-500"
+                  className="hover:border-b text-brand"
                 >
                   edfacademy.com
                 </a>
@@ -214,7 +214,7 @@ export default function ProjectsSection() {
             </div>
           </CardContent>
           <CardFooter className="flex flex-row justify-between gap-4">
-            <Button variant="link" className="hover:text-green-500" asChild>
+            <Button variant="link" className="hover:text-brand" asChild>
               <a href="https://edfacademy.com/" target="_blank">
                 {t("liveButtonText")}
               </a>
@@ -329,7 +329,7 @@ export default function ProjectsSection() {
             </div>
             <div className="grid gap-1">
               <CardTitle>Tuto-U</CardTitle>
-              <CardDescription className="text-green-500">
+              <CardDescription className="text-brand">
                 {t("projects.tutou.description")}
               </CardDescription>
             </div>
@@ -345,7 +345,7 @@ export default function ProjectsSection() {
             </div>
           </CardContent>
           <CardFooter className="flex flex-row justify-between gap-4">
-            <Button variant="link" className="hover:text-green-500" asChild>
+            <Button variant="link" className="hover:text-brand" asChild>
               <a href="https://tutou.app/" target="_blank">
                 {t("liveButtonText")}
               </a>
@@ -464,7 +464,7 @@ export default function ProjectsSection() {
             </div>
             <div className="grid gap-1">
               <CardTitle>OrientaYT</CardTitle>
-              <CardDescription className="text-green-500">
+              <CardDescription className="text-brand">
                 {t("projects.orientayt.description")}
               </CardDescription>
             </div>
@@ -602,7 +602,7 @@ export default function ProjectsSection() {
             <LayoutPanelLeftIcon className="w-8 h-8" />
             <div className="grid gap-1">
               <CardTitle>Kidney App</CardTitle>
-              <CardDescription className="text-green-500">
+              <CardDescription className="text-brand">
                 {t("projects.kidneyapp.description")}
               </CardDescription>
             </div>

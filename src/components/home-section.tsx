@@ -20,40 +20,40 @@ export default function HomeSection() {
       <div className="flex max-w-screen-xl md:flex-row items-center justify-center md:space-x-14 p-8 w-full gap-8 md:gap-0 flex-col-reverse">
         <div className="w-full xl:pr-24">
           <h1 className="lg:leading-tighter text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]">
-            {t("title")} <span className=" text-green-600 dark:text-green-500">Carlos Arévalo</span>
+            {t("title")} <span className=" text-brand">Carlos Arévalo</span>
           </h1>
           <p className="md:text-xl mt-6">
             {t("description1")}
-            <span className="font-semibold dark:font-normal dark:text-green-500">{t("description2")}</span>
+            <span className="font-semibold dark:font-normal dark:text-brand">{t("description2")}</span>
             {t("description3")}
-            <span className="font-semibold dark:font-normal dark:text-green-500">{t("description4")}</span>
+            <span className="font-semibold dark:font-normal dark:text-brand">{t("description4")}</span>
             {t("description5")}
-            <span className="font-semibold dark:font-normal dark:text-green-500">{t("description6")}</span>
+            <span className="font-semibold dark:font-normal dark:text-brand">{t("description6")}</span>
             {t("description7")}
-            <span className="font-semibold dark:font-normal dark:text-green-500">{t("description8")}</span>
+            <span className="font-semibold dark:font-normal dark:text-brand">{t("description8")}</span>
             {t("description9")}
-            <span className="font-semibold dark:font-normal dark:text-green-500">{t("description10")}</span>
+            <span className="font-semibold dark:font-normal dark:text-brand">{t("description10")}</span>
             {t("description11")}
-            <span className="font-semibold dark:font-normal dark:text-green-500">{t("description12")}</span>
+            <span className="font-semibold dark:font-normal dark:text-brand">{t("description12")}</span>
             {t("description13")}
           </p>
           <div className="space-x-4 mt-6">
-            <Button className="bg-green-500 hover:bg-green-600" aria-label="Link to Github" asChild>
+            <Button className="bg-brand text-brand-foreground hover:bg-brand/90" aria-label="Link to Github" asChild>
               <a href="https://github.com/carlosandresat" target="_blank">
-                <Github color="white"/>
+                <Github />
               </a>
             </Button>
-            <Button className="bg-green-500 hover:bg-green-600" aria-label="Link to LinkedIn" asChild>
+            <Button className="bg-brand text-brand-foreground hover:bg-brand/90" aria-label="Link to LinkedIn" asChild>
               <a
                 href="https://www.linkedin.com/in/carlosandresat/"
                 target="_blank"
               >
-                <Linkedin color="white"/>
+                <Linkedin />
               </a>
             </Button>
-            <Button className="bg-green-500 hover:bg-green-600" aria-label="Link to Mail" asChild>
+            <Button className="bg-brand text-brand-foreground hover:bg-brand/90" aria-label="Link to Mail" asChild>
               <a href="mailto:carlosandresat@hotmail.com" target="_blank">
-                <Mail color="white"/>
+                <Mail />
               </a>
             </Button>
           </div>
