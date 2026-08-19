@@ -27,7 +27,7 @@ export default function Page(props: { params: Promise<{ id: string; locale: stri
 
   return (
     <main className="w-full flex flex-col justify-center items-center py-12 md:py-24 lg:py-28 min-h-[93vh]">
-      <div className="max-w-screen-lg px-8 pt-12 lg:pt-0 w-full">
+      <div className="max-w-screen-lg px-8 pt-16 lg:pt-0 w-full">
         <Card className="w-full">
           <CardHeader className="flex flex-col sm:flex-row items-center  gap-4">
             <Avatar className="w-24 h-24">

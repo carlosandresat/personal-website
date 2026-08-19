@@ -172,7 +172,7 @@ export default function ScratchKids(props: { params: Promise<{ locale: string }>
 
   return (
     <main className="flex min-h-screen flex-col items-center">
-      <div className="flex pt-24 lg:pt-32 w-full p-8 gap-6 lg:gap-12 items-center flex-col-reverse lg:flex-row max-w-screen-xl">
+      <div className="flex pt-28 lg:pt-32 w-full p-8 gap-6 lg:gap-12 items-center flex-col-reverse lg:flex-row max-w-screen-xl">
         <div>
           <h1 className="scroll-m-20 text-4xl font-bold tracking-tight lg:text-5xl ">
             {t("title")}

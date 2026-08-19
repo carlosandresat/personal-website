@@ -21,7 +21,7 @@ export default function Courses(props: { params: Promise<{ locale: string }> }) 
   const t = useTranslations("Courses");
   return (
     <main className="flex min-h-screen flex-col items-center">
-      <h1 className="scroll-m-20 text-4xl font-bold tracking-tight lg:text-5xl pt-24 lg:pt-32">
+      <h1 className="scroll-m-20 text-4xl font-bold tracking-tight lg:text-5xl pt-28 lg:pt-32">
         {t("title")}
       </h1>
       <div className="flex flex-col w-full max-w-screen-lg space-y-6 p-8">

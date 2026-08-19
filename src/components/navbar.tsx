@@ -10,7 +10,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="flex gap-4 sm:gap-6">
+    <nav className="flex flex-wrap justify-center gap-4 sm:gap-6">
       <Link
         className={cn(
           "text-sm font-medium hover:underline hover:text-brand underline-offset-4",

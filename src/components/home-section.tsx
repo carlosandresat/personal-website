@@ -1,22 +1,16 @@
 import Image from "next/image";
-import { ModeToggle } from "@/components/mode-toggle";
 import { Button } from "@/components/ui/button";
 import { Github, Mail, Linkedin } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { LanguageSelect } from "@/components/language-select";
 
 export default function HomeSection() {
   const t = useTranslations("HomePage");
 
   return (
     <section
-      className="w-full pt-24 md:pt-32 bg-secondary pb-12 md:pb-24 lg:pb-32 flex flex-col items-center"
+      className="w-full pt-28 md:pt-32 bg-secondary pb-12 md:pb-24 lg:pb-32 flex flex-col items-center"
       id="home"
     >
-      <div className="w-full flex justify-between px-8 md:hidden">
-        <LanguageSelect></LanguageSelect>
-        <ModeToggle />
-      </div>
       <div className="flex max-w-screen-xl md:flex-row items-center justify-center md:space-x-14 p-8 w-full gap-8 md:gap-0 flex-col-reverse">
         <div className="w-full xl:pr-24">
           <h1 className="lg:leading-tighter text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]">
