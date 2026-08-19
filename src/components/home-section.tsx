@@ -11,7 +11,7 @@ export default function HomeSection() {
       className="w-full pt-28 md:pt-32 bg-secondary pb-12 md:pb-24 lg:pb-32 flex flex-col items-center"
       id="home"
     >
-      <div className="flex max-w-screen-xl md:flex-row items-center justify-center p-8 w-full gap-8 md:gap-14 flex-col-reverse">
+      <div className="flex max-w-screen-xl md:flex-row items-center justify-center p-8 w-full gap-8 md:gap-14 flex-col">
         <div className="w-full xl:pr-24">
           <p className="font-mono text-xs uppercase tracking-widest text-brand mb-3">
             {t("kicker")}
@@ -61,10 +61,10 @@ export default function HomeSection() {
             </Button>
           </div>
         </div>
-        <div className="flex flex-col items-center justify-center pt-6 md:pt-0">
+        <div className="flex flex-col items-center justify-center shrink-0">
           <Image
             alt="profile picture"
-            className="mx-auto aspect-[1/1] overflow-hidden rounded-full object-cover w-52 md:w-[550px] xl:w-[650px] shadow-xl"
+            className="mx-auto aspect-[1/1] overflow-hidden rounded-full object-cover w-52 md:w-96 xl:w-[420px] shadow-xl"
             height="900"
             src="/carlos.arevalo.jpg"
             width="900"
