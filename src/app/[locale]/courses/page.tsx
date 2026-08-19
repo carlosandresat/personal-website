@@ -26,12 +26,13 @@ export default function Courses(props: { params: Promise<{ locale: string }> }) 
       </h1>
       <div className="flex flex-col w-full max-w-screen-lg gap-6 p-8">
         <Card className="flex items-center h-full">
-          <div className="flex w-16 md:w-28 aspect-square justify-center items-center bg-secondary shadow rounded-xl md:ml-10 md:mr-4 shrink-0 object-cover p-2 ml-5">
+          <div className="flex w-16 md:w-28 aspect-square justify-center items-center bg-secondary shadow rounded-xl md:ml-10 md:mr-4 shrink-0 p-3 md:p-5 ml-5">
             <Image
               src="/Python.png"
               height={200}
               width={200}
               alt="Python"
+              className="object-contain"
             ></Image>
           </div>
           <div>
@@ -43,7 +44,7 @@ export default function Courses(props: { params: Promise<{ locale: string }> }) 
                 {t("BasicsPython.project")}
               </CardDescription>
             </CardHeader>
-            <CardContent className="hidden md:block">
+            <CardContent>
               <p>{t("BasicsPython.description")}</p>
             </CardContent>
             <CardFooter>
@@ -54,12 +55,13 @@ export default function Courses(props: { params: Promise<{ locale: string }> }) 
           </div>
         </Card>
         <Card className="flex items-center h-full">
-          <div className="flex w-16 md:w-28 aspect-square justify-center items-center bg-secondary shadow rounded-xl md:ml-10 md:mr-4 shrink-0 object-cover p-2 md:p-5 ml-5">
+          <div className="flex w-16 md:w-28 aspect-square justify-center items-center bg-secondary shadow rounded-xl md:ml-10 md:mr-4 shrink-0 p-3 md:p-5 ml-5">
             <Image
               src="/scratch.png"
               height={200}
               width={200}
               alt="Scratch Image"
+              className="object-contain"
             ></Image>
           </div>
           <div>
@@ -70,7 +72,7 @@ export default function Courses(props: { params: Promise<{ locale: string }> }) 
                 + 3 {t("Scratch.projects")}
               </CardDescription>
             </CardHeader>
-            <CardContent className="hidden md:block">
+            <CardContent>
               <p>{t("Scratch.description")}</p>
             </CardContent>
             <CardFooter>
@@ -81,12 +83,13 @@ export default function Courses(props: { params: Promise<{ locale: string }> }) 
           </div>
         </Card>
         <Card className="flex items-center h-full">
-          <div className="flex w-16 md:w-28 aspect-square justify-center items-center bg-secondary shadow rounded-xl md:ml-10 md:mr-4 shrink-0 object-cover p-2 md:p-5 ml-5">
+          <div className="flex w-16 md:w-28 aspect-square justify-center items-center bg-secondary shadow rounded-xl md:ml-10 md:mr-4 shrink-0 p-3 md:p-5 ml-5">
             <Image
               src="/matplotlib.png"
               height={200}
               width={200}
               alt="Matplotlib Image"
+              className="object-contain"
             ></Image>
           </div>
           <div>
@@ -94,7 +97,7 @@ export default function Courses(props: { params: Promise<{ locale: string }> }) 
               <CardTitle>{t("Matplotlib.title")}</CardTitle>
               <CardDescription>-</CardDescription>
             </CardHeader>
-            <CardContent className="hidden md:block">
+            <CardContent>
               <p>{t("Matplotlib.description")}</p>
             </CardContent>
             <CardFooter>
@@ -103,12 +106,13 @@ export default function Courses(props: { params: Promise<{ locale: string }> }) 
           </div>
         </Card>
         <Card className="flex items-center h-full">
-          <div className="flex w-16 md:w-28 aspect-square justify-center items-center bg-secondary shadow rounded-xl md:ml-10 md:mr-4 shrink-0 object-cover p-1 md:p-4 ml-5">
+          <div className="flex w-16 md:w-28 aspect-square justify-center items-center bg-secondary shadow rounded-xl md:ml-10 md:mr-4 shrink-0 p-3 md:p-5 ml-5">
             <Image
               src="/front1.png"
               height={200}
               width={200}
               alt="Front (I) Image"
+              className="object-contain"
             ></Image>
           </div>
           <div>
@@ -116,7 +120,7 @@ export default function Courses(props: { params: Promise<{ locale: string }> }) 
               <CardTitle>{t("FrontI.title")}</CardTitle>
               <CardDescription>-</CardDescription>
             </CardHeader>
-            <CardContent className="hidden md:block">
+            <CardContent>
               <p>{t("FrontI.description")}</p>
             </CardContent>
             <CardFooter>
@@ -125,12 +129,13 @@ export default function Courses(props: { params: Promise<{ locale: string }> }) 
           </div>
         </Card>
         <Card className="flex items-center h-full">
-          <div className="flex w-16 md:w-28 aspect-square justify-center items-center bg-secondary shadow rounded-xl md:ml-10 md:mr-4 shrink-0 object-cover p-2 md:p-4 ml-5">
+          <div className="flex w-16 md:w-28 aspect-square justify-center items-center bg-secondary shadow rounded-xl md:ml-10 md:mr-4 shrink-0 p-3 md:p-5 ml-5">
             <Image
               src="/React-icon.png"
               height={200}
               width={200}
               alt="React Image"
+              className="object-contain"
             ></Image>
           </div>
           <div>
@@ -138,7 +143,7 @@ export default function Courses(props: { params: Promise<{ locale: string }> }) 
               <CardTitle>{t("FrontII.title")}</CardTitle>
               <CardDescription>-</CardDescription>
             </CardHeader>
-            <CardContent className="hidden md:block">
+            <CardContent>
               <p>{t("FrontII.description")}</p>
             </CardContent>
             <CardFooter>
@@ -147,13 +152,13 @@ export default function Courses(props: { params: Promise<{ locale: string }> }) 
           </div>
         </Card>
         <Card className="flex items-center h-full">
-          <div className="flex w-16 md:w-28 aspect-square justify-center items-center bg-secondary shadow rounded-xl md:ml-10 md:mr-4 shrink-0 object-cover p-0 ml-5">
+          <div className="flex w-16 md:w-28 aspect-square justify-center items-center bg-secondary shadow rounded-xl md:ml-10 md:mr-4 shrink-0 p-3 md:p-5 ml-5">
             <Image
               src="/Next.js.png"
               height={200}
               width={200}
               alt="Next.js Image"
-              className="dark:invert"
+              className="object-contain dark:invert"
             ></Image>
           </div>
           <div>
@@ -161,7 +166,7 @@ export default function Courses(props: { params: Promise<{ locale: string }> }) 
               <CardTitle>{t("FrontIII.title")}</CardTitle>
               <CardDescription>-</CardDescription>
             </CardHeader>
-            <CardContent className="hidden md:block">
+            <CardContent>
               <p>{t("FrontIII.description")}</p>
             </CardContent>
             <CardFooter>
@@ -170,12 +175,13 @@ export default function Courses(props: { params: Promise<{ locale: string }> }) 
           </div>
         </Card>
         <Card className="flex items-center h-full">
-          <div className="flex w-16 md:w-28 aspect-square justify-center items-center bg-secondary shadow rounded-xl md:ml-10 md:mr-4 shrink-0 object-cover p-2 md:p-5 ml-5">
+          <div className="flex w-16 md:w-28 aspect-square justify-center items-center bg-secondary shadow rounded-xl md:ml-10 md:mr-4 shrink-0 p-3 md:p-5 ml-5">
             <Image
               src="/postgres.png"
               height={200}
               width={200}
               alt="PostgreSQL Image"
+              className="object-contain"
             ></Image>
           </div>
           <div>
@@ -183,7 +189,7 @@ export default function Courses(props: { params: Promise<{ locale: string }> }) 
               <CardTitle>{t("Databases.title")}</CardTitle>
               <CardDescription>-</CardDescription>
             </CardHeader>
-            <CardContent className="hidden md:block">
+            <CardContent>
               <p>{t("Databases.description")}</p>
             </CardContent>
             <CardFooter>
@@ -192,13 +198,13 @@ export default function Courses(props: { params: Promise<{ locale: string }> }) 
           </div>
         </Card>
         <Card className="flex items-center h-full">
-          <div className="flex w-16 md:w-28 aspect-square justify-center items-center bg-secondary shadow rounded-xl md:ml-10 md:mr-4 shrink-0 object-cover ml-5">
+          <div className="flex w-16 md:w-28 aspect-square justify-center items-center bg-secondary shadow rounded-xl md:ml-10 md:mr-4 shrink-0 p-3 md:p-5 ml-5">
             <Image
               src="/express.png"
               height={200}
               width={200}
               alt="Express Image"
-              className="dark:invert"
+              className="object-contain dark:invert"
             ></Image>
           </div>
           <div>
@@ -206,7 +212,7 @@ export default function Courses(props: { params: Promise<{ locale: string }> }) 
               <CardTitle>{t("BackExpress.title")}</CardTitle>
               <CardDescription>-</CardDescription>
             </CardHeader>
-            <CardContent className="hidden md:block">
+            <CardContent>
               <p>{t("BackExpress.description")}</p>
             </CardContent>
             <CardFooter>
@@ -215,13 +221,13 @@ export default function Courses(props: { params: Promise<{ locale: string }> }) 
           </div>
         </Card>
         <Card className="flex items-center h-full">
-          <div className="flex w-16 md:w-28 aspect-square justify-center items-center bg-secondary shadow rounded-xl md:ml-10 md:mr-4 shrink-0 object-cover ml-5">
+          <div className="flex w-16 md:w-28 aspect-square justify-center items-center bg-secondary shadow rounded-xl md:ml-10 md:mr-4 shrink-0 p-3 md:p-5 ml-5">
             <Image
               src="/Next.js.png"
               height={200}
               width={200}
               alt="Next.js Image"
-              className="dark:invert"
+              className="object-contain dark:invert"
             ></Image>
           </div>
           <div>
@@ -229,7 +235,7 @@ export default function Courses(props: { params: Promise<{ locale: string }> }) 
               <CardTitle>{t("BackNext.title")}</CardTitle>
               <CardDescription>-</CardDescription>
             </CardHeader>
-            <CardContent className="hidden md:block">
+            <CardContent>
               <p>{t("BackNext.description")}</p>
             </CardContent>
             <CardFooter>
@@ -238,12 +244,13 @@ export default function Courses(props: { params: Promise<{ locale: string }> }) 
           </div>
         </Card>
         <Card className="flex items-center h-full">
-          <div className="flex w-16 md:w-28 aspect-square justify-center items-center bg-secondary shadow rounded-xl md:ml-10 md:mr-4 shrink-0 object-cover p-3 md:p-5 ml-5">
+          <div className="flex w-16 md:w-28 aspect-square justify-center items-center bg-secondary shadow rounded-xl md:ml-10 md:mr-4 shrink-0 p-3 md:p-5 ml-5">
             <Image
               src="/arduino-logo.png"
               height={200}
               width={200}
               alt="Arduino Image"
+              className="object-contain"
             ></Image>
           </div>
           <div>
@@ -251,7 +258,7 @@ export default function Courses(props: { params: Promise<{ locale: string }> }) 
               <CardTitle>{t("IoTArduino.title")}</CardTitle>
               <CardDescription>-</CardDescription>
             </CardHeader>
-            <CardContent className="hidden md:block">
+            <CardContent>
               <p>{t("IoTArduino.description")}</p>
             </CardContent>
             <CardFooter>
@@ -260,12 +267,13 @@ export default function Courses(props: { params: Promise<{ locale: string }> }) 
           </div>
         </Card>
         <Card className="flex items-center h-full">
-          <div className="flex w-16 md:w-28 aspect-square justify-center items-center bg-secondary shadow rounded-xl md:ml-10 md:mr-4 shrink-0 object-cover p-2 ml-5">
+          <div className="flex w-16 md:w-28 aspect-square justify-center items-center bg-secondary shadow rounded-xl md:ml-10 md:mr-4 shrink-0 p-3 md:p-5 ml-5">
             <Image
               src="/nodemcu.png"
               height={200}
               width={200}
               alt="ESP8266 Image"
+              className="object-contain"
             ></Image>
           </div>
           <div>
@@ -273,7 +281,7 @@ export default function Courses(props: { params: Promise<{ locale: string }> }) 
               <CardTitle>{t("IoTESP8266.title")}</CardTitle>
               <CardDescription>-</CardDescription>
             </CardHeader>
-            <CardContent className="hidden md:block">
+            <CardContent>
               <p>{t("IoTESP8266.description")}</p>
             </CardContent>
             <CardFooter>
