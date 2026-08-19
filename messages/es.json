@@ -1,19 +1,9 @@
 {
   "HomePage": {
-    "title": "Hola, soy",
-    "description1": "+3 años de experiencia como ",
-    "description2": "Desarrollador de Software",
-    "description3": ". +500 ",
-    "description4": "contribuciones en GitHub",
-    "description5": " en el último año. Pasión por crear soluciones innovadoras con tecnologías modernas. Especializado en el desarrollo de aplicaciones web. Graduado de ",
-    "description6": "Ingeniería en Tecnologías de la Información",
-    "description7": " en la ",
-    "description8": "Universidad Yachay Tech",
-    "description9": ". A futuro me interesa profundizar en el mundo de la ",
-    "description10": "Ciencia de Datos",
-    "description11": " y la ",
-    "description12": "Inteligencia Artificial",
-    "description13": " para ampliar el impacto de mi trabajo. Espero con interés conectar y explorar cómo podemos crear algo excepcional juntos. ¡Empecemos!"
+    "kicker": "Desarrollador de Software e Investigador en IA",
+    "lead": "Soy desarrollador de software especializado en construir aplicaciones web con <emphasis>TypeScript, Next.js y React</emphasis>. Ahora profundizando en <emphasis>ciencia de datos e IA</emphasis>: creemos algo excepcional juntos.",
+    "statsYearsLabel": "Años de experiencia",
+    "statsContributionsLabel": "Contribuciones en GitHub"
   },
   "Navbar": {
     "home": "Inicio",

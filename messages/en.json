@@ -1,19 +1,9 @@
 {
   "HomePage": {
-    "title": "Hi, I'm",
-    "description1": "+3 years of experience as ",
-    "description2": "Software Developer",
-    "description3": ". +500 ",
-    "description4": "GitHub contributions",
-    "description5": " last year. Passion for creating innovative solutions with modern technologies. Specialized in web application development. Graduated in ",
-    "description6": "Information Technology Engineering",
-    "description7": " at ",
-    "description8": "Yachay Tech University",
-    "description9": ". Going forward I am interested in delving into the world of ",
-    "description10": "Data Science",
-    "description11": " and ",
-    "description12": "Artificial Intelligence",
-    "description13": " to broaden the impact of my work. I look forward to connecting and exploring how we can create something exceptional together. Let's start! "
+    "kicker": "Software Developer & AI Researcher",
+    "lead": "I'm a software developer specialized in building web applications with <emphasis>TypeScript, Next.js, and React</emphasis>. Now expanding into <emphasis>data science and AI</emphasis> — let's build something exceptional together.",
+    "statsYearsLabel": "Years experience",
+    "statsContributionsLabel": "GitHub contributions"
   },
   "Navbar": {
     "home": "Home",
