@@ -62,7 +62,7 @@ export default function ProjectsSection() {
           <CardFooter className="flex flex-row justify-end gap-4">
             <Dialog>
               <DialogTrigger asChild>
-                <Button variant="default" className="hover:bg-green-500">
+                <Button variant="default">
                   {t("infoButtonText")}
                 </Button>
               </DialogTrigger>
@@ -221,7 +221,7 @@ export default function ProjectsSection() {
             </Button>
             <Dialog>
               <DialogTrigger asChild>
-                <Button variant="default" className="hover:bg-green-500">
+                <Button variant="default">
                   {t("infoButtonText")}
                 </Button>
               </DialogTrigger>
@@ -297,7 +297,7 @@ export default function ProjectsSection() {
                   </p>
 
                   <DialogFooter className="mt-4">
-                    <Button className="hover:bg-green-500" asChild>
+                    <Button asChild>
                       <a
                         href="https://github.com/carlosandresat/educacion-del-futuro-web"
                         target="_blank"
@@ -352,7 +352,7 @@ export default function ProjectsSection() {
             </Button>
             <Dialog>
               <DialogTrigger asChild>
-                <Button variant="default" className="hover:bg-green-500">
+                <Button variant="default">
                   {t("infoButtonText")}
                 </Button>
               </DialogTrigger>
@@ -424,7 +424,7 @@ export default function ProjectsSection() {
                   </p>
 
                   <DialogFooter className="mt-4">
-                    <Button className="hover:bg-green-500" asChild>
+                    <Button asChild>
                       <a
                         href="https://github.com/carlosandresat/tuto-u"
                         target="_blank"
@@ -482,7 +482,7 @@ export default function ProjectsSection() {
           <CardFooter className="flex flex-row justify-end gap-4">
             <Dialog>
               <DialogTrigger asChild>
-                <Button variant="default" className="hover:bg-green-500">
+                <Button variant="default">
                   {t("infoButtonText")}
                 </Button>
               </DialogTrigger>
@@ -620,7 +620,7 @@ export default function ProjectsSection() {
           <CardFooter className="flex flex-row justify-end gap-4">
             <Dialog>
               <DialogTrigger asChild>
-                <Button variant="default" className="hover:bg-green-500">
+                <Button variant="default">
                   {t("infoButtonText")}
                 </Button>
               </DialogTrigger>
@@ -717,7 +717,7 @@ export default function ProjectsSection() {
                   </p>
 
                   <DialogFooter className="mt-4">
-                    <Button className="hover:bg-green-500" asChild>
+                    <Button asChild>
                       <a
                         href="https://github.com/carlosandresat/kidney-app"
                         target="_blank"
