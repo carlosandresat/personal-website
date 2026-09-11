@@ -3,7 +3,7 @@ export const studentsData = [
     code: "carlos-arevalo",
     name: "Carlos Arévalo",
     photoUrl: "/carlos.arevalo.jpg",
-    email: "carlosandresat@hotmail.com",
+    email: "carlosarevalodev@gmail.com",
     courses: [
       {
         code: "BasicsPython",

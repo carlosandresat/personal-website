@@ -1,6 +1,12 @@
 import { Card, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsContent } from "@/components/ui/tabs";
+import {
+  FilterTabsList,
+  FilterTabsTrigger,
+} from "@/components/design/filter-tabs";
+import { CornerTicks } from "@/components/design/corner-ticks";
+import { Eyebrow } from "@/components/design/eyebrow";
+import { StatusBadge } from "@/components/design/status-badge";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/navigation";
@@ -136,12 +142,7 @@ function CourseCard({ course }: { course: CourseData }) {
         enrolling && "border-brand shadow-[0_0_0_3px_hsl(var(--brand)/0.06)]"
       )}
     >
-      {enrolling && (
-        <>
-          <div className="absolute left-0 top-0 size-2.5 border-l border-t border-brand/50" />
-          <div className="absolute right-0 top-0 size-2.5 border-r border-t border-brand/50" />
-        </>
-      )}
+      {enrolling && <CornerTicks />}
       <div className="flex items-start justify-between gap-3">
         <div className="flex size-14 shrink-0 items-center justify-center rounded-[10px] bg-muted p-2.5">
           <Image
@@ -156,17 +157,9 @@ function CourseCard({ course }: { course: CourseData }) {
             )}
           />
         </div>
-        <Badge
-          variant="outline"
-          className={cn(
-            "font-mono text-[10px] font-medium uppercase tracking-wider",
-            enrolling
-              ? "border-brand/25 bg-brand/10 text-brand"
-              : "text-muted-foreground"
-          )}
-        >
+        <StatusBadge tone={enrolling ? "brand" : "muted"}>
           {t(enrolling ? "enrolling" : "soon")}
-        </Badge>
+        </StatusBadge>
       </div>
       <div className="flex flex-col gap-2">
         <CardTitle className="text-lg leading-tight">
@@ -217,9 +210,7 @@ export default function Courses(props: {
   return (
     <main className="flex min-h-screen flex-col items-center">
       <div className="flex w-full max-w-screen-lg flex-col items-center gap-4 px-8 pb-6 pt-28 text-center lg:pt-32">
-        <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-brand">
-          [ {t("catalogLabel", { count: courses.length })} ]
-        </span>
+        <Eyebrow>{t("catalogLabel", { count: courses.length })}</Eyebrow>
         <h1 className="scroll-m-20 text-4xl font-bold tracking-tight lg:text-5xl">
           {t("title")}
         </h1>
@@ -230,17 +221,13 @@ export default function Courses(props: {
         defaultValue="all"
         className="flex w-full max-w-screen-lg flex-col items-center px-4 pb-16"
       >
-        <TabsList className="h-auto flex-wrap justify-center gap-1.5 rounded-xl border border-border/80 bg-muted/50 p-1.5">
+        <FilterTabsList>
           {tracks.map((track) => (
-            <TabsTrigger
-              key={track.key}
-              value={track.key}
-              className="rounded-lg px-3 py-2.5 text-sm font-semibold data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
-            >
+            <FilterTabsTrigger key={track.key} value={track.key}>
               {t(`filters.${track.filterKey}`)}
-            </TabsTrigger>
+            </FilterTabsTrigger>
           ))}
-        </TabsList>
+        </FilterTabsList>
 
         {tracks.map((track) => (
           <TabsContent
@@ -269,7 +256,7 @@ export default function Courses(props: {
           </p>
         </div>
         <Button asChild>
-          <a href="mailto:carlosandresat@hotmail.com">{t("getInTouch")}</a>
+          <a href="mailto:carlosarevalodev@gmail.com">{t("getInTouch")}</a>
         </Button>
       </div>
     </main>

@@ -1,6 +1,10 @@
 import Image from "next/image";
 import { Award, BookOpen, Check, MapPin, Timer } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Eyebrow } from "@/components/design/eyebrow";
+import { LedgerDivider, pad2 } from "@/components/design/ledger-divider";
+import { RuleHeading } from "@/components/design/rule-heading";
+import { SpecRow } from "@/components/design/spec-row";
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
@@ -57,9 +61,7 @@ export default function BasicsPython(props: {
       <section className="flex w-full justify-center border-b px-8 py-16 lg:pt-32">
         <div className="flex w-full max-w-screen-xl flex-col items-end justify-between gap-10 lg:flex-row">
           <div className="flex max-w-2xl flex-col gap-4">
-            <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-brand">
-              [ {tc("trackFoundations")} ]
-            </span>
+            <Eyebrow>{tc("trackFoundations")}</Eyebrow>
             <h1 className="scroll-m-20 text-4xl font-bold tracking-tight lg:text-5xl">
               {t("title")}
             </h1>
@@ -103,28 +105,18 @@ export default function BasicsPython(props: {
                 { label: tc("homework"), value: 8 },
                 { label: t("project"), value: 1 },
               ].map((row) => (
-                <div
-                  key={row.label}
-                  className="flex items-center justify-between border-b py-2.5 font-mono text-[10px] uppercase tracking-wider text-muted-foreground last:border-b-0"
-                >
-                  <span>{row.label}</span>
-                  <span className="font-sans text-sm font-semibold text-foreground">
-                    {row.value}
-                  </span>
-                </div>
+                <SpecRow key={row.label} label={row.label} value={row.value} />
               ))}
             </div>
             <Button variant="brand" asChild>
-              <a href="mailto:carlosandresat@hotmail.com">
+              <a href="mailto:carlosarevalodev@gmail.com">
                 {tc("requestSeat")}
               </a>
             </Button>
           </aside>
 
           <div className="flex flex-1 flex-col gap-6">
-            <h2 className="scroll-m-20 border-b border-foreground pb-2 text-xl font-semibold tracking-tight">
-              {t("learningObjective.title")}
-            </h2>
+            <RuleHeading level="sub">{t("learningObjective.title")}</RuleHeading>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               {objectives.map((i) => (
                 <div key={i} className="flex items-start gap-3">
@@ -136,34 +128,24 @@ export default function BasicsPython(props: {
               ))}
             </div>
 
-            <h2 className="scroll-m-20 border-b border-foreground pb-2 pt-4 text-xl font-semibold tracking-tight">
+            <RuleHeading level="sub" className="mt-4">
               {t("prerequisites")}
-            </h2>
+            </RuleHeading>
             <p className="text-sm text-muted-foreground">{t("req.1")}</p>
           </div>
         </section>
 
         <section className="flex flex-col">
-          <div className="flex items-baseline justify-between gap-6 border-b border-foreground pb-2">
-            <h2 className="scroll-m-20 text-xl font-semibold tracking-tight">
-              {t("content")}
-            </h2>
-            <span className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground">
-              8 {t("lectures")} · 1h + 2h
-            </span>
-          </div>
+          <RuleHeading level="sub" meta={`8 ${t("lectures")} · 1h + 2h`}>
+            {t("content")}
+          </RuleHeading>
 
           {modules.map((n) => (
             <div key={n}>
-              <div className="flex items-center gap-4 pb-2 pt-6">
-                <span className="shrink-0 font-mono text-[11px] tracking-wider text-brand">
-                  {tc("module").toUpperCase()} {String(n).padStart(2, "0")}
-                </span>
-                <span className="h-px flex-grow bg-border" />
-                <span className="shrink-0 font-mono text-[11px] tracking-wide text-muted-foreground">
-                  3h
-                </span>
-              </div>
+              <LedgerDivider
+                label={`${tc("module")} ${pad2(n)}`}
+                meta="3h"
+              />
               <SessionRow
                 icon="/theoretical.png"
                 kind={t("lecture")}
@@ -185,15 +167,10 @@ export default function BasicsPython(props: {
             </div>
           ))}
 
-          <div className="flex items-center gap-4 pb-2 pt-6">
-            <span className="shrink-0 font-mono text-[11px] tracking-wider text-brand">
-              {t("finalProject").toUpperCase()}
-            </span>
-            <span className="h-px flex-grow bg-border" />
-            <span className="shrink-0 font-mono text-[11px] tracking-wide text-muted-foreground">
-              6 {t("time")}
-            </span>
-          </div>
+          <LedgerDivider
+            label={t("finalProject")}
+            meta={`6 ${t("time")}`}
+          />
           <SessionRow
             icon="/idea.png"
             kind={t("project")}
