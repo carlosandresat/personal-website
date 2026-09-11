@@ -1,5 +1,9 @@
 import { useTranslations } from "next-intl";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsContent } from "@/components/ui/tabs";
+import {
+  FilterTabsList,
+  FilterTabsTrigger,
+} from "@/components/design/filter-tabs";
 import PhaseTabContent from "@/components/phase-tab-content";
 import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
@@ -168,17 +172,17 @@ export default function Page(props: { params: Promise<{ locale: string }> }) {
         {t("title")}
       </h1>
       <Tabs defaultValue="requirements" className="w-full max-w-screen-xl p-8">
-        <TabsList className="flex w-full h-auto p-1.5 flex-wrap justify-center gap-1.5 bg-muted/50 border border-border/80 rounded-xl">
+        <FilterTabsList className="flex w-full">
           {tabsData.map((tab, index) => (
-            <TabsTrigger
+            <FilterTabsTrigger
               value={tab.code}
               key={tab.code}
-              className="text-wrap rounded-lg px-3 py-2.5 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground transition-all duration-300 font-semibold text-sm"
+              className="text-wrap transition-all duration-300"
             >
               {`${index + 1}. ` + tab.title}
-            </TabsTrigger>
+            </FilterTabsTrigger>
           ))}
-        </TabsList>
+        </FilterTabsList>
         {tabsData.map((tab) => (
           <TabsContent value={tab.code} key={tab.code} className="flex flex-col gap-2">
             {tab.phases.map((data, index) => (
