@@ -3,6 +3,10 @@ import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
 import { Link } from "@/navigation";
 
+import { pad2 } from "@/components/design/ledger-divider";
+import { SectionHeader } from "@/components/design/section-header";
+import { SectionShell } from "@/components/design/section-shell";
+
 export default function ServicesSection() {
   const t = useTranslations("Services");
 
@@ -37,33 +41,42 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section
-      className="w-full flex flex-col justify-center items-center py-12 md:py-24 lg:py-28"
-      id="services"
-    >
-      <h2 className="mt-10 scroll-m-20 border-b border-foreground pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
-        {t("title")}
-      </h2>
-      <div className="grid gap-8 md:grid-cols-2 md:gap-12 p-8 max-w-screen-xl w-full">
-        {services.map((service) => (
-          <div key={service.title} className="flex gap-6 items-start">
-            <div className="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 flex justify-center items-center bg-brand rounded-md shadow-lg">
-              <service.icon className="w-8 h-8 text-brand-foreground" />
+    <SectionShell id="services" band="muted">
+      <SectionHeader
+        eyebrow={t("eyebrow")}
+        title={t("title")}
+        meta={pad2(services.length)}
+      />
+
+      <div className="grid w-full gap-6 md:grid-cols-2">
+        {services.map((service, index) => (
+          <div
+            key={service.title}
+            className="flex flex-col gap-3 rounded-xl border bg-card p-5 transition-colors hover:border-brand/40"
+          >
+            <div className="flex items-center gap-3">
+              <span className="font-mono text-[11px] tracking-wider text-brand">
+                {pad2(index + 1)}
+              </span>
+              <span className="h-px flex-grow bg-border" />
+              <service.icon className="size-[18px] shrink-0 text-brand" />
             </div>
-            <div className="flex flex-col">
-              <h3 className="scroll-m-20 text-xl font-semibold tracking-tight">
-                {service.title}
-              </h3>
-              <p className="leading-7 mt-2">{service.description}</p>
-              {service.href && (
-                <Button className="mt-2 w-fit" asChild>
+            <h3 className="text-xl font-semibold tracking-tight">
+              {service.title}
+            </h3>
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              {service.description}
+            </p>
+            {service.href && (
+              <div className="mt-auto pt-2">
+                <Button variant="brand" asChild>
                   <Link href={service.href}>{t("learnButtonText")}</Link>
                 </Button>
-              )}
-            </div>
+              </div>
+            )}
           </div>
         ))}
       </div>
-    </section>
+    </SectionShell>
   );
 }
