@@ -80,3 +80,15 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  /* Hairline circuit texture. Theme-aware for free: --border already flips
+     from 89.8% to 14.9% lightness, so the delta against the surface stays
+     roughly symmetric in both themes. */
+  .circuit-grid {
+    background-image:
+      linear-gradient(to right, hsl(var(--border)) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--border)) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+}
