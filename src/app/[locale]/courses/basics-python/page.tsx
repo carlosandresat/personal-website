@@ -58,7 +58,7 @@ export default function BasicsPython(props: {
 
   return (
     <main className="flex min-h-screen flex-col items-center">
-      <section className="flex w-full justify-center border-b px-8 py-16 lg:pt-32">
+      <section className="flex w-full justify-center border-b px-8 pb-16 pt-28 lg:pt-32">
         <div className="flex w-full max-w-screen-xl flex-col items-end justify-between gap-10 lg:flex-row">
           <div className="flex max-w-2xl flex-col gap-4">
             <Eyebrow>{tc("trackFoundations")}</Eyebrow>
