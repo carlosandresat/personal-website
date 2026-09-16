@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Award, BookOpen, Check, MapPin, Timer } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { PricingDialog } from "@/components/pricing-dialog";
 import { Eyebrow } from "@/components/design/eyebrow";
 import { LedgerDivider, pad2 } from "@/components/design/ledger-divider";
 import { RuleHeading } from "@/components/design/rule-heading";
@@ -108,11 +108,7 @@ export default function BasicsPython(props: {
                 <SpecRow key={row.label} label={row.label} value={row.value} />
               ))}
             </div>
-            <Button variant="brand" asChild>
-              <a href="mailto:carlosarevalodev@gmail.com">
-                {tc("requestSeat")}
-              </a>
-            </Button>
+            <PricingDialog basePrice={120} variant="brand" />
           </aside>
 
           <div className="flex flex-1 flex-col gap-6">

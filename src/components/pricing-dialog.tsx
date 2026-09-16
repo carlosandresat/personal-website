@@ -11,13 +11,31 @@ import {
 import { CircleDollarSign } from "lucide-react";
 import { useTranslations } from "next-intl";
 
-export function PricingDialog() {
+const TIERS: { students: string; discountPct: number }[] = [
+  { students: "1",     discountPct: 0  },
+  { students: "2",     discountPct: 20 },
+  { students: "3",     discountPct: 30 },
+  { students: "4",     discountPct: 40 },
+  { students: "5-9",   discountPct: 45 },
+  { students: "10-14", discountPct: 50 },
+  { students: "15-19", discountPct: 55 },
+  { students: "20+",   discountPct: 60 },
+];
+
+interface PricingDialogProps {
+  /** Base (1-student) price in USD. Defaults to 100. */
+  basePrice?: number;
+  /** Override the trigger button variant. Defaults to "default". */
+  variant?: "default" | "brand";
+}
+
+export function PricingDialog({ basePrice = 100, variant = "default" }: PricingDialogProps) {
   const t = useTranslations("Courses.Scratch");
 
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button className="w-full md:w-auto">
+        <Button variant={variant} className="w-full">
           <CircleDollarSign className="mr-2" />
           {t("viewPrices")}
         </Button>
@@ -43,97 +61,25 @@ export function PricingDialog() {
               </tr>
             </thead>
             <tbody>
-              <tr className="m-0 border-t p-0 even:bg-muted">
-                <td className="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
-                  1
-                </td>
-                <td className="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
-                  -
-                </td>
-                <td className="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
-                  $100
-                </td>
-              </tr>
-              <tr className="m-0 border-t p-0 even:bg-muted">
-                <td className="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
-                  2
-                </td>
-                <td className="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
-                  20%
-                </td>
-                <td className="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
-                  $80
-                </td>
-              </tr>
-              <tr className="m-0 border-t p-0 even:bg-muted">
-                <td className="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
-                  3
-                </td>
-                <td className="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
-                  30%
-                </td>
-                <td className="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
-                  $70
-                </td>
-              </tr>
-              <tr className="m-0 border-t p-0 even:bg-muted">
-                <td className="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
-                  4
-                </td>
-                <td className="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
-                  40%
-                </td>
-                <td className="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
-                  $60
-                </td>
-              </tr>
-              <tr className="m-0 border-t p-0 even:bg-muted">
-                <td className="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
-                  5-9
-                </td>
-                <td className="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
-                  45%
-                </td>
-                <td className="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
-                  $55
-                </td>
-              </tr>
-              <tr className="m-0 border-t p-0 even:bg-muted">
-                <td className="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
-                  10-14
-                </td>
-                <td className="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
-                  50%
-                </td>
-                <td className="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
-                  $50
-                </td>
-              </tr>
-              <tr className="m-0 border-t p-0 even:bg-muted">
-                <td className="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
-                  15-19
-                </td>
-                <td className="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
-                  55%
-                </td>
-                <td className="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
-                  $45
-                </td>
-              </tr>
-              <tr className="m-0 border-t p-0 even:bg-muted">
-                <td className="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
-                  20+
-                </td>
-                <td className="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
-                  60%
-                </td>
-                <td className="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
-                  $40
-                </td>
-              </tr>
+              {TIERS.map(({ students, discountPct }) => {
+                const price = Math.round(basePrice * (1 - discountPct / 100));
+                return (
+                  <tr key={students} className="m-0 border-t p-0 even:bg-muted">
+                    <td className="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
+                      {students}
+                    </td>
+                    <td className="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
+                      {discountPct > 0 ? `${discountPct}%` : "-"}
+                    </td>
+                    <td className="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
+                      ${price}
+                    </td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
-        </div>         
+        </div>
         <DialogFooter>
           <p className="text-sm text-muted-foreground text-center md:text-left">{t("pricingNote")}</p>
         </DialogFooter>
