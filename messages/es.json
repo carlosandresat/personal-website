@@ -425,6 +425,10 @@
   },
   "Development": {
     "title": "Desarrollo de Aplicaciones Web",
+    "eyebrow": "Proceso de desarrollo",
+    "subtitle": "Un proceso transparente de cinco fases, desde la primera conversación hasta el soporte a largo plazo — con acciones claras de ambas partes en cada paso.",
+    "phasesLabel": "Fases",
+    "step": "Paso",
     "clientActions": "Acciones del Cliente",
     "developerActions": "Acciones del Desarrollador",
     "requirements": {

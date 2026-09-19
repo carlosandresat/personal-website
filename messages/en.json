@@ -425,6 +425,10 @@
   },
   "Development": {
     "title": "Web Application Development",
+    "eyebrow": "Development process",
+    "subtitle": "A transparent, five-phase process from first conversation to long-term support — with clear actions on both sides at every step.",
+    "phasesLabel": "Phases",
+    "step": "Step",
     "clientActions": "Client Actions",
     "developerActions": "Developer Actions",
     "requirements": {
