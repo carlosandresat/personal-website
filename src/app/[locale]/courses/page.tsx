@@ -47,7 +47,7 @@ const courses: CourseData[] = [
     key: "FrontI",
     image: "/front1.png",
     track: "frontend",
-    status: "soon",
+    status: "enrolling",
   },
   {
     key: "FrontII",
