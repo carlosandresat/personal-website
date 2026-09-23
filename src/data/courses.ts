@@ -90,6 +90,14 @@ export function blockMinutes(block: CourseBlock) {
     : block.minutes;
 }
 
+/** The countable parts of a course, in display order. */
+export const COUNT_KEYS = [
+  "lectures",
+  "workshops",
+  "homework",
+  "projects",
+] as const;
+
 export function courseStats(course: CourseConfig) {
   const stats = {
     lectures: 0,

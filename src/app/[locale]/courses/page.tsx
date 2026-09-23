@@ -15,16 +15,19 @@ import { ComingSoonDialog } from "@/components/coming-soon-dialog";
 import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
 import { cn } from "@/lib/utils";
-
-type Track = "foundations" | "frontend" | "backend" | "iot";
+import {
+  COUNT_KEYS,
+  courseStats,
+  getCourseByKey,
+  type CourseConfig,
+  type Track,
+} from "@/data/courses";
 
 interface CourseData {
   key: string;
   image: string;
   track: Track;
   status: "enrolling" | "soon";
-  href?: string;
-  meta?: string[];
 }
 
 const courses: CourseData[] = [
@@ -33,16 +36,12 @@ const courses: CourseData[] = [
     image: "/Python.png",
     track: "foundations",
     status: "enrolling",
-    href: "/courses/basics-python",
-    meta: ["lectures", "workshops", "assessments", "project"],
   },
   {
     key: "Scratch",
     image: "/scratch.png",
     track: "foundations",
     status: "enrolling",
-    href: "/courses/scratch-kids",
-    meta: ["lectures", "workshops", "projects"],
   },
   {
     key: "FrontI",
@@ -100,19 +99,14 @@ const courses: CourseData[] = [
   },
 ];
 
-const courseCounts = {
-  BasicsPython: [8, 8, 8, 1],
-  Scratch: [6, 6, 3],
-} as const;
-
 function CourseMeta({
   t,
-  course,
+  detail,
 }: {
   t: ReturnType<typeof useTranslations<"Courses">>;
-  course: CourseData;
+  detail?: CourseConfig;
 }) {
-  if (!course.meta) {
+  if (!detail) {
     return (
       <span className="font-mono text-[11px] tracking-wide text-muted-foreground">
         {t("syllabusInProgress")}
@@ -120,12 +114,12 @@ function CourseMeta({
     );
   }
 
-  const counts = courseCounts[course.key as keyof typeof courseCounts];
+  const stats = courseStats(detail);
 
   return (
     <span className="font-mono text-[11px] tracking-wide text-muted-foreground uppercase">
-      {course.meta
-        .map((field, i) => `${counts[i]} ${t(`${course.key}.${field}` as never)}`)
+      {COUNT_KEYS.filter((key) => stats[key] > 0)
+        .map((key) => `${stats[key]} ${t(`counts.${key}`, { count: stats[key] })}`)
         .join(" · ")}
     </span>
   );
@@ -134,6 +128,7 @@ function CourseMeta({
 function CourseCard({ course }: { course: CourseData }) {
   const t = useTranslations("Courses");
   const enrolling = course.status === "enrolling";
+  const detail = getCourseByKey(course.key);
 
   return (
     <Card
@@ -165,15 +160,15 @@ function CourseCard({ course }: { course: CourseData }) {
         <CardTitle className="text-lg leading-tight">
           {t(`${course.key}.title` as never)}
         </CardTitle>
-        <CourseMeta t={t} course={course} />
+        <CourseMeta t={t} detail={detail} />
         <p className="text-sm leading-relaxed text-muted-foreground">
           {t(`${course.key}.summary` as never)}
         </p>
       </div>
       <div className="mt-auto pt-1">
-        {course.href ? (
+        {detail ? (
           <Button variant="brand" asChild>
-            <Link href={course.href}>{t("viewMore")}</Link>
+            <Link href={`/courses/${detail.slug}`}>{t("viewMore")}</Link>
           </Button>
         ) : (
           <ComingSoonDialog />

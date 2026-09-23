@@ -357,11 +357,7 @@
           "lecture": "Manejo de Errores",
           "workshop": "Escribiendo Programas Robustos con Manejo de Errores"
         }
-      },
-      "lectures": "clases",
-      "workshops": "talleres",
-      "assessments": "evaluaciones",
-      "project": "proyecto"
+      }
     },
     "Scratch": {
       "title": "Programación para niños con Scratch",
@@ -406,10 +402,7 @@
           "lecture": "Introducción a la Difusión y Clonación",
           "workshop": "Construcción de un Juego Multijugador"
         }
-      },
-      "lectures": "clases",
-      "workshops": "talleres",
-      "projects": "proyectos"
+      }
     },
     "Matplotlib": {
       "title": "Visualización de Datos con Matplotlib",

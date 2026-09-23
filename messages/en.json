@@ -357,11 +357,7 @@
           "lecture": "Error Handling",
           "workshop": "Writing Robust Programs with Error Handling"
         }
-      },
-      "lectures": "lectures",
-      "workshops": "workshops",
-      "assessments": "assessments",
-      "project": "project"
+      }
     },
     "Scratch": {
       "title": "Programming for kids with Scratch",
@@ -406,10 +402,7 @@
           "lecture": "Introduction to Broadcasting and Cloning",
           "workshop": "Building a Multiplayer Game"
         }
-      },
-      "lectures": "lectures",
-      "workshops": "workshops",
-      "projects": "projects"
+      }
     },
     "Matplotlib": {
       "title": "Data Visualization with Matplotlib",

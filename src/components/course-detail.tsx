@@ -7,6 +7,7 @@ import { RuleHeading } from "@/components/design/rule-heading";
 import { SpecRow } from "@/components/design/spec-row";
 import {
   blockMinutes,
+  COUNT_KEYS,
   courseStats,
   type CourseBlock,
   type CourseConfig,
@@ -21,8 +22,6 @@ const SESSION_ICON: Record<SessionKind, string> = {
   workshop: "/workshop.png",
   homework: "/assessment.png",
 };
-
-const COUNTS = ["lectures", "workshops", "homework", "projects"] as const;
 
 /** Compact duration for ledger metadata: `40min`, `3h`. */
 const shortDuration = (minutes: number) =>
@@ -144,7 +143,7 @@ export function CourseDetail({ course }: { course: CourseConfig }) {
               />
             </div>
             <div className="flex flex-col">
-              {COUNTS.filter((key) => stats[key] > 0).map((key) => (
+              {COUNT_KEYS.filter((key) => stats[key] > 0).map((key) => (
                 <SpecRow
                   key={key}
                   label={tc(`counts.${key}`, { count: stats[key] })}
