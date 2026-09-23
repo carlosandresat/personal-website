@@ -270,7 +270,33 @@
     "homework": "Tarea",
     "homeworkFor": "Práctica independiente del módulo {module}",
     "requestSeat": "Solicitar un cupo",
-    "trackFoundations": "Ruta de fundamentos",
+    "track": {
+      "foundations": "Ruta de fundamentos",
+      "frontend": "Ruta de Front-End",
+      "backend": "Ruta de Back-End y Datos",
+      "iot": "Ruta de Internet de las Cosas"
+    },
+    "online": "Online (En vivo)",
+    "certificate": "Incluye certificado",
+    "learningObjectives": "Objetivos de Aprendizaje",
+    "prerequisites": "Requisitos Previos",
+    "content": "Contenido",
+    "lecture": "Clase",
+    "workshop": "Taller",
+    "project": "Proyecto",
+    "projectN": "Proyecto {n}",
+    "finalProject": "Proyecto Final",
+    "obtainCertificate": "Obtener Certificado",
+    "duration": {
+      "minutes": "{count} min",
+      "hours": "{count, plural, one {# hora} other {# horas}}"
+    },
+    "counts": {
+      "lectures": "{count, plural, one {clase} other {clases}}",
+      "workshops": "{count, plural, one {taller} other {talleres}}",
+      "homework": "{count, plural, one {tarea} other {tareas}}",
+      "projects": "{count, plural, one {proyecto} other {proyectos}}"
+    },
     "pricing": {
       "viewPrices": "Ver Precios",
       "prices": "Precios",
@@ -284,51 +310,58 @@
       "title": "Programación Básica con Python",
       "description": "Este curso introduce los fundamentos de la programación utilizando Python, uno de los lenguajes de programación más populares y versátiles. Los participantes aprenderán conceptos básicos como variables, estructuras de control, funciones y tipos de datos. Al final del curso, los estudiantes podrán escribir programas simples, resolver problemas de manera algorítmica y comprender los principios fundamentales de la codificación. Ideal para principiantes sin experiencia previa en programación.",
       "summary": "Variables, estructuras de control, funciones y tipos de datos — para principiantes absolutos, con proyecto final y certificado.",
-      "time": "horas",
-      "place": "En vivo",
+      "meta": {
+        "title": "Curso de Python | Carlos Arévalo",
+        "description": "Aprende a programar desde cero con Python: variables, estructuras de control, funciones y tipos de datos, con proyecto final y certificado."
+      },
       "difficulty": "Principiante",
-      "certificate": "Incluye certificado",
-      "learningObjective": {
+      "objectives": {
         "1": "Comprender e implementar conceptos básicos de programación",
         "2": "Escribir y depurar programas en Python",
         "3": "Desarrollar habilidades para resolver problemas a través de experiencias prácticas",
-        "4": "Crear código robusto y mantenible",
-        "title": "Objetivos de Aprendizaje"
+        "4": "Crear código robusto y mantenible"
+      },
+      "req": {
+        "1": "Ninguno"
+      },
+      "modules": {
+        "1": {
+          "lecture": "Introducción a la Programación y Python",
+          "workshop": "Escribiendo Tu Primer Programa en Python"
+        },
+        "2": {
+          "lecture": "Variables y Tipos de Datos",
+          "workshop": "Trabajando con Variables y Tipos de Datos"
+        },
+        "3": {
+          "lecture": "Estructuras de control: condicionales y bucles",
+          "workshop": "Implementación de Estructuras de Control"
+        },
+        "4": {
+          "lecture": "Introducción a las funciones",
+          "workshop": "Creación y Uso de Funciones"
+        },
+        "5": {
+          "lecture": "Listas",
+          "workshop": "Creación de Arreglos y Matrices"
+        },
+        "6": {
+          "lecture": "Trabajando con Cadenas de Texto",
+          "workshop": "Manipulación Práctica de Cadenas de Texto"
+        },
+        "7": {
+          "lecture": "Lectura/Escritura de Archivos",
+          "workshop": "Operaciones de Entrada y Salida de Archivos"
+        },
+        "8": {
+          "lecture": "Manejo de Errores",
+          "workshop": "Escribiendo Programas Robustos con Manejo de Errores"
+        }
       },
       "lectures": "clases",
       "workshops": "talleres",
       "assessments": "evaluaciones",
-      "project": "proyecto",
-      "prerequisites": "Requisitos Previos",
-      "req": {
-        "1": "Ninguno"
-      },
-      "content": "Contenido",
-      "lecture": "Clase",
-      "workshop": "Taller",
-      "assessment": "Evaluación",
-      "lecturesData": {
-        "1": "Introducción a la Programación y Python",
-        "2": "Variables y Tipos de Datos",
-        "3": "Estructuras de control: condicionales y bucles",
-        "4": "Introducción a las funciones",
-        "5": "Listas",
-        "6": "Trabajando con Cadenas de Texto",
-        "7": "Lectura/Escritura de Archivos",
-        "8": "Manejo de Errores"
-      },
-      "workshopsData": {
-        "1": "Escribiendo Tu Primer Programa en Python",
-        "2": "Trabajando con Variables y Tipos de Datos",
-        "3": "Implementación de Estructuras de Control",
-        "4": "Creación y Uso de Funciones",
-        "5": "Creación de Arreglos y Matrices",
-        "6": "Manipulación Práctica de Cadenas de Texto",
-        "7": "Operaciones de Entrada y Salida de Archivos",
-        "8": "Escribiendo Programas Robustos con Manejo de Errores"
-      },
-      "finalProject": "Proyecto Final",
-      "obtainCertificate": "Obtener Certificado"
+      "project": "proyecto"
     },
     "Scratch": {
       "title": "Programación para niños con Scratch",

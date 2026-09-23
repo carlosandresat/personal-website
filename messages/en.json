@@ -270,7 +270,33 @@
     "homework": "Homework",
     "homeworkFor": "Independent practice for module {module}",
     "requestSeat": "Request a seat",
-    "trackFoundations": "Foundations track",
+    "track": {
+      "foundations": "Foundations track",
+      "frontend": "Front-End track",
+      "backend": "Back-End & Data track",
+      "iot": "Internet of Things track"
+    },
+    "online": "Online (Live)",
+    "certificate": "Includes certificate",
+    "learningObjectives": "Learning Objectives",
+    "prerequisites": "Prerequisites",
+    "content": "Content",
+    "lecture": "Lecture",
+    "workshop": "Workshop",
+    "project": "Project",
+    "projectN": "Project {n}",
+    "finalProject": "Final Project",
+    "obtainCertificate": "Obtain Certificate",
+    "duration": {
+      "minutes": "{count} min",
+      "hours": "{count, plural, one {# hour} other {# hours}}"
+    },
+    "counts": {
+      "lectures": "{count, plural, one {lecture} other {lectures}}",
+      "workshops": "{count, plural, one {workshop} other {workshops}}",
+      "homework": "{count, plural, other {homework}}",
+      "projects": "{count, plural, one {project} other {projects}}"
+    },
     "pricing": {
       "viewPrices": "View Prices",
       "prices": "Prices",
@@ -284,51 +310,58 @@
       "title": "Basic Programming with Python",
       "description": "This course introduces the fundamentals of programming using Python, one of the most popular and versatile programming languages. Participants will learn basic concepts such as variables, control structures, functions, and data types. By the end of the course, students will be able to write simple programs, solve problems algorithmically, and understand the core principles of coding. Ideal for beginners with no prior programming experience.",
       "summary": "Variables, control flow, functions and data types — for absolute beginners, ending in a project and a certificate.",
-      "time": "hours",
-      "place": "Live",
+      "meta": {
+        "title": "Python Course | Carlos Arévalo",
+        "description": "Learn to program from scratch with Python: variables, control flow, functions and data types, ending in a final project and a certificate."
+      },
       "difficulty": "Beginner",
-      "certificate": "Includes certificate",
-      "learningObjective": {
+      "objectives": {
         "1": "Understand and implement basic programming concepts",
         "2": "Write and debug Python programs",
         "3": "Develop problem-solving skills through practical experiences",
-        "4": "Create robust and maintainable code",
-        "title": "Learning Objectives"
+        "4": "Create robust and maintainable code"
+      },
+      "req": {
+        "1": "None"
+      },
+      "modules": {
+        "1": {
+          "lecture": "Introduction to Programming & Python",
+          "workshop": "Writing Your First Python Program"
+        },
+        "2": {
+          "lecture": "Variables and Data Types",
+          "workshop": "Working with Variables and Data Types"
+        },
+        "3": {
+          "lecture": "Control structures: conditionals & loops",
+          "workshop": "Implementing Control Structures"
+        },
+        "4": {
+          "lecture": "Introduction to functions",
+          "workshop": "Creating and Using Functions"
+        },
+        "5": {
+          "lecture": "Lists",
+          "workshop": "Creating Arrays and Matrices"
+        },
+        "6": {
+          "lecture": "Working with Strings",
+          "workshop": "Practical String Manipulation"
+        },
+        "7": {
+          "lecture": "Reading/Writting Files",
+          "workshop": "File Input and Output Operations"
+        },
+        "8": {
+          "lecture": "Error Handling",
+          "workshop": "Writing Robust Programs with Error Handling"
+        }
       },
       "lectures": "lectures",
       "workshops": "workshops",
       "assessments": "assessments",
-      "project": "project",
-      "prerequisites": "Prerequisites",
-      "req": {
-        "1": "None"
-      },
-      "content": "Content",
-      "lecture": "Lecture",
-      "workshop": "WorkShop",
-      "assessment": "Assessment",
-      "lecturesData": {
-        "1": "Introduction to Programming & Python",
-        "2": "Variables and Data Types",
-        "3": "Control structures: conditionals & loops",
-        "4": "Introduction to functions",
-        "5": "Lists",
-        "6": "Working with Strings",
-        "7": "Reading/Writting Files",
-        "8": "Error Handling"
-      },
-      "workshopsData": {
-        "1": "Writing Your First Python Program",
-        "2": "Working with Variables and Data Types",
-        "3": "Implementing Control Structures",
-        "4": "Creating and Using Functions",
-        "5": "Creating Arrays and Matrices",
-        "6": "Practical String Manipulation",
-        "7": "File Input and Output Operations",
-        "8": "Writing Robust Programs with Error Handling"
-      },
-      "finalProject": "Final Project",
-      "obtainCertificate": "Obtain Certificate"
+      "project": "project"
     },
     "Scratch": {
       "title": "Programming for kids with Scratch",
