@@ -30,7 +30,7 @@ interface PricingDialogProps {
 }
 
 export function PricingDialog({ basePrice = 100, variant = "default" }: PricingDialogProps) {
-  const t = useTranslations("Courses.Scratch");
+  const t = useTranslations("Courses.pricing");
 
   return (
     <Dialog>
