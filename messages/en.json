@@ -412,7 +412,51 @@
     "FrontI": {
       "title": "Front-End (I): HTML, CSS & JavaScript",
       "description": "This foundational course covers the essential technologies for building web pages. Participants will learn HTML for structure, CSS for styling, and JavaScript for interactivity. By the end of the course, students will be able to create responsive and dynamic web pages from scratch. This course is perfect for beginners who want to start their journey in web development.",
-      "summary": "Structure, styling and interactivity — the three technologies every web page is built from, from scratch."
+      "summary": "Structure, styling and interactivity — the three technologies every web page is built from, from scratch.",
+      "meta": {
+        "title": "Front-End Course | Carlos Arévalo",
+        "description": "Learn to build web pages from scratch with HTML, CSS and JavaScript: structure, styling and interactivity, ending in a final project and a certificate."
+      },
+      "difficulty": "Beginner",
+      "objectives": {
+        "1": "Understand the role of HTML, CSS and JavaScript in building a web page",
+        "2": "Structure content with semantic HTML",
+        "3": "Style and lay out responsive pages with CSS (Flexbox and Grid)",
+        "4": "Add interactivity with JavaScript's DOM and event model"
+      },
+      "req": {
+        "1": "None"
+      },
+      "modules": {
+        "1": {
+          "lecture": "The web and HTML document structure",
+          "workshop": "Building your first page with semantic HTML"
+        },
+        "2": {
+          "lecture": "Forms, links, images and tables",
+          "workshop": "Marking up a personal profile page"
+        },
+        "3": {
+          "lecture": "Selectors, the box model, color and typography",
+          "workshop": "Styling your profile page"
+        },
+        "4": {
+          "lecture": "Modern layout: Flexbox, Grid and responsive design",
+          "workshop": "Building a responsive layout with Flexbox and Grid"
+        },
+        "5": {
+          "lecture": "JavaScript fundamentals: variables, types and operators",
+          "workshop": "Writing your first script"
+        },
+        "6": {
+          "lecture": "Control flow and functions",
+          "workshop": "Practicing logic with functions"
+        },
+        "7": {
+          "lecture": "The DOM and event handling",
+          "workshop": "Adding interactivity to your profile page"
+        }
+      }
     },
     "FrontII": {
       "title": "Front-End (II): React, TypeScript & TailwindCSS",

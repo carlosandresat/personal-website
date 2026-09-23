@@ -59,6 +59,22 @@ export const courses: CourseConfig[] = [
     ],
   },
   {
+    slug: "front-end-html-css-js",
+    key: "FrontI",
+    image: "/front1.png",
+    ogImage: "/opengraph-image.png",
+    track: "frontend",
+    basePrice: 150,
+    blocks: [
+      ...repeat(2, moduleBlock({ lecture: 20, workshop: 40, homework: 60 })),
+      projectBlock(180),
+      ...repeat(2, moduleBlock({ lecture: 20, workshop: 40, homework: 60 })),
+      projectBlock(180),
+      ...repeat(3, moduleBlock({ lecture: 20, workshop: 50, homework: 90 })),
+      projectBlock(480, { final: true }),
+    ],
+  },
+  {
     slug: "scratch-kids",
     key: "Scratch",
     image: "/scratch.png",

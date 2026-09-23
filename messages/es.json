@@ -412,7 +412,51 @@
     "FrontI": {
       "title": "Front-End (I): HTML, CSS y JavaScript",
       "description": "Este curso introductorio cubre las tecnologías esenciales para la construcción de páginas web. Los participantes aprenderán HTML para la estructura, CSS para el diseño y JavaScript para la interactividad. Al finalizar el curso, los estudiantes serán capaces de crear páginas web dinámicas y adaptables desde cero. Este curso es perfecto para principiantes que desean iniciar su camino en el desarrollo web.",
-      "summary": "Estructura, estilo e interactividad — las tres tecnologías con las que se construye toda página web, desde cero."
+      "summary": "Estructura, estilo e interactividad — las tres tecnologías con las que se construye toda página web, desde cero.",
+      "meta": {
+        "title": "Curso de Front-End | Carlos Arévalo",
+        "description": "Aprende a construir páginas web desde cero con HTML, CSS y JavaScript: estructura, estilo e interactividad, terminando en un proyecto final y un certificado."
+      },
+      "difficulty": "Principiante",
+      "objectives": {
+        "1": "Entender el rol de HTML, CSS y JavaScript en la construcción de una página web",
+        "2": "Estructurar contenido con HTML semántico",
+        "3": "Diseñar layouts responsive con CSS (Flexbox y Grid)",
+        "4": "Agregar interactividad con JavaScript: el DOM y el manejo de eventos"
+      },
+      "req": {
+        "1": "Ninguno"
+      },
+      "modules": {
+        "1": {
+          "lecture": "La web y la estructura de un documento HTML",
+          "workshop": "Construyendo tu primera página con HTML semántico"
+        },
+        "2": {
+          "lecture": "Formularios, enlaces, imágenes y tablas",
+          "workshop": "Maquetando una página de perfil personal"
+        },
+        "3": {
+          "lecture": "Selectores, el box model, color y tipografía",
+          "workshop": "Dándole estilo a tu página de perfil"
+        },
+        "4": {
+          "lecture": "Layout moderno: Flexbox, Grid y diseño responsive",
+          "workshop": "Maquetando un layout responsive con Flexbox y Grid"
+        },
+        "5": {
+          "lecture": "Fundamentos de JavaScript: variables, tipos y operadores",
+          "workshop": "Escribiendo tu primer script"
+        },
+        "6": {
+          "lecture": "Control de flujo y funciones",
+          "workshop": "Practicando lógica con funciones"
+        },
+        "7": {
+          "lecture": "El DOM y el manejo de eventos",
+          "workshop": "Añadiendo interactividad a tu página de perfil"
+        }
+      }
     },
     "FrontII": {
       "title": "Front-End (II): React, TypeScript y TailwindCSS",
