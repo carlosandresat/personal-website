@@ -222,6 +222,56 @@
       "description": "Director del Departamento de Comunicación en el club de la carrera de Ingeniería en TICs / Ciencias Computacionales."
     }
   },
+  "Education": {
+    "eyebrow": "Formación",
+    "title": "Educación",
+    "summary": "Programas · {current} en curso",
+    "present": "Presente",
+    "statusCurrent": "En curso",
+    "statusDone": "Completado",
+    "msc": {
+      "level": "Maestría · Posgrado",
+      "degree": "Maestría en Ciencia de Datos y Aprendizaje Automático",
+      "specialization": "Especialización en Inteligencia Artificial",
+      "institution": "Universidad Internacional del Ecuador (UIDE)",
+      "location": "Quito, EC · En línea",
+      "focus": {
+        "data-science": "Ciencia de Datos",
+        "machine-learning": "Aprendizaje Automático",
+        "ai": "Inteligencia Artificial"
+      },
+      "activitiesLabel": "Durante el programa",
+      "activities": {
+        "exec-leadership": {
+          "date": "Dic 2025 — Ene 2026",
+          "title": "Participante en el programa Liderazgo Ejecutivo"
+        }
+      }
+    },
+    "it-eng": {
+      "level": "Ingeniería · Pregrado",
+      "degree": "Ingeniería en Tecnologías de la Información",
+      "institution": "Universidad Yachay Tech",
+      "location": "Urcuquí, EC",
+      "date": "Ago 2024",
+      "dateNote": "Graduado",
+      "activitiesLabel": "Durante la carrera",
+      "activities": {
+        "hult-prize": {
+          "date": "Feb 2024",
+          "title": "Participante en Hult Prize Yachay Tech"
+        },
+        "scientific-poster": {
+          "date": "Jul 2023",
+          "title": "Presentación de póster científico · CIECIS23"
+        },
+        "board-member": {
+          "date": "Oct 2020 — Oct 2021",
+          "title": "Miembro de Junta Directiva, Club de Ciencias Computacionales"
+        }
+      }
+    }
+  },
   "TechStack": {
     "title": "Stack Tecnológico",
     "eyebrow": "Herramientas",

@@ -3,6 +3,7 @@ import ProjectsSection from "@/components/projects-section";
 import TechStackSection from "@/components/tech-stack-section";
 import ServicesSection from "@/components/services-section";
 import ExperiencesSection from "@/components/experiences-section";
+import EducationSection from "@/components/education-section";
 import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
 
@@ -15,6 +16,7 @@ export default function HomePage(props: { params: Promise<{ locale: string }> })
       <HomeSection />
       <ServicesSection />
       <ExperiencesSection />
+      <EducationSection />
       <ProjectsSection />
       <TechStackSection />
     </main>

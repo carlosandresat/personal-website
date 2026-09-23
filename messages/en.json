@@ -222,6 +222,56 @@
       "description": "Director of the Communications Department in the TICs / Computer Science Engineering club."
     }
   },
+  "Education": {
+    "eyebrow": "Background",
+    "title": "Education",
+    "summary": "Programs · {current} in progress",
+    "present": "Present",
+    "statusCurrent": "In progress",
+    "statusDone": "Completed",
+    "msc": {
+      "level": "Master's · Postgraduate",
+      "degree": "Master's in Data Science and Machine Learning",
+      "specialization": "Specialization in Artificial Intelligence",
+      "institution": "Universidad Internacional del Ecuador (UIDE)",
+      "location": "Quito, EC · Online",
+      "focus": {
+        "data-science": "Data Science",
+        "machine-learning": "Machine Learning",
+        "ai": "Artificial Intelligence"
+      },
+      "activitiesLabel": "During the program",
+      "activities": {
+        "exec-leadership": {
+          "date": "Dec 2025 — Jan 2026",
+          "title": "Executive Leadership Program participant"
+        }
+      }
+    },
+    "it-eng": {
+      "level": "Engineering · Undergraduate",
+      "degree": "Information Technology Engineering",
+      "institution": "Yachay Tech University",
+      "location": "Urcuquí, EC",
+      "date": "Aug 2024",
+      "dateNote": "Graduated",
+      "activitiesLabel": "During the degree",
+      "activities": {
+        "hult-prize": {
+          "date": "Feb 2024",
+          "title": "Participant at Hult Prize Yachay Tech"
+        },
+        "scientific-poster": {
+          "date": "Jul 2023",
+          "title": "Scientific poster presentation · CIECIS23"
+        },
+        "board-member": {
+          "date": "Oct 2020 — Oct 2021",
+          "title": "Board Member, Computer Science Club"
+        }
+      }
+    }
+  },
   "TechStack": {
     "title": "Tech Stack",
     "eyebrow": "Toolchain",
