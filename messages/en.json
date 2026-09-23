@@ -367,50 +367,49 @@
       "title": "Programming for kids with Scratch",
       "description": "Designed for young learners, this course uses Scratch, a visual programming language that makes coding fun and interactive. Children will learn the basics of programming through creating their own games, animations, and interactive stories. This course encourages creativity, logical thinking, and problem-solving skills in an engaging and supportive environment. Perfect for kids aged 8-14.",
       "summary": "Games, animations and interactive stories in a visual language, built for kids aged 8 to 14.",
-      "time": "hours",
-      "place": "Live",
+      "meta": {
+        "title": "Scratch Course | Carlos Arévalo",
+        "description": "Perfect for kids aged 8-14. Scratch is a visual programming language that makes coding fun and interactive."
+      },
       "difficulty": "Beginner",
-      "certificate": "Includes certificate",
-      "learningObjective": {
+      "objectives": {
         "1": "Understand basic programming concepts using Scratch’s visual language",
         "2": "Create interactive stories, games, and animations using Scratch",
         "3": "Develop problem-solving skills by building projects",
-        "4": "Gain confidence in presenting and explaining coding projects",
-        "title": "Learning Objectives"
+        "4": "Gain confidence in presenting and explaining coding projects"
       },
-      "lectures": "lectures",
-      "workshops": "workshops",
-      "assessments": "assessments",
-      "project": "project",
-      "projects": "projects",
-      "from": "From",
-      "forGroups": "for groups",
-      "prerequisites": "Prerequisites",
       "req": {
         "1": "None"
       },
-      "content": "Content",
-      "lecture": "Lecture",
-      "workshop": "WorkShop",
-      "assessment": "Assessment",
-      "lecturesData": {
-        "1": "Introduction to Scratch and the Scratch Interface",
-        "2": "Understanding Events and Controls",
-        "3": "Introduction to Variables and Loops",
-        "4": "Adding Sounds and Music to Projects",
-        "5": "Using Conditional Statements",
-        "6": "Introduction to Broadcasting and Cloning"
+      "modules": {
+        "1": {
+          "lecture": "Introduction to Scratch and the Scratch Interface",
+          "workshop": "Creating Your First Scratch Project: Make a Sprite Move"
+        },
+        "2": {
+          "lecture": "Understanding Events and Controls",
+          "workshop": "Creating Interactive Animations with Events"
+        },
+        "3": {
+          "lecture": "Introduction to Variables and Loops",
+          "workshop": "Building a Simple Game with Variables"
+        },
+        "4": {
+          "lecture": "Adding Sounds and Music to Projects",
+          "workshop": "Creating a Music-based Game"
+        },
+        "5": {
+          "lecture": "Using Conditional Statements",
+          "workshop": "Creating a Choose-Your-Own-Adventure Story"
+        },
+        "6": {
+          "lecture": "Introduction to Broadcasting and Cloning",
+          "workshop": "Building a Multiplayer Game"
+        }
       },
-      "workshopsData": {
-        "1": "Creating Your First Scratch Project: Make a Sprite Move",
-        "2": "Creating Interactive Animations with Events",
-        "3": "Building a Simple Game with Variables",
-        "4": "Creating a Music-based Game",
-        "5": "Creating a Choose-Your-Own-Adventure Story",
-        "6": "Building a Multiplayer Game"
-      },
-      "projectM": "Project",
-      "obtainCertificate": "Obtain Certificate"
+      "lectures": "lectures",
+      "workshops": "workshops",
+      "projects": "projects"
     },
     "Matplotlib": {
       "title": "Data Visualization with Matplotlib",

@@ -58,6 +58,22 @@ export const courses: CourseConfig[] = [
       projectBlock(360, { final: true }),
     ],
   },
+  {
+    slug: "scratch-kids",
+    key: "Scratch",
+    image: "/scratch.png",
+    ogImage: "/courses/scratch-kids/opengraph-image.png",
+    track: "foundations",
+    basePrice: 100,
+    blocks: [
+      ...repeat(2, moduleBlock({ lecture: 15, workshop: 45 })),
+      projectBlock(120),
+      ...repeat(2, moduleBlock({ lecture: 15, workshop: 45 })),
+      projectBlock(120),
+      ...repeat(2, moduleBlock({ lecture: 15, workshop: 45 })),
+      projectBlock(300),
+    ],
+  },
 ];
 
 export function getCourse(slug: string) {

@@ -367,50 +367,49 @@
       "title": "Programación para niños con Scratch",
       "description": "Diseñado para jóvenes aprendices, este curso utiliza Scratch, un lenguaje de programación visual que hace que la codificación sea divertida e interactiva. Los niños aprenderán los conceptos básicos de la programación creando sus propios juegos, animaciones e historias interactivas. Este curso fomenta la creatividad, el pensamiento lógico y las habilidades para resolver problemas en un entorno atractivo y de apoyo. Perfecto para niños de 8 a 14 años.",
       "summary": "Juegos, animaciones e historias interactivas en un lenguaje visual, pensado para niños de 8 a 14 años.",
-      "time": "horas",
-      "place": "En vivo",
+      "meta": {
+        "title": "Curso Scratch | Carlos Arévalo",
+        "description": "Perfecto para niños de 8 a 14 años. Scratch es un lenguaje de programación visual que hace que la codificación sea divertida e interactiva."
+      },
       "difficulty": "Principiante",
-      "certificate": "Incluye certificado",
-      "learningObjective": {
+      "objectives": {
         "1": "Comprender los conceptos básicos de programación utilizando el lenguaje visual de Scratch",
         "2": "Crear historias interactivas, juegos y animaciones usando Scratch",
         "3": "Desarrollar habilidades para resolver problemas al construir proyectos",
-        "4": "Ganar confianza en la presentación y explicación de proyectos de codificación",
-        "title": "Objetivos de Aprendizaje"
+        "4": "Ganar confianza en la presentación y explicación de proyectos de codificación"
       },
-      "lectures": "clases",
-      "workshops": "talleres",
-      "assessments": "evaluaciones",
-      "project": "proyecto",
-      "projects": "proyectos",
-      "from": "Desde",
-      "forGroups": "para grupos",
-      "prerequisites": "Requisitos previos",
       "req": {
         "1": "Ninguno"
       },
-      "content": "Contenido",
-      "lecture": "Clase",
-      "workshop": "Taller",
-      "assessment": "Evaluación",
-      "lecturesData": {
-        "1": "Introducción a Scratch y la interfaz de Scratch",
-        "2": "Comprensión de Eventos y Controles",
-        "3": "Introducción a Variables y Bucles",
-        "4": "Añadiendo Sonidos y Música a Proyectos",
-        "5": "Uso de Declaraciones Condicionales",
-        "6": "Introducción a la Difusión y Clonación"
+      "modules": {
+        "1": {
+          "lecture": "Introducción a Scratch y la interfaz de Scratch",
+          "workshop": "Creación de tu Primer Proyecto en Scratch: Haz que un Sprite se Mueva"
+        },
+        "2": {
+          "lecture": "Comprensión de Eventos y Controles",
+          "workshop": "Creación de Animaciones Interactivas con Eventos"
+        },
+        "3": {
+          "lecture": "Introducción a Variables y Bucles",
+          "workshop": "Construcción de un Juego Simple con Variables"
+        },
+        "4": {
+          "lecture": "Añadiendo Sonidos y Música a Proyectos",
+          "workshop": "Creación de un Juego basado en Música"
+        },
+        "5": {
+          "lecture": "Uso de Declaraciones Condicionales",
+          "workshop": "Creación de una Historia de Aventuras con Elecciones"
+        },
+        "6": {
+          "lecture": "Introducción a la Difusión y Clonación",
+          "workshop": "Construcción de un Juego Multijugador"
+        }
       },
-      "workshopsData": {
-        "1": "Creación de tu Primer Proyecto en Scratch: Haz que un Sprite se Mueva",
-        "2": "Creación de Animaciones Interactivas con Eventos",
-        "3": "Construcción de un Juego Simple con Variables",
-        "4": "Creación de un Juego basado en Música",
-        "5": "Creación de una Historia de Aventuras con Elecciones",
-        "6": "Construcción de un Juego Multijugador"
-      },
-      "projectM": "Proyecto",
-      "obtainCertificate": "Obtener Certificado"
+      "lectures": "clases",
+      "workshops": "talleres",
+      "projects": "proyectos"
     },
     "Matplotlib": {
       "title": "Visualización de Datos con Matplotlib",
