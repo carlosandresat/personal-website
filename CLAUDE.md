@@ -49,7 +49,7 @@ Pages are Server Components that take `params: Promise<{ locale: string }>` and 
 
 ### Metadata and OG images
 
-`generateMetadata` is written per-page with an explicit `if (locale == "es") / if (locale == "en")` branch returning a full metadata object — verbose, but that is the existing pattern.
+`generateMetadata` is written per-page with an explicit `if (locale == "es") / if (locale == "en")` branch returning a full metadata object — verbose, but that is the existing pattern. The exception is `courses/[slug]`, which reads `Courses.<key>.meta` from messages via `getTranslations`.
 
 **OG images must live in `public/`, not colocated next to the route as `opengraph-image.png`.** Colocated image files break the prerender build (two separate commits exist to fix this). Reference them by path, e.g. `/opengraph-image.png` or `/courses/scratch-kids/opengraph-image.png`.
 
@@ -59,6 +59,12 @@ Page content lives in two places and neither is a CMS:
 
 - Translatable copy → `messages/{locale}.json`.
 - Structured, non-translated records → hardcoded arrays in the component or in `src/data/` (e.g. `src/data/students-data.ts`, which drives both `/students` and the `/students/[id]` static params). Section components like `projects-section.tsx` (~740 lines) and `tech-stack-section.tsx` embed their own data arrays and pull labels via `useTranslations`.
+
+### Course pages
+
+Every course with a detail page is an entry in `src/data/courses.ts`, rendered by `CourseDetail` (`src/components/course-detail.tsx`) at `courses/[slug]`. An entry lists `blocks` in teaching order: modules (lecture + workshop, optional homework) and standalone projects, with durations in minutes. Total hours, per-module durations and every count (detail aside, catalog cards) are derived from those blocks — never hardcode them.
+
+To add a course: add the registry entry, then `Courses.<key>` in **both** message files with `title`, `description`, `summary`, `meta.{title,description}`, `difficulty`, `objectives`, `req`, and `modules.<n>.{lecture,workshop}` for every module (numbered from 1). Shared labels (session kinds, durations, plural counts, pricing) live directly under `Courses`. The catalog card in `courses/page.tsx` links to the detail page automatically when its `key` matches a registry entry. An OG image, if any, goes in `public/courses/<slug>/`.
 
 ### Styling
 
