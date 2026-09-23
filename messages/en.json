@@ -119,6 +119,12 @@
     "tabWork": "Work",
     "tabCourses": "Courses",
     "tabEvents": "Events",
+    "aws-community-day": {
+      "title": "Participant at AWS Community Day Ecuador 2026",
+      "date": "Sep 5, 2026",
+      "location": "AWS User Groups Ecuador · Cuenca, EC",
+      "description": "Attended and took part in AWS Community Day Ecuador 2026, a community gathering to share knowledge, experiences and innovation in the cloud."
+    },
     "claude-code": {
       "title": "Claude Code",
       "date": "Apr 2026",

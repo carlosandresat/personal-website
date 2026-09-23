@@ -45,6 +45,7 @@ const EXPERIENCES: {
   kind: ExperienceKind;
   certificate?: string;
 }[] = [
+  { key: "aws-community-day", kind: "event", certificate: "https://drive.google.com/file/d/17HW3bkp45rFtTVu-xVhe4M0rqYiZRw7S/view?usp=sharing" },
   { key: "claude-code", kind: "course", certificate: "https://platzi.com/p/carlosarevalodev/curso/12284-course/diploma/detalle/" },
   { key: "exec-leadership", kind: "event", certificate: "https://drive.google.com/file/d/1zBEsgnxT3q2HF-uYWKu8tEAwjNVGlnFX/view?usp=drive_link" },
   { key: "uide-ta", kind: "work" },
