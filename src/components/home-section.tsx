@@ -7,16 +7,13 @@ import { SectionShell } from "@/components/design/section-shell";
 import HomeNodeGraph from "@/components/home-node-graph";
 import { ContributionCounter } from "@/components/contribution-counter";
 import { getGithubContributions } from "@/lib/github";
+import { PROFILES } from "@/lib/seo";
 
 const GITHUB_USERNAME = "carlosandresat";
 
 const SOCIALS = [
-  { href: "https://github.com/carlosandresat", label: "Github", Icon: Github },
-  {
-    href: "https://www.linkedin.com/in/carlosandresat/",
-    label: "LinkedIn",
-    Icon: Linkedin,
-  },
+  { href: PROFILES.github, label: "Github", Icon: Github },
+  { href: PROFILES.linkedin, label: "LinkedIn", Icon: Linkedin },
   { href: "mailto:carlosarevalodev@gmail.com", label: "Mail", Icon: Mail },
 ];
 
@@ -68,7 +65,7 @@ export default async function HomeSection() {
               aria-label={`Link to ${label}`}
               asChild
             >
-              <a href={href} target="_blank">
+              <a href={href} target="_blank" rel="me noopener noreferrer">
                 <Icon />
               </a>
             </Button>
