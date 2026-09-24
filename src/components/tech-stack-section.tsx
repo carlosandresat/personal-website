@@ -102,7 +102,12 @@ export default function TechStackSection() {
         </FilterTabsList>
 
         {TECH_CATEGORIES.map((category) => (
-          <TabsContent key={category} value={category} className="mt-10 w-full">
+          <TabsContent
+            key={category}
+            value={category}
+            forceMount
+            className="mt-10 w-full data-[state=inactive]:hidden"
+          >
             <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
               {TECHNOLOGIES.filter((tech) => tech.category === category).map(
                 (tech) => (

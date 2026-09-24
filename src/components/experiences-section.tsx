@@ -183,7 +183,12 @@ export default function ExperiencesSection() {
         </FilterTabsList>
 
         {TABS.map((tab) => (
-          <TabsContent key={tab.value} value={tab.value} className="mt-8 w-full">
+          <TabsContent
+            key={tab.value}
+            value={tab.value}
+            forceMount
+            className="mt-8 w-full data-[state=inactive]:hidden"
+          >
             {renderCards(tab.value)}
           </TabsContent>
         ))}

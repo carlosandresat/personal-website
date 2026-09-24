@@ -180,6 +180,7 @@ export default function Page(props: { params: Promise<{ locale: string }> }) {
           <TabsContent
             key={phase.code}
             value={phase.code}
+            forceMount
             className="mt-0 flex min-w-0 flex-1 flex-col gap-6 data-[state=inactive]:hidden"
           >
             <RuleHeading level="sub" meta={pad2(phase.steps.length)}>
