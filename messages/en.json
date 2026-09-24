@@ -1,7 +1,7 @@
 {
   "HomePage": {
     "kicker": "Software Developer & AI Researcher",
-    "lead": "I'm a software developer specialized in building web applications with <emphasis>TypeScript, Next.js, and React</emphasis>. Now expanding into <emphasis>data science and AI</emphasis> — let's build something exceptional together.",
+    "lead": "I'm a software engineer specialized in building web applications with <emphasis>TypeScript, Next.js, and React</emphasis>, now pursuing a Master's in <emphasis>Data Science & Machine Learning</emphasis>. Let's build something exceptional together.",
     "statsYearsLabel": "Years experience",
     "statsContributionsLabel": "GitHub contributions"
   },
