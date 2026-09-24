@@ -1,10 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Github, Mail, Linkedin } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
 import { Eyebrow } from "@/components/design/eyebrow";
 import { SectionShell } from "@/components/design/section-shell";
 import HomeNodeGraph from "@/components/home-node-graph";
+import { ContributionCounter } from "@/components/contribution-counter";
+import { getGithubContributions } from "@/lib/github";
+
+const GITHUB_USERNAME = "carlosandresat";
 
 const SOCIALS = [
   { href: "https://github.com/carlosandresat", label: "Github", Icon: Github },
@@ -16,8 +20,9 @@ const SOCIALS = [
   { href: "mailto:carlosarevalodev@gmail.com", label: "Mail", Icon: Mail },
 ];
 
-export default function HomeSection() {
-  const t = useTranslations("HomePage");
+export default async function HomeSection() {
+  const t = await getTranslations("HomePage");
+  const contributions = await getGithubContributions(GITHUB_USERNAME);
 
   return (
     <SectionShell id="home" pad="hero" divider={false} grid innerClassName="gap-14">
@@ -44,7 +49,10 @@ export default function HomeSection() {
             </span>
           </div>
           <div className="flex flex-col gap-1">
-            <span className="text-3xl font-semibold text-brand">+500</span>
+            <ContributionCounter
+              value={contributions}
+              className="text-3xl font-semibold text-brand"
+            />
             <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">
               {t("statsContributionsLabel")}
             </span>
