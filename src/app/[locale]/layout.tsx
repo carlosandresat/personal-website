@@ -1,5 +1,5 @@
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages, setRequestLocale } from "next-intl/server";
+import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import { Chakra_Petch, JetBrains_Mono } from "next/font/google";
 import { cn } from "@/lib/utils";
@@ -8,6 +8,7 @@ import "../globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import { SITE_NAME, SITE_URL } from "@/lib/seo";
 
 const chakraPetch = Chakra_Petch({
   subsets: ["latin"],
@@ -28,65 +29,18 @@ export function generateStaticParams() {
   return [{ locale: "en" }, { locale: "es" }];
 }
 
+// Site-wide defaults only. Canonical, hreflang and Open Graph are per page
+// (pageMetadata in src/lib/seo.ts), so none of them is set here to inherit.
 export async function generateMetadata(props: Props): Promise<Metadata> {
-  const params = await props.params;
-  const ogImage = {
-    url: "/opengraph-image.png",
-    width: 1200,
-    height: 630,
-    alt: "Carlos Arévalo | Software Developer & AI Researcher",
-  };
-  if (params.locale == "es") {
-    return {
-      title: "Carlos Arévalo | Software Developer & AI Researcher",
-      description:
-        "Desarrollador de software e investigador en inteligencia artificial con experiencia en tecnologías web modernas como TypeScript, Next.js y React. Apasionado por la innovación, el aprendizaje continuo y la construcción de soluciones tecnológicas impactantes.",
-      metadataBase: new URL("https://carlosarevalo.dev"),
-      alternates: {
-        canonical: "/",
-        languages: {
-          en: "/en",
-          es: "/es",
-        },
-      },
-      openGraph: {
-        images: [ogImage],
-      },
-    };
-  }
-  if (params.locale == "en") {
-    return {
-      title: "Carlos Arévalo | Software Developer & AI Researcher",
-      description:
-        "Software developer and artificial intelligence researcher with experience in modern web technologies such as TypeScript, Next.js and React. Passionate about innovation, continuous learning and building impactful technology solutions.",
-      metadataBase: new URL("https://carlosarevalo.dev"),
-      alternates: {
-        canonical: "/",
-        languages: {
-          en: "/en",
-          es: "/es",
-        },
-      },
-      openGraph: {
-        images: [ogImage],
-      },
-    };
-  }
+  const { locale } = await props.params;
+  const t = await getTranslations({ locale, namespace: "HomePage.meta" });
   return {
-    title: "Carlos Arévalo | Software Developer & AI Researcher",
-    description:
-      "Desarrollador de software e investigador en inteligencia artificial con experiencia en tecnologías web modernas como TypeScript, Next.js y React. Apasionado por la innovación, el aprendizaje continuo y la construcción de soluciones tecnológicas impactantes.",
-    metadataBase: new URL("https://carlosarevalo.dev"),
-    alternates: {
-      canonical: "/",
-      languages: {
-        en: "/en",
-        es: "/es",
-      },
-    },
-    openGraph: {
-      images: [ogImage],
-    },
+    metadataBase: new URL(SITE_URL),
+    title: t("title"),
+    description: t("description"),
+    applicationName: SITE_NAME,
+    authors: [{ name: SITE_NAME, url: SITE_URL }],
+    creator: SITE_NAME,
   };
 }
 

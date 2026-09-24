@@ -3,7 +3,11 @@
     "kicker": "Desarrollador de Software e Investigador en IA",
     "lead": "Soy ingeniero de software especializado en construir aplicaciones web con <emphasis>TypeScript, Next.js y React</emphasis>, ahora cursando una Maestría en <emphasis>Ciencia de Datos y Aprendizaje Automático</emphasis>. Creemos algo excepcional juntos.",
     "statsYearsLabel": "Años de experiencia",
-    "statsContributionsLabel": "Contribuciones en GitHub"
+    "statsContributionsLabel": "Contribuciones en GitHub",
+    "meta": {
+      "title": "Carlos Arévalo | Desarrollador de Software e IA",
+      "description": "Ingeniero de software que construye aplicaciones web con TypeScript, Next.js y React, cursando una Maestría en Ciencia de Datos e IA. Proyectos y cursos."
+    }
   },
   "Navbar": {
     "home": "Inicio",
@@ -548,6 +552,10 @@
       "title": "Fundamentos de IoT con ESP8266",
       "description": "Este curso se centra en el desarrollo de IoT utilizando el ESP8266, un microchip Wi-Fi de bajo costo. Los participantes aprenderán a programar el ESP8266, conectarse a internet y construir dispositivos conectados a la web. El curso abarca diversos protocolos de comunicación e integración con la nube. Al finalizar, los estudiantes serán capaces de crear proyectos de IoT sofisticados con el ESP8266. Ideal para quienes tengan algo de experiencia en electrónica y programación y deseen explorar más a fondo el IoT.",
       "summary": "Microcontroladores Wi-Fi, protocolos de comunicación e integración con la nube para dispositivos conectados a la web."
+    },
+    "catalogMeta": {
+      "title": "Cursos de Programación | Carlos Arévalo",
+      "description": "Cursos de programación en vivo y basados en proyectos: Python, Scratch para niños, desarrollo web front-end y más. Clases online con certificado."
     }
   },
   "Development": {
@@ -703,6 +711,10 @@
           }
         }
       }
+    },
+    "meta": {
+      "title": "Desarrollo de Aplicaciones Web | Carlos Arévalo",
+      "description": "Desarrollo de aplicaciones web a medida con Next.js, React y TypeScript, con un proceso transparente de cinco fases: de los requisitos al soporte."
     }
   },
   "Students": {

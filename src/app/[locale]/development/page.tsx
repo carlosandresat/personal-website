@@ -1,6 +1,7 @@
 import { Check } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import type { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { use } from "react";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -8,6 +9,7 @@ import { CornerTicks } from "@/components/design/corner-ticks";
 import { Eyebrow } from "@/components/design/eyebrow";
 import { pad2 } from "@/components/design/ledger-divider";
 import { RuleHeading } from "@/components/design/rule-heading";
+import { pageMetadata } from "@/lib/seo";
 import { cn } from "@/lib/utils";
 
 /**
@@ -104,6 +106,19 @@ function StepCard({
       </div>
     </article>
   );
+}
+
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await props.params;
+  const t = await getTranslations({ locale, namespace: "Development.meta" });
+  return pageMetadata({
+    locale,
+    path: "/development",
+    title: t("title"),
+    description: t("description"),
+  });
 }
 
 export default function Page(props: { params: Promise<{ locale: string }> }) {

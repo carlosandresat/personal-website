@@ -3,7 +3,11 @@
     "kicker": "Software Developer & AI Researcher",
     "lead": "I'm a software engineer specialized in building web applications with <emphasis>TypeScript, Next.js, and React</emphasis>, now pursuing a Master's in <emphasis>Data Science & Machine Learning</emphasis>. Let's build something exceptional together.",
     "statsYearsLabel": "Years experience",
-    "statsContributionsLabel": "GitHub contributions"
+    "statsContributionsLabel": "GitHub contributions",
+    "meta": {
+      "title": "Carlos Arévalo | Software Developer & AI Researcher",
+      "description": "Software engineer building web apps with TypeScript, Next.js and React, now pursuing a Master's in Data Science & ML. Projects, experience and courses."
+    }
   },
   "Navbar": {
     "home": "Home",
@@ -548,6 +552,10 @@
       "title": "Internet of Things (IoT) Fundamentals with ESP8266",
       "description": "This course focuses on IoT development using the ESP8266, a low-cost Wi-Fi microchip. Participants will learn to program the ESP8266, connect to the internet, and build web-connected devices. The course covers various communication protocols and cloud integration. By the end of the course, students will be able to create sophisticated IoT projects with the ESP8266. Ideal for those with some experience in electronics and programming, looking to explore IoT further.",
       "summary": "Wi-Fi microcontrollers, communication protocols and cloud integration for web-connected devices."
+    },
+    "catalogMeta": {
+      "title": "Programming Courses | Carlos Arévalo",
+      "description": "Live, project-based programming courses: Python, Scratch for kids, front-end web development and more. Online classes with a certificate."
     }
   },
   "Development": {
@@ -703,6 +711,10 @@
           }
         }
       }
+    },
+    "meta": {
+      "title": "Web Application Development | Carlos Arévalo",
+      "description": "Custom web application development with Next.js, React and TypeScript, through a transparent five-phase process from requirements to long-term support."
     }
   },
   "Students": {
