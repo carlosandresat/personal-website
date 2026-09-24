@@ -6,8 +6,16 @@ import ExperiencesSection from "@/components/experiences-section";
 import EducationSection from "@/components/education-section";
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { pageMetadata } from "@/lib/seo";
+import { useTranslations } from "next-intl";
 import { use } from "react";
+import { JsonLd } from "@/components/json-ld";
+import {
+  SITE_NAME,
+  SITE_URL,
+  localeUrl,
+  pageMetadata,
+  personSchema,
+} from "@/lib/seo";
 
 export async function generateMetadata(props: {
   params: Promise<{ locale: string }>;
@@ -26,8 +34,25 @@ export default function HomePage(props: { params: Promise<{ locale: string }> })
   const { locale } = use(props.params);
   setRequestLocale(locale);
 
+  const t = useTranslations("HomePage");
+
   return (
     <main className="flex min-h-screen flex-col items-center">
+      <JsonLd
+        data={{
+          "@graph": [
+            personSchema(t("kicker")),
+            {
+              "@type": "WebSite",
+              "@id": `${SITE_URL}/#website`,
+              name: SITE_NAME,
+              url: localeUrl(locale, ""),
+              inLanguage: locale,
+              author: { "@id": `${SITE_URL}/#person` },
+            },
+          ],
+        }}
+      />
       <HomeSection />
       <ServicesSection />
       <ExperiencesSection />
