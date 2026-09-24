@@ -3,8 +3,25 @@ import StudentCard from "@/components/student-card";
 import { studentsData } from "@/data/students-data";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { AlertCircle } from "lucide-react";
-import { setRequestLocale } from "next-intl/server";
+import type { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { pageMetadata } from "@/lib/seo";
 import { use } from "react";
+
+// noindex until students-data.ts holds real students instead of examples.
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await props.params;
+  const t = await getTranslations({ locale, namespace: "Students.meta" });
+  return pageMetadata({
+    locale,
+    path: "/students",
+    title: t("title"),
+    description: t("description"),
+    noindex: true,
+  });
+}
 
 export default function Students(props: { params: Promise<{ locale: string }> }) {
   const { locale } = use(props.params);

@@ -743,6 +743,11 @@
       "BackNext": "Back-End with Next.js",
       "IoTArduino": "Internet of Things (IoT) Fundamentals with Arduino",
       "IoTESP8266": "Internet of Things (IoT) Fundamentals with ESP8266"
+    },
+    "meta": {
+      "title": "Students | Carlos Arévalo",
+      "description": "Students who have completed Carlos Arévalo's programming courses, and the projects they built along the way.",
+      "profileDescription": "{name}'s profile: programming courses completed with Carlos Arévalo and the projects built in each one."
     }
   }
 }

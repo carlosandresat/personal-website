@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { use } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -5,25 +7,38 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 import { studentsData } from "@/data/students-data";
 import { useTranslations } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { locales } from "@/navigation";
+import { pageMetadata } from "@/lib/seo";
 
-export default function Page(props: { params: Promise<{ id: string; locale: string }> }) {
+type Props = { params: Promise<{ id: string; locale: string }> };
+
+export const dynamicParams = false;
+
+export async function generateMetadata(props: Props): Promise<Metadata> {
+  const { id, locale } = await props.params;
+  const student = studentsData.find((s) => s.code === id);
+  if (!student) return {};
+
+  const t = await getTranslations({ locale, namespace: "Students.meta" });
+  return pageMetadata({
+    locale,
+    path: `/students/${id}`,
+    title: `${student.name} | Carlos Arévalo`,
+    description: t("profileDescription", { name: student.name }),
+    // noindex until students-data.ts holds real students instead of examples.
+    noindex: true,
+  });
+}
+
+export default function Page(props: Props) {
   const params = use(props.params);
   const { id, locale } = params;
   setRequestLocale(locale);
 
   const t = useTranslations("Students");
   const student = studentsData.find((s) => s.code === id);
-
-  if (!student) {
-    return (
-      <main className="flex min-h-[93vh] flex-col items-center justify-center">
-        <h1 className="scroll-m-20 text-4xl font-bold lg:text-5xl px-8 text-center">
-          Student not found
-        </h1>
-      </main>
-    );
-  }
+  if (!student) notFound();
 
   return (
     <main className="w-full flex flex-col justify-center items-center py-12 md:py-24 lg:py-28 min-h-[93vh]">
@@ -85,15 +100,8 @@ export default function Page(props: { params: Promise<{ id: string; locale: stri
   );
 }
 
-export async function generateStaticParams() {
-  const locales = ["en", "es"];
-  const params: { locale: string; id: string }[] = [];
-  
-  for (const locale of locales) {
-    for (const student of studentsData) {
-      params.push({ locale, id: student.code });
-    }
-  }
-  
-  return params;
+export function generateStaticParams() {
+  return locales.flatMap((locale) =>
+    studentsData.map((student) => ({ locale, id: student.code }))
+  );
 }
