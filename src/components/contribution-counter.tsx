@@ -9,7 +9,9 @@ export function ContributionCounter({
   value: number;
   className?: string;
 }) {
-  const [display, setDisplay] = useState(0);
+  // Start at the real value so the prerendered HTML (and crawlers) show it;
+  // the count-up restarts from 0 once the number scrolls into view.
+  const [display, setDisplay] = useState(value);
   const ref = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
