@@ -21,7 +21,7 @@ const PROGRAMS: {
     current: true,
     specialization: true,
     focus: ["data-science", "machine-learning", "ai"],
-    activities: ["exec-leadership"],
+    activities: ["cisco-ds-python", "exec-leadership"],
   },
   {
     key: "it-eng",

@@ -271,6 +271,10 @@
       },
       "activitiesLabel": "Durante el programa",
       "activities": {
+        "cisco-ds-python": {
+          "date": "Abr 2026",
+          "title": "Data Science Essentials with Python · Cisco Networking Academy"
+        },
         "exec-leadership": {
           "date": "Dic 2025 — Ene 2026",
           "title": "Participante en el programa Liderazgo Ejecutivo"
