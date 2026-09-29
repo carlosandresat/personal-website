@@ -85,10 +85,131 @@
   /* Hairline circuit texture. Theme-aware for free: --border already flips
      from 89.8% to 14.9% lightness, so the delta against the surface stays
      roughly symmetric in both themes. */
+  .circuit-grid,
+  .grid-spotlight,
+  .grid-pulses {
+    --grid-cell: 44px;
+  }
+
   .circuit-grid {
     background-image:
       linear-gradient(to right, hsl(var(--border)) 1px, transparent 1px),
       linear-gradient(to bottom, hsl(var(--border)) 1px, transparent 1px);
-    background-size: 44px 44px;
+    background-size: var(--grid-cell) var(--grid-cell);
+  }
+
+  /* The same grid drawn in brand colour, masked to a circle around the
+     pointer. Sharing the origin and cell size with .circuit-grid keeps the lit
+     lines exactly on top of the real ones. --spot-* are set by GridBackdrop. */
+  .grid-spotlight {
+    display: none;
+    background-color: hsl(var(--brand) / 0.05);
+    background-image:
+      linear-gradient(to right, hsl(var(--brand) / 0.7) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--brand) / 0.7) 1px, transparent 1px);
+    background-size: var(--grid-cell) var(--grid-cell);
+    mask-image: radial-gradient(
+      circle 220px at var(--spot-x, 50%) var(--spot-y, 50%),
+      black,
+      transparent
+    );
+    opacity: var(--spot-on, 0);
+    transition: opacity 300ms ease;
+  }
+
+  /* Touch: short streaks running along grid lines. Each .grid-pulse is a
+     full-length rail snapped to a line; its ::after streak starts just before
+     the rail and the rail translates by its own length (+ the streak), so the
+     motion is transform-only and needs no measuring. */
+  .grid-pulses {
+    display: none;
+  }
+
+  .grid-pulse {
+    position: absolute;
+    --streak: 96px;
+    animation: var(--pulse-name) var(--dur) var(--delay) linear infinite;
+  }
+
+  .grid-pulse::after {
+    content: "";
+    position: absolute;
+    /* Follows the gradient's alpha, so only the bright head glows. The rail
+       is transformed, not the streak, so this rasterizes once. */
+    filter: drop-shadow(0 0 3px hsl(var(--brand)));
+  }
+
+  .grid-pulse[data-axis="x"] {
+    --pulse-name: grid-pulse-x;
+    top: calc(var(--grid-cell) * var(--line));
+    left: 0;
+    width: 100%;
+    height: 1px;
+  }
+
+  .grid-pulse[data-axis="x"]::after {
+    top: 0;
+    right: 100%;
+    width: var(--streak);
+    height: 1px;
+    background: linear-gradient(to right, transparent, hsl(var(--brand)));
+  }
+
+  .grid-pulse[data-axis="y"] {
+    --pulse-name: grid-pulse-y;
+    top: 0;
+    left: calc(var(--grid-cell) * var(--line));
+    width: 1px;
+    height: 100%;
+  }
+
+  .grid-pulse[data-axis="y"]::after {
+    bottom: 100%;
+    left: 0;
+    width: 1px;
+    height: var(--streak);
+    background: linear-gradient(to bottom, transparent, hsl(var(--brand)));
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .grid-spotlight {
+      display: block;
+    }
+  }
+
+  @media (hover: none), (pointer: coarse) {
+    .grid-pulses {
+      display: block;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .grid-pulses {
+      display: none;
+    }
+
+    .grid-spotlight {
+      transition: none;
+    }
+  }
+}
+
+@keyframes grid-pulse-x {
+  from {
+    transform: translateX(0);
+  }
+  60%,
+  to {
+    transform: translateX(calc(100% + var(--streak)));
+  }
+}
+
+@keyframes grid-pulse-y {
+  from {
+    transform: translateY(0);
+  }
+  60%,
+  to {
+    transform: translateY(calc(100% + var(--streak)));
   }
 }

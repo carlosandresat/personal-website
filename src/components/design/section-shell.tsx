@@ -1,3 +1,4 @@
+import { GridBackdrop } from "@/components/design/grid-backdrop";
 import { cn } from "@/lib/utils";
 
 /**
@@ -43,12 +44,7 @@ export function SectionShell({
         className
       )}
     >
-      {grid ? (
-        <div
-          aria-hidden
-          className="circuit-grid pointer-events-none absolute inset-0 -z-10 [mask-image:radial-gradient(ellipse_at_center,black,transparent_75%)]"
-        />
-      ) : null}
+      {grid ? <GridBackdrop /> : null}
       <div
         className={cn(
           "flex w-full max-w-screen-xl flex-col gap-8 px-6 md:px-8",
