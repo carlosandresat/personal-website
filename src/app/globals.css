@@ -109,7 +109,7 @@
       linear-gradient(to bottom, hsl(var(--brand) / 0.7) 1px, transparent 1px);
     background-size: var(--grid-cell) var(--grid-cell);
     mask-image: radial-gradient(
-      circle 220px at var(--spot-x, 50%) var(--spot-y, 50%),
+      circle var(--spot-radius, 220px) at var(--spot-x, 50%) var(--spot-y, 50%),
       black,
       transparent
     );

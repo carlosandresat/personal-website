@@ -2,29 +2,48 @@
 
 import { useEffect, useRef } from "react";
 
-/**
- * Signals that travel along the grid on touch devices. Hardcoded rather than
- * random so the prerendered markup matches hydration. `line` is a grid index
- * (multiples of --grid-cell); indices stay small so every line lands inside a
- * ~375px-wide phone hero. Times are in seconds; each pulse spends the first
- * 60% of its cycle crossing and the rest offscreen, so ~2 are visible at once.
- */
-const PULSES: { axis: "x" | "y"; line: number; dur: number; delay: number }[] =
-  [
-    { axis: "x", line: 3, dur: 7, delay: 0 },
-    { axis: "y", line: 2, dur: 9, delay: 1.5 },
-    { axis: "x", line: 12, dur: 8, delay: 3 },
-    { axis: "y", line: 6, dur: 10, delay: 4.5 },
-    { axis: "x", line: 7, dur: 9, delay: 6 },
-    { axis: "y", line: 4, dur: 8, delay: 7.5 },
-  ];
+import { cn } from "@/lib/utils";
 
 /**
- * The hero's circuit grid, plus a light layer: a spotlight that follows a
- * fine pointer, or travelling pulses on touch. Which one shows is decided by
- * media queries in globals.css, so nothing flashes on hydration.
+ * A signal that travels along the grid on touch devices. `line` is a grid
+ * index (multiples of --grid-cell); times are in seconds. Each pulse spends
+ * the first 60% of its cycle crossing and the rest offscreen.
  */
-export function GridBackdrop() {
+export type GridPulse = {
+  axis: "x" | "y";
+  line: number;
+  dur: number;
+  delay: number;
+};
+
+/**
+ * Hardcoded rather than random so the prerendered markup matches hydration.
+ * Indices stay small so every line lands inside a ~375px-wide phone hero;
+ * delays are staggered so ~2 are visible at once.
+ */
+const HERO_PULSES: GridPulse[] = [
+  { axis: "x", line: 3, dur: 7, delay: 0 },
+  { axis: "y", line: 2, dur: 9, delay: 1.5 },
+  { axis: "x", line: 12, dur: 8, delay: 3 },
+  { axis: "y", line: 6, dur: 10, delay: 4.5 },
+  { axis: "x", line: 7, dur: 9, delay: 6 },
+  { axis: "y", line: 4, dur: 8, delay: 7.5 },
+];
+
+/**
+ * A circuit grid plus a light layer: a spotlight that follows a fine pointer,
+ * or travelling pulses on touch. Which one shows is decided by media queries
+ * in globals.css, so nothing flashes on hydration. Fills its nearest
+ * positioned ancestor; set `--spot-radius` via `className` to resize the
+ * spotlight.
+ */
+export function GridBackdrop({
+  pulses = HERO_PULSES,
+  className,
+}: {
+  pulses?: GridPulse[];
+  className?: string;
+}) {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -85,12 +104,12 @@ export function GridBackdrop() {
     <div
       ref={ref}
       aria-hidden
-      className="pointer-events-none absolute inset-0 -z-10 [mask-image:radial-gradient(ellipse_at_center,black,transparent_75%)]"
+      className={cn("pointer-events-none absolute inset-0 -z-10", className)}
     >
       <div className="circuit-grid absolute inset-0" />
       <div className="grid-spotlight absolute inset-0" />
       <div className="grid-pulses absolute inset-0 overflow-hidden">
-        {PULSES.map((pulse, i) => (
+        {pulses.map((pulse, i) => (
           <span
             key={i}
             data-axis={pulse.axis}

@@ -44,7 +44,9 @@ export function SectionShell({
         className
       )}
     >
-      {grid ? <GridBackdrop /> : null}
+      {grid ? (
+        <GridBackdrop className="[mask-image:radial-gradient(ellipse_at_center,black,transparent_75%)]" />
+      ) : null}
       <div
         className={cn(
           "flex w-full max-w-screen-xl flex-col gap-8 px-6 md:px-8",
