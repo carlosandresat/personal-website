@@ -61,6 +61,7 @@ const EXPERIENCES: {
   { key: "scientific-poster", kind: "event", certificate: "https://drive.google.com/file/d/1Uvj9UCsvFPhH8kbiKozF5ue_BpDAmMRM/view?usp=drive_link" },
   { key: "talov-intern", kind: "work" },
   { key: "software-seminar", kind: "event", certificate: "https://drive.google.com/file/d/1BZ0aSQV2ArIjwuf7SqOIvmrCZJnQizv8/view?usp=sharing" },
+  { key: "hamilton-tech", kind: "work", certificate: "https://drive.google.com/file/d/1kCUiT5kkI3ajeMcnyv2nxOPJGRwOhCSq/view?usp=sharing" },
   { key: "sdas-seminar", kind: "event" },
   { key: "board-member", kind: "work" },
 ];
