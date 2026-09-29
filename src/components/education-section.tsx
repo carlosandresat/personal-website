@@ -3,6 +3,7 @@ import { MapPin } from "lucide-react";
 
 import { CornerTicks } from "@/components/design/corner-ticks";
 import { Eyebrow } from "@/components/design/eyebrow";
+import { GridBackdrop, type GridPulse } from "@/components/design/grid-backdrop";
 import { pad2 } from "@/components/design/ledger-divider";
 import { SectionShell } from "@/components/design/section-shell";
 import { StatusBadge } from "@/components/design/status-badge";
@@ -36,6 +37,16 @@ const PROGRAMS: {
   },
 ];
 
+/** Sized for the 176px-tall summary card: rows 1–3, the first few columns. */
+const CARD_PULSES: GridPulse[] = [
+  { axis: "x", line: 1, dur: 5, delay: 0 },
+  { axis: "y", line: 2, dur: 6, delay: 1.5 },
+  { axis: "x", line: 3, dur: 6, delay: 3 },
+  { axis: "y", line: 5, dur: 5, delay: 4.5 },
+  { axis: "x", line: 2, dur: 7, delay: 6 },
+  { axis: "y", line: 4, dur: 6, delay: 7.5 },
+];
+
 export default function EducationSection() {
   const t = useTranslations("Education");
   const tk = (key: string) => t(key as never);
@@ -52,9 +63,9 @@ export default function EducationSection() {
           </h2>
           <div aria-hidden className="h-px bg-foreground" />
           <div className="relative isolate flex h-44 flex-col justify-end gap-1 overflow-hidden rounded-xl border bg-card p-5">
-            <div
-              aria-hidden
-              className="circuit-grid pointer-events-none absolute inset-0 -z-10"
+            <GridBackdrop
+              pulses={CARD_PULSES}
+              className="[--spot-radius:140px]"
             />
             <span className="text-5xl font-semibold leading-none text-brand">
               {pad2(PROGRAMS.length)}
