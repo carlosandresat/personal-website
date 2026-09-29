@@ -26,7 +26,13 @@ const PROGRAMS: {
   {
     key: "it-eng",
     current: false,
-    activities: ["hult-prize", "scientific-poster", "board-member"],
+    activities: [
+      "hult-prize",
+      "scientific-poster",
+      "cv-exhibition",
+      "hamilton-tech",
+      "board-member",
+    ],
   },
 ];
 
