@@ -119,6 +119,7 @@
     "kindEvent": "Evento",
     "moreInfo": "Más info...",
     "viewCertificate": "Ver certificado",
+    "viewPoster": "Ver póster",
     "back": "Atrás",
     "tabWork": "Trabajo",
     "tabCourses": "Cursos",
@@ -224,6 +225,12 @@
       "date": "May - Jul 2021",
       "location": "Grupo de Investigación SDAS",
       "description": "Contribución y participación en sesiones sobre principios de ingeniería de software."
+    },
+    "cv-exhibition": {
+      "title": "Ponente en Computer Vision Exhibition 2.0",
+      "date": "Dic 7, 2021",
+      "location": "IEEE Computer Society & Club de Ciencias Computacionales – Yachay Tech",
+      "description": "Presenté el póster 'Gesture Recognition App', en coautoría con Pedro E. Cajilima y Steeven Sánchez: una app Android (Java, TensorFlow Lite) que reconoce 8 gestos corporales aplicando transfer learning sobre un MobileNetV1 truncado con una red neuronal de 2 capas, entrenada con un dataset propio de 30 imágenes por clase capturado desde una interfaz web."
     },
     "hamilton-tech": {
       "title": "Tutor en el proyecto Hamilton Tech",

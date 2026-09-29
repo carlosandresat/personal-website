@@ -44,6 +44,7 @@ const EXPERIENCES: {
   key: string;
   kind: ExperienceKind;
   certificate?: string;
+  poster?: string;
 }[] = [
   { key: "aws-community-day", kind: "event", certificate: "https://drive.google.com/file/d/17HW3bkp45rFtTVu-xVhe4M0rqYiZRw7S/view?usp=sharing" },
   { key: "claude-code", kind: "course", certificate: "https://platzi.com/p/carlosarevalodev/curso/12284-course/diploma/detalle/" },
@@ -61,6 +62,7 @@ const EXPERIENCES: {
   { key: "scientific-poster", kind: "event", certificate: "https://drive.google.com/file/d/1Uvj9UCsvFPhH8kbiKozF5ue_BpDAmMRM/view?usp=drive_link" },
   { key: "talov-intern", kind: "work" },
   { key: "software-seminar", kind: "event", certificate: "https://drive.google.com/file/d/1BZ0aSQV2ArIjwuf7SqOIvmrCZJnQizv8/view?usp=sharing" },
+  { key: "cv-exhibition", kind: "event", certificate: "https://drive.google.com/file/d/1-KlFzNerXEhrc8XNmf7VorVgha7gE1GM/view?usp=drive_link", poster: "https://drive.google.com/file/d/1nlGiTGafYzZVO-K7R3-rvi6CoX4nMET8/view?usp=sharing" },
   { key: "hamilton-tech", kind: "work", certificate: "https://drive.google.com/file/d/1kCUiT5kkI3ajeMcnyv2nxOPJGRwOhCSq/view?usp=sharing" },
   { key: "sdas-seminar", kind: "event" },
   { key: "board-member", kind: "work" },
@@ -134,17 +136,30 @@ export default function ExperiencesSection() {
                     {t(`${exp.key}.description` as never)}
                   </p>
                   <DialogFooter className="flex w-full flex-col gap-2 md:flex-row md:justify-between">
-                    {exp.certificate && (
-                      <Button asChild>
-                        <a
-                          href={exp.certificate}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          {t("viewCertificate")}
-                        </a>
-                      </Button>
-                    )}
+                    <div className="flex flex-col gap-2 md:flex-row">
+                      {exp.certificate && (
+                        <Button asChild>
+                          <a
+                            href={exp.certificate}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {t("viewCertificate")}
+                          </a>
+                        </Button>
+                      )}
+                      {exp.poster && (
+                        <Button asChild variant="outline">
+                          <a
+                            href={exp.poster}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {t("viewPoster")}
+                          </a>
+                        </Button>
+                      )}
+                    </div>
                     <DialogClose asChild>
                       <Button type="button" variant="secondary">
                         {t("back")}
