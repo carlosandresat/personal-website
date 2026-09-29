@@ -130,6 +130,12 @@
       "location": "AWS User Groups Ecuador · Cuenca, EC",
       "description": "Asistencia y participación en AWS Community Day Ecuador 2026, encuentro de la comunidad tecnológica para compartir conocimientos, experiencias e innovación en la nube."
     },
+    "cisco-ds-python": {
+      "title": "Data Science Essentials with Python",
+      "date": "Abr 2026",
+      "location": "Cisco Networking Academy · UIDE",
+      "description": "Curso ofrecido por la UIDE a través de Cisco Networking Academy como parte de la maestría. Importar y leer datos CSV en DataFrames; operar con eval(), query() y groupby(); combinar DataFrames con left merges; limpiar datos (selección de columnas, valores faltantes, conversión de tipos); visualizar con Matplotlib aplicando buenas prácticas en gráficos de barras, dispersión y líneas; ajustar modelos lineales y evaluar su bondad de ajuste; y formular y probar hipótesis."
+    },
     "claude-code": {
       "title": "Claude Code",
       "date": "Abr 2026",

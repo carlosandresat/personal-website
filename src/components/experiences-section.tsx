@@ -47,6 +47,7 @@ const EXPERIENCES: {
   poster?: string;
 }[] = [
   { key: "aws-community-day", kind: "event", certificate: "https://drive.google.com/file/d/17HW3bkp45rFtTVu-xVhe4M0rqYiZRw7S/view?usp=sharing" },
+  { key: "cisco-ds-python", kind: "course", certificate: "https://www.credly.com/badges/08ced1f4-09df-48e9-b518-1b4d5fd3e25b/public_url" },
   { key: "claude-code", kind: "course", certificate: "https://platzi.com/p/carlosarevalodev/curso/12284-course/diploma/detalle/" },
   { key: "exec-leadership", kind: "event", certificate: "https://drive.google.com/file/d/1zBEsgnxT3q2HF-uYWKu8tEAwjNVGlnFX/view?usp=drive_link" },
   { key: "uide-ta", kind: "work" },
