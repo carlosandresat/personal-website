@@ -677,6 +677,11 @@
             "3": "Establecer la base para la documentación futura."
           }
         }
+      },
+      "brief": {
+        "summary": "Nos reunimos y aclaramos qué necesitas.",
+        "client": "Me cuentas tu idea, objetivos y presupuesto.",
+        "developer": "Pregunto, escucho y tomo nota de todo."
       }
     },
     "planning": {
@@ -706,6 +711,11 @@
             "2": "Definir canales y herramientas de comunicación y seguimiento."
           }
         }
+      },
+      "brief": {
+        "summary": "Tu idea se convierte en un plan por escrito.",
+        "client": "Revisas la propuesta y firmamos el acuerdo.",
+        "developer": "Detallo funciones, plazos y costos."
       }
     },
     "development": {
@@ -747,6 +757,11 @@
             "2": "Corregir errores y optimizar el rendimiento del sistema."
           }
         }
+      },
+      "brief": {
+        "summary": "Tu aplicación toma forma, paso a paso.",
+        "client": "Revisas diseños y avances, y das tu opinión.",
+        "developer": "Diseño, programo y pruebo cada parte."
       }
     },
     "deployment": {
@@ -775,6 +790,11 @@
             "2": "Proveer documentación, manuales y soporte para la capacitación del equipo."
           }
         }
+      },
+      "brief": {
+        "summary": "Tu aplicación sale al aire, lista para usarse.",
+        "client": "Eliges el dominio y la pruebas en vivo.",
+        "developer": "La publico y te enseño a usarla."
       }
     },
     "maintenance": {
@@ -804,7 +824,17 @@
             "2": "Realizar pruebas posteriores a cada actualización para garantizar la estabilidad del sistema."
           }
         }
+      },
+      "brief": {
+        "summary": "Sigo contigo después del lanzamiento.",
+        "client": "Reportas problemas y propones mejoras.",
+        "developer": "Vigilo, corrijo y actualizo tu aplicación."
       }
+    },
+    "video": {
+      "label": "Video: el proceso de desarrollo en cinco fases",
+      "play": "Reproducir video",
+      "pause": "Pausar video"
     },
     "meta": {
       "title": "Desarrollo de Aplicaciones Web | Carlos Arévalo",
