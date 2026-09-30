@@ -490,6 +490,25 @@
         "3": "Desarrollar habilidades para resolver problemas al construir proyectos",
         "4": "Ganar confianza en la presentación y explicación de proyectos de codificación"
       },
+      "outcomes": {
+        "1": "Crear sus propios videojuegos",
+        "2": "Contar historias interactivas y animaciones",
+        "3": "Presentar y explicar sus proyectos con confianza",
+        "4": "Entender las bases de la programación"
+      },
+      "motivations": {
+        "central": "No dejes que tus hijos queden atrás en un mundo cada vez más tecnológico",
+        "learning": {
+          "1": "Pasan de solo jugar videojuegos a crearlos",
+          "2": "Aprenden a programar con bloques, sin escribir código",
+          "3": "Desarrollan creatividad, lógica y resolución de problemas"
+        },
+        "course": {
+          "1": "Clases en vivo: resuelven sus dudas en el momento",
+          "2": "45 de cada 60 minutos son práctica",
+          "3": "Terminan con 3 proyectos propios y un certificado"
+        }
+      },
       "req": {
         "1": "Ninguno"
       },

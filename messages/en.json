@@ -490,6 +490,25 @@
         "3": "Develop problem-solving skills by building projects",
         "4": "Gain confidence in presenting and explaining coding projects"
       },
+      "outcomes": {
+        "1": "Make their own video games",
+        "2": "Tell interactive stories and animations",
+        "3": "Present and explain their projects with confidence",
+        "4": "Understand the basics of programming"
+      },
+      "motivations": {
+        "central": "Don't let your kids get left behind in an increasingly tech-driven world",
+        "learning": {
+          "1": "They go from just playing video games to making them",
+          "2": "They learn to code with blocks, without typing code",
+          "3": "They build creativity, logic and problem-solving skills"
+        },
+        "course": {
+          "1": "Live classes: questions answered on the spot",
+          "2": "45 of every 60 minutes are hands-on practice",
+          "3": "They finish with 3 projects of their own and a certificate"
+        }
+      },
       "req": {
         "1": "None"
       },
