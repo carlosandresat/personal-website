@@ -378,6 +378,11 @@
     "projectN": "Project {n}",
     "finalProject": "Final Project",
     "obtainCertificate": "Obtain Certificate",
+    "trailer": {
+      "label": "Trailer: {title}",
+      "play": "Play trailer",
+      "pause": "Pause trailer"
+    },
     "duration": {
       "minutes": "{count} min",
       "hours": "{count, plural, one {# hour} other {# hours}}"

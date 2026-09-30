@@ -1,0 +1,14 @@
+{
+  "basics-python": {
+    "es": {
+      "landscape": {
+        "video": "https://om9p1kzx5wmxpwkv.public.blob.vercel-storage.com/trailers/basics-python/es/landscape-5397cf4766.mp4",
+        "poster": "https://om9p1kzx5wmxpwkv.public.blob.vercel-storage.com/trailers/basics-python/es/landscape-poster-c86a170dac.jpg"
+      },
+      "portrait": {
+        "video": "https://om9p1kzx5wmxpwkv.public.blob.vercel-storage.com/trailers/basics-python/es/portrait-40efcb53c5.mp4",
+        "poster": "https://om9p1kzx5wmxpwkv.public.blob.vercel-storage.com/trailers/basics-python/es/portrait-poster-65a52348d9.jpg"
+      }
+    }
+  }
+}

@@ -378,6 +378,11 @@
     "projectN": "Proyecto {n}",
     "finalProject": "Proyecto Final",
     "obtainCertificate": "Obtener Certificado",
+    "trailer": {
+      "label": "Tráiler: {title}",
+      "play": "Reproducir tráiler",
+      "pause": "Pausar tráiler"
+    },
     "duration": {
       "minutes": "{count} min",
       "hours": "{count, plural, one {# hora} other {# horas}}"

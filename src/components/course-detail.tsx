@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Award, BookOpen, Check, MapPin, Timer } from "lucide-react";
+import { CourseTrailer } from "@/components/course-trailer";
 import { PricingDialog } from "@/components/pricing-dialog";
 import { Eyebrow } from "@/components/design/eyebrow";
 import { LedgerDivider, pad2 } from "@/components/design/ledger-divider";
@@ -13,7 +14,8 @@ import {
   type CourseConfig,
   type SessionKind,
 } from "@/data/courses";
-import { useTranslations } from "next-intl";
+import { courseTrailer } from "@/data/course-trailers";
+import { useLocale, useTranslations } from "next-intl";
 
 const META = [Timer, MapPin, BookOpen, Award];
 
@@ -63,6 +65,7 @@ function SessionRow({
 export function CourseDetail({ course }: { course: CourseConfig }) {
   const t = useTranslations(`Courses.${course.key}`);
   const tc = useTranslations("Courses");
+  const trailer = courseTrailer(course.slug, useLocale());
 
   const stats = courseStats(course);
   const objectives = Object.keys(t.raw("objectives"));
@@ -129,6 +132,21 @@ export function CourseDetail({ course }: { course: CourseConfig }) {
           </div>
         </div>
       </section>
+
+      {trailer ? (
+        <section className="flex w-full justify-center border-b px-8 py-12">
+          <div className="w-full max-w-screen-lg">
+            <CourseTrailer
+              sources={trailer}
+              labels={{
+                video: tc("trailer.label", { title: t("title") }),
+                play: tc("trailer.play"),
+                pause: tc("trailer.pause"),
+              }}
+            />
+          </div>
+        </section>
+      ) : null}
 
       <div className="flex w-full max-w-screen-xl flex-col gap-16 px-8 py-14">
         <section className="flex flex-col gap-10 lg:flex-row-reverse">
