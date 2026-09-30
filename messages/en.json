@@ -412,6 +412,26 @@
         "3": "Develop problem-solving skills through practical experiences",
         "4": "Create robust and maintainable code"
       },
+      "outcomes": {
+        "1": "Automate repetitive tasks with your own scripts",
+        "2": "Read, process and save data in files",
+        "3": "Build interactive games and tools in the console",
+        "4": "Find and fix bugs in your code on your own"
+      },
+      "motivations": {
+        "central": "Don't get left behind in an increasingly tech-driven world",
+        "learning": {
+          "1": "It's never too late (or too early) to learn to code",
+          "2": "No coding experience needed",
+          "3": "Coding trains the way you solve problems",
+          "4": "Python is your gateway to AI, data and automation"
+        },
+        "course": {
+          "1": "Live classes: get your questions answered on the spot",
+          "2": "Every class has a workshop: you learn by doing",
+          "3": "You finish with your own project and a certificate"
+        }
+      },
       "req": {
         "1": "None"
       },

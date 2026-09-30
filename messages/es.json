@@ -412,6 +412,26 @@
         "3": "Desarrollar habilidades para resolver problemas a través de experiencias prácticas",
         "4": "Crear código robusto y mantenible"
       },
+      "outcomes": {
+        "1": "Automatizar tareas repetitivas con tus propios scripts",
+        "2": "Leer, procesar y guardar datos en archivos",
+        "3": "Crear juegos y herramientas interactivas en la consola",
+        "4": "Encontrar y corregir errores en tu código por tu cuenta"
+      },
+      "motivations": {
+        "central": "No te quedes atrás en un mundo cada vez más tecnológico",
+        "learning": {
+          "1": "Nunca es tarde (ni temprano) para aprender a programar",
+          "2": "No necesitas saber nada de programación",
+          "3": "Programar entrena tu forma de resolver problemas",
+          "4": "Python es la puerta a la IA, los datos y la automatización"
+        },
+        "course": {
+          "1": "Clases en vivo: resuelves tus dudas en el momento",
+          "2": "Cada clase tiene su taller: aprendes haciendo",
+          "3": "Terminas con un proyecto propio y un certificado"
+        }
+      },
       "req": {
         "1": "Ninguno"
       },
