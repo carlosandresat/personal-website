@@ -34,5 +34,17 @@
         "poster": "https://om9p1kzx5wmxpwkv.public.blob.vercel-storage.com/trailers/front-end-html-css-js/es/portrait-poster-f5648e597d.jpg"
       }
     }
+  },
+  "development": {
+    "es": {
+      "landscape": {
+        "video": "https://om9p1kzx5wmxpwkv.public.blob.vercel-storage.com/trailers/development/es/landscape-af733aaace.mp4",
+        "poster": "https://om9p1kzx5wmxpwkv.public.blob.vercel-storage.com/trailers/development/es/landscape-poster-3bb02c474e.jpg"
+      },
+      "portrait": {
+        "video": "https://om9p1kzx5wmxpwkv.public.blob.vercel-storage.com/trailers/development/es/portrait-677345bfbb.mp4",
+        "poster": "https://om9p1kzx5wmxpwkv.public.blob.vercel-storage.com/trailers/development/es/portrait-poster-bece80dd36.jpg"
+      }
+    }
   }
 }
