@@ -8,6 +8,8 @@ const eslintConfig = [
       "out/**",
       "build/**",
       "next-env.d.ts",
+      // Remotion project with its own install; see video/README.md.
+      "video/**",
     ],
   },
 ];

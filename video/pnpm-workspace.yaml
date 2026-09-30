@@ -1,0 +1,7 @@
+# Keeps video/ its own pnpm workspace, so Remotion never lands in the site's
+# install or the Vercel build.
+packages:
+  - '.'
+
+allowBuilds:
+  esbuild: true

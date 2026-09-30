@@ -66,6 +66,10 @@ Every course with a detail page is an entry in `src/data/courses.ts`, rendered b
 
 To add a course: add the registry entry, then `Courses.<key>` in **both** message files with `title`, `description`, `summary`, `meta.{title,description}`, `difficulty`, `objectives`, `req`, and `modules.<n>.{lecture,workshop}` for every module (numbered from 1). Shared labels (session kinds, durations, plural counts, pricing) live directly under `Courses`. The catalog card in `courses/page.tsx` links to the detail page automatically when its `key` matches a registry entry. An OG image, if any, goes in `public/courses/<slug>/`.
 
+### Course trailers (`video/`)
+
+`video/` is a separate Remotion project that renders course trailers to MP4 from the same `messages/*.json` and `src/data/courses.ts` data. It has its own `pnpm-workspace.yaml` and install, and is excluded from the site's `tsconfig.json` and eslint — never add Remotion packages to the root `package.json`. `Courses.<key>.outcomes` and `Courses.<key>.motivations` exist for the trailers and are not rendered on the site yet. See `video/README.md`.
+
 ### Styling
 
 - `tailwind.config.js` is the live config (shadcn tokens, `darkMode: ["class"]`, animations) and is what `components.json` points at. `tailwind.config.ts` is a leftover from `create-next-app` and is **not** used — Tailwind resolves `.js` first. Edit the `.js` one.
