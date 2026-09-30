@@ -1,7 +1,7 @@
-import { AbsoluteFill } from "remotion";
+import { AbsoluteFill, useCurrentFrame } from "remotion";
 
 import { display, mono } from "../fonts";
-import { rise, useEnter, useLayout } from "../lib/motion";
+import { rise, sliceChars, typedCount, useEnter, useLayout } from "../lib/motion";
 import { color } from "../theme";
 
 /** The site's bracketed mono kicker (`[ LABEL ]`). */
@@ -245,5 +245,76 @@ export function SceneHeader({
         )}
       </div>
     </div>
+  );
+}
+
+/** A brand pill with a pulsing dot, like the site's "enrolling" badge. */
+export function PulsePill({ children, delay }: { children: React.ReactNode; delay: number }) {
+  const frame = useCurrentFrame();
+  const pill = useEnter(delay, 12);
+  const dot = 0.45 + 0.55 * Math.abs(Math.sin(frame / 9));
+
+  return (
+    <span
+      style={{
+        display: "flex",
+        alignItems: "center",
+        gap: 16,
+        padding: "16px 30px",
+        borderRadius: 999,
+        border: `1px solid ${color.brand(0.45)}`,
+        background: color.brand(0.1),
+        fontFamily: mono,
+        fontSize: 26,
+        letterSpacing: "0.14em",
+        textTransform: "uppercase",
+        color: color.brand(),
+        opacity: pill,
+        transform: `scale(${0.8 + 0.2 * pill})`,
+      }}
+    >
+      <span
+        style={{
+          width: 14,
+          height: 14,
+          borderRadius: 999,
+          background: color.brand(),
+          opacity: dot,
+          boxShadow: `0 0 14px ${color.brand(0.8)}`,
+        }}
+      />
+      {children}
+    </span>
+  );
+}
+
+/** A URL typed out from `start`, with a blinking block caret. */
+export function TypedUrl({ url, start, fontSize }: { url: string; start: number; fontSize: number }) {
+  const frame = useCurrentFrame();
+  const caretOn = Math.floor(frame / 15) % 2 === 0;
+
+  return (
+    <span
+      style={{
+        fontFamily: mono,
+        fontSize,
+        color: color.foreground(),
+        whiteSpace: "pre",
+        opacity: frame >= start ? 1 : 0,
+      }}
+    >
+      {sliceChars(url, typedCount(frame, start, 1.4))}
+      <span
+        style={{
+          display: "inline-block",
+          width: "0.55em",
+          height: "1.1em",
+          marginLeft: 3,
+          verticalAlign: "text-bottom",
+          background: color.brand(),
+          opacity: caretOn ? 1 : 0,
+        }}
+      />
+    </span>
   );
 }

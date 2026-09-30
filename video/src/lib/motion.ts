@@ -4,6 +4,11 @@ import { spring, useCurrentFrame, useVideoConfig } from "remotion";
 export function useEnter(delay: number, damping = 200) {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
+  return enterAt(frame, fps, delay, damping);
+}
+
+/** useEnter's spring outside a hook, for values computed in a loop. */
+export function enterAt(frame: number, fps: number, delay: number, damping = 200) {
   return spring({ frame: frame - delay, fps, config: { damping } });
 }
 

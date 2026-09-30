@@ -37,14 +37,18 @@ export function StageLayout({
   );
 }
 
-function RevealRow({
+/**
+ * A list row that slides in at `at` and stays highlighted, wired to the
+ * stage on landscape, until `next`. `marker` is its mono tag ("01", "TÚ").
+ */
+export function RevealRow({
   text,
-  number,
+  marker,
   at,
   next,
 }: {
   text: string;
-  number: number;
+  marker: string;
   at: number;
   /** When the next row arrives and takes the highlight; null for the last. */
   next: number | null;
@@ -77,7 +81,7 @@ function RevealRow({
           color: interpolateColors(active, [0, 1], [color.mutedForeground(), color.brand()]),
         }}
       >
-        {pad2(number)}
+        {marker}
       </span>
       <span
         style={{
@@ -129,7 +133,7 @@ export function RevealList({
         <RevealRow
           key={i}
           text={text}
-          number={numberFrom + i + 1}
+          marker={pad2(numberFrom + i + 1)}
           at={start + i * ITEM_FRAMES}
           next={i < items.length - 1 ? start + (i + 1) * ITEM_FRAMES : null}
         />

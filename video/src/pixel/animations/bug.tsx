@@ -6,11 +6,11 @@ import { Px, Sprite, hash, lerp, progress, step, type Grid } from "../draw";
 const LINES = [4, 7, 10, 13, 16, 19, 22, 25];
 const BUG_LINE = 16;
 
-const BUG: Grid[] = [
+export const BUG: Grid[] = [
   ["..33.", ".3333", ".3343", "3.3.3"],
   ["..33.", ".3333", ".3343", ".3.3."],
 ];
-const SPLAT: Grid = ["2.2.2", ".222.", "2.2.2"];
+export const SPLAT: Grid = ["2.2.2", ".222.", "2.2.2"];
 const LENS: Grid = [
   "..444....",
   ".4...4...",

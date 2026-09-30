@@ -1,24 +1,17 @@
-import { Img, staticFile, useCurrentFrame } from "remotion";
+import { Img, staticFile } from "remotion";
 
-import { Eyebrow, SceneFrame } from "../../components/primitives";
-import { mono } from "../../fonts";
-import { rise, sliceChars, typedCount, useEnter, useLayout } from "../../lib/motion";
+import { Eyebrow, PulsePill, SceneFrame, TypedUrl } from "../../components/primitives";
+import { rise, useEnter, useLayout } from "../../lib/motion";
 import { MascotArt } from "../../pixel/mascot";
 import { color } from "../../theme";
 import type { TrailerData } from "../trailer-data";
 
 export function ClosingScene({ data }: { data: TrailerData }) {
-  const frame = useCurrentFrame();
   const { portrait } = useLayout();
 
   const logo = useEnter(0, 14);
   const eyebrow = useEnter(6);
   const title = useEnter(10);
-  const pill = useEnter(24, 12);
-  const urlStart = 34;
-  const urlTyped = typedCount(frame, urlStart, 1.4);
-  const caretOn = Math.floor(frame / 15) % 2 === 0;
-  const dot = 0.45 + 0.55 * Math.abs(Math.sin(frame / 9));
 
   return (
     <SceneFrame style={{ alignItems: "center", textAlign: "center", gap: 40 }}>
@@ -54,59 +47,13 @@ export function ClosingScene({ data }: { data: TrailerData }) {
       >
         {data.title}
       </h1>
-      <span
-        style={{
-          display: "flex",
-          alignItems: "center",
-          gap: 16,
-          padding: "16px 30px",
-          borderRadius: 999,
-          border: `1px solid ${color.brand(0.45)}`,
-          background: color.brand(0.1),
-          fontFamily: mono,
-          fontSize: 26,
-          letterSpacing: "0.14em",
-          textTransform: "uppercase",
-          color: color.brand(),
-          opacity: pill,
-          transform: `scale(${0.8 + 0.2 * pill})`,
-        }}
-      >
-        <span
-          style={{
-            width: 14,
-            height: 14,
-            borderRadius: 999,
-            background: color.brand(),
-            opacity: dot,
-            boxShadow: `0 0 14px ${color.brand(0.8)}`,
-          }}
-        />
-        {data.enrolling}
-      </span>
-      <span
-        style={{
-          fontFamily: mono,
-          // Long course slugs would touch the edges on portrait.
-          fontSize: portrait ? (data.url.length > 40 ? 28 : 32) : 36,
-          color: color.foreground(),
-          whiteSpace: "pre",
-          opacity: frame >= urlStart ? 1 : 0,
-        }}
-      >
-        {sliceChars(data.url, urlTyped)}
-        <span
-          style={{
-            display: "inline-block",
-            width: "0.55em",
-            height: "1.1em",
-            marginLeft: 3,
-            verticalAlign: "text-bottom",
-            background: color.brand(),
-            opacity: caretOn ? 1 : 0,
-          }}
-        />
-      </span>
+      <PulsePill delay={24}>{data.enrolling}</PulsePill>
+      <TypedUrl
+        url={data.url}
+        start={34}
+        // Long course slugs would touch the edges on portrait.
+        fontSize={portrait ? (data.url.length > 40 ? 28 : 32) : 36}
+      />
     </SceneFrame>
   );
 }
