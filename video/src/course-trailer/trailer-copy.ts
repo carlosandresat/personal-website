@@ -1,3 +1,5 @@
+import type { CSSProperties } from "react";
+
 import type { Locale } from "../i18n";
 import type { PixelAnimationId } from "../pixel/animations";
 
@@ -13,10 +15,31 @@ export type ScratchBlock = {
   children?: ScratchBlock[];
 };
 
-/** What the code scene shows: typed Python, or a Scratch script snapping together. */
+/** A file typed in the web demo's editor, one tab each, in order. */
+export type WebFile = { name: string; lang: "html" | "css" | "js"; code: string };
+
+/**
+ * What the web demo's browser renders. It must match the files: the page
+ * shows `heading`, `paragraph` and `button`; `styles[i]` applies once CSS
+ * line i is typed; a click on the button swaps the paragraph for `clicked`.
+ */
+export type WebPreview = {
+  url: string;
+  heading: string;
+  paragraph: string;
+  button: string;
+  clicked: string;
+  styles: { body?: CSSProperties; h1?: CSSProperties; button?: CSSProperties }[];
+};
+
+/**
+ * What the code scene shows: typed Python, a Scratch script snapping
+ * together, or HTML → CSS → JS with a live browser preview.
+ */
 export type CodeDemo =
   | { kind: "python"; snippet: string; output: string[] }
-  | { kind: "blocks"; program: ScratchBlock[] };
+  | { kind: "blocks"; program: ScratchBlock[] }
+  | { kind: "web"; files: WebFile[]; preview: WebPreview };
 
 export type TrailerLabels = {
   codeEyebrow: string;
@@ -76,6 +99,67 @@ export const TRAILER_EXTRAS: Record<string, TrailerExtras> = {
       course: ["live", "bricks", "diploma"],
     },
     outcomeAnimations: ["conveyor", "files", "snake", "bug"],
+  },
+  FrontI: {
+    // Structure, style, interactivity: the course summary in one scene.
+    code: {
+      es: {
+        kind: "web",
+        files: [
+          {
+            name: "index.html",
+            lang: "html",
+            code: [
+              "<h1>Hola, soy Ana</h1>",
+              "<p>Aprendo desarrollo web</p>",
+              "<button>Saludar</button>",
+            ].join("\n"),
+          },
+          {
+            name: "style.css",
+            lang: "css",
+            code: [
+              "body { font-family: sans-serif; }",
+              "h1 { color: #16a34a; }",
+              "button { background: #22c55e; }",
+            ].join("\n"),
+          },
+          {
+            name: "script.js",
+            lang: "js",
+            code: [
+              'const p = document.querySelector("p");',
+              'const b = document.querySelector("button");',
+              "b.onclick = () => {",
+              '  p.textContent = "¡Hola, JavaScript!";',
+              "};",
+            ].join("\n"),
+          },
+        ],
+        preview: {
+          url: "mi-pagina.html",
+          heading: "Hola, soy Ana",
+          paragraph: "Aprendo desarrollo web",
+          button: "Saludar",
+          clicked: "¡Hola, JavaScript!",
+          styles: [
+            { body: { fontFamily: "sans-serif" } },
+            { h1: { color: "#16a34a" } },
+            { button: { background: "#22c55e" } },
+          ],
+        },
+      },
+    },
+    labels: {
+      es: { codeHeading: "Crea tu primera página web" },
+      en: { codeHeading: "Build your first web page" },
+    },
+    motivationAnimations: {
+      central: "journey",
+      learning: ["livePreview", "sprout", "portfolio"],
+      course: ["live", "bricks", "diploma"],
+    },
+    outcomeAnimations: ["browserBuild", "responsive", "interactive", "profile"],
   },
   Scratch: {
     // Module 1's workshop: "make a sprite move". Block text as in Scratch 3's

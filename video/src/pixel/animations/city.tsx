@@ -46,7 +46,7 @@ const RUN: Grid[] = [
 const LAPTOP: Grid = ["444.", "424.", "444.", "2222"];
 
 /** A child runner (hair, shorter, with a tablet) for the kids' courses. */
-const KID_RUN: Grid[] = [
+export const KID_RUN: Grid[] = [
   ["..22..", "..44..", ".3333.", "3.33.3", "..33..", ".2..2.", "2....2"],
   ["..22..", "..44..", ".3333.", ".3333.", "..33..", "..22..", ".2.2.."],
 ];

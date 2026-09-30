@@ -87,7 +87,8 @@ export function ClosingScene({ data }: { data: TrailerData }) {
       <span
         style={{
           fontFamily: mono,
-          fontSize: portrait ? 32 : 36,
+          // Long course slugs would touch the edges on portrait.
+          fontSize: portrait ? (data.url.length > 40 ? 28 : 32) : 36,
           color: color.foreground(),
           whiteSpace: "pre",
           opacity: frame >= urlStart ? 1 : 0,

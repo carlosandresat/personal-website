@@ -12,6 +12,7 @@ import { CodeScene } from "./scenes/CodeScene";
 import { MotivationsScene, motivationsFrames } from "./scenes/MotivationsScene";
 import { OutcomesScene, outcomesFrames } from "./scenes/OutcomesScene";
 import { TitleScene } from "./scenes/TitleScene";
+import { WebScene, webTiming } from "./scenes/WebScene";
 import { resolveTrailerData, type TrailerData } from "./trailer-data";
 
 export type CourseTrailerProps = {
@@ -19,13 +20,19 @@ export type CourseTrailerProps = {
   locale: Locale;
 };
 
-/** Typed Python, or a Scratch script snapping together, per the course. */
+/** Typed Python, a Scratch script, or HTML/CSS/JS with a live preview. */
 function CodeDemoScene({ data }: { data: TrailerData }) {
-  return data.code.kind === "blocks" ? (
-    <BlocksScene data={data} program={data.code.program} />
-  ) : (
-    <CodeScene data={data} code={data.code} />
-  );
+  const { code } = data;
+  if (code.kind === "blocks") return <BlocksScene data={data} program={code.program} />;
+  if (code.kind === "web") return <WebScene data={data} files={code.files} preview={code.preview} />;
+  return <CodeScene data={data} code={code} />;
+}
+
+/** Blocks and web demos need longer: the sprite walks, the page gets clicked. */
+function codeFrames({ code }: TrailerData) {
+  if (code.kind === "blocks") return 200;
+  if (code.kind === "web") return webTiming(code.files).frames;
+  return 175;
 }
 
 /**
@@ -37,8 +44,7 @@ const SCENES: {
   Scene: React.FC<{ data: TrailerData }>;
 }[] = [
   { frames: 105, Scene: TitleScene },
-  // Blocks get longer: the sprite needs time to walk once the flag is hit.
-  { frames: (data) => (data.code.kind === "blocks" ? 200 : 175), Scene: CodeDemoScene },
+  { frames: codeFrames, Scene: CodeDemoScene },
   { frames: motivationsFrames, Scene: MotivationsScene },
   { frames: outcomesFrames, Scene: OutcomesScene },
   { frames: 110, Scene: ClosingScene },

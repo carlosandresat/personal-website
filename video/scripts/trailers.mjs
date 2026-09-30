@@ -15,6 +15,12 @@ export const TRAILERS = [
     landscape: "ScratchTrailerLandscape",
     portrait: "ScratchTrailerPortrait",
   },
+  {
+    slug: "front-end-html-css-js",
+    locale: "es",
+    landscape: "FrontITrailerLandscape",
+    portrait: "FrontITrailerPortrait",
+  },
 ];
 
 export const FORMATS = ["landscape", "portrait"];

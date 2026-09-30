@@ -10,6 +10,7 @@ import {
 const TRAILERS: { id: string; props: CourseTrailerProps }[] = [
   { id: "PythonTrailer", props: { courseKey: "BasicsPython", locale: "es" } },
   { id: "ScratchTrailer", props: { courseKey: "Scratch", locale: "es" } },
+  { id: "FrontITrailer", props: { courseKey: "FrontI", locale: "es" } },
 ];
 
 const FORMATS = [

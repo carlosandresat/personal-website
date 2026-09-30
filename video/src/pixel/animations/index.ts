@@ -1,6 +1,7 @@
 import { Ages } from "./ages";
 import { BlockStack } from "./block-stack";
 import { Bricks } from "./bricks";
+import { BrowserBuild } from "./browser-build";
 import { Bug } from "./bug";
 import { City, CityKid } from "./city";
 import { Clock } from "./clock";
@@ -8,10 +9,16 @@ import { Conveyor } from "./conveyor";
 import { Diploma } from "./diploma";
 import { Door } from "./door";
 import { Files } from "./files";
+import { Interactive } from "./interactive";
+import { Journey } from "./journey";
 import { Live } from "./live";
+import { LivePreview } from "./live-preview";
 import { Maze } from "./maze";
 import { PlayToCreate } from "./play-to-create";
+import { Portfolio } from "./portfolio";
 import { Present } from "./present";
+import { Profile } from "./profile";
+import { Responsive } from "./responsive";
 import { Snake } from "./snake";
 import { SpriteStand, SpriteWalk } from "./sprite-walk";
 import { Sprout } from "./sprout";
@@ -42,6 +49,13 @@ export const PIXEL_ANIMATIONS = {
   clock: Clock,
   story: Story,
   present: Present,
+  journey: Journey,
+  livePreview: LivePreview,
+  portfolio: Portfolio,
+  browserBuild: BrowserBuild,
+  responsive: Responsive,
+  interactive: Interactive,
+  profile: Profile,
   spriteStand: SpriteStand,
   spriteWalk: SpriteWalk,
 } satisfies Record<string, React.FC<{ frame: number }>>;
@@ -65,6 +79,11 @@ export const ONE_SHOT: ReadonlySet<PixelAnimationId> = new Set([
   "clock",
   "story",
   "present",
+  "livePreview",
+  "portfolio",
+  "browserBuild",
+  "interactive",
+  "profile",
 ]);
 
 export { Idle } from "./idle";
