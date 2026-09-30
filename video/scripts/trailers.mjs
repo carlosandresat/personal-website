@@ -1,6 +1,7 @@
 /**
- * Trailers published to the site, with the composition that renders each
- * format. Landscape plays on desktop, portrait on phones.
+ * Videos published to the site (the course trailers and the development
+ * explainer), with the composition that renders each format. Landscape plays
+ * on desktop, portrait on phones.
  */
 export const TRAILERS = [
   {
@@ -20,6 +21,13 @@ export const TRAILERS = [
     locale: "es",
     landscape: "FrontITrailerLandscape",
     portrait: "FrontITrailerPortrait",
+  },
+  // Not a course: the /development page's process explainer.
+  {
+    slug: "development",
+    locale: "es",
+    landscape: "DevelopmentExplainerLandscape",
+    portrait: "DevelopmentExplainerPortrait",
   },
 ];
 

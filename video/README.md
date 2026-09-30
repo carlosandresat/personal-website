@@ -1,6 +1,7 @@
 # Course trailers (Remotion)
 
-Motion-graphics trailers for the course pages, written in React with
+Motion-graphics trailers for the course pages, plus an explainer for the
+development page ([below](#development-explainer)), written in React with
 [Remotion](https://www.remotion.dev/). This folder is its own pnpm workspace:
 nothing here is installed or built by the site or by Vercel.
 
@@ -72,3 +73,22 @@ and nothing is served stale from the CDN. Commit the updated JSON to publish.
    locale and one animation id per motivation and outcome.
 3. Add it to `TRAILERS` in `src/Root.tsx` (both formats are registered).
 4. Add it to `scripts/trailers.mjs`, then `pnpm render:web <slug> && pnpm upload <slug>`.
+
+## Development explainer
+
+A ~40 s video for `/development` (`src/process-explainer/`, compositions
+`DevelopmentExplainer{Landscape,Portrait}`): the title, then the five phases one
+by one under a rail that fills as the process moves on, then a closing
+invitation. Each phase shows its title, a one-line summary and who does what
+("Tú" / "Yo"), beside its own stage animation (`kickoff`, `blueprint`,
+`build`, `launch`, `upkeep`). Unlike the list animations, these are ~6 s
+stories that play once per phase and are not in `ONE_SHOT`.
+
+- Phase titles: `Development.<phase>.title`, the page's own tabs.
+- Summary and roles: `Development.<phase>.brief` in both message files.
+- Phase order, animations, and the video-only headings and tags:
+  `src/process-explainer/explainer-copy.ts`.
+
+It publishes like a trailer, under the slug `development`:
+`pnpm render:web development && pnpm upload development`. The page shows it
+above the tabs once `src/data/course-trailers.json` has an entry for the locale.

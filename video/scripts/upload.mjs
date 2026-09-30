@@ -1,5 +1,6 @@
 // Uploads the web renders to the site's Vercel Blob store and records their
-// URLs in src/data/course-trailers.json, which the course pages read.
+// URLs in src/data/course-trailers.json, which the course pages and
+// /development read.
 //
 // Needs BLOB_READ_WRITE_TOKEN in video/.env.local, e.g. from the repo root:
 //   vercel link && vercel env pull video/.env.local

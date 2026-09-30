@@ -40,3 +40,8 @@ export function numbered(map: Record<string, string> | undefined): string[] {
     .sort((a, b) => Number(a) - Number(b))
     .map((k) => map[k]);
 }
+
+/** The /development page's copy, which the process explainer reads. */
+export function developmentMessages(locale: Locale) {
+  return MESSAGES[locale].Development;
+}

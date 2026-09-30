@@ -5,6 +5,7 @@ import {
   calculateTrailerMetadata,
   type CourseTrailerProps,
 } from "./course-trailer/CourseTrailer";
+import { ProcessExplainer, explainerDuration } from "./process-explainer/ProcessExplainer";
 
 /** Every trailer, each rendered in both formats. */
 const TRAILERS: { id: string; props: CourseTrailerProps }[] = [
@@ -13,13 +14,16 @@ const TRAILERS: { id: string; props: CourseTrailerProps }[] = [
   { id: "FrontITrailer", props: { courseKey: "FrontI", locale: "es" } },
 ];
 
+/** The /development page's process explainer, per locale. */
+const EXPLAINERS = [{ id: "DevelopmentExplainer", locale: "es" as const }];
+
 const FORMATS = [
   { suffix: "Landscape", width: 1920, height: 1080 },
   { suffix: "Portrait", width: 1080, height: 1920 },
 ];
 
-// durationInFrames is a placeholder: calculateMetadata sizes each trailer
-// from its course's item counts.
+// durationInFrames is a placeholder for trailers: calculateMetadata sizes
+// each one from its course's item counts.
 export function RemotionRoot() {
   return (
     <>
@@ -35,6 +39,20 @@ export function RemotionRoot() {
             width={width}
             height={height}
             defaultProps={props}
+          />
+        ))
+      )}
+      {EXPLAINERS.flatMap(({ id, locale }) =>
+        FORMATS.map(({ suffix, width, height }) => (
+          <Composition
+            key={`${id}${suffix}`}
+            id={`${id}${suffix}`}
+            component={ProcessExplainer}
+            durationInFrames={explainerDuration(locale)}
+            fps={30}
+            width={width}
+            height={height}
+            defaultProps={{ locale }}
           />
         ))
       )}

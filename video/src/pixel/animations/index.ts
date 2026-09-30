@@ -1,6 +1,8 @@
 import { Ages } from "./ages";
 import { BlockStack } from "./block-stack";
+import { Blueprint } from "./blueprint";
 import { Bricks } from "./bricks";
+import { Build } from "./build";
 import { BrowserBuild } from "./browser-build";
 import { Bug } from "./bug";
 import { City, CityKid } from "./city";
@@ -11,6 +13,8 @@ import { Door } from "./door";
 import { Files } from "./files";
 import { Interactive } from "./interactive";
 import { Journey } from "./journey";
+import { Kickoff } from "./kickoff";
+import { Launch } from "./launch";
 import { Live } from "./live";
 import { LivePreview } from "./live-preview";
 import { Maze } from "./maze";
@@ -23,6 +27,7 @@ import { Snake } from "./snake";
 import { SpriteStand, SpriteWalk } from "./sprite-walk";
 import { Sprout } from "./sprout";
 import { Story } from "./story";
+import { Upkeep } from "./upkeep";
 
 /**
  * Stage animations. Each one draws on the 40×30 screen from its own local
@@ -58,6 +63,12 @@ export const PIXEL_ANIMATIONS = {
   profile: Profile,
   spriteStand: SpriteStand,
   spriteWalk: SpriteWalk,
+  // The development explainer: one story per phase, ~6 s each.
+  kickoff: Kickoff,
+  blueprint: Blueprint,
+  build: Build,
+  launch: Launch,
+  upkeep: Upkeep,
 } satisfies Record<string, React.FC<{ frame: number }>>;
 
 export type PixelAnimationId = keyof typeof PIXEL_ANIMATIONS;
