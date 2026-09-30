@@ -118,10 +118,16 @@ function OutputLine({ children, delay }: { children: string; delay: number }) {
   );
 }
 
-export function CodeScene({ data }: { data: TrailerData }) {
+export function CodeScene({
+  data,
+  code,
+}: {
+  data: TrailerData;
+  code: { snippet: string; output: string[] };
+}) {
   const frame = useCurrentFrame();
   const { portrait } = useLayout();
-  const { snippet, output } = data.code;
+  const { snippet, output } = code;
 
   const total = Array.from(snippet).length;
   const typed = typedCount(frame, TYPE_START, TYPE_SPEED);

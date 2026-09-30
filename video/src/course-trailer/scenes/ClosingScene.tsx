@@ -3,6 +3,7 @@ import { Img, staticFile, useCurrentFrame } from "remotion";
 import { Eyebrow, SceneFrame } from "../../components/primitives";
 import { mono } from "../../fonts";
 import { rise, sliceChars, typedCount, useEnter, useLayout } from "../../lib/motion";
+import { MascotArt } from "../../pixel/mascot";
 import { color } from "../../theme";
 import type { TrailerData } from "../trailer-data";
 
@@ -21,15 +22,21 @@ export function ClosingScene({ data }: { data: TrailerData }) {
 
   return (
     <SceneFrame style={{ alignItems: "center", textAlign: "center", gap: 40 }}>
-      <Img
-        src={staticFile(data.image)}
-        style={{
-          width: 150,
-          opacity: logo,
-          transform: `scale(${0.6 + 0.4 * logo})`,
-          filter: `drop-shadow(0 0 36px ${color.brand(0.35)})`,
-        }}
-      />
+      {data.image ? (
+        <Img
+          src={staticFile(data.image)}
+          style={{
+            width: 150,
+            opacity: logo,
+            transform: `scale(${0.6 + 0.4 * logo})`,
+            filter: `drop-shadow(0 0 36px ${color.brand(0.35)})`,
+          }}
+        />
+      ) : (
+        <div style={{ opacity: logo, transform: `scale(${0.6 + 0.4 * logo})` }}>
+          <MascotArt size={120} />
+        </div>
+      )}
       <div style={rise(eyebrow, 20)}>
         <Eyebrow size={28}>{data.track}</Eyebrow>
       </div>

@@ -6,6 +6,7 @@ import { GridBackground } from "../components/GridBackground";
 import { Hud } from "../components/Hud";
 import type { Locale } from "../i18n";
 import { TRANSITION_FRAMES } from "./pacing";
+import { BlocksScene } from "./scenes/BlocksScene";
 import { ClosingScene } from "./scenes/ClosingScene";
 import { CodeScene } from "./scenes/CodeScene";
 import { MotivationsScene, motivationsFrames } from "./scenes/MotivationsScene";
@@ -18,6 +19,15 @@ export type CourseTrailerProps = {
   locale: Locale;
 };
 
+/** Typed Python, or a Scratch script snapping together, per the course. */
+function CodeDemoScene({ data }: { data: TrailerData }) {
+  return data.code.kind === "blocks" ? (
+    <BlocksScene data={data} program={data.code.program} />
+  ) : (
+    <CodeScene data={data} code={data.code} />
+  );
+}
+
 /**
  * Scenes in playback order. Reading scenes size themselves from how many
  * items the course has; the rest are fixed (frames at 30 fps).
@@ -27,7 +37,8 @@ const SCENES: {
   Scene: React.FC<{ data: TrailerData }>;
 }[] = [
   { frames: 105, Scene: TitleScene },
-  { frames: 175, Scene: CodeScene },
+  // Blocks get longer: the sprite needs time to walk once the flag is hit.
+  { frames: (data) => (data.code.kind === "blocks" ? 200 : 175), Scene: CodeDemoScene },
   { frames: motivationsFrames, Scene: MotivationsScene },
   { frames: outcomesFrames, Scene: OutcomesScene },
   { frames: 110, Scene: ClosingScene },

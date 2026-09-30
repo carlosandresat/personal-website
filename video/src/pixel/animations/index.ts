@@ -1,15 +1,21 @@
 import { Ages } from "./ages";
+import { BlockStack } from "./block-stack";
 import { Bricks } from "./bricks";
 import { Bug } from "./bug";
-import { City } from "./city";
+import { City, CityKid } from "./city";
+import { Clock } from "./clock";
 import { Conveyor } from "./conveyor";
 import { Diploma } from "./diploma";
 import { Door } from "./door";
 import { Files } from "./files";
 import { Live } from "./live";
 import { Maze } from "./maze";
+import { PlayToCreate } from "./play-to-create";
+import { Present } from "./present";
 import { Snake } from "./snake";
+import { SpriteStand, SpriteWalk } from "./sprite-walk";
 import { Sprout } from "./sprout";
+import { Story } from "./story";
 
 /**
  * Stage animations. Each one draws on the 40×30 screen from its own local
@@ -19,6 +25,7 @@ import { Sprout } from "./sprout";
  */
 export const PIXEL_ANIMATIONS = {
   city: City,
+  cityKid: CityKid,
   ages: Ages,
   sprout: Sprout,
   maze: Maze,
@@ -30,6 +37,13 @@ export const PIXEL_ANIMATIONS = {
   files: Files,
   snake: Snake,
   bug: Bug,
+  playToCreate: PlayToCreate,
+  blockStack: BlockStack,
+  clock: Clock,
+  story: Story,
+  present: Present,
+  spriteStand: SpriteStand,
+  spriteWalk: SpriteWalk,
 } satisfies Record<string, React.FC<{ frame: number }>>;
 
 export type PixelAnimationId = keyof typeof PIXEL_ANIMATIONS;
@@ -46,6 +60,11 @@ export const ONE_SHOT: ReadonlySet<PixelAnimationId> = new Set([
   "bricks",
   "diploma",
   "bug",
+  "playToCreate",
+  "blockStack",
+  "clock",
+  "story",
+  "present",
 ]);
 
 export { Idle } from "./idle";

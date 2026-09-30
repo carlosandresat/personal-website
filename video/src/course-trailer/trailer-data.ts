@@ -1,7 +1,7 @@
 import { courses } from "../../../src/data/courses";
 import { courseCopy, coursesMessages, numbered, type Locale } from "../i18n";
 import type { PixelAnimationId } from "../pixel/animations";
-import { TRAILER_EXTRAS, TRAILER_LABELS } from "./trailer-copy";
+import { TRAILER_EXTRAS, TRAILER_LABELS, type CodeDemo, type TrailerLabels } from "./trailer-copy";
 
 /** A line of copy and the stage animation that illustrates it. */
 export type StagedItem = { text: string; animation: PixelAnimationId };
@@ -11,15 +11,15 @@ export type TrailerData = {
   title: string;
   meta: string[];
   enrolling: string;
-  code: { snippet: string; output: string[] };
+  code: CodeDemo;
   motivations: {
     central: StagedItem;
     pages: { label: string; items: StagedItem[] }[];
   };
   outcomes: StagedItem[];
-  labels: (typeof TRAILER_LABELS)[Locale];
-  /** Path under the site's public/, for staticFile(). */
-  image: string;
+  labels: TrailerLabels;
+  /** Path under the site's public/, for staticFile(); null draws the pixel mascot. */
+  image: string | null;
   url: string;
 };
 
@@ -44,7 +44,7 @@ export function resolveTrailerData(courseKey: string, locale: Locale): TrailerDa
 
   const shared = coursesMessages(locale);
   const copy = courseCopy(locale, courseKey);
-  const labels = TRAILER_LABELS[locale];
+  const labels = { ...TRAILER_LABELS[locale], ...extras.labels?.[locale] };
   const motivations = copy.motivations;
   if (!motivations) throw new Error(`No Courses.${courseKey}.motivations in messages/${locale}.json`);
   const animations = extras.motivationAnimations;
@@ -70,7 +70,7 @@ export function resolveTrailerData(courseKey: string, locale: Locale): TrailerDa
     },
     outcomes: stage(numbered(copy.outcomes), extras.outcomeAnimations, "outcomes"),
     labels,
-    image: course.image.replace(/^\//, ""),
+    image: extras.artwork === "mascot" ? null : course.image.replace(/^\//, ""),
     // Unprefixed on purpose: the site's middleware adds the viewer's locale.
     url: `carlosarevalo.dev/courses/${course.slug}`,
   };

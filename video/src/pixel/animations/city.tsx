@@ -45,6 +45,13 @@ const RUN: Grid[] = [
 
 const LAPTOP: Grid = ["444.", "424.", "444.", "2222"];
 
+/** A child runner (hair, shorter, with a tablet) for the kids' courses. */
+const KID_RUN: Grid[] = [
+  ["..22..", "..44..", ".3333.", "3.33.3", "..33..", ".2..2.", "2....2"],
+  ["..22..", "..44..", ".3333.", ".3333.", "..33..", "..22..", ".2.2.."],
+];
+const TABLET: Grid = ["44", "42", "44"];
+
 function Building({ x, index, lit }: { x: number; index: number; lit: number }) {
   const [, width, height] = BUILDINGS[index];
   const top = GROUND - height;
@@ -63,12 +70,13 @@ function Building({ x, index, lit }: { x: number; index: number; lit: number }) 
   );
 }
 
-export function City({ frame }: { frame: number }) {
+export function City({ frame, kid = false }: { frame: number; kid?: boolean }) {
   const offset = Math.floor(frame * 0.5) % STRIP;
   const lit = 0.12 + 0.8 * progress(frame, 0, 70);
   const run = step(frame, 8) % 2;
+  const runner = kid ? KID_RUN[run] : RUN[run];
   const runnerX = 15;
-  const runnerY = GROUND - 10 - (run === 1 ? 1 : 0);
+  const runnerY = GROUND - runner.length - (run === 1 ? 1 : 0);
 
   return (
     <>
@@ -96,8 +104,21 @@ export function City({ frame }: { frame: number }) {
           <Px key={i} x={runnerX - 4 - i * 2} y={runnerY + 3 + i * 2} w={3} c="2" />
         ) : null
       )}
-      <Sprite grid={RUN[run]} x={runnerX} y={runnerY} />
-      <Sprite grid={LAPTOP} x={runnerX + 6} y={runnerY + 2} />
+      {/* A screen-coloured halo keeps the runner legible over the windows. */}
+      {[[-1, 0], [1, 0], [0, -1], [0, 1]].map(([dx, dy]) => (
+        <Sprite key={`${dx}:${dy}`} grid={runner} x={runnerX + dx} y={runnerY + dy} tone="0" />
+      ))}
+      <Sprite grid={runner} x={runnerX} y={runnerY} />
+      {kid ? (
+        <Sprite grid={TABLET} x={runnerX + 6} y={runnerY + 2} />
+      ) : (
+        <Sprite grid={LAPTOP} x={runnerX + 6} y={runnerY + 2} />
+      )}
     </>
   );
+}
+
+/** Same city, with a child keeping pace: "don't let your kids fall behind". */
+export function CityKid({ frame }: { frame: number }) {
+  return <City frame={frame} kid />;
 }

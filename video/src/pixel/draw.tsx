@@ -12,18 +12,23 @@ export function Sprite({
   x,
   y,
   tone,
+  flip = false,
 }: {
   grid: Grid;
   x: number;
   y: number;
   /** Paint every lit pixel in this tone instead of its own. */
   tone?: PixelTone;
+  /** Mirror horizontally, e.g. to face left. */
+  flip?: boolean;
 }) {
   const left = Math.round(x);
   const top = Math.round(y);
   const rects: React.ReactNode[] = [];
+  const width = Math.max(...grid.map((row) => row.length));
 
-  grid.forEach((row, j) => {
+  grid.forEach((line, j) => {
+    const row = flip ? [...line.padEnd(width, ".")].reverse().join("") : line;
     let i = 0;
     while (i < row.length) {
       const c = row[i] as PixelTone | ".";

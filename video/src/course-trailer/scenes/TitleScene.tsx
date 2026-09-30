@@ -2,6 +2,7 @@ import { Img, staticFile, useCurrentFrame } from "remotion";
 
 import { CornerTicks, Eyebrow, RevealWords, SceneFrame, SubLabel } from "../../components/primitives";
 import { sliceChars, typedCount, useEnter, useLayout } from "../../lib/motion";
+import { MascotArt } from "../../pixel/mascot";
 import { color } from "../../theme";
 import type { TrailerData } from "../trailer-data";
 
@@ -10,7 +11,8 @@ export function LogoPanel({
   size,
   delay,
 }: {
-  src: string;
+  /** Course image under public/; null draws the pixel mascot instead. */
+  src: string | null;
   size: number;
   delay: number;
 }) {
@@ -36,14 +38,18 @@ export function LogoPanel({
       }}
     >
       <CornerTicks size={30} />
-      <Img
-        src={staticFile(src)}
-        style={{
-          width: size * 0.5,
-          transform: `translateY(${Math.sin(frame / 20) * 6}px)`,
-          filter: `drop-shadow(0 12px 40px ${color.brand(0.25)})`,
-        }}
-      />
+      {src ? (
+        <Img
+          src={staticFile(src)}
+          style={{
+            width: size * 0.5,
+            transform: `translateY(${Math.sin(frame / 20) * 6}px)`,
+            filter: `drop-shadow(0 12px 40px ${color.brand(0.25)})`,
+          }}
+        />
+      ) : (
+        <MascotArt size={size * 0.46} />
+      )}
     </div>
   );
 }

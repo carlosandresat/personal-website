@@ -21,9 +21,14 @@ pnpm typecheck
 - "When you finish, you'll be able to…": `Courses.<key>.outcomes`.
 - Slug and image: `src/data/courses.ts`. Images are served from the site's
   `public/` (see `remotion.config.ts`).
-- Things with no home on the site — the typed code snippet and its output, and
-  which pixel-art animation illustrates each motivation and outcome — live in
-  `src/course-trailer/trailer-copy.ts`.
+- Things with no home on the site live in `src/course-trailer/trailer-copy.ts`:
+  - the code scene, per locale: typed Python (`kind: "python"`) or a Scratch
+    script snapping together (`kind: "blocks"`, in Scratch's block colours);
+  - which pixel-art animation illustrates each motivation and outcome;
+  - `labels` overriding the generic headings (e.g. copy addressed to parents);
+  - `artwork: "mascot"` to show the trailers' own pixel kid instead of the
+    course image — used for Scratch, since the Scratch Cat is a Scratch
+    Foundation trademark.
 
 Colours mirror the `.dark` tokens in `src/app/globals.css`; see `src/theme.ts`.
 
@@ -62,7 +67,7 @@ and nothing is served stale from the CDN. Commit the updated JSON to publish.
 ## Adding a course trailer
 
 1. Add `motivations` and `outcomes` under `Courses.<key>` in both message files.
-2. Add a `TRAILER_EXTRAS.<key>` entry in `trailer-copy.ts`: the code snippet per
+2. Add a `TRAILER_EXTRAS.<key>` entry in `trailer-copy.ts`: the code demo per
    locale and one animation id per motivation and outcome.
-3. Register two compositions in `src/Root.tsx` with `{ courseKey, locale }`.
+3. Add it to `TRAILERS` in `src/Root.tsx` (both formats are registered).
 4. Add it to `scripts/trailers.mjs`, then `pnpm render:web && pnpm upload`.
