@@ -2,12 +2,36 @@
   "basics-python": {
     "es": {
       "landscape": {
-        "video": "https://om9p1kzx5wmxpwkv.public.blob.vercel-storage.com/trailers/basics-python/es/landscape-5397cf4766.mp4",
-        "poster": "https://om9p1kzx5wmxpwkv.public.blob.vercel-storage.com/trailers/basics-python/es/landscape-poster-c86a170dac.jpg"
+        "video": "https://om9p1kzx5wmxpwkv.public.blob.vercel-storage.com/trailers/basics-python/es/landscape-462444fbb5.mp4",
+        "poster": "https://om9p1kzx5wmxpwkv.public.blob.vercel-storage.com/trailers/basics-python/es/landscape-poster-4ca0c06d56.jpg"
       },
       "portrait": {
-        "video": "https://om9p1kzx5wmxpwkv.public.blob.vercel-storage.com/trailers/basics-python/es/portrait-40efcb53c5.mp4",
-        "poster": "https://om9p1kzx5wmxpwkv.public.blob.vercel-storage.com/trailers/basics-python/es/portrait-poster-65a52348d9.jpg"
+        "video": "https://om9p1kzx5wmxpwkv.public.blob.vercel-storage.com/trailers/basics-python/es/portrait-ecd5068222.mp4",
+        "poster": "https://om9p1kzx5wmxpwkv.public.blob.vercel-storage.com/trailers/basics-python/es/portrait-poster-0c7f926945.jpg"
+      }
+    }
+  },
+  "scratch-kids": {
+    "es": {
+      "landscape": {
+        "video": "https://om9p1kzx5wmxpwkv.public.blob.vercel-storage.com/trailers/scratch-kids/es/landscape-5b51ff5044.mp4",
+        "poster": "https://om9p1kzx5wmxpwkv.public.blob.vercel-storage.com/trailers/scratch-kids/es/landscape-poster-a7b52a2420.jpg"
+      },
+      "portrait": {
+        "video": "https://om9p1kzx5wmxpwkv.public.blob.vercel-storage.com/trailers/scratch-kids/es/portrait-6bee70d6a2.mp4",
+        "poster": "https://om9p1kzx5wmxpwkv.public.blob.vercel-storage.com/trailers/scratch-kids/es/portrait-poster-0487637646.jpg"
+      }
+    }
+  },
+  "front-end-html-css-js": {
+    "es": {
+      "landscape": {
+        "video": "https://om9p1kzx5wmxpwkv.public.blob.vercel-storage.com/trailers/front-end-html-css-js/es/landscape-b38f273f08.mp4",
+        "poster": "https://om9p1kzx5wmxpwkv.public.blob.vercel-storage.com/trailers/front-end-html-css-js/es/landscape-poster-3922e166e0.jpg"
+      },
+      "portrait": {
+        "video": "https://om9p1kzx5wmxpwkv.public.blob.vercel-storage.com/trailers/front-end-html-css-js/es/portrait-e7ed848eb3.mp4",
+        "poster": "https://om9p1kzx5wmxpwkv.public.blob.vercel-storage.com/trailers/front-end-html-css-js/es/portrait-poster-f5648e597d.jpg"
       }
     }
   }
