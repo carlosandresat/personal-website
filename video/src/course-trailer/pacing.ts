@@ -9,8 +9,8 @@ export const ITEM_FRAMES = REPLAY_AFTER * 2;
 export const HOLD_FRAMES = ITEM_FRAMES + 15;
 /** Fade between two pages of the same list. */
 export const PAGE_SWAP_FRAMES = 12;
-/** The motivations' central idea, on its own (3 s). */
-export const HERO_FRAMES = 90;
+/** The motivations' central idea, on its own (4 s): it's the longest line. */
+export const HERO_FRAMES = 120;
 /** Cross-fade between scenes; it overlaps both, so scenes pad for it. */
 export const TRANSITION_FRAMES = 12;
 

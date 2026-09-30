@@ -83,7 +83,7 @@ export function MotivationsScene({ data }: { data: TrailerData }) {
             <RevealWords
               text={motivations.central.text}
               delay={HERO_START + 4}
-              stagger={3}
+              stagger={2}
               style={{
                 fontSize: portrait ? 66 : 60,
                 fontWeight: 700,
