@@ -559,6 +559,25 @@
         "3": "Style and lay out responsive pages with CSS (Flexbox and Grid)",
         "4": "Add interactivity with JavaScript's DOM and event model"
       },
+      "outcomes": {
+        "1": "Build complete web pages from scratch",
+        "2": "Design pages that adapt to mobile and desktop",
+        "3": "Bring them to life with JavaScript: buttons, forms and events",
+        "4": "Have your own profile page to show your work"
+      },
+      "motivations": {
+        "central": "Your first web page is one course away",
+        "learning": {
+          "1": "You see your code's result instantly in the browser",
+          "2": "No coding experience needed: you start from zero",
+          "3": "You finish with real projects for your portfolio"
+        },
+        "course": {
+          "1": "Live classes: get your questions answered on the spot",
+          "2": "Every class has a workshop: you learn by doing",
+          "3": "You finish with 3 projects and a certificate"
+        }
+      },
       "req": {
         "1": "None"
       },

@@ -559,6 +559,25 @@
         "3": "Diseñar layouts responsive con CSS (Flexbox y Grid)",
         "4": "Agregar interactividad con JavaScript: el DOM y el manejo de eventos"
       },
+      "outcomes": {
+        "1": "Crear páginas web completas desde cero",
+        "2": "Diseñar páginas que se adaptan a móvil y escritorio",
+        "3": "Darles vida con JavaScript: botones, formularios y eventos",
+        "4": "Tener tu propia página de perfil para mostrar tu trabajo"
+      },
+      "motivations": {
+        "central": "Tu primera página web está a un curso de distancia",
+        "learning": {
+          "1": "Ves el resultado de tu código al instante en el navegador",
+          "2": "No necesitas saber programar: empiezas desde cero",
+          "3": "Sales con proyectos reales para tu portafolio"
+        },
+        "course": {
+          "1": "Clases en vivo: resuelves tus dudas en el momento",
+          "2": "Cada clase tiene su taller: aprendes haciendo",
+          "3": "Terminas con 3 proyectos y un certificado"
+        }
+      },
       "req": {
         "1": "Ninguno"
       },
