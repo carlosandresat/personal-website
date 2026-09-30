@@ -8,7 +8,8 @@ nothing here is installed or built by the site or by Vercel.
 cd video
 pnpm install
 pnpm studio      # live editor with a timeline scrubber
-pnpm render      # both formats → out/python-trailer-{16x9,9x16}.mp4
+pnpm render      # review cuts → out/<slug>-<locale>-{16x9,9x16}.mp4
+pnpm render scratch-kids   # every script takes slugs to limit it
 pnpm typecheck
 ```
 
@@ -70,4 +71,4 @@ and nothing is served stale from the CDN. Commit the updated JSON to publish.
 2. Add a `TRAILER_EXTRAS.<key>` entry in `trailer-copy.ts`: the code demo per
    locale and one animation id per motivation and outcome.
 3. Add it to `TRAILERS` in `src/Root.tsx` (both formats are registered).
-4. Add it to `scripts/trailers.mjs`, then `pnpm render:web && pnpm upload`.
+4. Add it to `scripts/trailers.mjs`, then `pnpm render:web <slug> && pnpm upload <slug>`.

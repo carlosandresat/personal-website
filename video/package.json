@@ -5,9 +5,7 @@
   "packageManager": "pnpm@11.2.2",
   "scripts": {
     "studio": "remotion studio",
-    "render": "pnpm render:landscape && pnpm render:portrait",
-    "render:landscape": "remotion render PythonTrailerLandscape out/python-trailer-16x9.mp4",
-    "render:portrait": "remotion render PythonTrailerPortrait out/python-trailer-9x16.mp4",
+    "render": "node scripts/render-review.mjs",
     "typecheck": "tsc --noEmit",
     "render:web": "node scripts/render-web.mjs",
     "upload": "node scripts/upload.mjs"

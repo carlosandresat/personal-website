@@ -8,7 +8,7 @@ import { existsSync, readFileSync, writeFileSync } from "node:fs";
 
 import { put } from "@vercel/blob";
 
-import { FORMATS, TRAILERS, webDir } from "./trailers.mjs";
+import { FORMATS, selectTrailers, webDir } from "./trailers.mjs";
 
 const MANIFEST = "../src/data/course-trailers.json";
 
@@ -41,7 +41,7 @@ async function upload(file, folder, name) {
 
 const manifest = existsSync(MANIFEST) ? JSON.parse(readFileSync(MANIFEST, "utf8")) : {};
 
-for (const trailer of TRAILERS) {
+for (const trailer of selectTrailers()) {
   const dir = webDir(trailer);
   const folder = `trailers/${trailer.slug}/${trailer.locale}`;
   console.log(`${trailer.slug} (${trailer.locale})`);
