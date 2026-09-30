@@ -72,6 +72,8 @@ To add a course: add the registry entry, then `Courses.<key>` in **both** messag
 
 Rendered trailers are hosted on Vercel Blob, not in Git. `src/data/course-trailers.json` maps slug → locale → `{ landscape, portrait }` URLs and is written by `pnpm upload` in `video/` — don't edit it by hand. `CourseDetail` renders a trailer section only when that JSON has an entry for the course and locale (portrait below `md`, landscape above), via the client component `course-trailer.tsx`.
 
+The same project renders a process explainer for `/development` (`video/src/process-explainer/`), published under the manifest key `development` and shown above the phase tabs when that key has the locale. It reads `Development.<phase>.title` and `Development.<phase>.brief.{summary,client,developer}`; `brief` and `Development.video` (player labels) exist in both message files, though only the Spanish video is rendered for now.
+
 ### Styling
 
 - `tailwind.config.js` is the live config (shadcn tokens, `darkMode: ["class"]`, animations) and is what `components.json` points at. `tailwind.config.ts` is a leftover from `create-next-app` and is **not** used — Tailwind resolves `.js` first. Edit the `.js` one.

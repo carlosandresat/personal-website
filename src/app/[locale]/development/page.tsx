@@ -4,11 +4,13 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { use } from "react";
 
+import { CourseTrailer } from "@/components/course-trailer";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CornerTicks } from "@/components/design/corner-ticks";
 import { Eyebrow } from "@/components/design/eyebrow";
 import { pad2 } from "@/components/design/ledger-divider";
 import { RuleHeading } from "@/components/design/rule-heading";
+import { developmentExplainer } from "@/data/course-trailers";
 import { pageMetadata } from "@/lib/seo";
 import { cn } from "@/lib/utils";
 
@@ -126,6 +128,7 @@ export default function Page(props: { params: Promise<{ locale: string }> }) {
   setRequestLocale(locale);
 
   const t = useTranslations("Development");
+  const explainer = developmentExplainer(locale);
 
   const bullets = (prefix: string, n: number) =>
     Array.from({ length: n }, (_, i) => t(`${prefix}.${i + 1}` as never));
@@ -139,6 +142,22 @@ export default function Page(props: { params: Promise<{ locale: string }> }) {
         </h1>
         <p className="max-w-xl text-muted-foreground">{t("subtitle")}</p>
       </div>
+
+      {/* The five phases in 40 s, for readers who'd rather watch than read. */}
+      {explainer ? (
+        <section className="flex w-full justify-center px-8 pt-6">
+          <div className="w-full max-w-screen-lg">
+            <CourseTrailer
+              sources={explainer}
+              labels={{
+                video: t("video.label"),
+                play: t("video.play"),
+                pause: t("video.pause"),
+              }}
+            />
+          </div>
+        </section>
+      ) : null}
 
       <Tabs
         orientation="vertical"

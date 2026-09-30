@@ -18,3 +18,8 @@ const TRAILERS = manifest as Record<string, Record<string, CourseTrailerSources>
 export function courseTrailer(slug: string, locale: string): CourseTrailerSources | undefined {
   return TRAILERS[slug]?.[locale];
 }
+
+/** The /development page's process explainer, kept in the same manifest. */
+export function developmentExplainer(locale: string): CourseTrailerSources | undefined {
+  return TRAILERS.development?.[locale];
+}
