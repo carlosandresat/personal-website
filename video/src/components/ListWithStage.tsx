@@ -43,11 +43,14 @@ export function StageLayout({
  */
 export function RevealRow({
   text,
+  detail,
   marker,
   at,
   next,
 }: {
   text: string;
+  /** A mono second line under the text. */
+  detail?: string;
   marker: string;
   at: number;
   /** When the next row arrives and takes the highlight; null for the last. */
@@ -83,15 +86,29 @@ export function RevealRow({
       >
         {marker}
       </span>
-      <span
-        style={{
-          fontSize: portrait ? 34 : 32,
-          fontWeight: 500,
-          lineHeight: 1.28,
-          color: interpolateColors(active, [0, 1], [color.mutedForeground(), color.foreground()]),
-        }}
-      >
-        {text}
+      <span style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+        <span
+          style={{
+            fontSize: portrait ? 34 : 32,
+            fontWeight: 500,
+            lineHeight: 1.28,
+            color: interpolateColors(active, [0, 1], [color.mutedForeground(), color.foreground()]),
+          }}
+        >
+          {text}
+        </span>
+        {detail ? (
+          <span
+            style={{
+              fontFamily: mono,
+              fontSize: portrait ? 24 : 22,
+              letterSpacing: "0.04em",
+              color: interpolateColors(active, [0, 1], [color.mutedForeground(0.7), color.brand()]),
+            }}
+          >
+            {detail}
+          </span>
+        ) : null}
       </span>
       {/* Wire from the highlighted row to the stage. */}
       {portrait ? null : (

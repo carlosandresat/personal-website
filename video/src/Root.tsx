@@ -6,6 +6,7 @@ import {
   type CourseTrailerProps,
 } from "./course-trailer/CourseTrailer";
 import { ProcessExplainer, explainerDuration } from "./process-explainer/ProcessExplainer";
+import { SocialTrailer, calculateSocialMetadata } from "./social-trailer/SocialTrailer";
 
 /** Every trailer, each rendered in both formats. */
 const TRAILERS: { id: string; props: CourseTrailerProps }[] = [
@@ -23,7 +24,8 @@ const FORMATS = [
 ];
 
 // durationInFrames is a placeholder for trailers: calculateMetadata sizes
-// each one from its course's item counts.
+// each one from its course's item counts (the social trailer's loads its
+// recorded clips).
 export function RemotionRoot() {
   return (
     <>
@@ -56,6 +58,19 @@ export function RemotionRoot() {
           />
         ))
       )}
+      {FORMATS.map(({ suffix, width, height }) => (
+        <Composition
+          key={`SocialTrailer${suffix}`}
+          id={`SocialTrailer${suffix}`}
+          component={SocialTrailer}
+          durationInFrames={1}
+          calculateMetadata={calculateSocialMetadata}
+          fps={30}
+          width={width}
+          height={height}
+          defaultProps={{ recording: null }}
+        />
+      ))}
     </>
   );
 }

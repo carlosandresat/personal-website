@@ -8,10 +8,13 @@ import { Bug } from "./bug";
 import { City, CityKid } from "./city";
 import { Clock } from "./clock";
 import { Conveyor } from "./conveyor";
+import { DataChart } from "./data-chart";
+import { Database } from "./database";
 import { Diploma } from "./diploma";
 import { Door } from "./door";
 import { Files } from "./files";
 import { Interactive } from "./interactive";
+import { Iot } from "./iot";
 import { Journey } from "./journey";
 import { Kickoff } from "./kickoff";
 import { Launch } from "./launch";
@@ -69,6 +72,10 @@ export const PIXEL_ANIMATIONS = {
   build: Build,
   launch: Launch,
   upkeep: Upkeep,
+  // The social trailer.
+  database: Database,
+  dataChart: DataChart,
+  iot: Iot,
 } satisfies Record<string, React.FC<{ frame: number }>>;
 
 export type PixelAnimationId = keyof typeof PIXEL_ANIMATIONS;
@@ -95,6 +102,8 @@ export const ONE_SHOT: ReadonlySet<PixelAnimationId> = new Set([
   "browserBuild",
   "interactive",
   "profile",
+  "database",
+  "dataChart",
 ]);
 
 export { Idle } from "./idle";

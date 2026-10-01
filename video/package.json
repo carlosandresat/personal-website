@@ -8,7 +8,10 @@
     "render": "node scripts/render-review.mjs",
     "typecheck": "tsc --noEmit",
     "render:web": "node scripts/render-web.mjs",
-    "upload": "node scripts/upload.mjs"
+    "upload": "node scripts/upload.mjs",
+    "record": "node --experimental-strip-types --disable-warning=ExperimentalWarning --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/record-site.mts",
+    "audio": "node --experimental-strip-types --disable-warning=ExperimentalWarning --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/synth-audio.mts",
+    "render:social": "node scripts/render-social.mjs"
   },
   "dependencies": {
     "@remotion/cli": "4.0.524",
@@ -21,6 +24,7 @@
   },
   "devDependencies": {
     "@types/react": "^19.2.17",
+    "playwright": "1.63.0",
     "typescript": "^6.0.3"
   }
 }

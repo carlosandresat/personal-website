@@ -92,3 +92,40 @@ stories that play once per phase and are not in `ONE_SHOT`.
 It publishes like a trailer, under the slug `development`:
 `pnpm render:web development && pnpm upload development`. The page shows it
 above the tabs once `src/data/course-trailers.json` has an entry for the locale.
+
+## Social trailer
+
+A 30 s announcement for social media (`src/social-trailer/`, compositions
+`SocialTrailer{Landscape,Portrait}`), Spanish only: the redesigned site,
+filmed; the kinds of software I build; the course areas; then the URL. It is
+not published to the site: the MP4s are uploaded to the networks by hand.
+
+Scenes are cut on a 120 BPM grid (`src/social-trailer/pacing.ts`) so every
+change lands on a downbeat of the generated soundtrack. The copy lives in
+`social-copy.ts`; course areas list `Courses.<key>` entries, and the counts
+on screen come from them.
+
+```bash
+# at the repo root, serve the site to film it
+pnpm build && pnpm start
+
+cd video
+pnpm record          # → ../public/social-trailer/clips/*.mp4 + recording.json
+pnpm audio           # → ../public/social-trailer/audio.wav
+pnpm render:social   # → out/social/carlosarevalo-es-{16x9,9x16}.{mp4,jpg}
+```
+
+- `pnpm record` films each page in `shots.ts` frame by frame with Playwright:
+  it scrolls to an exact position and seeks every CSS animation to the same
+  clock before each screenshot, so the footage is smooth and identical on
+  every run. `SITE_URL` points it elsewhere, `CHROMIUM_PATH` at an installed
+  Chromium (otherwise run `pnpm exec playwright install chromium` once), and
+  shot ids limit it (`pnpm record hero`). Headless Chromium can't play the
+  site's H.264 trailers, so it also saves where each page's `<video>` sits;
+  the composition renders that trailer's own composition in its place.
+- `pnpm audio` synthesizes a chiptune (triangle bass, square arpeggio and
+  lead, noise drums) and the effects (typing, blips, whooshes, the final
+  ding) on the frames the scenes animate. No samples or licences.
+- Both scripts run TypeScript through Node's type stripping (Node ≥ 22.6).
+  What they write is git-ignored; rerun them after changing the site or the
+  pacing.

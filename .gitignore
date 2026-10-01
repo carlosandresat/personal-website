@@ -38,3 +38,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .env*
+
+# social trailer recordings and soundtrack (regenerate: cd video && pnpm record && pnpm audio)
+/public/social-trailer/

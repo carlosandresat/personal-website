@@ -74,6 +74,8 @@ Rendered trailers are hosted on Vercel Blob, not in Git. `src/data/course-traile
 
 The same project renders a process explainer for `/development` (`video/src/process-explainer/`), published under the manifest key `development` and shown above the phase tabs when that key has the locale. It reads `Development.<phase>.title` and `Development.<phase>.brief.{summary,client,developer}`; `brief` and `Development.video` (player labels) exist in both message files, though only the Spanish video is rendered for now.
 
+`video/src/social-trailer/` is a 30 s announcement for social media (Spanish, both formats), not shown on the site. Its site tour is filmed from a running copy of the site by `pnpm record` (Playwright) into the git-ignored `public/social-trailer/`, and its chiptune soundtrack is synthesized by `pnpm audio`; see `video/README.md`. Re-record after visual changes to the home, `/courses`, a course page or `/development`.
+
 ### Styling
 
 - `tailwind.config.js` is the live config (shadcn tokens, `darkMode: ["class"]`, animations) and is what `components.json` points at. `tailwind.config.ts` is a leftover from `create-next-app` and is **not** used — Tailwind resolves `.js` first. Edit the `.js` one.
