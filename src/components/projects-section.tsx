@@ -9,14 +9,17 @@ import KidneyAppBody from "@/components/projects/kidneyapp-body";
 import OrientaYTBody from "@/components/projects/orientayt-body";
 import TinderYTBody from "@/components/projects/tinderyt-body";
 import TutoUBody from "@/components/projects/tutou-body";
-import { PROJECTS, type ProjectId } from "@/data/projects";
+import { PROJECTS, type Project, type ProjectId } from "@/data/projects";
 
 /**
  * Each project's write-up keeps its own component: the five message subtrees
  * have genuinely different shapes, so a single generic body would mean
  * migrating all five to a block model in both locale files.
  */
-const BODIES: Record<ProjectId, () => React.JSX.Element> = {
+const BODIES: Record<
+  ProjectId,
+  (props: { project: Project }) => React.JSX.Element
+> = {
   tinderyt: TinderYTBody,
   edf: EdfBody,
   tutou: TutoUBody,
@@ -40,7 +43,7 @@ export default function ProjectsSection() {
           const Body = BODIES[project.id];
           return (
             <ProjectCard key={project.id} project={project}>
-              <Body />
+              <Body project={project} />
             </ProjectCard>
           );
         })}

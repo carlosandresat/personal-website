@@ -22,6 +22,7 @@
     "liveButtonText": "Ver online",
     "backButton": "Atrás",
     "viewCodeButton": "Ver código",
+    "zoomImage": "Ver en grande",
     "projects": {
       "tinderyt": {
         "description": "Aplicación social de matching",
@@ -86,11 +87,49 @@
         "description": "Plataforma de Tutorías (versión antigua)",
         "content": {
           "introduction": "OrientaYT creó un ecosistema educativo basado en el apoyo mutuo. Era una plataforma de tutoría entre pares diseñada por estudiantes para estudiantes. Su misión era proporcionar a los estudiantes de Yachay Tech una comunidad en línea donde pudieran encontrar ayuda académica personalizada y colaborar en su desarrollo educativo.",
-          "title1": "Cómo Funcionaba:",
-          "p1": "OrientaYT era fácil de usar. Si un estudiante necesitaba asistencia, simplemente se registraba en la plataforma y buscaba tutores disponibles. Podían explorar los perfiles de los tutores, ver sus áreas de especialización y consultar sus horarios disponibles. Luego, seleccionaban a un tutor que se adaptara a sus necesidades y programaban una sesión de tutoría.",
-          "p2": "Si un estudiante quería compartir su conocimiento, podía unirse al equipo de tutores voluntarios. Al convertirse en tutor, tenían la oportunidad de ayudar a sus compañeros, desarrollar su experiencia y obtener logros por su contribución.",
-          "title2": "Screenshots:",
-          "p3": "En resumen, OrientaYT fue un compañero de aprendizaje en línea, donde la comunidad se unía para ayudarse mutuamente a alcanzar el éxito académico. Fue un emocionante viaje educativo. ¡Bienvenidos al legado de OrientaYT!"
+          "eyebrow": "Proyecto piloto",
+          "specs": {
+            "campus": "Campus",
+            "pilot": "Piloto",
+            "pilotDate": "20 nov 2023",
+            "subjects": "Asignaturas",
+            "version": "Versión"
+          },
+          "stack": "Stack",
+          "successor": "Su evolución",
+          "closing": "Fue un compañero de aprendizaje en línea, donde la comunidad se unía para ayudarse mutuamente a alcanzar el éxito académico.",
+          "journey": {
+            "title": "Recorrido de una tutoría",
+            "count": "{count} pasos",
+            "cover": "Portada",
+            "coverQuote": "Donde nos reunimos en nombre del conocimiento",
+            "steps": {
+              "1": {
+                "title": "Elige una asignatura",
+                "description": "Matemáticas, Química, Física, Redacción o Inglés."
+              },
+              "2": {
+                "title": "Explora a los orientadores",
+                "description": "Perfiles, especialidades y calificaciones."
+              },
+              "3": {
+                "title": "Agenda la sesión",
+                "description": "Tutor, fecha, hora, duración, lugar y tema en un solo formulario. El tutor debe confirmar el horario solicitado."
+              },
+              "4": {
+                "title": "El orientador responde",
+                "description": "Acepta, propone cambios o cancela."
+              },
+              "5": {
+                "title": "Califica la tutoría",
+                "description": "De 1 a 5 y un comentario opcional."
+              },
+              "6": {
+                "title": "El orientador gana logros",
+                "description": "Ayudar a sus compañeros suma experiencia e insignias, como la de Orientador Piloto."
+              }
+            }
+          }
         }
       },
       "kidneyapp": {

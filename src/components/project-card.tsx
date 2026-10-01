@@ -26,7 +26,7 @@ import { cn } from "@/lib/utils";
 import type { Project } from "@/data/projects";
 
 /** The logo plate, at card size or the larger dialog size. */
-function ProjectLogo({
+export function ProjectLogo({
   project,
   size,
 }: {
@@ -80,12 +80,19 @@ function ProjectLogo({
   );
 }
 
+/** The dialog's fixed scroll height, stepped by viewport height. */
+const DIALOG_SCROLL =
+  "h-[200px] px-2 hsm:h-[300px] hmd:h-[500px] hxl:h-[700px]";
+
 export default function ProjectCard({
   project,
   children,
 }: {
   project: Project;
-  /** The project's own write-up, rendered inside the dialog's scroll area. */
+  /**
+   * The project's own write-up, rendered inside the dialog's scroll area —
+   * under the shared header and logo, or alone for `layout: "bento"`.
+   */
   children: React.ReactNode;
 }) {
   const t = useTranslations("Projects");
@@ -138,38 +145,44 @@ export default function ProjectCard({
             <Button>{t("infoButtonText")}</Button>
           </DialogTrigger>
           <DialogContent className={cn("max-h-full", project.dialogClassName)}>
-            <DialogHeader>
-              <DialogTitle>{project.name}</DialogTitle>
-              {description ? (
-                <DialogDescription>{description}</DialogDescription>
-              ) : null}
-            </DialogHeader>
-            <ScrollArea className="h-[200px] px-2 hsm:h-[300px] hmd:h-[500px] hxl:h-[700px]">
-              <div className="flex w-full justify-center">
-                <ProjectLogo project={project} size="dialog" />
-              </div>
+            {project.layout === "bento" ? (
+              <ScrollArea className={DIALOG_SCROLL}>{children}</ScrollArea>
+            ) : (
+              <>
+                <DialogHeader>
+                  <DialogTitle>{project.name}</DialogTitle>
+                  {description ? (
+                    <DialogDescription>{description}</DialogDescription>
+                  ) : null}
+                </DialogHeader>
+                <ScrollArea className={DIALOG_SCROLL}>
+                  <div className="flex w-full justify-center">
+                    <ProjectLogo project={project} size="dialog" />
+                  </div>
 
-              {children}
+                  {children}
 
-              <DialogFooter className="mt-4">
-                {project.repo && (
-                  <Button asChild>
-                    <a
-                      href={project.repo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {t("viewCodeButton")}
-                    </a>
-                  </Button>
-                )}
-                <DialogClose asChild>
-                  <Button variant="secondary" className="w-full">
-                    {t("backButton")}
-                  </Button>
-                </DialogClose>
-              </DialogFooter>
-            </ScrollArea>
+                  <DialogFooter className="mt-4">
+                    {project.repo && (
+                      <Button asChild>
+                        <a
+                          href={project.repo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {t("viewCodeButton")}
+                        </a>
+                      </Button>
+                    )}
+                    <DialogClose asChild>
+                      <Button variant="secondary" className="w-full">
+                        {t("backButton")}
+                      </Button>
+                    </DialogClose>
+                  </DialogFooter>
+                </ScrollArea>
+              </>
+            )}
           </DialogContent>
         </Dialog>
       </CardFooter>

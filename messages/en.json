@@ -22,6 +22,7 @@
     "liveButtonText": "View live",
     "backButton": "Back",
     "viewCodeButton": "View code",
+    "zoomImage": "View larger",
     "projects": {
       "tinderyt": {
         "description": "Social matching app",
@@ -86,11 +87,49 @@
         "description": "Old Peer Tutoring Platform",
         "content": {
           "introduction": "OrientaYT created an educational ecosystem all about mutual support. It was a peer tutoring platform designed for students, by students. Its mission was to provide Yachay Tech students with an online community where they could find personalized academic help and collaborate in their educational development.",
-          "title1": "How it Worked:",
-          "p1": "OrientaYT was easy to use. If a student needed assistance, they simply logged in to the platform and searched for available tutors. They could explore tutor profiles, view their areas of expertise, and check their availability schedules. Then, they selected a tutor that suited their needs and scheduled a tutoring session.",
-          "p2": "If a student was looking to share their knowledge, they could join the team of volunteer tutors. By becoming a tutor, they had the opportunity to help their peers, build their expertise, and earn achievements for their contribution.",
-          "title2": "Screenshots:",
-          "p3": "In summary, OrientaYT was an online learning companion, where the community came together to help each other achieve academic success. It was an exciting educational journey. Welcome to the legacy of OrientaYT!"
+          "eyebrow": "Pilot project",
+          "specs": {
+            "campus": "Campus",
+            "pilot": "Pilot",
+            "pilotDate": "Nov 20, 2023",
+            "subjects": "Subjects",
+            "version": "Version"
+          },
+          "stack": "Stack",
+          "successor": "What it became",
+          "closing": "It was an online learning companion, where the community came together to help each other achieve academic success.",
+          "journey": {
+            "title": "How a tutoring session worked",
+            "count": "{count} steps",
+            "cover": "Home",
+            "coverQuote": "Where we meet in the name of knowledge",
+            "steps": {
+              "1": {
+                "title": "Pick a subject",
+                "description": "Math, Chemistry, Physics, Writing or English."
+              },
+              "2": {
+                "title": "Browse the tutors",
+                "description": "Profiles, areas of expertise and ratings."
+              },
+              "3": {
+                "title": "Book the session",
+                "description": "Tutor, date, time, length, place and topic in a single form. The tutor has to confirm the requested time."
+              },
+              "4": {
+                "title": "The tutor responds",
+                "description": "Accept, propose changes or cancel."
+              },
+              "5": {
+                "title": "Rate the session",
+                "description": "From 1 to 5, plus an optional comment."
+              },
+              "6": {
+                "title": "Tutors earn achievements",
+                "description": "Helping peers builds experience and badges, like Pilot Tutor."
+              }
+            }
+          }
         }
       },
       "kidneyapp": {

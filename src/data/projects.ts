@@ -19,6 +19,11 @@ export interface Project {
   repo?: string;
   /** Max-width classes for this project's dialog; screenshot sets differ a lot. */
   dialogClassName: string;
+  /**
+   * `bento`: the body renders the whole dialog — title, description and close
+   * button included — instead of being slotted under the shared header.
+   */
+  layout?: "bento";
 }
 
 export const PROJECTS: Project[] = [
@@ -86,7 +91,8 @@ export const PROJECTS: Project[] = [
       "Express",
       "Windows Server",
     ],
-    dialogClassName: "sm:max-w-[525px] md:max-w-2xl xl:max-w-5xl",
+    dialogClassName: "sm:max-w-[525px] md:max-w-3xl lg:max-w-4xl xl:max-w-5xl",
+    layout: "bento",
   },
   {
     id: "kidneyapp",
