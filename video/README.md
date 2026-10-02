@@ -123,9 +123,12 @@ pnpm render:social   # → out/social/carlosarevalo-es-{16x9,9x16}.{mp4,jpg}
   shot ids limit it (`pnpm record hero`). Headless Chromium can't play the
   site's H.264 trailers, so it also saves where each page's `<video>` sits;
   the composition renders that trailer's own composition in its place.
-- `pnpm audio` synthesizes a chiptune (triangle bass, square arpeggio and
-  lead, noise drums) and the effects (typing, blips, whooshes, the final
-  ding) on the frames the scenes animate. No samples or licences.
+- `pnpm audio` synthesizes a minimal synth pulse: a filtered pulse-wave
+  pad and eighth-note pulse over a held bass and a soft kick they duck
+  under, through a ping-pong delay and a small reverb. Square waves keep the
+  pixel timbre, but there is no lead melody, so it reads as a tech launch
+  rather than a game. Subtle effects (typing, low tocks, whooshes, a closing
+  chime) land on the frames the scenes animate. No samples or licences.
 - Both scripts run TypeScript through Node's type stripping (Node ≥ 22.6).
   What they write is git-ignored; rerun them after changing the site or the
   pacing.
