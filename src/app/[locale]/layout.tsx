@@ -8,6 +8,7 @@ import "../globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import WhatsAppButton from "@/components/whatsapp-button";
 import { SITE_NAME, SITE_URL } from "@/lib/seo";
 
 const chakraPetch = Chakra_Petch({
@@ -115,6 +116,7 @@ export default async function LocaleLayout(
           <Header />
             {children}
             <Footer />
+            <WhatsAppButton />
           </NextIntlClientProvider>
           <Analytics />
         </ThemeProvider>

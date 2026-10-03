@@ -1,13 +1,16 @@
 import { NextResponse } from "next/server";
 
-// Printed QR codes point at /wa/<source>; this opens WhatsApp with a message
-// naming where the person saw the ad. Kept on our domain so the destination can
-// change without a reprint. The number lives in the WHATSAPP_NUMBER env var
-// (country code, no "+") rather than in this public repo.
-const seenAt: Record<string, string> = {
-  local: "vi tu afiche en un local",
-  poste: "vi tu afiche en la calle",
-  volante: "vi tu volante",
+// Printed QR codes and the site's WhatsApp button point at /wa/<source>; this
+// opens WhatsApp with a message naming where the person came from. Kept on our
+// domain so the destination can change without a reprint, and so the number
+// stays out of the HTML. It lives in the WHATSAPP_NUMBER env var (country
+// code, no "+") rather than in this public repo.
+const messages: Record<string, string> = {
+  local: "Hola Carlos, vi tu afiche en un local y quiero información sobre las clases.",
+  poste: "Hola Carlos, vi tu afiche en la calle y quiero información sobre las clases.",
+  volante: "Hola Carlos, vi tu volante y quiero información sobre las clases.",
+  web: "Hola Carlos, vi tu página web y quiero más información.",
+  "web-en": "Hi Carlos, I saw your website and would like more information.",
 };
 
 export async function GET(
@@ -16,14 +19,13 @@ export async function GET(
 ) {
   const { source } = await params;
   const number = process.env.WHATSAPP_NUMBER;
-  const seen = seenAt[source];
-  if (!number || !seen) {
+  const text = messages[source];
+  if (!number || !text) {
     return NextResponse.redirect(new URL("/es", request.url));
   }
 
-  // Shows up in the Vercel logs, which is how scans per piece are counted.
-  console.log(`qr-scan source=${source}`);
-  const text = `Hola Carlos, ${seen} y quiero información sobre las clases.`;
+  // Shows up in the Vercel logs, which is how contacts per source are counted.
+  console.log(`wa-click source=${source}`);
   return NextResponse.redirect(
     `https://wa.me/${number}?text=${encodeURIComponent(text)}`,
   );
