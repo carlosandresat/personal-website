@@ -4,6 +4,6 @@ import { routing } from './navigation';
 export default createMiddleware(routing);
 
 export const config = {
-  // Match only internationalized pathnames
-  matcher: ['/((?!.*\\..*|_next|favicon.ico).*)']
+  // Match only internationalized pathnames; /wa/* are the QR redirects
+  matcher: ['/((?!.*\\..*|_next|favicon.ico|wa/).*)']
 };
