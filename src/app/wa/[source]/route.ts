@@ -6,9 +6,10 @@ import { NextResponse } from "next/server";
 // stays out of the HTML. It lives in the WHATSAPP_NUMBER env var (country
 // code, no "+") rather than in this public repo.
 const messages: Record<string, string> = {
-  local: "Hola Carlos, vi tu afiche en un local y quiero información sobre las clases.",
+  local: "Hola Carlos, vi tu afiche en un local y quiero más información.",
   poste: "Hola Carlos, vi tu afiche en la calle y quiero información sobre las clases.",
-  volante: "Hola Carlos, vi tu volante y quiero información sobre las clases.",
+  volante: "Hola Carlos, vi tu volante y quiero información sobre las clases y cursos.",
+  negocios: "Hola Carlos, vi tu volante para negocios y quiero información sobre una página web o sistema.",
   web: "Hola Carlos, vi tu página web y quiero más información.",
   "web-en": "Hi Carlos, I saw your website and would like more information.",
 };
