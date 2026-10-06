@@ -5,6 +5,8 @@ import {
   calculateTrailerMetadata,
   type CourseTrailerProps,
 } from "./course-trailer/CourseTrailer";
+import { Explainer, calculateExplainerMetadata } from "./explainer/Explainer";
+import { PIECES } from "./explainer/pieces";
 import { ProcessExplainer, explainerDuration } from "./process-explainer/ProcessExplainer";
 import { SocialTrailer, calculateSocialMetadata } from "./social-trailer/SocialTrailer";
 
@@ -69,6 +71,20 @@ export function RemotionRoot() {
           width={width}
           height={height}
           defaultProps={{ recording: null }}
+        />
+      ))}
+      {/* Social-media explainers: portrait only, sized from their voice recordings. */}
+      {Object.keys(PIECES).map((slug) => (
+        <Composition
+          key={`Redes-${slug}`}
+          id={`Redes-${slug}`}
+          component={Explainer}
+          durationInFrames={1}
+          calculateMetadata={calculateExplainerMetadata}
+          fps={30}
+          width={1080}
+          height={1920}
+          defaultProps={{ slug, voice: [] }}
         />
       ))}
     </>

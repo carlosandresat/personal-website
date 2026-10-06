@@ -1,6 +1,6 @@
 ---
 name: sitio-web
-description: Working on the carlosarevalo.dev site code in this repo — pages, components, i18n copy, course pages, the /wa WhatsApp redirects, styling, metadata/OG images, Vercel deploys, and the Remotion videos in video/ (course trailers, the /development explainer, the social trailer). Use for any change to the Next.js app or the video/ project, not for social-media or income planning.
+description: "Working on the carlosarevalo.dev site code in this repo — pages, components, i18n copy, course pages, the /wa WhatsApp redirects, styling, metadata/OG images, Vercel deploys, and the Remotion videos in video/ (course trailers, the /development explainer, the social trailer). Use for any change to the Next.js app or the video/ project, not for social-media or income planning."
 ---
 
 # Sitio web (carlosarevalo.dev)
@@ -46,7 +46,7 @@ Notes:
 - **Trailer hosting.** Rendered files live on Vercel Blob, not in Git. `src/data/course-trailers.json` maps slug → locale → `{ landscape, portrait }` URLs and is written by `pnpm upload` in `video/`; don't edit it by hand. `CourseDetail` renders a trailer section only when that JSON has an entry for the course and locale (portrait below `md`, landscape above), via the client component `course-trailer.tsx`.
 - **Process explainer.** `video/src/process-explainer/` renders the explainer for `/development`, published under the manifest key `development` and shown above the phase tabs when that key has the locale. It reads `Development.<phase>.title` and `Development.<phase>.brief.{summary,client,developer}`. `brief` and `Development.video` (player labels) exist in both message files, though only the Spanish video is rendered for now.
 - **Social trailer.** `video/src/social-trailer/` is a 30 s announcement for social media (Spanish, both formats), not shown on the site. Its site tour is filmed from a running copy of the site by `pnpm record` (Playwright) into the git-ignored `public/social-trailer/`. Its soundtrack (a minimal synth pulse, deliberately not game-like) is synthesized by `pnpm audio`. Re-record after visual changes to the home, `/courses`, a course page or `/development`.
-- **Social-media explainers** (vertical videos for the professional accounts) are planned in the private `redes-sociales` skill; build their templates in `video/` following the same conventions.
+- **Social-media explainers.** `video/src/explainer/` (compositions `Redes-<slug>`) renders vertical videos for the professional accounts: see the "Social-media explainers" section of `video/README.md`. Their content is planned in the private `redes-sociales` skill.
 
 ## WhatsApp redirects (`/wa/<source>`)
 

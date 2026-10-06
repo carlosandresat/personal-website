@@ -42,6 +42,9 @@ next-env.d.ts
 # social trailer recordings and soundtrack (regenerate: cd video && pnpm record && pnpm audio)
 /public/social-trailer/
 
+# voice takes for the social-media explainers (cd video && pnpm voz <slug>)
+/public/redes/
+
 # print materials (contain the phone number; not for the public repo)
 /marketing
 

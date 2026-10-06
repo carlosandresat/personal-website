@@ -132,3 +132,36 @@ pnpm render:social   # → out/social/carlosarevalo-es-{16x9,9x16}.{mp4,jpg}
 - Both scripts run TypeScript through Node's type stripping (Node ≥ 22.6).
   What they write is git-ignored; rerun them after changing the site or the
   pacing.
+
+## Social-media explainers
+
+Vertical (1080×1920) explainers for the professional accounts
+(`src/explainer/`, compositions `Redes-<slug>`): one scene per line of
+voice, the visual in a band clear of the Reels/TikTok UI, burned-in
+subtitles under it, the handle on top. They use the print palette
+(`src/explainer/theme.ts`) in a clean register: pixel art only in a `pixel`
+scene, for metaphors, kids' content and promotion — never for graphs.
+
+A piece is a file in `src/explainer/pieces/` (registered in `index.ts`): a
+list of scenes, each with `say`, the line recorded for it, which also
+becomes the subtitles (`*asterisks*` colour words). Scene kinds: `hook`,
+`points`, `plot` (functions on axes), `graph` (boxes, arrows and a moving
+packet), `array` (cells walked step by step), `code`, `pixel`, `outro`
+(soft or WhatsApp call to action). `Redes-muestrario` shows each once.
+
+```bash
+# one take per scene, numbered: ../public/redes/<slug>/grabaciones/01.m4a, 02.m4a …
+pnpm voz busqueda-binaria            # → ../public/redes/<slug>/voz/01.wav … (trimmed, normalised)
+pnpm studio                          # check it with the voice
+pnpm render:redes busqueda-binaria   # → out/redes/<slug>.mp4 + <slug>-portada.jpg
+```
+
+- Without recordings, scenes are sized from their text at a calm speaking
+  pace, so a piece can be previewed before recording. With them, each scene
+  lasts its take plus a short lead and tail (`pacing.ts`); `hold` adds
+  seconds for an animation to breathe, and `at` (a 0–1 fraction) pins a
+  step to the voice.
+- `pnpm voz` uses the ffmpeg bundled with Remotion: it trims the silence at
+  both ends of each take and normalises loudness. iPhone Voice Memos work
+  as recorded ("Compressed" quality, AAC); "Lossless" (ALAC) isn't supported.
+- Recordings are git-ignored (`public/redes/`), like the renders in `out/`.
