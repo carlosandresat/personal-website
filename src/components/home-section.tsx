@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { Github, Mail, Linkedin } from "lucide-react";
+import { Mail } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 
+import { Github, Linkedin } from "@/components/brand-icons";
 import { Eyebrow } from "@/components/design/eyebrow";
 import { SectionShell } from "@/components/design/section-shell";
 import HomeNodeGraph from "@/components/home-node-graph";
