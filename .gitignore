@@ -44,3 +44,8 @@ next-env.d.ts
 
 # print materials (contain the phone number; not for the public repo)
 /marketing
+
+# business and social-media plans, and the skills that read them (personal; not for the public repo)
+/negocio
+/.claude/skills/redes-sociales
+/.claude/skills/plan-ingresos

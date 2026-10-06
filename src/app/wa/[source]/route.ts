@@ -12,6 +12,11 @@ const messages: Record<string, string> = {
   negocios: "Hola Carlos, vi tu volante para negocios y quiero información sobre una página web o sistema.",
   web: "Hola Carlos, vi tu página web y quiero más información.",
   "web-en": "Hi Carlos, I saw your website and would like more information.",
+  // Bio links of the professional social accounts.
+  instagram: "Hola Carlos, vi tu Instagram y quiero más información.",
+  tiktok: "Hola Carlos, vi tu TikTok y quiero más información.",
+  facebook: "Hola Carlos, vi tu página de Facebook y quiero más información.",
+  linkedin: "Hola Carlos, vi tu perfil de LinkedIn y quiero más información.",
 };
 
 export async function GET(

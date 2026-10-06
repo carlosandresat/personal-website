@@ -9,6 +9,13 @@ Next.js 16 App Router + React 19, TypeScript, Tailwind CSS v3, shadcn/ui, `next-
 
 `AGENTS.md` holds the design/aesthetic conventions (font, color tokens, shadcn rules); read it before making UI changes.
 
+## Areas and skills
+
+Each area of work has its own skill in `.claude/skills/`, so a chat only loads the context it needs:
+
+- `sitio-web`: detail for working on the site and `video/` (courses, trailers, `/wa` redirects, styling, gotchas). Load it for any code change.
+- `redes-sociales` and `plan-ingresos`: social-media content and the income plan. They are personal and git-ignored, together with their plans in `negocio/`, so they only exist on Carlos's machine.
+
 ## Commands
 
 Package manager is **pnpm** (pinned via `packageManager`, Node >= 20.9).
@@ -25,18 +32,18 @@ There is **no test suite** and no test runner configured. Verification means `pn
 
 Extra agent skills are vendored under `.agents/skills/` (shadcn, next-upgrade, vercel-react-best-practices, frontend-design), tracked by `skills-lock.json`.
 
-## Architecture
+## Rules that break the build
 
 ### Routing and i18n
 
-Every route lives under `src/app/[locale]/`. The locale segment is always present in the URL (`localePrefix: 'always'`, default `en`) — there are no unprefixed routes.
+Every route lives under `src/app/[locale]/`. The locale segment is always present in the URL (`localePrefix: 'always'`, default `en`); there are no unprefixed routes.
 
 The i18n wiring is spread across four files and they must stay consistent:
 
-- `src/navigation.ts` — `defineRouting` + `createNavigation`. Exports the locale-aware `Link`, `redirect`, `usePathname`, `useRouter`. **Import `Link` from `@/navigation`, not `next/link`**, or the locale prefix is lost.
-- `src/proxy.ts` — the middleware (Next 16 renamed `middleware.ts` → `proxy.ts`). Runs `createMiddleware(routing)`; its matcher skips `_next`, `favicon.ico`, and anything with a file extension.
-- `src/i18n/request.ts` — `getRequestConfig`, loads `messages/{locale}.json`, `notFound()` on an unknown locale. Note it hardcodes its own `locales` array, separate from `src/navigation.ts`.
-- `messages/en.json` and `messages/es.json` — flat top-level namespaces (`HomePage`, `Navbar`, `Projects`, `Experiences`, `TechStack`, `Services`, `Courses`, `Development`, `Students`). **The two files must have identical key trees**; a missing key surfaces as a next-intl error instead of copy, and a past bug was exactly a mistyped Spanish key.
+- `src/navigation.ts`: `defineRouting` + `createNavigation`. Exports the locale-aware `Link`, `redirect`, `usePathname`, `useRouter`. **Import `Link` from `@/navigation`, not `next/link`**, or the locale prefix is lost.
+- `src/proxy.ts`: the middleware (Next 16 renamed `middleware.ts` → `proxy.ts`). Runs `createMiddleware(routing)`; its matcher skips `_next`, `wa/`, `favicon.ico`, and anything with a file extension.
+- `src/i18n/request.ts`: `getRequestConfig`, loads `messages/{locale}.json`, `notFound()` on an unknown locale. It hardcodes its own `locales` array, separate from `src/navigation.ts`.
+- `messages/en.json` and `messages/es.json`: flat top-level namespaces (`HomePage`, `Navbar`, `Projects`, `Experiences`, `TechStack`, `Services`, `Courses`, `Development`, `Students`). **The two files must have identical key trees.** A missing key surfaces as a next-intl error instead of copy; a past bug was exactly a mistyped Spanish key.
 
 ### Static rendering
 
@@ -47,45 +54,9 @@ The whole site is prerendered. Two things are required for that and are easy to 
 
 Pages are Server Components that take `params: Promise<{ locale: string }>` and unwrap it with `use(...)` (sync components) or `await` (async `generateMetadata`). Only leaf components that need interactivity are `"use client"` (`navbar`, `language-select`, `mode-toggle`, dialogs, carousel).
 
-### Metadata and OG images
+### Other
 
-`generateMetadata` is written per-page with an explicit `if (locale == "es") / if (locale == "en")` branch returning a full metadata object — verbose, but that is the existing pattern. The exception is `courses/[slug]`, which reads `Courses.<key>.meta` from messages via `getTranslations`.
-
-**OG images must live in `public/`, not colocated next to the route as `opengraph-image.png`.** Colocated image files break the prerender build (two separate commits exist to fix this). Reference them by path, e.g. `/opengraph-image.png` or `/courses/scratch-kids/opengraph-image.png`.
-
-### Content
-
-Page content lives in two places and neither is a CMS:
-
-- Translatable copy → `messages/{locale}.json`.
-- Structured, non-translated records → hardcoded arrays in the component or in `src/data/` (e.g. `src/data/students-data.ts`, which drives both `/students` and the `/students/[id]` static params). Section components like `projects-section.tsx` (~740 lines) and `tech-stack-section.tsx` embed their own data arrays and pull labels via `useTranslations`.
-
-### Course pages
-
-Every course with a detail page is an entry in `src/data/courses.ts`, rendered by `CourseDetail` (`src/components/course-detail.tsx`) at `courses/[slug]`. An entry lists `blocks` in teaching order: modules (lecture + workshop, optional homework) and standalone projects, with durations in minutes. Total hours, per-module durations and every count (detail aside, catalog cards) are derived from those blocks — never hardcode them.
-
-To add a course: add the registry entry, then `Courses.<key>` in **both** message files with `title`, `description`, `summary`, `meta.{title,description}`, `difficulty`, `objectives`, `req`, and `modules.<n>.{lecture,workshop}` for every module (numbered from 1). Shared labels (session kinds, durations, plural counts, pricing) live directly under `Courses`. The catalog card in `courses/page.tsx` links to the detail page automatically when its `key` matches a registry entry. An OG image, if any, goes in `public/courses/<slug>/`.
-
-### Course trailers (`video/`)
-
-`video/` is a separate Remotion project that renders course trailers to MP4 from the same `messages/*.json` and `src/data/courses.ts` data. It has its own `pnpm-workspace.yaml` and install, and is excluded from the site's `tsconfig.json` and eslint — never add Remotion packages to the root `package.json`. `Courses.<key>.outcomes` and `Courses.<key>.motivations` exist for the trailers and are not rendered on the site yet. See `video/README.md`.
-
-Rendered trailers are hosted on Vercel Blob, not in Git. `src/data/course-trailers.json` maps slug → locale → `{ landscape, portrait }` URLs and is written by `pnpm upload` in `video/` — don't edit it by hand. `CourseDetail` renders a trailer section only when that JSON has an entry for the course and locale (portrait below `md`, landscape above), via the client component `course-trailer.tsx`.
-
-The same project renders a process explainer for `/development` (`video/src/process-explainer/`), published under the manifest key `development` and shown above the phase tabs when that key has the locale. It reads `Development.<phase>.title` and `Development.<phase>.brief.{summary,client,developer}`; `brief` and `Development.video` (player labels) exist in both message files, though only the Spanish video is rendered for now.
-
-`video/src/social-trailer/` is a 30 s announcement for social media (Spanish, both formats), not shown on the site. Its site tour is filmed from a running copy of the site by `pnpm record` (Playwright) into the git-ignored `public/social-trailer/`, and its soundtrack (a minimal synth pulse, deliberately not game-like) is synthesized by `pnpm audio`; see `video/README.md`. Re-record after visual changes to the home, `/courses`, a course page or `/development`.
-
-### Styling
-
-- `tailwind.config.js` is the live config (shadcn tokens, `darkMode: ["class"]`, animations) and is what `components.json` points at. `tailwind.config.ts` is a leftover from `create-next-app` and is **not** used — Tailwind resolves `.js` first. Edit the `.js` one.
-- Theme tokens are HSL CSS variables in `src/app/globals.css`, light in `:root` and dark in `.dark`. Dark mode is driven by `next-themes` (`ThemeProvider` in the locale layout, `attribute="class"`).
-- shadcn style is `new-york`, base color `neutral`, RSC enabled. Path alias is `@/*` → `src/*`.
-
-## Gotchas
-
-- `language-select.tsx` deliberately uses `usePathname`/`useRouter` from `next/navigation` (not `@/navigation`) so it can string-slice the locale prefix: `router.push("/en" + pathname.slice(3))`. This assumes a 2-char locale code — adding a locale like `pt-BR` would break it.
-- `navbar.tsx` also uses raw `next/navigation` `usePathname`, so its active-link checks compare against locale-prefixed paths (`pathname === "/es"`, `pathname.endsWith("/courses")`).
-- `next.config.js` wraps the config in `createNextIntlPlugin()`; `allowedDevOrigins` is set for LAN dev testing.
-- `README.md` is still the untouched `create-next-app` boilerplate — don't treat it as a source of truth.
-- `/wa/<source>` (`src/app/wa/[source]/route.ts`) is the target of printed QR codes and of the site-wide floating `whatsapp-button.tsx`: it redirects to WhatsApp with a message naming the source (`local`, `poste`, `volante`, `negocios`, `web`, `web-en`). It sits outside `[locale]`, so `src/proxy.ts` excludes `wa/`, and it needs the `WHATSAPP_NUMBER` env var (without it, it falls back to `/es`). Never rename those paths — they are printed. The print sources live in the git-ignored `marketing/print/` (`node render.mjs` there renders PDFs with local Chrome).
+- **OG images must live in `public/`, not colocated next to the route as `opengraph-image.png`.** Colocated image files break the prerender build (two separate commits exist to fix this). Reference them by path, e.g. `/opengraph-image.png` or `/courses/scratch-kids/opengraph-image.png`.
+- Edit `tailwind.config.js`, not `tailwind.config.ts`: the `.ts` file is an unused `create-next-app` leftover.
+- `video/` is a separate Remotion project. Never add Remotion packages to the root `package.json`.
+- Never rename the `/wa/<source>` paths: they are printed on QR codes and linked from social profiles.
