@@ -14,7 +14,8 @@
     "development": "Desarrollo",
     "courses": "Cursos",
     "students": "Estudiantes",
-    "whatsapp": "Escríbeme por WhatsApp"
+    "whatsapp": "Escríbeme por WhatsApp",
+    "explora": "Explora"
   },
   "Projects": {
     "title": "Mis Proyectos",
@@ -913,5 +914,53 @@
       "description": "Estudiantes que han completado los cursos de programación de Carlos Arévalo y los proyectos que construyeron en el camino.",
       "profileDescription": "Perfil de {name}: cursos de programación completados con Carlos Arévalo y los proyectos construidos en cada uno."
     }
+  },
+  "Links": {
+    "meta": {
+      "title": "Enlaces | Carlos Arévalo",
+      "description": "Clases, cursos, software para negocios y temas de tecnología explicados: todos los enlaces de Carlos Arévalo."
+    },
+    "tagline": "Si no lo entiendes, ¿cómo lo usas?",
+    "intro": "Clases de matemática, física y programación, cursos y software para negocios. En Santa Rosa y en línea.",
+    "whatsapp": {
+      "label": "Escríbeme por WhatsApp",
+      "sub": "Clases, cursos o una cotización"
+    },
+    "explora": {
+      "label": "Explora los temas de los videos",
+      "sub": "Explicaciones a fondo, con ejemplos para tocar"
+    },
+    "courses": {
+      "label": "Cursos de programación",
+      "sub": "Python, desarrollo web, Scratch y más"
+    },
+    "development": {
+      "label": "Software para tu negocio",
+      "sub": "Páginas web y sistemas a medida"
+    },
+    "site": {
+      "label": "carlosarevalo.dev",
+      "sub": "Mi página completa"
+    }
+  },
+  "Explora": {
+    "meta": {
+      "title": "Explora | Tecnología explicada simple",
+      "description": "Los temas de mis videos explicados a fondo, con visualizaciones y ejemplos interactivos: algoritmos, datos, IA y la matemática detrás."
+    },
+    "eyebrow": "Explora",
+    "title": "Tecnología explicada a fondo",
+    "subtitle": "Los temas de mis videos, con más detalle, visualizaciones y ejemplos para tocar. Si no lo entiendes, ¿cómo lo usas?",
+    "spanishOnly": "Este contenido está en español.",
+    "series": {
+      "como-funciona": "¿Cómo funciona…?",
+      "sabias-que-puedes": "¿Sabías que puedes…?",
+      "mate-que-si-se-usa": "Mate que sí se usa"
+    },
+    "season": "Temporada {n}",
+    "minutes": "{n} min de lectura",
+    "read": "Explorar",
+    "back": "Todos los temas",
+    "topics": "Temas"
   }
 }

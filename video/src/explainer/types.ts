@@ -90,11 +90,16 @@ export type CodeScene = Base & {
 
 export type PixelScene = Base & { kind: "pixel"; animation: PixelAnimationId; label: string };
 
+/**
+ * The fixed close: "Ahora que ya sabes X, podrás Y. Tarea para la casa: …"
+ * in the voice (`say`), the homework on screen, then the tagline and handle.
+ */
 export type OutroScene = Base & {
   kind: "outro";
   /** Soft for teaching pieces, strong (WhatsApp) for "Trabaja conmigo". */
   cta: "suave" | "fuerte";
-  line?: string;
+  /** Homework shown on screen; usually doable, now and then absurd as a joke. */
+  tarea?: string;
 };
 
 export type Scene =

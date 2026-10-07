@@ -41,6 +41,15 @@ export default function Navbar() {
       <Link
         className={cn(
           "text-sm font-medium hover:underline hover:text-brand underline-offset-4",
+          pathname.includes("/explora") ? "text-brand" : ""
+        )}
+        href="/explora"
+      >
+        {t("explora")}
+      </Link>
+      <Link
+        className={cn(
+          "text-sm font-medium hover:underline hover:text-brand underline-offset-4",
           pathname.endsWith("/students") ? "text-brand" : ""
         )}
         href="/students"

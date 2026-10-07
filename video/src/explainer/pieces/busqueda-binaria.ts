@@ -75,7 +75,9 @@ export const busquedaBinaria: Piece = {
     {
       kind: "outro",
       cta: "suave",
-      say: "Sígueme para más ideas de programación explicadas simple.",
+      // Answer: 9, since 2^8 = 256 < 366 ≤ 512 = 2^9.
+      tarea: "Adivina el *día del año* en que nació alguien (del 1 al 366). ¿Cuántos intentos necesitas, como máximo?",
+      say: "Ahora que ya sabes búsqueda binaria, podrás encontrar un dato entre millones en un parpadeo. Tarea para la casa: ¿cuántos intentos necesitas para adivinar el día del año en que nació alguien?",
     },
   ],
 };

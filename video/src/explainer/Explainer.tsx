@@ -19,7 +19,12 @@ import type { Scene } from "./types";
  * Only the slug travels as a prop (pieces hold functions, which props can't);
  * `voice` is filled in by calculateMetadata with each recording's length.
  */
-export type ExplainerProps = { slug: string; voice: (number | null)[] };
+export type ExplainerProps = { slug: string; voice: (number | null)[]; music: boolean };
+
+/** The background bed, written by `pnpm audio:redes`; skipped if it's missing. */
+const MUSIC = "redes/fondo.wav";
+/** Far under the voice (normalised to −16 LUFS by `pnpm voz`). */
+const MUSIC_VOLUME = 0.12;
 
 /** One recording per scene, numbered from 01; written by `pnpm voz <slug>`. */
 export const voicePath = (slug: string, i: number) => `redes/${slug}/voz/${String(i + 1).padStart(2, "0")}.wav`;
@@ -49,8 +54,9 @@ function piece(slug: string) {
 export const calculateExplainerMetadata: CalculateMetadataFunction<ExplainerProps> = async ({ props }) => {
   const { scenes } = piece(props.slug);
   const voice = await Promise.all(scenes.map((_, i) => wavSeconds(voicePath(props.slug, i))));
+  const music = (await fetch(staticFile(MUSIC), { method: "HEAD" })).ok;
   const durationInFrames = scenes.reduce((sum, scene, i) => sum + sceneFrames(scene, voice[i]), 0);
-  return { durationInFrames, props: { ...props, voice } };
+  return { durationInFrames, props: { ...props, voice, music } };
 };
 
 function SceneView({ scene, frames }: { scene: Scene; frames: number }) {
@@ -95,11 +101,12 @@ function Watermark() {
  * A vertical explainer for Reels, TikTok and LinkedIn: one scene per line of
  * voice, the visual in the middle band, subtitles under it, the handle on top.
  */
-export function Explainer({ slug, voice }: ExplainerProps) {
+export function Explainer({ slug, voice, music }: ExplainerProps) {
   const { scenes } = piece(slug);
 
   return (
     <AbsoluteFill style={{ background: `radial-gradient(ellipse at 50% 28%, ${ink2}, ${ink} 72%)` }}>
+      {music ? <Audio src={staticFile(MUSIC)} loop volume={MUSIC_VOLUME} /> : null}
       <Series>
         {scenes.map((scene, i) => {
           const recorded = voice[i] ?? null;
@@ -107,9 +114,9 @@ export function Explainer({ slug, voice }: ExplainerProps) {
           return (
             <Series.Sequence key={i} durationInFrames={frames}>
               <SceneView scene={scene} frames={frames} />
-              {/* The outro shows the handle and its line large, so no corner handle or subtitles there. */}
+              {/* The outro shows the handle large, so no corner handle there. */}
               {scene.kind !== "outro" ? <Watermark /> : null}
-              {scene.say && scene.kind !== "outro" ? (
+              {scene.say ? (
                 <Captions say={scene.say} voiceFrames={voiceFrames(scene, recorded)} />
               ) : null}
               {recorded != null ? (

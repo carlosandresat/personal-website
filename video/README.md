@@ -146,11 +146,15 @@ A piece is a file in `src/explainer/pieces/` (registered in `index.ts`): a
 list of scenes, each with `say`, the line recorded for it, which also
 becomes the subtitles (`*asterisks*` colour words). Scene kinds: `hook`,
 `points`, `plot` (functions on axes), `graph` (boxes, arrows and a moving
-packet), `array` (cells walked step by step), `code`, `pixel`, `outro`
-(soft or WhatsApp call to action). `Redes-muestrario` shows each once.
+packet), `array` (cells walked step by step), `code`, `pixel`, `outro`.
+`Redes-muestrario` shows each once. The outro is the fixed close: the voice
+says "Ahora que ya sabes X, podrás Y. Tarea para la casa: …", the screen shows
+the homework (`tarea`), the tagline ("Si no lo entiendes, ¿cómo lo usas?"),
+the mascot and the handle, with a soft or WhatsApp call to action (`cta`).
 
 ```bash
 # one take per scene, numbered: ../public/redes/<slug>/grabaciones/01.m4a, 02.m4a …
+pnpm audio:redes                     # → ../public/redes/fondo.wav, the background bed (once)
 pnpm voz busqueda-binaria            # → ../public/redes/<slug>/voz/01.wav … (trimmed, normalised)
 pnpm studio                          # check it with the voice
 pnpm render:redes busqueda-binaria   # → out/redes/<slug>.mp4 + <slug>-portada.jpg
@@ -164,4 +168,7 @@ pnpm render:redes busqueda-binaria   # → out/redes/<slug>.mp4 + <slug>-portada
 - `pnpm voz` uses the ffmpeg bundled with Remotion: it trims the silence at
   both ends of each take and normalises loudness. iPhone Voice Memos work
   as recorded ("Compressed" quality, AAC); "Lossless" (ALAC) isn't supported.
-- Recordings are git-ignored (`public/redes/`), like the renders in `out/`.
+- `pnpm audio:redes` synthesizes a calm, seamless 23 s loop (pulse-wave pad,
+  triangle bass, a quiet arpeggio; no drums) that plays far under the voice,
+  about 18 dB below it. Without the file, videos render without music.
+- Recordings and the bed are git-ignored (`public/redes/`), like the renders in `out/`.

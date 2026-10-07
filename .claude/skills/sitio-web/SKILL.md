@@ -18,7 +18,19 @@ Page content lives in two places and neither is a CMS:
 
 ## Metadata
 
-`generateMetadata` is written per page with an explicit `if (locale == "es") / if (locale == "en")` branch returning a full metadata object. That is verbose, but it is the existing pattern. The exception is `courses/[slug]`, which reads `Courses.<key>.meta` from messages via `getTranslations`.
+Every page's `generateMetadata` reads its `meta.{title,description}` from messages with `getTranslations` and returns `pageMetadata()` from `src/lib/seo.ts`, which sets the canonical, hreflang alternates and Open Graph/Twitter cards. Pass `noindex: true` for pages that shouldn't rank (the `/links` hubs, the English `/explora` pages). New indexable paths go in `src/app/sitemap.ts`.
+
+## /explora (topics explained in depth)
+
+The social videos' subjects, explained further with visualizations and interactive pieces. Spanish only for now: the English routes exist (with an "available in Spanish" badge) but are noindex, and only the Spanish URLs are in the sitemap.
+
+- Topics are entries in `src/data/explora.ts` (slug, series, season, Spanish title and summary). Titles live there, not in messages, because they aren't translated.
+- Each topic's body is a component in `src/components/explora/`, registered by slug in `index.ts`, built from the shared blocks in `prose.tsx` (`Section`, `P`, `List`, `Code`, `InlineCode`, `Homework`). Interactive pieces are small client components next to it (e.g. `binary-guess-game.tsx`).
+- UI labels (series names, season, read time) are in `Explora` in both message files.
+
+## /links/<source> (bio links)
+
+`src/app/[locale]/links/[source]/page.tsx` is the hub the professional profiles link to (`/es/links/instagram`, `tiktok`, `facebook`, `linkedin`). Its WhatsApp button goes to `/wa/<source>`, so contacts stay counted per network. Noindex and out of the sitemap. Never rename the sources: they are in the profiles.
 
 ## Course pages
 
@@ -52,7 +64,7 @@ Notes:
 
 `src/app/wa/[source]/route.ts` is the target of printed QR codes, of the floating `whatsapp-button.tsx`, and of the social-media bio links. It redirects to WhatsApp with a message naming the source.
 
-- Sources: `local`, `poste`, `volante`, `negocios`, `web`, `web-en`, `instagram`, `tiktok`, `facebook`, `linkedin`.
+- Sources: `local`, `poste`, `volante`, `negocios`, `web`, `web-en`, `instagram`, `tiktok`, `facebook`, `linkedin` (the last four via the `/links/<source>` hubs).
 - **Never rename these paths.** They are printed and linked from profiles. Add new sources instead.
 - Each click logs `wa-click source=<source>` (visible in the Vercel logs); that is how contacts per channel are counted.
 - The route sits outside `[locale]`, so `src/proxy.ts` excludes `wa/`.

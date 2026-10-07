@@ -69,6 +69,12 @@ export const muestrario: Piece = {
       label: "base de datos",
       say: "El pixel art queda para metáforas e historias, nunca para gráficas.",
     },
-    { kind: "outro", cta: "fuerte", say: "Y el cierre: llamado suave, o fuerte con WhatsApp." },
+    {
+      kind: "outro",
+      cta: "fuerte",
+      // Now and then the homework is absurd on purpose, as a joke.
+      tarea: "Demuestra que *P = NP*. Tienes hasta el lunes.",
+      say: "Ahora que ya sabes usar la plantilla, podrás armar un video en una tarde. Tarea para la casa: demuestra que P es igual a NP.",
+    },
   ],
 };

@@ -13,7 +13,8 @@
     "audio": "node --experimental-strip-types --disable-warning=ExperimentalWarning --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/synth-audio.mts",
     "render:social": "node scripts/render-social.mjs",
     "voz": "node scripts/voz.mjs",
-    "render:redes": "node scripts/render-redes.mjs"
+    "render:redes": "node scripts/render-redes.mjs",
+    "audio:redes": "node --experimental-strip-types --disable-warning=ExperimentalWarning --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/synth-bed.mts"
   },
   "dependencies": {
     "@remotion/cli": "4.0.524",

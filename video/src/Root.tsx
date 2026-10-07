@@ -84,7 +84,7 @@ export function RemotionRoot() {
           fps={30}
           width={1080}
           height={1920}
-          defaultProps={{ slug, voice: [] }}
+          defaultProps={{ slug, voice: [], music: false }}
         />
       ))}
     </>

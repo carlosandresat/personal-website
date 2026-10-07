@@ -14,7 +14,8 @@
     "development": "Development",
     "courses": "Courses",
     "students": "Students",
-    "whatsapp": "Message me on WhatsApp"
+    "whatsapp": "Message me on WhatsApp",
+    "explora": "Explore"
   },
   "Projects": {
     "title": "My Projects",
@@ -913,5 +914,53 @@
       "description": "Students who have completed Carlos Arévalo's programming courses, and the projects they built along the way.",
       "profileDescription": "{name}'s profile: programming courses completed with Carlos Arévalo and the projects built in each one."
     }
+  },
+  "Links": {
+    "meta": {
+      "title": "Links | Carlos Arévalo",
+      "description": "Classes, courses, software for businesses and tech topics explained: all of Carlos Arévalo's links."
+    },
+    "tagline": "If you don't understand it, how do you use it?",
+    "intro": "Math, physics and programming classes, courses and software for businesses. In Santa Rosa, Ecuador, and online.",
+    "whatsapp": {
+      "label": "Message me on WhatsApp",
+      "sub": "Classes, courses or a quote"
+    },
+    "explora": {
+      "label": "Explore the topics from the videos",
+      "sub": "In-depth explanations with hands-on examples (Spanish)"
+    },
+    "courses": {
+      "label": "Programming courses",
+      "sub": "Python, web development, Scratch and more"
+    },
+    "development": {
+      "label": "Software for your business",
+      "sub": "Custom websites and systems"
+    },
+    "site": {
+      "label": "carlosarevalo.dev",
+      "sub": "My full website"
+    }
+  },
+  "Explora": {
+    "meta": {
+      "title": "Explore | Tech explained simply",
+      "description": "The topics from my videos explained in depth, with visualizations and interactive examples. Available in Spanish."
+    },
+    "eyebrow": "Explore",
+    "title": "Tech explained in depth",
+    "subtitle": "The topics from my videos, with more detail, visualizations and examples you can play with. If you don't understand it, how do you use it?",
+    "spanishOnly": "These topics are available in Spanish only for now.",
+    "series": {
+      "como-funciona": "¿Cómo funciona…? (How does it work?)",
+      "sabias-que-puedes": "¿Sabías que puedes…? (Did you know you can…?)",
+      "mate-que-si-se-usa": "Mate que sí se usa (Math you actually use)"
+    },
+    "season": "Season {n}",
+    "minutes": "{n} min read",
+    "read": "Explore",
+    "back": "All topics",
+    "topics": "Topics"
   }
 }

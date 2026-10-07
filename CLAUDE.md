@@ -13,8 +13,8 @@ Next.js 16 App Router + React 19, TypeScript, Tailwind CSS v3, shadcn/ui, `next-
 
 Each area of work has its own skill in `.claude/skills/`, so a chat only loads the context it needs:
 
-- `sitio-web`: detail for working on the site and `video/` (courses, trailers, `/wa` redirects, styling, gotchas). Load it for any code change.
-- `redes-sociales` and `plan-ingresos`: social-media content and the income plan. They are personal and git-ignored, together with their plans in `negocio/`, so they only exist on Carlos's machine.
+- `sitio-web`: detail for working on the site and `video/` (courses, `/explora`, `/links`, trailers, `/wa` redirects, metadata, styling, gotchas). Load it for any code change.
+- `redes-sociales`, `plan-ingresos` and `educacion`: social-media content, the income plan and the teaching method and offer. They are personal and git-ignored, together with their plans in `negocio/`, so they only exist on Carlos's machine.
 
 ## Commands
 
